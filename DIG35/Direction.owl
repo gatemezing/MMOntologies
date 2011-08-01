@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY genc "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:genc="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing the direction to specify a 3D heading</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#hasDirectionComment -->
+
+    <owl:ObjectProperty rdf:about="#hasDirectionComment">
+        <rdfs:domain rdf:resource="#Direction"/>
+        <rdfs:range rdf:resource="&genc;GeneralComment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#hasDirectionTime -->
+
+    <owl:DatatypeProperty rdf:about="#hasDirectionTime">
+        <rdfs:domain rdf:resource="#Direction"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#pitch -->
+
+    <owl:DatatypeProperty rdf:about="#pitch">
+        <rdfs:domain rdf:resource="#Direction"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#roll -->
+
+    <owl:DatatypeProperty rdf:about="#roll">
+        <rdfs:domain rdf:resource="#Direction"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#yaw -->
+
+    <owl:DatatypeProperty rdf:about="#yaw">
+        <rdfs:domain rdf:resource="#Direction"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#Direction -->
+
+    <owl:Class rdf:about="#Direction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#roll"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDirectionTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#pitch"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDirectionComment"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#yaw"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#GeneralComment -->
+
+    <owl:Class rdf:about="&genc;GeneralComment"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

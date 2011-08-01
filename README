@@ -1,0 +1,36 @@
+This project contains the source schema for the list (16) of some relevant Multimedia ontologies studied for 
+the paper "The Landscape of Multimedia Ontologies in the last Decade", submitted dor publication to 
+the journal "MULTIMEDIA TOOLS AND APPLICATIONS"
+
+We am sharing the schemas in github so others can easily see the ontologies for further study or for their any other uses, since it was founded through many researchs,
+and someetimes the original links are not available now.
+
+LIST OF THE ONTOLOGIES
+We divided the ontologies in four categories: Ontologies for describing Multimedia Objects, Shape & Image Ontologies, Visual Resource Ontologies and Music Ontologies
+1-Multimedia Ontologies
+ COMM
+ M3O
+ Media Resource Ontology
+ MPEG-7 Upper MDS
+ MPEG-7 Tsinakari
+ MPEG-7 Rhizomik
+ 
+2-Shape & Image Ontologies
+ DIG 35
+ MSO
+ SAPO
+ CSO
+ MIRO
+ 
+3-Visual Resource Ontologies
+ VRA Core 3
+ VDO
+ 
+4-Music Ontologies
+ Music Ontology
+ Kanzaki Music Ontology
+ Music Recommendation Ontology
+
+It is an experiment to see how well a service like github can work for collaboratively managing schemas.
+
+Thanks for your comments!!

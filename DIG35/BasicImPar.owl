@@ -1,0 +1,769 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rect "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rect="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for Basic Image Parameters metadata</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#colorInfo -->
+
+    <owl:ObjectProperty rdf:about="#colorInfo">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="#Colorspace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#componentDescription -->
+
+    <owl:ObjectProperty rdf:about="#componentDescription">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="#ComponentDescriptions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#compressionMethod -->
+
+    <owl:ObjectProperty rdf:about="#compressionMethod">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="#CompressionType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#fileFormat -->
+
+    <owl:ObjectProperty rdf:about="#fileFormat">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="#FormatTypes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#heightPresentation -->
+
+    <owl:ObjectProperty rdf:about="#heightPresentation">
+        <rdfs:domain rdf:resource="#PreferredPresentationSize"/>
+        <rdfs:subPropertyOf rdf:resource="&rect;doubleHeight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#imageID -->
+
+    <owl:ObjectProperty rdf:about="#imageID">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="#ImageID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#imageSize -->
+
+    <owl:ObjectProperty rdf:about="#imageSize">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="#ImageSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#preferredPresentationSize -->
+
+    <owl:ObjectProperty rdf:about="#preferredPresentationSize">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="#PreferredPresentationSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#profileName -->
+
+    <owl:ObjectProperty rdf:about="#profileName">
+        <rdfs:domain rdf:resource="#Colorspace"/>
+        <rdfs:range rdf:resource="#ProfileNames"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#widthPresentation -->
+
+    <owl:ObjectProperty rdf:about="#widthPresentation">
+        <rdfs:domain rdf:resource="#PreferredPresentationSize"/>
+        <rdfs:subPropertyOf rdf:resource="&rect;doubleWidth"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#doubleHeight -->
+
+    <owl:ObjectProperty rdf:about="&rect;doubleHeight"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#doubleWidth -->
+
+    <owl:ObjectProperty rdf:about="&rect;doubleWidth"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#componentSize -->
+
+    <owl:DatatypeProperty rdf:about="#componentSize">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#fileName -->
+
+    <owl:DatatypeProperty rdf:about="#fileName">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#formatVersion -->
+
+    <owl:DatatypeProperty rdf:about="#formatVersion">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#heightImage -->
+
+    <owl:DatatypeProperty rdf:about="#heightImage">
+        <rdfs:domain rdf:resource="#ImageSize"/>
+        <rdfs:subPropertyOf rdf:resource="&rect;integerHeight"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#idType -->
+
+    <owl:DatatypeProperty rdf:about="#idType">
+        <rdfs:domain rdf:resource="#ImageID"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#mime -->
+
+    <owl:DatatypeProperty rdf:about="#mime">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#numComponents -->
+
+    <owl:DatatypeProperty rdf:about="#numComponents">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#premultipliedColorComponents -->
+
+    <owl:DatatypeProperty rdf:about="#premultipliedColorComponents">
+        <rdfs:domain rdf:resource="#BasicImageInformation"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#profileReference -->
+
+    <owl:DatatypeProperty rdf:about="#profileReference">
+        <rdfs:domain rdf:resource="#Colorspace"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#uid -->
+
+    <owl:DatatypeProperty rdf:about="#uid">
+        <rdfs:domain rdf:resource="#ImageID"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#widthImage -->
+
+    <owl:DatatypeProperty rdf:about="#widthImage">
+        <rdfs:domain rdf:resource="#ImageSize"/>
+        <rdfs:subPropertyOf rdf:resource="&rect;integerWidth"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#integerHeight -->
+
+    <owl:DatatypeProperty rdf:about="&rect;integerHeight"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#integerWidth -->
+
+    <owl:DatatypeProperty rdf:about="&rect;integerWidth"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#BasicImageInformation -->
+
+    <owl:Class rdf:about="#BasicImageInformation">
+        <rdfs:label>Basic Image Information</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#fileFormat"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#fileName"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#premultipliedColorComponents"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#imageID"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#preferredPresentationSize"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#imageSize"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#formatVersion"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#colorInfo"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#componentDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#numComponents"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#compressionMethod"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#mime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The class containing basic image information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#Colorspace -->
+
+    <owl:Class rdf:about="#Colorspace">
+        <rdfs:label>Colorspace</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#profileName"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#profileReference"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>class of colorspaces defining the ICC profile either through a name or an URL</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#ComponentDescription -->
+
+    <owl:Class rdf:about="#ComponentDescription"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#ComponentDescriptions -->
+
+    <owl:Class rdf:about="#ComponentDescriptions">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#RGBA"/>
+                    <rdf:Description rdf:about="#RGB"/>
+                    <rdf:Description rdf:about="#CMYK"/>
+                    <rdf:Description rdf:about="#CMY"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#CompressionType -->
+
+    <owl:Class rdf:about="#CompressionType"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#CompressionTypes -->
+
+    <owl:Class rdf:about="#CompressionTypes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#JPEG2000"/>
+                    <rdf:Description rdf:about="#RLE"/>
+                    <rdf:Description rdf:about="#LZ77"/>
+                    <rdf:Description rdf:about="#JPEG"/>
+                    <rdf:Description rdf:about="#Uncompressed"/>
+                    <rdf:Description rdf:about="#LZW"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#FormatType -->
+
+    <owl:Class rdf:about="#FormatType"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#FormatTypes -->
+
+    <owl:Class rdf:about="#FormatTypes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#JFIF"/>
+                    <rdf:Description rdf:about="#Flashpix"/>
+                    <rdf:Description rdf:about="#PICT"/>
+                    <rdf:Description rdf:about="#TIFF"/>
+                    <rdf:Description rdf:about="#GIF"/>
+                    <rdf:Description rdf:about="#PNG"/>
+                    <rdf:Description rdf:about="#BMP"/>
+                    <rdf:Description rdf:about="#Exif"/>
+                    <rdf:Description rdf:about="#JP2"/>
+                    <rdf:Description rdf:about="#SPIFF"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#ImageID -->
+
+    <owl:Class rdf:about="#ImageID">
+        <rdfs:label>Unique image identifier</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#idType"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#uid"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>class of unique image identifiers</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#ImageSize -->
+
+    <owl:Class rdf:about="#ImageSize">
+        <rdfs:subClassOf rdf:resource="&rect;IntegerRectangularSize"/>
+        <rdfs:comment>image width and height</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#PreferredPresentationSize -->
+
+    <owl:Class rdf:about="#PreferredPresentationSize">
+        <rdfs:subClassOf rdf:resource="&rect;DoubleRectangularSize"/>
+        <rdfs:comment>Preferred presentation sizes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#ProfileName -->
+
+    <owl:Class rdf:about="#ProfileName"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#ProfileNames -->
+
+    <owl:Class rdf:about="#ProfileNames">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#sRGB"/>
+                    <rdf:Description rdf:about="#Grayscale"/>
+                    <rdf:Description rdf:about="#YCbCr"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#DoubleRectangularSize -->
+
+    <owl:Class rdf:about="&rect;DoubleRectangularSize"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#IntegerRectangularSize -->
+
+    <owl:Class rdf:about="&rect;IntegerRectangularSize"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#BMP -->
+
+    <owl:NamedIndividual rdf:about="#BMP">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>Bitmap format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#CMY -->
+
+    <owl:NamedIndividual rdf:about="#CMY">
+        <rdf:type rdf:resource="#ComponentDescription"/>
+        <rdfs:label>Cyan, Magenta, Yellow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#CMYK -->
+
+    <owl:NamedIndividual rdf:about="#CMYK">
+        <rdf:type rdf:resource="#ComponentDescription"/>
+        <rdfs:label>Cyan, Magenta, Yellow, Black</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#Exif -->
+
+    <owl:NamedIndividual rdf:about="#Exif">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>Exchangeable Image File Format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#Flashpix -->
+
+    <owl:NamedIndividual rdf:about="#Flashpix">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>Flashpix file format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#GIF -->
+
+    <owl:NamedIndividual rdf:about="#GIF">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>Graphics Interchange format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#Grayscale -->
+
+    <owl:NamedIndividual rdf:about="#Grayscale">
+        <rdf:type rdf:resource="#ProfileName"/>
+        <rdfs:label>Grayscale colorspace used</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#JFIF -->
+
+    <owl:NamedIndividual rdf:about="#JFIF">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>JPEG File Interchange format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#JP2 -->
+
+    <owl:NamedIndividual rdf:about="#JP2">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>JPEG 2000 file format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#JPEG -->
+
+    <owl:NamedIndividual rdf:about="#JPEG">
+        <rdf:type rdf:resource="#CompressionType"/>
+        <rdfs:label>JPEG compression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#JPEG2000 -->
+
+    <owl:NamedIndividual rdf:about="#JPEG2000">
+        <rdf:type rdf:resource="#CompressionType"/>
+        <rdfs:label>JPEG 2000 compression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#LZ77 -->
+
+    <owl:NamedIndividual rdf:about="#LZ77">
+        <rdf:type rdf:resource="#CompressionType"/>
+        <rdfs:label>LZ77 compression</rdfs:label>
+        <rdfs:comment>LZ77 compression and its variant used</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#LZW -->
+
+    <owl:NamedIndividual rdf:about="#LZW">
+        <rdf:type rdf:resource="#CompressionType"/>
+        <rdfs:label>LZW compression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#PICT -->
+
+    <owl:NamedIndividual rdf:about="#PICT">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>PICT file format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#PNG -->
+
+    <owl:NamedIndividual rdf:about="#PNG">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>Portable Network Graphic format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#RGB -->
+
+    <owl:NamedIndividual rdf:about="#RGB">
+        <rdf:type rdf:resource="#ComponentDescription"/>
+        <rdfs:label>Red, Green and Blue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#RGBA -->
+
+    <owl:NamedIndividual rdf:about="#RGBA">
+        <rdf:type rdf:resource="#ComponentDescription"/>
+        <rdfs:label>Red, Green, Blue and Alpha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#RLE -->
+
+    <owl:NamedIndividual rdf:about="#RLE">
+        <rdf:type rdf:resource="#CompressionType"/>
+        <rdfs:label>Run Length Encoding</rdfs:label>
+        <rdfs:comment>Run Length Encoding used</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#SPIFF -->
+
+    <owl:NamedIndividual rdf:about="#SPIFF">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>Still Picture Interchange File format</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#TIFF -->
+
+    <owl:NamedIndividual rdf:about="#TIFF">
+        <rdf:type rdf:resource="#FormatType"/>
+        <rdfs:label>Tag Image File Format and its variants</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#Uncompressed -->
+
+    <owl:NamedIndividual rdf:about="#Uncompressed">
+        <rdf:type rdf:resource="#CompressionType"/>
+        <rdfs:label>Uncompressed</rdfs:label>
+        <rdfs:comment>No compression used</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#YCbCr -->
+
+    <owl:NamedIndividual rdf:about="#YCbCr">
+        <rdf:type rdf:resource="#ProfileName"/>
+        <rdfs:label>YCbCr colorspace used</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#sRGB -->
+
+    <owl:NamedIndividual rdf:about="#sRGB">
+        <rdf:type rdf:resource="#ProfileName"/>
+        <rdfs:label>sRGB colorspace used</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

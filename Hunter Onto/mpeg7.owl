@@ -1,0 +1,1386 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xsd "http://www.w3.org/2000/10/XMLSchema#" >
+    <!ENTITY mpeg7 "http://metadata.net/mpeg7/mpeg7.owl#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://metadata.net/mpeg7/mpeg7.owl#"
+     xml:base="http://metadata.net/mpeg7/mpeg7.owl"
+     xmlns:mpeg7="http://metadata.net/mpeg7/mpeg7.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <rdfs:label>MPEG-7 Ontology</rdfs:label>
+        <owl:versionInfo>v 1.0 2006/11/06 12:56:51 slittle</owl:versionInfo>
+        <rdfs:comment>An OWL ontology for MPEG-7</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="&xsd;time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Coords -->
+
+    <owl:ObjectProperty rdf:about="#Coords">
+        <rdfs:domain rdf:resource="#RegionLocator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Depth -->
+
+    <owl:ObjectProperty rdf:about="#Depth">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#FigureTrajectory"/>
+                    <rdf:Description rdf:about="#ParameterTrajectory"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#InitialRegion -->
+
+    <owl:ObjectProperty rdf:about="#InitialRegion">
+        <rdfs:domain rdf:resource="#ParameterTrajectory"/>
+        <rdfs:range rdf:resource="#RegionLocator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Params -->
+
+    <owl:ObjectProperty rdf:about="#Params">
+        <rdfs:domain rdf:resource="#ParameterTrajectory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#abstract -->
+
+    <owl:ObjectProperty rdf:about="#abstract">
+        <rdfs:label>abstract</rdfs:label>
+        <rdfs:domain rdf:resource="#Creation"/>
+        <rdfs:range rdf:resource="#TextAnnotation"/>
+        <rdfs:subPropertyOf rdf:resource="#multimediaDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#address -->
+
+    <owl:ObjectProperty rdf:about="#address">
+        <rdfs:label>address</rdfs:label>
+        <rdfs:range rdf:resource="#Address"/>
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#affiliation -->
+
+    <owl:ObjectProperty rdf:about="#affiliation">
+        <rdfs:label>affiliation</rdfs:label>
+        <rdfs:range rdf:resource="#Affiliation"/>
+        <rdfs:domain rdf:resource="#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#color -->
+
+    <owl:ObjectProperty rdf:about="#color">
+        <rdfs:label>color</rdfs:label>
+        <rdfs:comment>Color descriptor - applicable to video segments, still regions and moving regions.</rdfs:comment>
+        <rdfs:range rdf:resource="#Color"/>
+        <rdfs:subPropertyOf rdf:resource="#visualDescriptor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MovingRegion"/>
+                    <rdf:Description rdf:about="#StillRegion"/>
+                    <rdf:Description rdf:about="#VideoSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#comprises -->
+
+    <owl:ObjectProperty rdf:about="#comprises">
+        <rdfs:range rdf:resource="#RegionLocator"/>
+        <rdfs:domain rdf:resource="#RegionLocator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#creationDate -->
+
+    <owl:ObjectProperty rdf:about="#creationDate">
+        <rdfs:label>creationDate</rdfs:label>
+        <rdfs:domain rdf:resource="#Creation"/>
+        <rdfs:range rdf:resource="#Time"/>
+        <rdfs:subPropertyOf rdf:resource="#multimediaDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#creationLocation -->
+
+    <owl:ObjectProperty rdf:about="#creationLocation">
+        <rdfs:label>creationLocation</rdfs:label>
+        <rdfs:domain rdf:resource="#Creation"/>
+        <rdfs:range rdf:resource="#Place"/>
+        <rdfs:subPropertyOf rdf:resource="#multimediaDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#creationTool -->
+
+    <owl:ObjectProperty rdf:about="#creationTool">
+        <rdfs:label>instrument</rdfs:label>
+        <rdfs:comment>Instrument used by creator to create multimedia content.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Creator"/>
+        <rdfs:range rdf:resource="#Instrument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#creator -->
+
+    <owl:ObjectProperty rdf:about="#creator">
+        <rdfs:label>creator</rdfs:label>
+        <rdfs:domain rdf:resource="#Creation"/>
+        <rdfs:range rdf:resource="#Creator"/>
+        <rdfs:subPropertyOf rdf:resource="#multimediaDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#decomposition -->
+
+    <owl:ObjectProperty rdf:about="#decomposition">
+        <rdfs:label>decomposition of a segment</rdfs:label>
+        <rdfs:domain rdf:resource="#MultimediaContent"/>
+        <rdfs:range rdf:resource="#Segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#familyName -->
+
+    <owl:ObjectProperty rdf:about="#familyName">
+        <rdfs:label>familyName</rdfs:label>
+        <rdfs:domain rdf:resource="#PersonName"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#givenName -->
+
+    <owl:ObjectProperty rdf:about="#givenName">
+        <rdfs:label>givenName</rdfs:label>
+        <rdfs:domain rdf:resource="#PersonName"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#hasCoordRef -->
+
+    <owl:ObjectProperty rdf:about="#hasCoordRef">
+        <rdfs:range rdf:resource="#CoordRef"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#RegionLocator"/>
+                    <rdf:Description rdf:about="#SpatialTemporalLocator"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#interpolationFunction -->
+
+    <owl:ObjectProperty rdf:about="#interpolationFunction">
+        <rdfs:range rdf:resource="#KeyValue"/>
+        <rdfs:domain rdf:resource="#TemporalInterpolation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#locator -->
+
+    <owl:ObjectProperty rdf:about="#locator">
+        <rdfs:range rdf:resource="#Locator"/>
+        <rdfs:subPropertyOf rdf:resource="#visualDescriptor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MovingRegion"/>
+                    <rdf:Description rdf:about="#StillRegion"/>
+                    <rdf:Description rdf:about="#VideoSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#mediaSource_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#mediaSource_decomposition">
+        <rdfs:label>media source decomposition of a segment</rdfs:label>
+        <rdfs:domain rdf:resource="#MultimediaContent"/>
+        <rdfs:range rdf:resource="#Segment"/>
+        <rdfs:subPropertyOf rdf:resource="#decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#mediaTime -->
+
+    <owl:ObjectProperty rdf:about="#mediaTime">
+        <rdfs:range rdf:resource="#MediaTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#FigureTrajectory"/>
+                    <rdf:Description rdf:about="#ParameterTrajectory"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#motion -->
+
+    <owl:ObjectProperty rdf:about="#motion">
+        <rdfs:range rdf:resource="#Motion"/>
+        <rdfs:subPropertyOf rdf:resource="#visualDescriptor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MovingRegion"/>
+                    <rdf:Description rdf:about="#VideoSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#multimediaDescriptor -->
+
+    <owl:ObjectProperty rdf:about="#multimediaDescriptor"/>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#name -->
+
+    <owl:ObjectProperty rdf:about="#name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#PersonName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ref -->
+
+    <owl:ObjectProperty rdf:about="#ref">
+        <rdfs:domain rdf:resource="#CoordRef"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#role -->
+
+    <owl:ObjectProperty rdf:about="#role">
+        <rdfs:label>role</rdfs:label>
+        <rdfs:domain rdf:resource="#Creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#shape -->
+
+    <owl:ObjectProperty rdf:about="#shape">
+        <rdfs:range rdf:resource="#Shape"/>
+        <rdfs:subPropertyOf rdf:resource="#visualDescriptor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MovingRegion"/>
+                    <rdf:Description rdf:about="#StillRegion"/>
+                    <rdf:Description rdf:about="#VideoSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#spatial_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#spatial_decomposition">
+        <rdfs:label>spatial decomposition of a segment</rdfs:label>
+        <rdfs:domain rdf:resource="#MultimediaContent"/>
+        <rdfs:range rdf:resource="#Segment"/>
+        <rdfs:subPropertyOf rdf:resource="#decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#spatio-temporal_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#spatio-temporal_decomposition">
+        <rdfs:label>spatio-temporal decomposition of a segment</rdfs:label>
+        <rdfs:domain rdf:resource="#MultimediaContent"/>
+        <rdfs:range rdf:resource="#Segment"/>
+        <rdfs:subPropertyOf rdf:resource="#decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#temporal_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#temporal_decomposition">
+        <rdfs:label>temporal decomposition of a segment</rdfs:label>
+        <rdfs:domain rdf:resource="#MultimediaContent"/>
+        <rdfs:range rdf:resource="#Segment"/>
+        <rdfs:subPropertyOf rdf:resource="#decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#texture -->
+
+    <owl:ObjectProperty rdf:about="#texture">
+        <rdfs:range rdf:resource="#Texture"/>
+        <rdfs:subPropertyOf rdf:resource="#visualDescriptor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MovingRegion"/>
+                    <rdf:Description rdf:about="#StillRegion"/>
+                    <rdf:Description rdf:about="#VideoSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#title -->
+
+    <owl:ObjectProperty rdf:about="#title">
+        <rdfs:label>title</rdfs:label>
+        <rdfs:domain rdf:resource="#Creation"/>
+        <rdfs:range rdf:resource="#Title"/>
+        <rdfs:subPropertyOf rdf:resource="#multimediaDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#vertex -->
+
+    <owl:ObjectProperty rdf:about="#vertex">
+        <rdfs:domain rdf:resource="#FigureTrajectory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#videoSegment_mediaSource_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#videoSegment_mediaSource_decomposition">
+        <rdfs:label>media source decomposition of a video segment</rdfs:label>
+        <rdfs:range rdf:resource="#VideoSegment"/>
+        <rdfs:domain rdf:resource="#VideoSegment"/>
+        <rdfs:subPropertyOf rdf:resource="#mediaSource_decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#videoSegment_spatial_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#videoSegment_spatial_decomposition">
+        <rdfs:label>spatial decomposition of a video segment</rdfs:label>
+        <rdfs:range rdf:resource="#MovingRegion"/>
+        <rdfs:domain rdf:resource="#VideoSegment"/>
+        <rdfs:subPropertyOf rdf:resource="#spatial_decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#videoSegment_spatio-temporal_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#videoSegment_spatio-temporal_decomposition">
+        <rdfs:label>spatio-temporal decomposition of a video segment</rdfs:label>
+        <rdfs:range rdf:resource="#MovingOrStillRegions"/>
+        <rdfs:domain rdf:resource="#VideoSegment"/>
+        <rdfs:subPropertyOf rdf:resource="#spatio-temporal_decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#videoSegment_temporal_decomposition -->
+
+    <owl:ObjectProperty rdf:about="#videoSegment_temporal_decomposition">
+        <rdfs:label>temporal decomposition of a video segment</rdfs:label>
+        <rdfs:domain rdf:resource="#VideoSegment"/>
+        <rdfs:range rdf:resource="#VideoSegmentsOrStillRegions"/>
+        <rdfs:subPropertyOf rdf:resource="#temporal_decomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#visualDescriptor -->
+
+    <owl:ObjectProperty rdf:about="#visualDescriptor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MediaDuration -->
+
+    <owl:DatatypeProperty rdf:about="#MediaDuration">
+        <rdfs:domain rdf:resource="#MediaTime"/>
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#StartTime -->
+
+    <owl:DatatypeProperty rdf:about="#StartTime">
+        <rdfs:domain rdf:resource="#MediaTime"/>
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#UnlocatedRegion -->
+
+    <owl:DatatypeProperty rdf:about="#UnlocatedRegion">
+        <rdfs:domain rdf:resource="#RegionLocator"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#elipseFlag -->
+
+    <owl:DatatypeProperty rdf:about="#elipseFlag">
+        <rdfs:domain rdf:resource="#ParameterTrajectory"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#figureTrajectoryType -->
+
+    <owl:DatatypeProperty rdf:about="#figureTrajectoryType">
+        <rdfs:domain rdf:resource="#FigureTrajectory"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:List>
+                        <rdf:first rdf:datatype="&xsd;string">elipse</rdf:first>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:datatype="&xsd;string">polygon</rdf:first>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:datatype="&xsd;string">rectangle</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#keyValue -->
+
+    <owl:DatatypeProperty rdf:about="#keyValue">
+        <rdfs:domain rdf:resource="#KeyValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#keyValueType -->
+
+    <owl:DatatypeProperty rdf:about="#keyValueType">
+        <rdfs:domain rdf:resource="#KeyValue"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:List>
+                        <rdf:first rdf:datatype="&xsd;string">firstOrder</rdf:first>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:datatype="&xsd;string">secondOrder</rdf:first>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:datatype="&xsd;string">startPoint</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#motionModel -->
+
+    <owl:DatatypeProperty rdf:about="#motionModel">
+        <rdfs:domain rdf:resource="#ParameterTrajectory"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:List>
+                        <rdf:first rdf:datatype="&xsd;string">affine</rdf:first>
+                        <rdf:rest>
+                            <rdf:List>
+                                <rdf:first rdf:datatype="&xsd;string">parabolic</rdf:first>
+                                <rdf:rest>
+                                    <rdf:List>
+                                        <rdf:first rdf:datatype="&xsd;string">perspective</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:List>
+                                                <rdf:first rdf:datatype="&xsd;string">rotationAndScaling</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:List>
+                                                        <rdf:first rdf:datatype="&xsd;string">still</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:List>
+                                                                <rdf:first rdf:datatype="&xsd;string">translation</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:List>
+                                                        </rdf:rest>
+                                                    </rdf:List>
+                                                </rdf:rest>
+                                            </rdf:List>
+                                        </rdf:rest>
+                                    </rdf:List>
+                                </rdf:rest>
+                            </rdf:List>
+                        </rdf:rest>
+                    </rdf:List>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#param -->
+
+    <owl:DatatypeProperty rdf:about="#param">
+        <rdfs:domain rdf:resource="#KeyValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#spatialref -->
+
+    <owl:DatatypeProperty rdf:about="#spatialref">
+        <rdfs:domain rdf:resource="#CoordRef"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Address -->
+
+    <owl:Class rdf:about="#Address">
+        <rdfs:label>Address</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Place"/>
+        <rdfs:comment>Address of person, organisation or person group.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Affiliation -->
+
+    <owl:Class rdf:about="#Affiliation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Organisation"/>
+                    <rdf:Description rdf:about="#PersonGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>An affiliation is either an Organisation or a PersonGroup</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Agent -->
+
+    <owl:Class rdf:about="#Agent">
+        <rdfs:label>Agent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment>Agent - person, organisation or group which performs an act.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Audio -->
+
+    <owl:Class rdf:about="#Audio">
+        <rdfs:label>Audio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultimediaContent"/>
+        <rdfs:comment>The class of audio resources</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#AudioSegment -->
+
+    <owl:Class rdf:about="#AudioSegment">
+        <rdfs:label>AudioSegment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Audio"/>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>Temporal intervals or segments of audio data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#AudioVisual -->
+
+    <owl:Class rdf:about="#AudioVisual">
+        <rdfs:label>AudioVisual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultimediaContent"/>
+        <rdfs:comment>The class of audiovisual resources</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#AudioVisualRegion -->
+
+    <owl:Class rdf:about="#AudioVisualRegion">
+        <rdfs:label>AudioVisualRegion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>Arbitrary spatio-temporal segments of AV data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#AudioVisualSegment -->
+
+    <owl:Class rdf:about="#AudioVisualSegment">
+        <rdfs:label>AudioVisualSegment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AudioVisual"/>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>Temporal intervals or segments of audiovisual data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Box -->
+
+    <owl:Class rdf:about="#Box">
+        <rdfs:label>Box</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RegionLocator"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#CameraMotion -->
+
+    <owl:Class rdf:about="#CameraMotion">
+        <rdfs:label>camera motion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Motion"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Color -->
+
+    <owl:Class rdf:about="#Color">
+        <rdfs:label>Color</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment>Color of a visual resource</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ColorLayout -->
+
+    <owl:Class rdf:about="#ColorLayout">
+        <rdfs:label>ColorLayout</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Color"/>
+        <rdfs:comment>Spatial distribution of colors.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ColorStructure -->
+
+    <owl:Class rdf:about="#ColorStructure">
+        <rdfs:label>ColorStructure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Color"/>
+        <rdfs:comment>Describes color content and the structure of this content.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ContourShape -->
+
+    <owl:Class rdf:about="#ContourShape">
+        <rdfs:label>contour shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Shape"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#CoordRef -->
+
+    <owl:Class rdf:about="#CoordRef">
+        <rdfs:label>Coordinate Reference</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Creation -->
+
+    <owl:Class rdf:about="#Creation">
+        <rdfs:label>Creation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultimediaContent"/>
+        <rdfs:comment>A multimedia content creation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Creator -->
+
+    <owl:Class rdf:about="#Creator">
+        <rdfs:label>Creator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Agent"/>
+        <rdfs:comment>Person, organisation or person group who created the content.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#DominantColor -->
+
+    <owl:Class rdf:about="#DominantColor">
+        <rdfs:label>DominantColor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Color"/>
+        <rdfs:comment>The set of dominant colors in an arbitrarily-shaped region.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#EdgeHistogram -->
+
+    <owl:Class rdf:about="#EdgeHistogram">
+        <rdfs:label>edge histogram</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Texture"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#EditedVideoSegment -->
+
+    <owl:Class rdf:about="#EditedVideoSegment">
+        <rdfs:label>EditedVideoSegment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#VideoSegment"/>
+        <rdfs:comment>Video segment that results from editing work</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#FigureTrajectory -->
+
+    <owl:Class rdf:about="#FigureTrajectory">
+        <rdfs:label>figure trajectory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialTemporalLocator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#vertex"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#GoFGoPColor -->
+
+    <owl:Class rdf:about="#GoFGoPColor">
+        <rdfs:label>GoFGoPColor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ScalableColor"/>
+        <rdfs:comment>Group of frames/pictures color descriptor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#HomogeneousTexture -->
+
+    <owl:Class rdf:about="#HomogeneousTexture">
+        <rdfs:label>homogeneous texture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Texture"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Image -->
+
+    <owl:Class rdf:about="#Image">
+        <rdfs:label>Image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultimediaContent"/>
+        <rdfs:comment>The class of images</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ImageText -->
+
+    <owl:Class rdf:about="#ImageText">
+        <rdfs:label>ImageText</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#StillRegion"/>
+        <rdfs:comment>Spatial regions of an image or video frame that correspond to text or captions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Instrument -->
+
+    <owl:Class rdf:about="#Instrument">
+        <rdfs:label xml:lang="en">Instrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment>Describes instrument or tool used to perform an action.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#KeyValue -->
+
+    <owl:Class rdf:about="#KeyValue">
+        <rdfs:label>key value</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Locator -->
+
+    <owl:Class rdf:about="#Locator">
+        <rdfs:label>locator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MediaTime -->
+
+    <owl:Class rdf:about="#MediaTime">
+        <rdfs:label>media time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialTemporalLocator"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Mosaic -->
+
+    <owl:Class rdf:about="#Mosaic">
+        <rdfs:label>Mosaic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#StillRegion"/>
+        <rdfs:comment>Mosaic or panaoramic view of a video segment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Motion -->
+
+    <owl:Class rdf:about="#Motion">
+        <rdfs:label>motion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MotionActivity -->
+
+    <owl:Class rdf:about="#MotionActivity">
+        <rdfs:label>motion activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Motion"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MotionTrajectory -->
+
+    <owl:Class rdf:about="#MotionTrajectory">
+        <rdfs:label>motion trajectory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Motion"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MovingOrStillRegions -->
+
+    <owl:Class rdf:about="#MovingOrStillRegions">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MovingRegion"/>
+                    <rdf:Description rdf:about="#StillRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MovingRegion -->
+
+    <owl:Class rdf:about="#MovingRegion">
+        <rdfs:label>MovingRegion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>2D spatio-temporal regions of video data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Multimedia -->
+
+    <owl:Class rdf:about="#Multimedia">
+        <rdfs:label>Multimedia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultimediaContent"/>
+        <rdfs:comment>The class of multimedia resources</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MultimediaContent -->
+
+    <owl:Class rdf:about="#MultimediaContent">
+        <rdfs:label>MultimediaContent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment>The class of multimedia data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#MultimediaSegment -->
+
+    <owl:Class rdf:about="#MultimediaSegment">
+        <rdfs:label>MultimediaSegment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Multimedia"/>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>Segment of a composite multimedia presentation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Organisation -->
+
+    <owl:Class rdf:about="#Organisation">
+        <rdfs:label>Organisation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Agent"/>
+        <rdfs:comment>Organisation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ParameterTrajectory -->
+
+    <owl:Class rdf:about="#ParameterTrajectory">
+        <rdfs:label>parameter trajectory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SpatialTemporalLocator"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ParametricMotion -->
+
+    <owl:Class rdf:about="#ParametricMotion">
+        <rdfs:label>parametric motion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Motion"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Person -->
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:label>Person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Agent"/>
+        <rdfs:comment>An individual person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#PersonGroup -->
+
+    <owl:Class rdf:about="#PersonGroup">
+        <rdfs:label>PersonGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Agent"/>
+        <rdfs:comment>A group of persons with a collective title.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#PersonName -->
+
+    <owl:Class rdf:about="#PersonName">
+        <rdfs:label>PersonName</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment>Name of an individual person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Place -->
+
+    <owl:Class rdf:about="#Place">
+        <rdfs:label>Place</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment>Describes real, fictional, historical locations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Polygon -->
+
+    <owl:Class rdf:about="#Polygon">
+        <rdfs:label>Polygon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RegionLocator"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#RegionLocator -->
+
+    <owl:Class rdf:about="#RegionLocator">
+        <rdfs:label>Region Locator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#RegionShape -->
+
+    <owl:Class rdf:about="#RegionShape">
+        <rdfs:label>region shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Shape"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#ScalableColor -->
+
+    <owl:Class rdf:about="#ScalableColor">
+        <rdfs:label>ScalableColor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Color"/>
+        <rdfs:comment>Color histogram in the HSV color space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Segment -->
+
+    <owl:Class rdf:about="#Segment">
+        <rdfs:label>Segment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultimediaContent"/>
+        <rdfs:comment>The class of fragments of multimedia content</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Shape -->
+
+    <owl:Class rdf:about="#Shape">
+        <rdfs:label>shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Shape3D -->
+
+    <owl:Class rdf:about="#Shape3D">
+        <rdfs:label>shape three dimensional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Shape"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#SpatialTemporalLocator -->
+
+    <owl:Class rdf:about="#SpatialTemporalLocator">
+        <rdfs:label>spatial temporal locator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#StillRegion -->
+
+    <owl:Class rdf:about="#StillRegion">
+        <rdfs:label>StillRegion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Image"/>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>2D spatial regions of an image or video frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#StillRegion3D -->
+
+    <owl:Class rdf:about="#StillRegion3D">
+        <rdfs:label>StillRegion3D</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Image"/>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>3D spatial regions of a 3D image</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#TemporalInterpolation -->
+
+    <owl:Class rdf:about="#TemporalInterpolation">
+        <rdfs:label>temporal interpolation</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#TextAnnotation -->
+
+    <owl:Class rdf:about="#TextAnnotation"/>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Texture -->
+
+    <owl:Class rdf:about="#Texture">
+        <rdfs:label>texture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#TextureBrowsing -->
+
+    <owl:Class rdf:about="#TextureBrowsing">
+        <rdfs:label>texture browsing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Texture"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Time -->
+
+    <owl:Class rdf:about="#Time">
+        <rdfs:label>Time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+        <rdfs:comment>Describes date/time points and durations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Title -->
+
+    <owl:Class rdf:about="#Title"/>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Video -->
+
+    <owl:Class rdf:about="#Video">
+        <rdfs:label>Video</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultimediaContent"/>
+        <rdfs:comment>The class of videos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#VideoSegment -->
+
+    <owl:Class rdf:about="#VideoSegment">
+        <rdfs:label>VideoSegment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:subClassOf rdf:resource="#Video"/>
+        <rdfs:comment>Temporal intervals or segments of video data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#VideoSegmentsOrStillRegions -->
+
+    <owl:Class rdf:about="#VideoSegmentsOrStillRegions">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#StillRegion"/>
+                    <rdf:Description rdf:about="#VideoSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#VideoText -->
+
+    <owl:Class rdf:about="#VideoText">
+        <rdfs:label>VideoText</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MovingRegion"/>
+        <rdfs:comment>Spatio-temporal regions of video data that correspond to text or captions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Literal -->
+
+    <owl:Class rdf:about="&rdfs;Literal"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="&rdfs;Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Datatype -->
+
+    <owl:Class rdf:about="&owl;Datatype"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    <owl:Datatype/>
+    <owl:Datatype/>
+    <owl:Datatype/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

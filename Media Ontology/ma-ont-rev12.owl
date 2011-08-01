@@ -1,0 +1,1379 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ma-ont "http://www.w3.org/ns/ma-ont#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/ns/ma-ont#"
+     xml:base="http://www.w3.org/ns/ma-ont"
+     xmlns:ma-ont="http://www.w3.org/ns/ma-ont#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">R12</owl:versionInfo>
+        <rdfs:comment>Created by Tobias and Jean Pierre with the RDFS Taskforce within the W3C Media Annotation Working Group</rdfs:comment>
+        <dc:date>2010-10-03</dc:date>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#actorIs -->
+
+    <owl:ObjectProperty rdf:about="#actorIs">
+        <rdfs:domain rdf:resource="#Actor"/>
+        <rdfs:range rdf:resource="#Person"/>
+        <rdfs:subPropertyOf rdf:resource="#contributorIs"/>
+        <owl:inverseOf rdf:resource="#isActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#audioCompression -->
+
+    <owl:ObjectProperty rdf:about="#audioCompression">
+        <rdfs:range rdf:resource="&skos;Concept"/>
+        <rdfs:domain rdf:resource="#AudioTrack"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#contributorIs -->
+
+    <owl:ObjectProperty rdf:about="#contributorIs">
+        <rdfs:range rdf:resource="#Agent"/>
+        <rdfs:domain rdf:resource="#Contributor"/>
+        <owl:inverseOf rdf:resource="#isContributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#copyrightHolderIs -->
+
+    <owl:ObjectProperty rdf:about="#copyrightHolderIs">
+        <rdfs:range rdf:resource="#Agent"/>
+        <rdfs:domain rdf:resource="#CopyrightHolder"/>
+        <rdfs:subPropertyOf rdf:resource="#contributorIs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#creatorIs -->
+
+    <owl:ObjectProperty rdf:about="#creatorIs">
+        <rdfs:range rdf:resource="#Agent"/>
+        <rdfs:domain rdf:resource="#Creator"/>
+        <rdfs:subPropertyOf rdf:resource="#contributorIs"/>
+        <owl:inverseOf rdf:resource="#isCreator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#depictsLocation -->
+
+    <owl:ObjectProperty rdf:about="#depictsLocation">
+        <rdfs:range rdf:resource="#Location"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <owl:inverseOf rdf:resource="#isDepictedLocationIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#features -->
+
+    <owl:ObjectProperty rdf:about="#features">
+        <rdfs:range rdf:resource="#Actor"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#hasContributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasContributedTo -->
+
+    <owl:ObjectProperty rdf:about="#hasContributedTo">
+        <rdfs:domain rdf:resource="#Contributor"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasContributor -->
+
+    <owl:ObjectProperty rdf:about="#hasContributor">
+        <rdfs:range rdf:resource="#Contributor"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasCreated -->
+
+    <owl:ObjectProperty rdf:about="#hasCreated">
+        <rdfs:domain rdf:resource="#Creator"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#hasContributedTo"/>
+        <owl:inverseOf rdf:resource="#hasCreator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasCreator -->
+
+    <owl:ObjectProperty rdf:about="#hasCreator">
+        <rdfs:range rdf:resource="#Creator"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#hasContributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasFragment -->
+
+    <owl:ObjectProperty rdf:about="#hasFragment">
+        <rdfs:range rdf:resource="#MediaFragment"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasMember -->
+
+    <owl:ObjectProperty rdf:about="#hasMember">
+        <rdfs:domain rdf:resource="#Collection"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+        <owl:inverseOf rdf:resource="#isMemberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasNamedFragment -->
+
+    <owl:ObjectProperty rdf:about="#hasNamedFragment">
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:range rdf:resource="#NamedFragment"/>
+        <rdfs:subPropertyOf rdf:resource="#hasFragment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasPlayedIn -->
+
+    <owl:ObjectProperty rdf:about="#hasPlayedIn">
+        <rdfs:domain rdf:resource="#Actor"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+        <owl:inverseOf rdf:resource="#features"/>
+        <rdfs:subPropertyOf rdf:resource="#hasContributedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasPublished -->
+
+    <owl:ObjectProperty rdf:about="#hasPublished">
+        <rdfs:range rdf:resource="#MediaResource"/>
+        <rdfs:domain rdf:resource="#Publisher"/>
+        <rdfs:subPropertyOf rdf:resource="#hasContributedTo"/>
+        <owl:inverseOf rdf:resource="#hasPublisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasPublisher -->
+
+    <owl:ObjectProperty rdf:about="#hasPublisher">
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:range rdf:resource="#Publisher"/>
+        <rdfs:subPropertyOf rdf:resource="#hasContributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasRelatedImage -->
+
+    <owl:ObjectProperty rdf:about="#hasRelatedImage">
+        <rdfs:range rdf:resource="#Image"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isActor -->
+
+    <owl:ObjectProperty rdf:about="#isActor">
+        <rdfs:range rdf:resource="#Actor"/>
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:subPropertyOf rdf:resource="#isContributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isContributor -->
+
+    <owl:ObjectProperty rdf:about="#isContributor">
+        <rdfs:domain rdf:resource="#Agent"/>
+        <rdfs:range rdf:resource="#Contributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isCreator -->
+
+    <owl:ObjectProperty rdf:about="#isCreator">
+        <rdfs:domain rdf:resource="#Agent"/>
+        <rdfs:range rdf:resource="#Creator"/>
+        <rdfs:subPropertyOf rdf:resource="#isContributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isDepictedLocationIn -->
+
+    <owl:ObjectProperty rdf:about="#isDepictedLocationIn">
+        <rdfs:domain rdf:resource="#Location"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isImageRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="#isImageRelatedTo">
+        <rdfs:domain rdf:resource="#Image"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isMadeOf -->
+
+    <owl:ObjectProperty rdf:about="#isMadeOf">
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AudioTrack"/>
+                    <rdf:Description rdf:about="#VideoTrack"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isMediaFragmentOf -->
+
+    <owl:ObjectProperty rdf:about="#isMediaFragmentOf">
+        <rdfs:domain rdf:resource="#MediaFragment"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="#isMemberOf">
+        <rdfs:range rdf:resource="#Collection"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isNamedFragmentOf -->
+
+    <owl:ObjectProperty rdf:about="#isNamedFragmentOf">
+        <rdfs:range rdf:resource="#MediaResource"/>
+        <rdfs:domain rdf:resource="#NamedFragment"/>
+        <rdfs:subPropertyOf rdf:resource="#isMediaFragmentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isPublisher -->
+
+    <owl:ObjectProperty rdf:about="#isPublisher">
+        <rdfs:domain rdf:resource="#Agent"/>
+        <rdfs:range rdf:resource="#Publisher"/>
+        <rdfs:subPropertyOf rdf:resource="#isContributor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isRatedBy -->
+
+    <owl:ObjectProperty rdf:about="#isRatedBy">
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:range rdf:resource="#RatingProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="#isRelatedTo">
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:range rdf:resource="#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#publisherIs -->
+
+    <owl:ObjectProperty rdf:about="#publisherIs">
+        <rdfs:range rdf:resource="#Agent"/>
+        <rdfs:domain rdf:resource="#Publisher"/>
+        <rdfs:subPropertyOf rdf:resource="#contributorIs"/>
+        <owl:inverseOf rdf:resource="#isPublisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#ratingProviderIs -->
+
+    <owl:ObjectProperty rdf:about="#ratingProviderIs">
+        <rdfs:range rdf:resource="#Agent"/>
+        <rdfs:domain rdf:resource="#RatingProvider"/>
+        <rdfs:subPropertyOf rdf:resource="#contributorIs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#targetAudienceAuthorityIs -->
+
+    <owl:ObjectProperty rdf:about="#targetAudienceAuthorityIs">
+        <rdfs:range rdf:resource="#Agent"/>
+        <rdfs:domain rdf:resource="#TargetAudienceAuthority"/>
+        <rdfs:subPropertyOf rdf:resource="#contributorIs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#videoCompression -->
+
+    <owl:ObjectProperty rdf:about="#videoCompression">
+        <rdfs:range rdf:resource="&skos;Concept"/>
+        <rdfs:domain rdf:resource="#VideoTrack"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#accessConditions -->
+
+    <owl:DatatypeProperty rdf:about="#accessConditions">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#policy"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#alternative -->
+
+    <owl:DatatypeProperty rdf:about="#alternative">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#title"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#averageBitrate -->
+
+    <owl:DatatypeProperty rdf:about="#averageBitrate">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MediaResource"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Image"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#collectionId -->
+
+    <owl:DatatypeProperty rdf:about="#collectionId">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#Collection"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#collectionName -->
+
+    <owl:DatatypeProperty rdf:about="#collectionName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#Collection"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#copyright -->
+
+    <owl:DatatypeProperty rdf:about="#copyright">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#createDate -->
+
+    <owl:DatatypeProperty rdf:about="#createDate">
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#description -->
+
+    <owl:DatatypeProperty rdf:about="#description">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#duration -->
+
+    <owl:DatatypeProperty rdf:about="#duration">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MediaResource"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Image"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#editDate -->
+
+    <owl:DatatypeProperty rdf:about="#editDate">
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#createDate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#format -->
+
+    <owl:DatatypeProperty rdf:about="#format">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#fragmentRole -->
+
+    <owl:DatatypeProperty rdf:about="#fragmentRole">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="#MediaFragment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#fragmentUri -->
+
+    <owl:DatatypeProperty rdf:about="#fragmentUri">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#MediaFragment"/>
+        <rdfs:subPropertyOf rdf:resource="#locator"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#frameHeight -->
+
+    <owl:DatatypeProperty rdf:about="#frameHeight">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MediaResource"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#AudioTrack"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#frameRate -->
+
+    <owl:DatatypeProperty rdf:about="#frameRate">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MediaResource"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#AudioTrack"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Image"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#frameWidth -->
+
+    <owl:DatatypeProperty rdf:about="#frameWidth">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MediaResource"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#AudioTrack"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#genre -->
+
+    <owl:DatatypeProperty rdf:about="#genre">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#identifier -->
+
+    <owl:DatatypeProperty rdf:about="#identifier">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#keyword -->
+
+    <owl:DatatypeProperty rdf:about="#keyword">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#language -->
+
+    <owl:DatatypeProperty rdf:about="#language">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#locationAltitude -->
+
+    <owl:DatatypeProperty rdf:about="#locationAltitude">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#locationCoordinateSystem -->
+
+    <owl:DatatypeProperty rdf:about="#locationCoordinateSystem">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#locationId -->
+
+    <owl:DatatypeProperty rdf:about="#locationId">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#locationLatitude -->
+
+    <owl:DatatypeProperty rdf:about="#locationLatitude">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#locationLongitude -->
+
+    <owl:DatatypeProperty rdf:about="#locationLongitude">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#locationName -->
+
+    <owl:DatatypeProperty rdf:about="#locationName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#locator -->
+
+    <owl:DatatypeProperty rdf:about="#locator">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#mainOriginal -->
+
+    <owl:DatatypeProperty rdf:about="#mainOriginal">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#title"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#namedFragmentLabel -->
+
+    <owl:DatatypeProperty rdf:about="#namedFragmentLabel">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#NamedFragment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#namedFragmentUri -->
+
+    <owl:DatatypeProperty rdf:about="#namedFragmentUri">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#NamedFragment"/>
+        <rdfs:subPropertyOf rdf:resource="#locator"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#numberOfAudioTracks -->
+
+    <owl:DatatypeProperty rdf:about="#numberOfAudioTracks">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#numberOfTracks"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#numberOfTracks -->
+
+    <owl:DatatypeProperty rdf:about="#numberOfTracks">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#numberOfVideoTracks -->
+
+    <owl:DatatypeProperty rdf:about="#numberOfVideoTracks">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#numberOfTracks"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#permissions -->
+
+    <owl:DatatypeProperty rdf:about="#permissions">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#policy"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#policy -->
+
+    <owl:DatatypeProperty rdf:about="#policy">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#policyUri -->
+
+    <owl:DatatypeProperty rdf:about="#policyUri">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#ratingScaleMax -->
+
+    <owl:DatatypeProperty rdf:about="#ratingScaleMax">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="#RatingProvider"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#ratingScaleMin -->
+
+    <owl:DatatypeProperty rdf:about="#ratingScaleMin">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="#RatingProvider"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="#ratingValue">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="#RatingProvider"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#recordDate -->
+
+    <owl:DatatypeProperty rdf:about="#recordDate">
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#createDate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#relation -->
+
+    <owl:DatatypeProperty rdf:about="#relation">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#releaseDate -->
+
+    <owl:DatatypeProperty rdf:about="#releaseDate">
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:subPropertyOf rdf:resource="#createDate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#role -->
+
+    <owl:DatatypeProperty rdf:about="#role">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="#Agent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#samplingRate -->
+
+    <owl:DatatypeProperty rdf:about="#samplingRate">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MediaResource"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Image"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#VideoTrack"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#size -->
+
+    <owl:DatatypeProperty rdf:about="#size">
+        <rdfs:range rdf:resource="&xsd;long"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#targetAudience -->
+
+    <owl:DatatypeProperty rdf:about="#targetAudience">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="#TargetAudienceAuthority"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#targetAudienceCountry -->
+
+    <owl:DatatypeProperty rdf:about="#targetAudienceCountry">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="#TargetAudienceAuthority"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#title -->
+
+    <owl:DatatypeProperty rdf:about="#title">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Actor -->
+
+    <owl:Class rdf:about="#Actor">
+        <rdfs:subClassOf rdf:resource="#Contributor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#actorIs"/>
+                <owl:someValuesFrom rdf:resource="#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Agent -->
+
+    <owl:Class rdf:about="#Agent"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#AudioTrack -->
+
+    <owl:Class rdf:about="#AudioTrack">
+        <rdfs:subClassOf rdf:resource="#MediaResource"/>
+        <owl:disjointWith rdf:resource="#Image"/>
+        <owl:disjointWith rdf:resource="#VideoTrack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Collection -->
+
+    <owl:Class rdf:about="#Collection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasMember"/>
+                <owl:someValuesFrom rdf:resource="#MediaResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Contributor -->
+
+    <owl:Class rdf:about="#Contributor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contributorIs"/>
+                <owl:someValuesFrom rdf:resource="#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#CopyrightHolder -->
+
+    <owl:Class rdf:about="#CopyrightHolder">
+        <rdfs:subClassOf rdf:resource="#Contributor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#copyrightHolderIs"/>
+                <owl:someValuesFrom rdf:resource="#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Creator -->
+
+    <owl:Class rdf:about="#Creator">
+        <rdfs:subClassOf rdf:resource="#Contributor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#creatorIs"/>
+                <owl:someValuesFrom rdf:resource="#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Image -->
+
+    <owl:Class rdf:about="#Image">
+        <rdfs:subClassOf rdf:resource="#MediaResource"/>
+        <owl:disjointWith rdf:resource="#VideoTrack"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Location -->
+
+    <owl:Class rdf:about="#Location"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#MediaFragment -->
+
+    <owl:Class rdf:about="#MediaFragment"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#MediaResource -->
+
+    <owl:Class rdf:about="#MediaResource"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#NamedFragment -->
+
+    <owl:Class rdf:about="#NamedFragment">
+        <rdfs:subClassOf rdf:resource="#MediaFragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Organisation -->
+
+    <owl:Class rdf:about="#Organisation">
+        <rdfs:subClassOf rdf:resource="#Agent"/>
+        <owl:disjointWith rdf:resource="#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Person -->
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Publisher -->
+
+    <owl:Class rdf:about="#Publisher">
+        <rdfs:subClassOf rdf:resource="#Contributor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#publisherIs"/>
+                <owl:someValuesFrom rdf:resource="#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#RatingProvider -->
+
+    <owl:Class rdf:about="#RatingProvider">
+        <rdfs:subClassOf rdf:resource="#Contributor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#TargetAudienceAuthority -->
+
+    <owl:Class rdf:about="#TargetAudienceAuthority">
+        <rdfs:subClassOf rdf:resource="#Contributor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#targetAudienceAuthorityIs"/>
+                <owl:someValuesFrom rdf:resource="#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#VideoTrack -->
+
+    <owl:Class rdf:about="#VideoTrack">
+        <rdfs:subClassOf rdf:resource="#MediaResource"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Actor_1 -->
+
+    <Actor rdf:about="#Actor_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Actor>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Actor_2 -->
+
+    <Actor rdf:about="#Actor_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Actor>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Actor_3 -->
+
+    <Actor rdf:about="#Actor_3">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Actor>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#AudioTrack_1 -->
+
+    <AudioTrack rdf:about="#AudioTrack_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </AudioTrack>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#AudioTrack_2 -->
+
+    <AudioTrack rdf:about="#AudioTrack_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </AudioTrack>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#AudioTrack_3 -->
+
+    <AudioTrack rdf:about="#AudioTrack_3">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </AudioTrack>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Collection_1 -->
+
+    <Collection rdf:about="#Collection_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Collection>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#CopyrightHolder_1 -->
+
+    <CopyrightHolder rdf:about="#CopyrightHolder_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </CopyrightHolder>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Creator_1 -->
+
+    <Creator rdf:about="#Creator_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Creator>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Creator_2 -->
+
+    <Creator rdf:about="#Creator_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Creator>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Creator_3 -->
+
+    <Creator rdf:about="#Creator_3">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Creator>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Image_1 -->
+
+    <Image rdf:about="#Image_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Image>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Location_1 -->
+
+    <Location rdf:about="#Location_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Location>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#MediaFragment_1 -->
+
+    <MediaFragment rdf:about="#MediaFragment_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </MediaFragment>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#MediaFragment_2 -->
+
+    <MediaFragment rdf:about="#MediaFragment_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </MediaFragment>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#MediaResource_1 -->
+
+    <MediaResource rdf:about="#MediaResource_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </MediaResource>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#MediaResource_2 -->
+
+    <MediaResource rdf:about="#MediaResource_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </MediaResource>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#NamedFragment_1 -->
+
+    <NamedFragment rdf:about="#NamedFragment_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </NamedFragment>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Organisation_1 -->
+
+    <Organisation rdf:about="#Organisation_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Organisation>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Organisation_2 -->
+
+    <Organisation rdf:about="#Organisation_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Organisation>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Organisation_3 -->
+
+    <Organisation rdf:about="#Organisation_3">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Organisation>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Person_1 -->
+
+    <Person rdf:about="#Person_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Person>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Person_2 -->
+
+    <Person rdf:about="#Person_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Person>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Person_3 -->
+
+    <Person rdf:about="#Person_3">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Person>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Publisher_1 -->
+
+    <Publisher rdf:about="#Publisher_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Publisher>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Publisher_2 -->
+
+    <Publisher rdf:about="#Publisher_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </Publisher>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#RatingProvider_1 -->
+
+    <RatingProvider rdf:about="#RatingProvider_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </RatingProvider>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#TargetAudienceAuthority_1 -->
+
+    <TargetAudienceAuthority rdf:about="#TargetAudienceAuthority_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </TargetAudienceAuthority>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#VideoTrack_1 -->
+
+    <VideoTrack rdf:about="#VideoTrack_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </VideoTrack>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#VideoTrack_2 -->
+
+    <VideoTrack rdf:about="#VideoTrack_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </VideoTrack>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ev "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Event.owl#" >
+    <!ENTITY aud "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Audio.owl#" >
+    <!ENTITY dat "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#" >
+    <!ENTITY loc "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#" >
+    <!ENTITY dict "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Dictionary.owl#" >
+    <!ENTITY lang "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#" >
+    <!ENTITY some "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/SomeProperty.owl#" >
+    <!ENTITY tang "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/TangibleThing.owl#" >
+    <!ENTITY genc "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#" >
+    <!ENTITY persdescr "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#" >
+    <!ENTITY orgdescr "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/OrganizationDescription.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl"
+     xmlns:dict="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Dictionary.owl#"
+     xmlns:ev="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Event.owl#"
+     xmlns:genc="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#"
+     xmlns:persdescr="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#"
+     xmlns:loc="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#"
+     xmlns:lang="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#"
+     xmlns:orgdescr="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/OrganizationDescription.owl#"
+     xmlns:dat="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tang="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/TangibleThing.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:aud="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Audio.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:some="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/SomeProperty.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing image content</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Audio.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Dictionary.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Event.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/OrganizationDescription.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/SomeProperty.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/TangibleThing.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentAudio -->
+
+    <owl:ObjectProperty rdf:about="#contentAudio">
+        <rdfs:range rdf:resource="&aud;Audio"/>
+        <rdfs:domain rdf:resource="#Content"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentCaption -->
+
+    <owl:ObjectProperty rdf:about="#contentCaption">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentCaptureTime -->
+
+    <owl:ObjectProperty rdf:about="#contentCaptureTime">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&dat;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentComment -->
+
+    <owl:ObjectProperty rdf:about="#contentComment">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&genc;GeneralComment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentDictionary -->
+
+    <owl:ObjectProperty rdf:about="#contentDictionary">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&dict;Dictionary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentEventDescription -->
+
+    <owl:ObjectProperty rdf:about="#contentEventDescription">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&ev;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentGroupCaption -->
+
+    <owl:ObjectProperty rdf:about="#contentGroupCaption">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentLocation -->
+
+    <owl:ObjectProperty rdf:about="#contentLocation">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&loc;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentOrganizationDescription -->
+
+    <owl:ObjectProperty rdf:about="#contentOrganizationDescription">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&orgdescr;OrganizationDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentPersonDescription -->
+
+    <owl:ObjectProperty rdf:about="#contentPersonDescription">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&persdescr;PersonDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentSomeProperty -->
+
+    <owl:ObjectProperty rdf:about="#contentSomeProperty">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&some;SomeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#contentThingDescription -->
+
+    <owl:ObjectProperty rdf:about="#contentThingDescription">
+        <rdfs:domain rdf:resource="#Content"/>
+        <rdfs:range rdf:resource="&tang;TangibleThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Audio.owl#Audio -->
+
+    <owl:Class rdf:about="&aud;Audio"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#Content -->
+
+    <owl:Class rdf:about="#Content">
+        <rdfs:label>Content description</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contentLocation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contentCaptureTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contentGroupCaption"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contentCaption"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contentComment"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#DateTime -->
+
+    <owl:Class rdf:about="&dat;DateTime"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Dictionary.owl#Dictionary -->
+
+    <owl:Class rdf:about="&dict;Dictionary"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Event.owl#Event -->
+
+    <owl:Class rdf:about="&ev;Event"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#GeneralComment -->
+
+    <owl:Class rdf:about="&genc;GeneralComment"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#LangString -->
+
+    <owl:Class rdf:about="&lang;LangString"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#Location -->
+
+    <owl:Class rdf:about="&loc;Location"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/OrganizationDescription.owl#OrganizationDescription -->
+
+    <owl:Class rdf:about="&orgdescr;OrganizationDescription"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#PersonDescription -->
+
+    <owl:Class rdf:about="&persdescr;PersonDescription"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/SomeProperty.owl#SomeProperty -->
+
+    <owl:Class rdf:about="&some;SomeProperty"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/TangibleThing.owl#TangibleThing -->
+
+    <owl:Class rdf:about="&tang;TangibleThing"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

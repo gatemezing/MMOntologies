@@ -1,0 +1,2641 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ico "http://www.aimatshape.net/ontologies/infoCommonOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#"
+     xml:base="http://www.aimatshape.net/ontologies/shapeCommonOntology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ico="http://www.aimatshape.net/ontologies/infoCommonOntology.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="file:/C:/infoOntology_v1.0.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasContactPerson -->
+
+    <owl:ObjectProperty rdf:about="#hasContactPerson">
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ico;InstitutionInfo"/>
+                    <rdf:Description rdf:about="&ico;PersonInfo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasCreator -->
+
+    <owl:ObjectProperty rdf:about="#hasCreator">
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ico;InstitutionInfo"/>
+                    <rdf:Description rdf:about="&ico;PersonInfo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFileInfo -->
+
+    <owl:ObjectProperty rdf:about="#hasFileInfo">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#FileInfo"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMaximumResolutionMesh -->
+
+    <owl:ObjectProperty rdf:about="#hasMaximumResolutionMesh">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Type: link (pointing either to a surface mesh or to a volume mesh)   
+
+Meaning: 
+link to the original mesh from which this multiresolution mesh  has been built through simplification.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ManifoldSurfaceMesh"/>
+                    <rdf:Description rdf:about="#ManifoldVolumeMesh"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="#hasMember">
+        <rdfs:range rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:domain rdf:resource="#SubGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMultiResolutionModel -->
+
+    <owl:ObjectProperty rdf:about="#hasMultiResolutionModel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="#MultiResolutionModel"/>
+        <owl:inverseOf rdf:resource="#hasMaximumResolutionMesh"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ManifoldSurfaceMesh"/>
+                    <rdf:Description rdf:about="#ManifoldVolumeMesh"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNextHierarchicalLevel -->
+
+    <owl:TransitiveProperty rdf:about="#hasNextHierarchicalLevel">
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">If the structural descriptor is hierarchical, a structural descriptor is associated to each level
+of the hierarchy. This property identifies the next level of the hierarchy.</rdfs:comment>
+        <rdfs:domain rdf:resource="#StructuralDescriptor"/>
+        <rdfs:range rdf:resource="#StructuralDescriptor"/>
+        <owl:inverseOf rdf:resource="#hasPreviousHierarchicalLevel"/>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="#hasOwner">
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ico;InstitutionInfo"/>
+                    <rdf:Description rdf:about="&ico;PersonInfo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPreviousHierarchicalLevel -->
+
+    <owl:ObjectProperty rdf:about="#hasPreviousHierarchicalLevel">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#StructuralDescriptor"/>
+        <rdfs:domain rdf:resource="#StructuralDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasRepresentativeShape -->
+
+    <owl:ObjectProperty rdf:about="#hasRepresentativeShape">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ShapeGroup"/>
+        <rdfs:range rdf:resource="#ShapeRepresentationAndDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasStructuralDescriptor -->
+
+    <owl:ObjectProperty rdf:about="#hasStructuralDescriptor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="#StructuralDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasSubGroup -->
+
+    <owl:ObjectProperty rdf:about="#hasSubGroup">
+        <rdfs:domain rdf:resource="#ShapeGroup"/>
+        <rdfs:range rdf:resource="#SubGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasUploadPerson -->
+
+    <owl:ObjectProperty rdf:about="#hasUploadPerson">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ico;InstitutionInfo"/>
+                    <rdf:Description rdf:about="&ico;PersonInfo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isOriginatedBy -->
+
+    <owl:ObjectProperty rdf:about="#isOriginatedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="#ShapeRepresentationAndDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAccuracyOfConnectionBetweenFaces -->
+
+    <owl:FunctionalProperty rdf:about="#hasAccuracyOfConnectionBetweenFaces">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAcquisitionDate -->
+
+    <owl:FunctionalProperty rdf:about="#hasAcquisitionDate">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The date in which it has been acquired</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAcquisitionFrequency -->
+
+    <owl:FunctionalProperty rdf:about="#hasAcquisitionFrequency">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#DynamicMRI"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAcquisitionMatrix -->
+
+    <owl:FunctionalProperty rdf:about="#hasAcquisitionMatrix">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">It defines the size of the Matrix  n by m.
+It is in the form [n by m]</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Matrix of n rows x m columns of Float
+note: must be better defined, it will be added in the future</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAcquisitionTime -->
+
+    <owl:FunctionalProperty rdf:about="#hasAcquisitionTime">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The time of acquisition</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAnimationFormat -->
+
+    <owl:FunctionalProperty rdf:about="#hasAnimationFormat">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;MPG-4 BAP | MPG-4 FAP | WRL | WRK | TRK |
+Vertex-based | MAX | MB | BVH | LWS | 3DS | BIP | 3D | C3D | Other&gt;</rdfs:comment>
+        <rdfs:domain rdf:resource="#Animation3D"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasApproximationTolerance -->
+
+    <owl:FunctionalProperty rdf:about="#hasApproximationTolerance">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This should be constrained to be 0 if &quot;Generated from Parametric Description&quot; is different from &quot;yes approximate&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="#ImplicitRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAttributeDescription -->
+
+    <owl:FunctionalProperty rdf:about="#hasAttributeDescription">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Explanation of the attributes meaning</rdfs:comment>
+        <rdfs:domain rdf:resource="#StructuralDescriptor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasAvailabilityLevel -->
+
+    <owl:FunctionalProperty rdf:about="#hasAvailabilityLevel">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Allowed values: project-only, everyone</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasBitStored -->
+
+    <owl:FunctionalProperty rdf:about="#hasBitStored">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasBoundingBox -->
+
+    <owl:FunctionalProperty rdf:about="#hasBoundingBox">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImplicitCurve"/>
+                    <rdf:Description rdf:about="#ImplicitSurface"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasBoundingBoxDiagonal -->
+
+    <owl:FunctionalProperty rdf:about="#hasBoundingBoxDiagonal">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#GeometricalRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasCodec -->
+
+    <owl:DatatypeProperty rdf:about="#hasCodec">
+        <rdfs:comment rdf:datatype="&xsd;string">Uncompressed | Indeo | Microsoft Video | mpeg | mpeg 4 | DivX | Cinepak | other</rdfs:comment>
+        <rdfs:domain rdf:resource="#Movie"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasContentType -->
+
+    <owl:DatatypeProperty rdf:about="#hasContentType">
+        <rdfs:comment rdf:datatype="&xsd;string">AIR TRANSPORT | ANATOMY | ANIMAL | ARCHITECTURE | CHARACTER | | CULTURAL HERITAGE | ELECTRONIC | GEOGRAPHY | GROUND TRANSPORT | | INDUSTRIAL DESIGN | MECHANICAL DESIGN | MILITARY | MUSICAL | SPACE | SPORTS &amp; HOBBIES | WATER TRANSPORT # This field is not [required]. If a model does not belong to any of the classes available, the field should be left blank. In future versions the choice of one (or several) of these classes might be the base for a further set of &quot;second-level&quot; metadata (i.e. for ARCHITECTURal shapes it might be useful to know the historical period in which they have been created, the style, etc.). This property should not be present here however. Such a description should be made in the appropriate metadata structure of each domain ontology!</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasContinuity -->
+
+    <owl:FunctionalProperty rdf:about="#hasContinuity">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">ParametricCurve: G1 | G2 | superior [required]
+ParametricSurface: G-1 | G0 | G1 | G2 | superior [required]
+ImplicitCurve: G-1 | G0 | G1 | G2 | superior [required]
+ImplicitSurface: G-1 | G0 | G1 | G2 | superior [required]</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImplicitCurve"/>
+                    <rdf:Description rdf:about="#ImplicitSurface"/>
+                    <rdf:Description rdf:about="#ParametricCurve"/>
+                    <rdf:Description rdf:about="#ParametricSurface"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasCopyright -->
+
+    <owl:FunctionalProperty rdf:about="#hasCopyright">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasCreationDate -->
+
+    <owl:FunctionalProperty rdf:about="#hasCreationDate">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasCreationMethod -->
+
+    <owl:FunctionalProperty rdf:about="#hasCreationMethod">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#StructuralDescriptor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasCurvilinearEdges -->
+
+    <owl:FunctionalProperty rdf:about="#hasCurvilinearEdges">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDegree -->
+
+    <owl:FunctionalProperty rdf:about="#hasDegree">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImplicitRepresentation"/>
+                    <rdf:Description rdf:about="#ParametricRepresentation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDescription -->
+
+    <owl:FunctionalProperty rdf:about="#hasDescription">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ShapeGroup"/>
+                    <rdf:Description rdf:about="#ShapeRepresentationAndDescription"/>
+                    <rdf:Description rdf:about="#SubGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDigitalImages -->
+
+    <owl:FunctionalProperty rdf:about="#hasDigitalImages">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">raw | focus-corrected | mixed | other</rdfs:comment>
+        <rdfs:domain rdf:resource="#PointSet"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDimension -->
+
+    <owl:FunctionalProperty rdf:about="#hasDimension">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">maximum dimension of the cells</rdfs:comment>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDimensionT -->
+
+    <owl:DatatypeProperty rdf:about="#hasDimensionT">
+        <rdfs:comment rdf:datatype="&xsd;string">Dimension Time. It indicates the number of frames of a movie</rdfs:comment>
+        <rdfs:domain rdf:resource="#Movie"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDimensionX -->
+
+    <owl:FunctionalProperty rdf:about="#hasDimensionX">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#RasterData"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDimensionY -->
+
+    <owl:FunctionalProperty rdf:about="#hasDimensionY">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#RasterData2D"/>
+                    <rdf:Description rdf:about="#RasterData3D"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDimensionZ -->
+
+    <owl:FunctionalProperty rdf:about="#hasDimensionZ">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasDuration -->
+
+    <owl:FunctionalProperty rdf:about="#hasDuration">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">number of seconds</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Animation3D"/>
+                    <rdf:Description rdf:about="#Movie"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasEchoTime -->
+
+    <owl:FunctionalProperty rdf:about="#hasEchoTime">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Echo time expressed in milliseconds (ms)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFileFormat -->
+
+    <owl:FunctionalProperty rdf:about="#hasFileFormat">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">SurfaceMesh: OFF | PLY | VRML | OBJ | Other [required]
+VolumeMesh: ASCII | TRI | Other [required]
+BRep: IGES | STEP | IRIT | SAT | Other [required]
+ParametricRepresentation: IGES | STEP | IRIT | Other [required]
+PointCloud: MENSI Scanner ASCII | Leica Scanner | Other [required]
+Image2D: Bitmap | TIFF | GIF | JPEG | EPS | BMP | PNG | SVG | Other [required]
+Image3D: DICOM | Other
+Movie: MPEG | AVI | Quicktime | Windows Media | Real | Other [required]
+Animation3D: ZIP | GZIP | TAR | TGZ | Other [required]</rdfs:comment>
+        <rdfs:domain rdf:resource="#FileInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFileName -->
+
+    <owl:FunctionalProperty rdf:about="#hasFileName">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">[required] # Example &#39;MOD01_imati.wrl&#39;, &#39;rab_simpl.off&#39;</rdfs:comment>
+        <rdfs:domain rdf:resource="#FileInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFileSize -->
+
+    <owl:FunctionalProperty rdf:about="#hasFileSize">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#FileInfo"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFileURL -->
+
+    <owl:DatatypeProperty rdf:about="#hasFileURL">
+        <rdfs:domain rdf:resource="#FileInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFiltering -->
+
+    <owl:FunctionalProperty rdf:about="#hasFiltering">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">kind of treatment that has had the mocap data.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MotionCapture"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFlipAngle -->
+
+    <owl:FunctionalProperty rdf:about="#hasFlipAngle">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Flip angle expressed in degrees</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasFrameRate -->
+
+    <owl:FunctionalProperty rdf:about="#hasFrameRate">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Frames per second</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Animation3D"/>
+                    <rdf:Description rdf:about="#Movie"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasGalleryImageURL -->
+
+    <owl:DatatypeProperty rdf:about="#hasGalleryImageURL">
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasGenus -->
+
+    <owl:FunctionalProperty rdf:about="#hasGenus">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BRep"/>
+                    <rdf:Description rdf:about="#ImplicitRepresentation"/>
+                    <rdf:Description rdf:about="#ManifoldSurfaceMesh"/>
+                    <rdf:Description rdf:about="#ParametricSurface"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasGeoReference -->
+
+    <owl:FunctionalProperty rdf:about="#hasGeoReference">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">gps-coordinates | other</rdfs:comment>
+        <rdfs:domain rdf:resource="#PointSet"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasGeometryFormat -->
+
+    <owl:FunctionalProperty rdf:about="#hasGeometryFormat">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">VRML | X3D | OBJ | OFF | PLY | Other [required]</rdfs:comment>
+        <rdfs:domain rdf:resource="#Animation3D"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasGranularity -->
+
+    <owl:FunctionalProperty rdf:about="#hasGranularity">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Granularity   
+Type: integer   
+Meaning: 
+a measure of granularity of elementary moves for resolution   increase and decrease that this multiresolution mesh is able to support,   it is the same as the number of tiles (triangles if surface mesh,   tetrahedra if volume mesh) involved in a single simplification operation   during the construction of this multiresolution mesh.  
+
+More precisely, a simplification operation removes a (bigger) set of   triangles T1 and replaces it with another (smaller) set of triangles,   the granularity is the cardinality of set T1.   A smaller granularity means that the multiresolution mesh is able to   extract a wider variety of meshes at different resolutions.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasImageOrientation -->
+
+    <owl:FunctionalProperty rdf:about="#hasImageOrientation">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">ImageOrientation is a double 3D vector x1,y1,z1 and x2,y2,z2 (in mm). It give the orientation of the image with respect to the global coordinate system
+
+It should be in the form [x1,y1,z1] ; [x2,y2,z2]</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasImagePosition -->
+
+    <owl:FunctionalProperty rdf:about="#hasImagePosition">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">(x,y,z in mm - image origin) 
+A 3D vector  in the form [x,y,z]</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasImplicitBasis -->
+
+    <owl:FunctionalProperty rdf:about="#hasImplicitBasis">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">barycentric | power basis | other [required]</rdfs:comment>
+        <rdfs:domain rdf:resource="#ImplicitRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasInterpolatorType -->
+
+    <owl:FunctionalProperty rdf:about="#hasInterpolatorType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">translation | rotation | scaling | morphing | other</rdfs:comment>
+        <rdfs:domain rdf:resource="#KeyFrame"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasKeyword -->
+
+    <owl:DatatypeProperty rdf:about="#hasKeyword">
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasLastModifiedDate -->
+
+    <owl:FunctionalProperty rdf:about="#hasLastModifiedDate">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"># This should be updated when metadata entries are modified by an authorized user</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasLevelNumber -->
+
+    <owl:FunctionalProperty rdf:about="#hasLevelNumber">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#SubGroup"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasLicense -->
+
+    <owl:FunctionalProperty rdf:about="#hasLicense">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This might be turned into &quot;License*&quot; in future versions. Currently, this field does not influence the accessibility of the data, while it is meant to provide information about how and in which cases the data may be used.</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMRIAcquisitionType -->
+
+    <owl:FunctionalProperty rdf:about="#hasMRIAcquisitionType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Possible values: | 2D | 3D | 
+
+- 2D: the 3D volume is made of a stack of 2D acquisitions.
+- 3D: the 3D volume is made of one 3D volume acquisition.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMRIModality -->
+
+    <owl:FunctionalProperty rdf:about="#hasMRIModality">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">| CT | NM | MR | DS | DR | US | OT |</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMagneticFieldStrength -->
+
+    <owl:FunctionalProperty rdf:about="#hasMagneticFieldStrength">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Magnetic Field Strength expressed in Tesla</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMaterial -->
+
+    <owl:FunctionalProperty rdf:about="#hasMaterial">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">If a material (or more) is associated to the shape, it can be specified here (e.g. for simulation or rendering purposes). This field is not required.</rdfs:comment>
+        <rdfs:domain rdf:resource="#GeometricalRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMaxContinuityAcrossFaces -->
+
+    <owl:FunctionalProperty rdf:about="#hasMaxContinuityAcrossFaces">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">G0| G1 | G2 | superior</rdfs:comment>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMaxDegreePolynomial -->
+
+    <owl:FunctionalProperty rdf:about="#hasMaxDegreePolynomial">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">integer | unknown</rdfs:comment>
+        <rdfs:domain rdf:resource="#ParametricSurface"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMaximumDimension -->
+
+    <owl:FunctionalProperty rdf:about="#hasMaximumDimension">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This is the maximum dimension of the atomic elements forming the structural descriptor.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiDimensionalStructuralDescriptor"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMeasureType -->
+
+    <owl:FunctionalProperty rdf:about="#hasMeasureType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Black&amp;White | Greyscale | Indexed | RGB | Height (Depth - Distance - Range - Elevation) | XYZ</rdfs:comment>
+        <rdfs:domain rdf:resource="#RasterData"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMeshType -->
+
+    <owl:FunctionalProperty rdf:about="#hasMeshType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">indicates if the MT is made for Surface meshes or for volume meshes.
+Type: string in {surface, volume} (alternative: integer in {2, 3})  Meaning: the type of mesh that is represented by this multiresolution mesh, i.e., the type of mesh from which this multiresolution mesh  has been built through simplification</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasMinContinuityOfTheFaces -->
+
+    <owl:FunctionalProperty rdf:about="#hasMinContinuityOfTheFaces">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">G-1 | G0 | G1 | G2 | superior [required]</rdfs:comment>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasModelURL -->
+
+    <owl:FunctionalProperty rdf:about="#hasModelURL">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasName -->
+
+    <owl:FunctionalProperty rdf:about="#hasName">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">[required] # Example &quot;Rabbit&quot;</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ShapeGroup"/>
+                    <rdf:Description rdf:about="#ShapeRepresentationAndDescription"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNormals -->
+
+    <owl:FunctionalProperty rdf:about="#hasNormals">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ManifoldSurfaceMesh"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOf1ConnectedComponents -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOf1ConnectedComponents">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;positive integer&gt; #a 1-connected component is any maximal submesh composed only of triangles which can be navigated by paths involving only triangles and edges shared by two triangles</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOf2Cycles -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOf2Cycles">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;positive integer&gt; #the 2-cycles in a mesh are maximal components of the mesh bounding voids</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfAcquisitionPlane -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfAcquisitionPlane">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">It indicates the number of acquisition planes chosen for the session</rdfs:comment>
+        <rdfs:domain rdf:resource="#DynamicMRI"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfArcs -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfArcs">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Number of arcs of the graph</rdfs:comment>
+        <rdfs:domain rdf:resource="#CentreLineGraph"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfBoundaries -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfBoundaries">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ManifoldSurfaceMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfCells -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfCells">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ManifoldVolumeMesh"/>
+                    <rdf:Description rdf:about="#NonManifoldMesh"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfConnectedComponents -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfConnectedComponents">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Number of connected components forming the structural descriptor.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BRep"/>
+                    <rdf:Description rdf:about="#Mesh"/>
+                    <rdf:Description rdf:about="#StructuralDescriptor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfConnectedSimplexesOfDim1 -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfConnectedSimplexesOfDim1">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;positive integer&gt; #The number of connected components, which are not 1-connnected and are composed of simplexes of dimension 1</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfConnectedSimplexesOfDim2 -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfConnectedSimplexesOfDim2">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;positive integer&gt; #The number of connected components, which are not 1-connnected and are composed of simplexes of dimension 2</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfControlPoints -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfControlPoints">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ParametricRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfEdges -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfEdges">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#Mesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfFaces -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfFaces">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BRep"/>
+                    <rdf:Description rdf:about="#Mesh"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfIsolatedVertices -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfIsolatedVertices">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ManifoldSurfaceMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfKeyFrames -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfKeyFrames">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">number of the important key frames of key frame animation</rdfs:comment>
+        <rdfs:domain rdf:resource="#KeyFrame"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfNonManifoldEdges -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfNonManifoldEdges">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A non-manifold edge is any edge shared by three or more triangles.A non-manifold edge is any edge shared by three or more triangles.</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfNonManifoldVertices -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfNonManifoldVertices">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;positive integer&gt; #A non-manifold vertex is a vertex such that its star consists of several connected components.</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfPoints -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfPoints">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#PointSet"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfScans -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfScans">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#PointSet"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfSingularities -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfSingularities">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;positive integer&gt; [required]</rdfs:comment>
+        <rdfs:domain rdf:resource="#ImplicitSurface"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfTemporalPositions -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfTemporalPositions">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"># semantically equal to the number of frames</rdfs:comment>
+        <rdfs:domain rdf:resource="#DynamicMRI"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfTilesAtMaxRes -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfTilesAtMaxRes">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Number of tiles at maximum resolution   
+Type: integer   
+Meaning: 
+number of tiles (triangles if surface mesh, tetrahedra if volume   mesh) in the mesh at maximum resolution that can be extracted from this   multiresolution mesh, it is the same as the number of tiles of the   original mesh from which this multiresolution mesh has been built through   simplification.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfTilesAtMinRes -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfTilesAtMinRes">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Number of tiles at minimum resolution   
+Type: integer   
+Meaning: 
+number of tiles (triangles if surface mesh, tetrahedra if volume   mesh) in the mesh at minimum resolution that can be extracted from this multiresolution mesh, it is the same as the number of tiles of the final   mesh in the simplification process performed for building this multiresolution mesh.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfTrimmedFaces -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumberOfTrimmedFaces">
+        <rdfs:comment rdf:datatype="&xsd;string">with trimmed face we refer only to trimmed parametric surface, if the B-Rep has parametric surfaces as faces.</rdfs:comment>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfVertices -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfVertices">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#Mesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfVerticesAtMaxRes -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfVerticesAtMaxRes">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Number of vertices at maximum resolution   
+Type: integer   
+Meaning: 
+number of vertices in the mesh at maximum resolution that can   be extracted from this multiresolution mesh, it is the same as the number   of vertices of the original mesh from which this multiresolution mesh   has been built through simplification.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfVerticesAtMinRes -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfVerticesAtMinRes">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Number of vertices at minimum resolution   
+Type: integer   
+Meaning: 
+number of vertices in the mesh at minimum resolution that can  be extracted from this multiresolution mesh, it is the same as the number   of vertices of the final mesh in the simplification process performed   for building this multiresolution mesh.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberOfWireEdges -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberOfWireEdges">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;positive integer&gt; #dangling edges not bounding any triangle.</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasNumberofNodes -->
+
+    <owl:FunctionalProperty rdf:about="#hasNumberofNodes">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Number of nodes of the graph.</rdfs:comment>
+        <rdfs:domain rdf:resource="#CentreLineGraph"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasOnlyAnalyticalSurfaces -->
+
+    <owl:FunctionalProperty rdf:about="#hasOnlyAnalyticalSurfaces">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">analytical surfaces include planes, spheres, cylinders</rdfs:comment>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasOrigin -->
+
+    <owl:FunctionalProperty rdf:about="#hasOrigin">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasParametricDescriptionURL -->
+
+    <owl:FunctionalProperty rdf:about="#hasParametricDescriptionURL">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ImplicitRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPatientAge -->
+
+    <owl:FunctionalProperty rdf:about="#hasPatientAge">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">xxxD or W or M or Y</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPatientSex -->
+
+    <owl:FunctionalProperty rdf:about="#hasPatientSex">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">M | F | O</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPatientWeight -->
+
+    <owl:FunctionalProperty rdf:about="#hasPatientWeight">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Weight in Kilos</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPixelSpacing -->
+
+    <owl:FunctionalProperty rdf:about="#hasPixelSpacing">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">pixel spacing in millimeters (mm)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPointInfo -->
+
+    <owl:DatatypeProperty rdf:about="#hasPointInfo">
+        <rdfs:comment rdf:datatype="&xsd;string">normal | local disc | higher order local model | Color | Confidence Value</rdfs:comment>
+        <rdfs:domain rdf:resource="#PointSet"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPolynomialModelType -->
+
+    <owl:FunctionalProperty rdf:about="#hasPolynomialModelType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Bezier | B-Spline | NURBS |Algebraic</rdfs:comment>
+        <rdfs:domain rdf:resource="#ParametricRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasPurpose -->
+
+    <owl:FunctionalProperty rdf:about="#hasPurpose">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Applies currently only for Animation3D, Mesh, CADRepresentation</rdfs:comment>
+        <rdfs:domain rdf:resource="#FileInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasQuality -->
+
+    <owl:FunctionalProperty rdf:about="#hasQuality">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Allowed values: 1 (lowest) - 5 (highest)</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasReceivingCoil -->
+
+    <owl:FunctionalProperty rdf:about="#hasReceivingCoil">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">| surface | body |</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasRelatedResource -->
+
+    <owl:DatatypeProperty rdf:about="#hasRelatedResource">
+        <rdfs:comment rdf:datatype="&xsd;string">Free text indicating publications which refer to this shape model, tools which use it, other shape models related to this one, and so on. In future versions this field might be modified to point to specific entries within the Digital Library, The Tool Rep. and the Shape Rep.</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasRepetitionTime -->
+
+    <owl:FunctionalProperty rdf:about="#hasRepetitionTime">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The repetition time in milliseconds (ms)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasScaleOfOriginal -->
+
+    <owl:FunctionalProperty rdf:about="#hasScaleOfOriginal">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Correspondence between units in the digital shape model and units in the original shape. Example: if the extent of the digital shape in the x direction ranges from 10 to 100 and &#39;Scale of Original&#39; = 5.0, then the corresponding extent of the original shape is (100-10)*5.0 = 450. If the original shape, as described in the field &#39;Origin Description&#39;, is a real object, then its extent is assumed to be measured in meters.</rdfs:comment>
+        <rdfs:domain rdf:resource="#GeometricalRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasSimplificationOperator -->
+
+    <owl:FunctionalProperty rdf:about="#hasSimplificationOperator">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Type: string in {edge collapse, vertex removal, triangle collapse,  vertex-pair collapse, ...}   
+Meaning: 
+the operator used to simplify the original mesh from   which this multiresolution mesh has been built</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasSliceThickness -->
+
+    <owl:FunctionalProperty rdf:about="#hasSliceThickness">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">slice tickness in millimeters (mm)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DynamicMRI"/>
+                    <rdf:Description rdf:about="#MRI"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasSound -->
+
+    <owl:FunctionalProperty rdf:about="#hasSound">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#Movie"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasStatus -->
+
+    <owl:FunctionalProperty rdf:about="#hasStatus">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">approved | not approved | under review [automatic]</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasStreaming -->
+
+    <owl:FunctionalProperty rdf:about="#hasStreaming">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#Movie"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasStructureType -->
+
+    <owl:FunctionalProperty rdf:about="#hasStructureType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">GraphLike | H-Anim | MultiDimensional | Other (we should list here any specialization of the structural class)</rdfs:comment>
+        <rdfs:domain rdf:resource="#Animation3D"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasSynthesisDescription -->
+
+    <owl:FunctionalProperty rdf:about="#hasSynthesisDescription">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the process of creation of the shape. This should include all the tasks performed to generate the model starting from the original shape given in &quot;Origin Description&quot; such as, for example, the scanning process and registration (if model acquired from physical world), the polygonization algorithm employed (if synthetic shape), simplification, remeshing, and so on.</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasTextureFormat -->
+
+    <owl:FunctionalProperty rdf:about="#hasTextureFormat">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Bitmap | TIFF | GIF | JPEG | EPS | TGA | Other</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BRep"/>
+                    <rdf:Description rdf:about="#ManifoldSurfaceMesh"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasTextures -->
+
+    <owl:FunctionalProperty rdf:about="#hasTextures">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BRep"/>
+                    <rdf:Description rdf:about="#ManifoldSurfaceMesh"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasThickness -->
+
+    <owl:FunctionalProperty rdf:about="#hasThickness">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">this should deprecated (we have actually hasDimensionT and hasDimensionZ in the specific subclasses)</rdfs:comment>
+        <rdfs:domain rdf:resource="#RasterData3D"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasThumbnailImageURL -->
+
+    <owl:FunctionalProperty rdf:about="#hasThumbnailImageURL">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasTopologicalDescription -->
+
+    <owl:FunctionalProperty rdf:about="#hasTopologicalDescription">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;uri&gt; #a file providing description of the different topological meaningful parts in which a non-manifold mesh can be segmented by the application of TopMesh. The mesh is partitioned into the following class of components (1) Graphs of wire-edges: a graph of wire-edges is any maximal connected component of the mesh consisting only of wire-edges, (2) Maximal 1-connected submeshes of triangles homeomomorphic to 2-manifold with boundaries obtained by splitting the mesh at non-manifold edges also called sheets, (3) 2-cycles also called shells</rdfs:comment>
+        <rdfs:domain rdf:resource="#NonManifoldMesh"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasType -->
+
+    <owl:FunctionalProperty rdf:about="#hasType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">ManifoldSurfaceMesh: triangular | quadrangular | polygonal | composite [required]
+ManifoldVolumeMesh: tetrahedral | hexahedral | other [required]
+BRep: polygonal | analytical | parametric | implicit | mixed [required]
+PointSet: Aggregated | Multiple Scans | Individual [required]
+Implicit: Polynomial | Bezier | BSpline
+Parametric: Polynomial | Rational | Bezier | BSpline | NURBS
+StructuralDescriptor: Medial Axis | Animation Skeleton | Reeb Graph | Shock Graph | Bisector | Contour Tree | other</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BRep"/>
+                    <rdf:Description rdf:about="#ImplicitRepresentation"/>
+                    <rdf:Description rdf:about="#Mesh"/>
+                    <rdf:Description rdf:about="#ParametricRepresentation"/>
+                    <rdf:Description rdf:about="#PointSet"/>
+                    <rdf:Description rdf:about="#StructuralDescriptor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasTypeOfParametricDomain -->
+
+    <owl:FunctionalProperty rdf:about="#hasTypeOfParametricDomain">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Tensor-based | Triangular</rdfs:comment>
+        <rdfs:domain rdf:resource="#ParametricRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasUncompressedFileSize -->
+
+    <owl:FunctionalProperty rdf:about="#hasUncompressedFileSize">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"># Optional, the size of the video file in bytes if saved as uncompressed video</rdfs:comment>
+        <rdfs:domain rdf:resource="#Movie"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#hasUploadDate -->
+
+    <owl:FunctionalProperty rdf:about="#hasUploadDate">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"># This should be updated also when metadata entries are modified by an authorized user</rdfs:comment>
+        <rdfs:domain rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isAcyclic -->
+
+    <owl:FunctionalProperty rdf:about="#isAcyclic">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if there exists no paths from a node to itself. False otherwise.</rdfs:comment>
+        <rdfs:domain rdf:resource="#CentreLineGraph"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isAttributed -->
+
+    <owl:FunctionalProperty rdf:about="#isAttributed">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if attributes can be associated to either nodes and edges of the descriptor. False otherwise.</rdfs:comment>
+        <rdfs:domain rdf:resource="#StructuralDescriptor"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isClosed -->
+
+    <owl:FunctionalProperty rdf:about="#isClosed">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImplicitCurve"/>
+                    <rdf:Description rdf:about="#ImplicitSurface"/>
+                    <rdf:Description rdf:about="#ParametricRepresentation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isConformal -->
+
+    <owl:FunctionalProperty rdf:about="#isConformal">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ManifoldSurfaceMesh"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isDirected -->
+
+    <owl:FunctionalProperty rdf:about="#isDirected">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This property is true if to each edge is given a unique direction.</rdfs:comment>
+        <rdfs:domain rdf:resource="#CentreLineGraph"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isGeneratedFromParametricDescription -->
+
+    <owl:DatatypeProperty rdf:about="#isGeneratedFromParametricDescription">
+        <rdfs:comment rdf:datatype="&xsd;string">yes exact | yes approximate | no</rdfs:comment>
+        <rdfs:domain rdf:resource="#ImplicitRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isOrientable -->
+
+    <owl:FunctionalProperty rdf:about="#isOrientable">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ManifoldSurfaceMesh"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isOriented -->
+
+    <owl:FunctionalProperty rdf:about="#isOriented">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ManifoldSurfaceMesh"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isPlanar -->
+
+    <owl:FunctionalProperty rdf:about="#isPlanar">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImplicitCurve"/>
+                    <rdf:Description rdf:about="#ParametricCurve"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isRawData -->
+
+    <owl:FunctionalProperty rdf:about="#isRawData">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The mocap data has not been modified from the original</rdfs:comment>
+        <rdfs:domain rdf:resource="#MotionCapture"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isRegular -->
+
+    <owl:FunctionalProperty rdf:about="#isRegular">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ManifoldSurfaceMesh"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isSelfIntersecting -->
+
+    <owl:FunctionalProperty rdf:about="#isSelfIntersecting">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BRep"/>
+                    <rdf:Description rdf:about="#ImplicitRepresentation"/>
+                    <rdf:Description rdf:about="#ManifoldSurfaceMesh"/>
+                    <rdf:Description rdf:about="#ParametricRepresentation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isSimplyConnected -->
+
+    <owl:FunctionalProperty rdf:about="#isSimplyConnected">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This property is true if all the atomic elements of the multi-dimensional structural descriptor are simply connected.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiDimensionalStructuralDescriptor"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isTopologicalComplex -->
+
+    <owl:FunctionalProperty rdf:about="#isTopologicalComplex">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">It has a property that the intersection of two faces is a subface</rdfs:comment>
+        <rdfs:domain rdf:resource="#BRep"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#isTrimmed -->
+
+    <owl:FunctionalProperty rdf:about="#isTrimmed">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#ParametricSurface"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#maintainsTopology -->
+
+    <owl:FunctionalProperty rdf:about="#maintainsTopology">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Simplification maintains topology   
+Type: boolean   
+Meaning: 
+whether the topology of the original mesh (manifold condition,   number of connected components, etc.) was maintained during the   siplification process that has built this multiresolution mesh, or not;   if yes, then all mesh representation extracted by this multiresolution   mesh have the same topology as the original mesh; otherwise, this is   not guaranteed.   
+
+
+Note: 
+some simplification operators intrinsically maintain topology,   while others do not; so this information in some cases may be deduced   from the simplification operator.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#usesSimplificationTool -->
+
+    <owl:FunctionalProperty rdf:about="#usesSimplificationTool">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Link to the tool (if it exists) in the tool repository which has been used for the simplification</rdfs:comment>
+        <rdfs:domain rdf:resource="#MultiResolutionModel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/infoCommonOntology.owl#InstitutionInfo -->
+
+    <owl:Class rdf:about="&ico;InstitutionInfo"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/infoCommonOntology.owl#PersonInfo -->
+
+    <owl:Class rdf:about="&ico;PersonInfo"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#Animation3D -->
+
+    <owl:Class rdf:about="#Animation3D">
+        <rdfs:subClassOf rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDuration"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStructureType"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGeometryFormat"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnimationFormat"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#BRep"/>
+        <owl:disjointWith rdf:resource="#GeometricalRepresentation"/>
+        <owl:disjointWith rdf:resource="#RasterData"/>
+        <owl:disjointWith rdf:resource="#StructuralDescriptor"/>
+        <rdfs:comment rdf:datatype="&xsd;string">MPG-4 BAP | MPG-4 FAP | WRL | WRK | TRK | Vertex-based | MAX | MB | BVH | LWS | 3DS | BIP | 3D | C3D | Other</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#BRep -->
+
+    <owl:Class rdf:about="#BRep">
+        <rdfs:subClassOf rdf:resource="#ShapeRepresentationAndDescription"/>
+        <owl:disjointWith rdf:resource="#RasterData"/>
+        <owl:disjointWith rdf:resource="#StructuralDescriptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#CentreLineGraph -->
+
+    <owl:Class rdf:about="#CentreLineGraph">
+        <rdfs:subClassOf rdf:resource="#StructuralDescriptor"/>
+        <owl:disjointWith rdf:resource="#MultiDimensionalStructuralDescriptor"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A structural descriptor that can be represented as a graph G = (V, E) where V is the set of nodes of G, and E (subset of VxV, may be empty) is the set of arcs of G. Each node has a specific geometric meaning.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ContourSet -->
+
+    <owl:Class rdf:about="#ContourSet">
+        <rdfs:subClassOf rdf:resource="#GeometricalRepresentation"/>
+        <owl:disjointWith rdf:resource="#ImplicitRepresentation"/>
+        <owl:disjointWith rdf:resource="#Mesh"/>
+        <owl:disjointWith rdf:resource="#ParametricRepresentation"/>
+        <owl:disjointWith rdf:resource="#PointSet"/>
+        <rdfs:comment rdf:datatype="&xsd;string">It includes also higher dimensional level sets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#DynamicMRI -->
+
+    <owl:Class rdf:about="#DynamicMRI">
+        <rdfs:subClassOf rdf:resource="#RasterData4D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#FileInfo -->
+
+    <owl:Class rdf:about="#FileInfo">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFileName"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFileFormat"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ShapeGroup"/>
+        <owl:disjointWith rdf:resource="#ShapeRepresentationAndDescription"/>
+        <owl:disjointWith rdf:resource="#SubGroup"/>
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;string, geometry | animation | texture | skinning data&gt;. List of pairs expressing what is in the archive. Each pair represents a file name (&lt;string&gt;) and a file type (geometry | animation | texture | skinning data)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#GeometricalRepresentation -->
+
+    <owl:Class rdf:about="#GeometricalRepresentation">
+        <rdfs:subClassOf rdf:resource="#ShapeRepresentationAndDescription"/>
+        <owl:disjointWith rdf:resource="#RasterData"/>
+        <owl:disjointWith rdf:resource="#StructuralDescriptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ImplicitCurve -->
+
+    <owl:Class rdf:about="#ImplicitCurve">
+        <rdfs:subClassOf rdf:resource="#ImplicitRepresentation"/>
+        <owl:disjointWith rdf:resource="#ImplicitSurface"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An implicit curve is defined as the intersection of two implicit surfaces. In the case where one of the two surfaces is a plane, then the curve is a 2D one.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ImplicitRepresentation -->
+
+    <owl:Class rdf:about="#ImplicitRepresentation">
+        <rdfs:subClassOf rdf:resource="#GeometricalRepresentation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasImplicitBasis"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDegree"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasApproximationTolerance"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Mesh"/>
+        <owl:disjointWith rdf:resource="#ParametricRepresentation"/>
+        <owl:disjointWith rdf:resource="#PointSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ImplicitSurface -->
+
+    <owl:Class rdf:about="#ImplicitSurface">
+        <rdfs:subClassOf rdf:resource="#ImplicitRepresentation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An implicit surface is defined by a multivariate polynomial in 3 variables.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#KeyFrame -->
+
+    <owl:Class rdf:about="#KeyFrame">
+        <rdfs:subClassOf rdf:resource="#Animation3D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInterpolatorType"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#MotionCapture"/>
+        <rdfs:comment rdf:datatype="&xsd;string">For animations where important key frmes are defined and the computer calculates whith a kind of interpolatior the frames in between.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#MRI -->
+
+    <owl:Class rdf:about="#MRI">
+        <rdfs:subClassOf rdf:resource="#RasterData3D"/>
+        <owl:disjointWith rdf:resource="#Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ManifoldSurfaceBRep -->
+
+    <owl:Class rdf:about="#ManifoldSurfaceBRep">
+        <rdfs:subClassOf rdf:resource="#BRep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ManifoldVolumeBRep"/>
+        <owl:disjointWith rdf:resource="#NonManifoldBRep"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ManifoldSurfaceMesh -->
+
+    <owl:Class rdf:about="#ManifoldSurfaceMesh">
+        <rdfs:subClassOf rdf:resource="#Mesh"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfBoundaries"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfIsolatedVertices"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfEdges"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGenus"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfVertices"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfFaces"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasType"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfConnectedComponents"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ManifoldVolumeMesh"/>
+        <owl:disjointWith rdf:resource="#NonManifoldMesh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ManifoldVolumeBRep -->
+
+    <owl:Class rdf:about="#ManifoldVolumeBRep">
+        <rdfs:subClassOf rdf:resource="#BRep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;int">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#NonManifoldBRep"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ManifoldVolumeMesh -->
+
+    <owl:Class rdf:about="#ManifoldVolumeMesh">
+        <rdfs:subClassOf rdf:resource="#Mesh"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasType"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfConnectedComponents"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfEdges"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfFaces"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfCells"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfVertices"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#NonManifoldMesh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#Mesh -->
+
+    <owl:Class rdf:about="#Mesh">
+        <rdfs:subClassOf rdf:resource="#GeometricalRepresentation"/>
+        <owl:disjointWith rdf:resource="#ParametricRepresentation"/>
+        <owl:disjointWith rdf:resource="#PointSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#MotionCapture -->
+
+    <owl:Class rdf:about="#MotionCapture">
+        <rdfs:subClassOf rdf:resource="#Animation3D"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Animation frm recorded movements with a mition capture system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#Movie -->
+
+    <owl:Class rdf:about="#Movie">
+        <rdfs:subClassOf rdf:resource="#RasterData3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#MultiDimensionalStructuralDescriptor -->
+
+    <owl:Class rdf:about="#MultiDimensionalStructuralDescriptor">
+        <rdfs:subClassOf rdf:resource="#StructuralDescriptor"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A Multidimensional structural descriptor is based on atomic elements whose dimension is higher then one. For example it may include also surfaces, and volumes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#MultiResolutionModel -->
+
+    <owl:Class rdf:about="#MultiResolutionModel">
+        <rdfs:subClassOf rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Note: each property has its own comment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#NonManifoldBRep -->
+
+    <owl:Class rdf:about="#NonManifoldBRep">
+        <rdfs:subClassOf rdf:resource="#BRep"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#NonManifoldMesh -->
+
+    <owl:Class rdf:about="#NonManifoldMesh">
+        <rdfs:subClassOf rdf:resource="#Mesh"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ParametricCurve -->
+
+    <owl:Class rdf:about="#ParametricCurve">
+        <rdfs:subClassOf rdf:resource="#ParametricRepresentation"/>
+        <owl:disjointWith rdf:resource="#ParametricSurface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ParametricRepresentation -->
+
+    <owl:Class rdf:about="#ParametricRepresentation">
+        <rdfs:subClassOf rdf:resource="#GeometricalRepresentation"/>
+        <owl:disjointWith rdf:resource="#PointSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ParametricSurface -->
+
+    <owl:Class rdf:about="#ParametricSurface">
+        <rdfs:subClassOf rdf:resource="#ParametricRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#PointSet -->
+
+    <owl:Class rdf:about="#PointSet">
+        <rdfs:subClassOf rdf:resource="#GeometricalRepresentation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfPoints"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasType"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDigitalImages"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGeoReference"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfScans"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#RasterData -->
+
+    <owl:Class rdf:about="#RasterData">
+        <rdfs:subClassOf rdf:resource="#ShapeRepresentationAndDescription"/>
+        <owl:disjointWith rdf:resource="#StructuralDescriptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#RasterData2D -->
+
+    <owl:Class rdf:about="#RasterData2D">
+        <rdfs:subClassOf rdf:resource="#RasterData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasMeasureType"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimensionY"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimensionX"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#RasterData3D"/>
+        <owl:disjointWith rdf:resource="#RasterData4D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#RasterData3D -->
+
+    <owl:Class rdf:about="#RasterData3D">
+        <rdfs:subClassOf rdf:resource="#RasterData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimensionY"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasMeasureType"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimensionX"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#RasterData4D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#RasterData4D -->
+
+    <owl:Class rdf:about="#RasterData4D">
+        <rdfs:subClassOf rdf:resource="#RasterData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ShapeGroup -->
+
+    <owl:Class rdf:about="#ShapeGroup">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRepresentativeShape"/>
+                <owl:someValuesFrom rdf:resource="#ShapeRepresentationAndDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ShapeRepresentationAndDescription"/>
+        <owl:disjointWith rdf:resource="#SubGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ShapeRepresentationAndDescription -->
+
+    <owl:Class rdf:about="#ShapeRepresentationAndDescription">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStatus"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFileInfo"/>
+                <owl:someValuesFrom rdf:resource="#FileInfo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasName"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#SubGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#StructuralDescriptor -->
+
+    <owl:Class rdf:about="#StructuralDescriptor">
+        <rdfs:subClassOf rdf:resource="#ShapeRepresentationAndDescription"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A structural descriptor is a decomposition of a shape into their relevant sub-parts, together with the adjacency realtionships among the parts.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#SubGroup -->
+
+    <owl:Class rdf:about="#SubGroup"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

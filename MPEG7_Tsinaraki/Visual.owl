@@ -1,0 +1,617 @@
+<!-- 
+	OWL ontology for the part of the MPEG-7 Visual needed for the representation of the MPEG-7 MDS as defined in ISO/IEC 15938-5, March 2003
+	Created by Chrisa Tsinaraki, TUC/MUSIC
+-->
+<!DOCTYPE rdf:RDF [
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY datatypes "datatypes#">
+	<!ENTITY BaseURL "http://127.0.0.1:8080/ontologies/MPEG703/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY MDS "MDS#">
+	<!ENTITY Visual "Visual#">
+]>
+<rdf:RDF xmlns="&BaseURL;&Visual;" xmlns:Visual="&BaseURL;&Visual;" xml:base="&BaseURL;&Visual;" xmlns:owl="&owl;" xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;" xmlns:xsd="&xsd;" xmlns:MDS="&BaseURL;&MDS;" xmlns:datatypes="&BaseURL;&datatypes;">
+	<owl:Ontology rdf:about="">
+		<rdfs:label>Ontology for the part of the MPEG-7 Visual needed in the MDS</rdfs:label>
+		<owl:imports rdf:resource="&BaseURL;&MDS;"/>
+		<rdfs:comment>
+			OWL ontology for the part of the MPEG-7 Visual needed for the representation of the MPEG-7 MDS
+		</rdfs:comment>
+	</owl:Ontology>
+	<!-- Definition of MPEG-7 datatypes -->
+	<rdfs:Datatype rdf:about="&datatypes;descriptorMaskType">
+		<rdfs:isDefinedBy rdf:resource="&datatypes;"/>
+		<rdfs:label>descriptorMaskType</rdfs:label>
+	</rdfs:Datatype>
+	<rdfs:Datatype rdf:about="&datatypes;unsigned8">
+		<rdfs:isDefinedBy rdf:resource="&datatypes;"/>
+		<rdfs:label>unsigned8</rdfs:label>
+	</rdfs:Datatype>
+	<rdfs:Datatype rdf:about="&datatypes;mediaDurationType">
+		<rdfs:isDefinedBy rdf:resource="&datatypes;"/>
+		<rdfs:label>mediaDurationType</rdfs:label>
+	</rdfs:Datatype>
+	<rdfs:Datatype rdf:about="&datatypes;mediaTimePointType">
+		<rdfs:isDefinedBy rdf:resource="&datatypes;"/>
+		<rdfs:label>mediaTimePointType</rdfs:label>
+	</rdfs:Datatype>
+	<!-- Definition of xsd datatypes -->
+	<rdfs:Datatype rdf:about="&xsd;IDREF">
+		<rdfs:isDefinedBy rdf:resource="&xsd;"/>
+		<rdfs:label>IDREF</rdfs:label>
+	</rdfs:Datatype>
+	<!-- Definition of RegionLocator Datatype from Visual -->
+	<owl:Class rdf:ID="RegionLocatorType"/>
+	<owl:ObjectProperty rdf:ID="CoordRef">
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#RegionLocatorType"/>
+					<owl:Class rdf:about="#SpatioTemporalLocatorType"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range rdf:resource="#CoordRefType"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="CoordRefType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#ref"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:DatatypeProperty rdf:ID="ref">
+		<rdfs:domain rdf:resource="#CoordRefType"/>
+		<rdfs:range rdf:resource="&xsd;IDREF"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:ID="spatialRef">
+		<rdfs:domain rdf:resource="#CoordRefType"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty rdf:ID="Box">
+		<rdfs:domain rdf:resource="#RegionLocatorType"/>
+		<rdfs:range rdf:resource="#BoxType"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="BoxType">
+		<rdfs:subClassOf rdf:resource="#BoxListType"/>
+	</owl:Class>
+	<owl:DatatypeProperty rdf:ID="unlocatedRegion">
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#BoxType"/>
+					<owl:Class rdf:about="#PolygonType"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty rdf:ID="Polygon">
+		<rdfs:domain rdf:resource="#RegionLocatorType"/>
+		<rdfs:range rdf:resource="#PolygonType"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="PolygonType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#Coords"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="Coords">
+		<rdfs:domain rdf:resource="#PolygonType"/>
+		<rdfs:range rdf:resource="&BaseURL;&MDS;IntegerMatrixType"/>
+	</owl:ObjectProperty>
+	<!-- Definition of SpatioTemporalLocator Datatype from Visual -->
+	<owl:Class rdf:ID="SpatioTemporalLocatorType">
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="#FigureTrajectory"/>
+						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="#ParameterTrajectory"/>
+						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="#MediaTime"/>
+						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+					</owl:Restriction>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="FigureTrajectory">
+		<rdfs:domain rdf:resource="#SpatioTemporalLocatorType"/>
+		<rdfs:range rdf:resource="#FigureTrajectoryType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ParameterTrajectory">
+		<rdfs:domain rdf:resource="#SpatioTemporalLocatorType"/>
+		<rdfs:range rdf:resource="#ParameterTrajectoryType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="MediaTime">
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#SpatioTemporalLocatorType"/>
+					<owl:Class rdf:about="#FigureTrajectoryType"/>
+					<owl:Class rdf:about="#ParameterTrajectoryType"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range rdf:resource="&BaseURL;&MDS;MediaTimeType"/>
+	</owl:ObjectProperty>
+	<!-- Definition of FigureTrajectory Datatype from Visual -->
+	<owl:Class rdf:ID="FigureTrajectoryType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#MediaTime"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#Vertex"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#type"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="Vertex">
+		<rdfs:domain rdf:resource="#FigureTrajectoryType"/>
+		<rdfs:range rdf:resource="#TemporalInterpolationType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="Depth">
+		<rdfs:domain rdf:resource="#FigureTrajectoryType"/>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#FigureTrajectoryType"/>
+					<owl:Class rdf:about="#ParameterTrajectoryType"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range rdf:resource="#TemporalInterpolationType"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:ID="type">
+		<rdfs:domain rdf:resource="#FigureTrajectoryType"/>
+		<rdfs:range>
+			<owl:DataRange>
+				<owl:oneOf>
+					<rdf:List>
+						<rdf:first rdf:datatype="&xsd;string">rectangle</rdf:first>
+						<rdf:rest>
+							<rdf:List>
+								<rdf:first rdf:datatype="&xsd;string">ellipse</rdf:first>
+								<rdf:rest>
+									<rdf:List>
+										<rdf:first rdf:datatype="&xsd;string">polygon</rdf:first>
+										<rdf:rest rdf:resource="&rdf;nil"/>
+									</rdf:List>
+								</rdf:rest>
+							</rdf:List>
+						</rdf:rest>
+					</rdf:List>
+				</owl:oneOf>
+			</owl:DataRange>
+		</rdfs:range>
+	</owl:DatatypeProperty>
+	<!-- Definition of ParameterTrajectory Datatype from Visual -->
+	<owl:Class rdf:ID="ParameterTrajectoryType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#MediaTime"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#InitialRegion"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="InitialRegion">
+		<rdfs:domain rdf:resource="#ParameterTrajectoryType"/>
+		<rdfs:range rdf:resource="#RegionLocatorType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="Params">
+		<rdfs:domain rdf:resource="#ParameterTrajectoryType"/>
+		<rdfs:range rdf:resource="#TemporalInterpolationType"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:ID="ellipseFlag">
+		<rdfs:domain rdf:resource="#ParameterTrajectoryType"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:ID="motionModel">
+		<rdfs:domain rdf:resource="#FigureTrajectoryType"/>
+		<rdfs:range>
+			<owl:DataRange>
+				<owl:oneOf>
+					<rdf:List>
+						<rdf:first rdf:datatype="&xsd;string">still</rdf:first>
+						<rdf:rest>
+							<rdf:List>
+								<rdf:first rdf:datatype="&xsd;string">translation</rdf:first>
+								<rdf:rest>
+									<rdf:List>
+										<rdf:first rdf:datatype="&xsd;string">rotationAndScaling</rdf:first>
+										<rdf:rest>
+											<rdf:List>
+												<rdf:first rdf:datatype="&xsd;string">affine</rdf:first>
+												<rdf:rest>
+													<rdf:List>
+														<rdf:first rdf:datatype="&xsd;string">perspective</rdf:first>
+														<rdf:rest>
+															<rdf:List>
+																<rdf:first rdf:datatype="&xsd;string">parabolic</rdf:first>
+																<rdf:rest rdf:resource="&rdf;nil"/>
+															</rdf:List>
+														</rdf:rest>
+													</rdf:List>
+												</rdf:rest>
+											</rdf:List>
+										</rdf:rest>
+									</rdf:List>
+								</rdf:rest>
+							</rdf:List>
+						</rdf:rest>
+					</rdf:List>
+				</owl:oneOf>
+			</owl:DataRange>
+		</rdfs:range>
+	</owl:DatatypeProperty>
+	<!-- Definition of TemporalInterpolation Datatype from Visual -->
+	<owl:Class rdf:ID="TemporalInterpolationType">
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#WholeInterval"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#KeyTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#WholeInterval"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#KeyTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#InterpolationFunctions"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#InterpolationFunctions"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">15</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="WholeInterval">
+		<rdfs:domain rdf:resource="#TemporalInterpolationType"/>
+		<rdfs:range rdf:resource="#WholeIntervalType"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:ID="MediaDuration">
+		<rdfs:domain rdf:resource="#WholeIntervalType"/>
+		<rdfs:range rdf:resource="&datatypes;mediaDurationType"/>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty rdf:ID="MediaIncrDuration">
+		<rdfs:domain rdf:resource="#WholeIntervalType"/>
+		<rdfs:range rdf:resource="&BaseURL;&MDS;MediaIncrDurationType"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="WholeIntervalType">
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaDuration"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaIncrDuration"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaDuration"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaIncrDuration"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="KeyTimePoint">
+		<rdfs:domain rdf:resource="#TemporalInterpolationType"/>
+		<rdfs:range rdf:resource="#KeyTimePointType"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:ID="MediaTimePoint">
+		<rdfs:domain rdf:resource="#KeyTimePointType"/>
+		<rdfs:range rdf:resource="&datatypes;mediaTimePointType"/>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty rdf:ID="MediaRelIncrTimePoint">
+		<rdfs:domain rdf:resource="#KeyTimePointType"/>
+		<rdfs:range rdf:resource="&BaseURL;&MDS;MediaRelIncrTimePointType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="MediaRelTimePoint">
+		<rdfs:domain rdf:resource="#KeyTimePointType"/>
+		<rdfs:range rdf:resource="&BaseURL;&MDS;MediaRelTimePointType"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="KeyTimePointType">
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaTimePoint"/>
+								<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaRelTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaRelIncrTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaRelTimePoint"/>
+								<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaRelIncrTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaRelTimePoint"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="#MediaRelIncrTimePoint"/>
+								<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="InterpolationFunctions">
+		<rdfs:domain rdf:resource="#TemporalInterpolationType"/>
+		<rdfs:range rdf:resource="#InterpolationFunctionsType"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="InterpolationFunctionsType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#KeyValue"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#KeyValue"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">200</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="KeyValue">
+		<rdfs:domain rdf:resource="#InterpolationFunctionsType"/>
+		<rdfs:range rdf:resource="#KeyValueType"/>
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="KeyValueType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#contentFloat"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:DatatypeProperty rdf:ID="contentFloat">
+		<rdfs:domain rdf:resource="#KeyValueType"/>
+		<rdfs:range rdf:resource="&xsd;float"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:ID="type">
+		<rdfs:domain rdf:resource="#KeyValueType"/>
+		<rdfs:range>
+			<owl:DataRange>
+				<owl:oneOf>
+					<rdf:List>
+						<rdf:first rdf:datatype="&xsd;string">startPoint</rdf:first>
+						<rdf:rest>
+							<rdf:List>
+								<rdf:first rdf:datatype="&xsd;string">firstOrder</rdf:first>
+								<rdf:rest>
+									<rdf:List>
+										<rdf:first rdf:datatype="&xsd;string">secondOrder</rdf:first>
+										<rdf:rest>
+											<rdf:List>
+												<rdf:first rdf:datatype="&xsd;string">notDetermined</rdf:first>
+												<rdf:rest rdf:resource="&rdf;nil"/>
+											</rdf:List>
+										</rdf:rest>
+									</rdf:List>
+								</rdf:rest>
+							</rdf:List>
+						</rdf:rest>
+					</rdf:List>
+				</owl:oneOf>
+			</owl:DataRange>
+		</rdfs:range>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:ID="param">
+		<rdfs:domain rdf:resource="#KeyValueType"/>
+		<rdfs:range rdf:resource="&xsd;float"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:DatatypeProperty>
+	<!-- Definition of GridLayout Datatype from Visual -->
+	<owl:Class rdf:ID="GridLayoutType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#Descriptor"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#numOfPartX"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#numOfPartY"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:DatatypeProperty rdf:ID="numOfPartX">
+		<rdfs:domain rdf:resource="#GridLayoutType"/>
+		<rdfs:range rdf:resource="&datatypes;unsigned8"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:ID="numOfPartY">
+		<rdfs:domain rdf:resource="#GridLayoutType"/>
+		<rdfs:range rdf:resource="&datatypes;unsigned8"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:ID="descriptorMask">
+		<rdfs:domain rdf:resource="#GridLayoutType"/>
+		<rdfs:range rdf:resource="&datatypes;descriptorMaskType"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:DatatypeProperty>
+	<!-- Definition of MultipleView Datatypes from-->
+	<owl:Class rdf:ID="MultipleViewType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#fixedViewsFlag"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#IsVisible"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#IsVisible"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">16</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#Descriptor"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#Descriptor"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">16</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:DatatypeProperty rdf:ID="IsVisible">
+		<rdfs:domain rdf:resource="#MultipleViewType"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	<owl:ObjectProperty rdf:ID="Descriptor">
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#GridLayoutType"/>
+					<owl:Class rdf:about="#MultipleViewType"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range rdf:resource="&BaseURL;&MDS;VisualDType"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:ID="fixedViewsFlag">
+		<rdfs:domain rdf:resource="#MultipleViewType"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	<!-- Definition of VisualTimeSeries Datatype from Visual -->
+	<owl:Class rdf:ID="VisualTimeSeriesType">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="#TimeIncr"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:DatatypeProperty rdf:ID="TimeIncr">
+		<rdfs:domain rdf:resource="#VisualTimeSeriesType"/>
+		<rdfs:range rdf:resource="&datatypes;mediaDurationType"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:ID="offset">
+		<rdfs:domain rdf:resource="#VisualTimeSeriesType"/>
+		<rdfs:range rdf:resource="&datatypes;mediaDurationType"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty"/>
+	</owl:DatatypeProperty>
+	<!-- Definition of BoxList Datatype from Visual -->
+	<owl:Class rdf:ID="BoxListType">
+		<rdfs:subClassOf rdf:resource="&BaseURL;&MDS;IntegerMatrixType"/>
+	</owl:Class>
+</rdf:RDF>

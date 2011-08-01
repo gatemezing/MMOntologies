@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY org "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:org="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing product details</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#hasManufacturer -->
+
+    <owl:ObjectProperty rdf:about="#hasManufacturer">
+        <rdfs:range rdf:resource="&org;Organization"/>
+        <rdfs:domain rdf:resource="#ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="#hasModel">
+        <rdfs:domain rdf:resource="#ProductDetails"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#hasSerial -->
+
+    <owl:DatatypeProperty rdf:about="#hasSerial">
+        <rdfs:domain rdf:resource="#ProductDetails"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="#hasVersion">
+        <rdfs:domain rdf:resource="#ProductDetails"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#Organization -->
+
+    <owl:Class rdf:about="&org;Organization"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#ProductDetails -->
+
+    <owl:Class rdf:about="#ProductDetails">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSerial"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasVersion"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasModel"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasManufacturer"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

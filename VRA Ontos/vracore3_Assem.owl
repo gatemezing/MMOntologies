@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vra "http://www.vraweb.org/vracore/vracore3.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.vraweb.org/vracore/vracore3.owl#"
+     xml:base="http://www.vraweb.org/vracore/vracore3.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vra="http://www.vraweb.org/vracore/vracore3.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <rdfs:isDefinedBy>http://www.vraweb.org/vracore3.htm</rdfs:isDefinedBy>
+        <rdfs:comment>OWL representation of the VRA element set (Visual Resource Association). Mark van Assem, October 2005, MultimediaN project.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:ObjectProperty rdf:about="&dc;contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/coverage -->
+
+    <owl:ObjectProperty rdf:about="&dc;coverage"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:ObjectProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:ObjectProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:ObjectProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:ObjectProperty rdf:about="&dc;format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:ObjectProperty rdf:about="&dc;identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+    <owl:ObjectProperty rdf:about="&dc;relation"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:ObjectProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:ObjectProperty rdf:about="&dc;source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <owl:ObjectProperty rdf:about="&dc;subject"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:ObjectProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:ObjectProperty rdf:about="&dc;type"/>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#creator -->
+
+    <owl:ObjectProperty rdf:about="#creator">
+        <rdfs:label>Creator</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;contributor"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;creator"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#creator.attribution -->
+
+    <owl:ObjectProperty rdf:about="#creator.attribution">
+        <rdfs:label>Creator.Attribution</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;creator"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#creator.corporateName -->
+
+    <owl:ObjectProperty rdf:about="#creator.corporateName">
+        <rdfs:label>Creator.Corporate name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;creator"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#creator.personalName -->
+
+    <owl:ObjectProperty rdf:about="#creator.personalName">
+        <rdfs:label>Creator.Personal name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;creator"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#creator.role -->
+
+    <owl:ObjectProperty rdf:about="#creator.role">
+        <rdfs:label>Creator.Role</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;creator"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#culture -->
+
+    <owl:ObjectProperty rdf:about="#culture">
+        <rdfs:label>Culture</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;coverage"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#culture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date -->
+
+    <owl:ObjectProperty rdf:about="#date">
+        <rdfs:label>Date</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;coverage"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;date"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date.alteration -->
+
+    <owl:ObjectProperty rdf:about="#date.alteration">
+        <rdfs:label>Date.Alteration</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date.beginning -->
+
+    <owl:ObjectProperty rdf:about="#date.beginning">
+        <rdfs:label>Date.Beginning</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date.completion -->
+
+    <owl:ObjectProperty rdf:about="#date.completion">
+        <rdfs:label>Date.Completion</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date.creation -->
+
+    <owl:ObjectProperty rdf:about="#date.creation">
+        <rdfs:label>Date.Creation</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date.design -->
+
+    <owl:ObjectProperty rdf:about="#date.design">
+        <rdfs:label>Date.Design</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date.restoration -->
+
+    <owl:ObjectProperty rdf:about="#date.restoration">
+        <rdfs:label>Date.Restoration</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#description -->
+
+    <owl:ObjectProperty rdf:about="#description">
+        <rdfs:label>Description</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;description"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#idNumber -->
+
+    <owl:ObjectProperty rdf:about="#idNumber">
+        <rdfs:label>ID Number</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;identifier"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#id%20number"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#idNumber.currentAsseccion -->
+
+    <owl:ObjectProperty rdf:about="#idNumber.currentAsseccion">
+        <rdfs:label>ID Number.Current Accession</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#idNumber"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#id%20number"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#idNumber.currentRepository -->
+
+    <owl:ObjectProperty rdf:about="#idNumber.currentRepository">
+        <rdfs:label>ID Number.Current Repository</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#idNumber"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#id%20number"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#idNumber.formerAccession -->
+
+    <owl:ObjectProperty rdf:about="#idNumber.formerAccession">
+        <rdfs:label>ID Number.Former Accession</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#idNumber"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#id%20number"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#idNumber.formerRepository -->
+
+    <owl:ObjectProperty rdf:about="#idNumber.formerRepository">
+        <rdfs:label>ID Number.Former Repository</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#idNumber"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#id%20number"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#location -->
+
+    <owl:ObjectProperty rdf:about="#location">
+        <rdfs:label>Location</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;contributor"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;coverage"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#geographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#location.creationSite -->
+
+    <owl:ObjectProperty rdf:about="#location.creationSite">
+        <rdfs:label>Location.Creation Site</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#geographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#location.currentRepository -->
+
+    <owl:ObjectProperty rdf:about="#location.currentRepository">
+        <rdfs:label>Location.Current Repository</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#geographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#location.currentSite -->
+
+    <owl:ObjectProperty rdf:about="#location.currentSite">
+        <rdfs:label>Location.Current Site</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#geographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#location.discoverySite -->
+
+    <owl:ObjectProperty rdf:about="#location.discoverySite">
+        <rdfs:label>Location.Discovery Site</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#geographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#location.formerRepository -->
+
+    <owl:ObjectProperty rdf:about="#location.formerRepository">
+        <rdfs:label>Location.Former Repository</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#geographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#location.formerSite -->
+
+    <owl:ObjectProperty rdf:about="#location.formerSite">
+        <rdfs:label>Location.Former Site</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#geographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#material -->
+
+    <owl:ObjectProperty rdf:about="#material">
+        <rdfs:label>Material</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;format"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#material.medium -->
+
+    <owl:ObjectProperty rdf:about="#material.medium">
+        <rdfs:label>Material.Medium</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#material"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#material.support -->
+
+    <owl:ObjectProperty rdf:about="#material.support">
+        <rdfs:label>Material.Support</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#material"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#measurements -->
+
+    <owl:ObjectProperty rdf:about="#measurements">
+        <rdfs:label>Measurements</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;format"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#measurements.dimensions -->
+
+    <owl:ObjectProperty rdf:about="#measurements.dimensions">
+        <rdfs:label>Measurements.Dimensions</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#measurements"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#measurements.format -->
+
+    <owl:ObjectProperty rdf:about="#measurements.format">
+        <rdfs:label>Measurements.Format</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#measurements"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#measurements.resolution -->
+
+    <owl:ObjectProperty rdf:about="#measurements.resolution">
+        <rdfs:label>Measurements.Resolution</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#measurements"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#recordType -->
+
+    <owl:ObjectProperty rdf:about="#recordType">
+        <rdfs:label>Record Type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;type"/>
+        <rdfs:range rdf:resource="#RecordType"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#record%20type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#relation -->
+
+    <owl:ObjectProperty rdf:about="#relation">
+        <rdfs:label>Relation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:range rdf:resource="#VisualResource"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#related%20work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#relation.identity -->
+
+    <owl:ObjectProperty rdf:about="#relation.identity">
+        <rdfs:label>Relation.Identity</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:range rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#relation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#related%20work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#relation.type -->
+
+    <owl:ObjectProperty rdf:about="#relation.type">
+        <rdfs:label>Relation.Type</rdfs:label>
+        <rdfs:range rdf:resource="#VisualResource"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#relation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#related%20work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#rights -->
+
+    <owl:ObjectProperty rdf:about="#rights">
+        <rdfs:label>Rights</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;rights"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#rights"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#source -->
+
+    <owl:ObjectProperty rdf:about="#source">
+        <rdfs:label>Source</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;source"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#source"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#stylePeriod -->
+
+    <owl:ObjectProperty rdf:about="#stylePeriod">
+        <rdfs:label>Style/Period</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;coverage"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;subject"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#style"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#stylePeriod.dynasty -->
+
+    <owl:ObjectProperty rdf:about="#stylePeriod.dynasty">
+        <rdfs:label>Style/Period.Dynasty</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#stylePeriod"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#style"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#stylePeriod.group -->
+
+    <owl:ObjectProperty rdf:about="#stylePeriod.group">
+        <rdfs:label>Style/Period.Group</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#stylePeriod"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#style"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#stylePeriod.movement -->
+
+    <owl:ObjectProperty rdf:about="#stylePeriod.movement">
+        <rdfs:label>Style/Period.Movement</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#stylePeriod"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#style"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#stylePeriod.school -->
+
+    <owl:ObjectProperty rdf:about="#stylePeriod.school">
+        <rdfs:label>Style/Period.School</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#stylePeriod"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#style"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#stylePeriod.style -->
+
+    <owl:ObjectProperty rdf:about="#stylePeriod.style">
+        <rdfs:label>Style/Period.Style</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#stylePeriod"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#style"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#subject -->
+
+    <owl:ObjectProperty rdf:about="#subject">
+        <rdfs:label>Subject</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;subject"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#technique -->
+
+    <owl:ObjectProperty rdf:about="#technique">
+        <rdfs:label>Technique</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;format"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#title -->
+
+    <owl:ObjectProperty rdf:about="#title">
+        <rdfs:label>Title</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;title"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#title.largerEntity -->
+
+    <owl:ObjectProperty rdf:about="#title.largerEntity">
+        <rdfs:label>Title.LargerEntity</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#title"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#title.series -->
+
+    <owl:ObjectProperty rdf:about="#title.series">
+        <rdfs:label>Title.Series</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#title"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#title.translation -->
+
+    <owl:ObjectProperty rdf:about="#title.translation">
+        <rdfs:label>Title.Translation</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#title"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#title.variant -->
+
+    <owl:ObjectProperty rdf:about="#title.variant">
+        <rdfs:label>Title.Variant</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:subPropertyOf rdf:resource="#title"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#type -->
+
+    <owl:ObjectProperty rdf:about="#type">
+        <rdfs:label>Type</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dc;type"/>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#date -->
+
+    <owl:DatatypeProperty rdf:about="#date">
+        <rdfs:label>Date</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#description -->
+
+    <owl:DatatypeProperty rdf:about="#description">
+        <rdfs:label>Description</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#description"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#idNumber -->
+
+    <owl:DatatypeProperty rdf:about="#idNumber">
+        <rdfs:label>ID Number</rdfs:label>
+        <rdfs:domain rdf:resource="#VisualResource"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm#id%20number"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#Image -->
+
+    <owl:Class rdf:about="#Image">
+        <rdfs:label>Image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#VisualResource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#recordType"/>
+                <owl:hasValue rdf:resource="#image"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#RecordType -->
+
+    <owl:Class rdf:about="#RecordType">
+        <rdfs:label>RecordType</rdfs:label>
+        <rdfs:comment>RecordType class contains the individuals to represent the type of 
+	a record using the vra:recordType propery</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#VisualResource -->
+
+    <owl:Class rdf:about="#VisualResource">
+        <rdfs:label>VisualResource</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#recordType"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#Work -->
+
+    <owl:Class rdf:about="#Work">
+        <rdfs:label>Work</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#VisualResource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#recordType"/>
+                <owl:hasValue rdf:resource="#work"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://www.vraweb.org/vracore3.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <owl:Class rdf:about="&xsd;date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <owl:Class rdf:about="&xsd;string"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#image -->
+
+    <owl:NamedIndividual rdf:about="#image">
+        <rdf:type rdf:resource="#RecordType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.vraweb.org/vracore/vracore3.owl#work -->
+
+    <owl:NamedIndividual rdf:about="#work">
+        <rdf:type rdf:resource="#RecordType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AllDifferent>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="#image"/>
+            <rdf:Description rdf:about="#work"/>
+        </owl:distinctMembers>
+    </owl:AllDifferent>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

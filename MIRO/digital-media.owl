@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.mindswap.org/2005/owl/digital-media#"
+     xml:base="http://www.mindswap.org/2005/owl/digital-media"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#depiction -->
+
+    <owl:ObjectProperty rdf:about="#depiction">
+        <rdfs:label>depiction</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&foaf;depiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#depicts -->
+
+    <owl:ObjectProperty rdf:about="#depicts">
+        <rdfs:label>depicts</rdfs:label>
+        <owl:inverseOf rdf:resource="#depiction"/>
+        <rdfs:subPropertyOf rdf:resource="&foaf;depiction"/>
+        <rdfs:subPropertyOf rdf:resource="&foaf;depicts"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#descriptor -->
+
+    <owl:ObjectProperty rdf:about="#descriptor">
+        <rdfs:domain rdf:resource="#DigitalMedia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#frameOf -->
+
+    <owl:ObjectProperty rdf:about="#frameOf">
+        <rdfs:label>frameOf</rdfs:label>
+        <rdfs:range rdf:resource="#Video"/>
+        <rdfs:domain rdf:resource="#VideoFrame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="#hasRegion">
+        <rdfs:label>hasRegion</rdfs:label>
+        <rdfs:domain rdf:resource="#DigitalMedia"/>
+        <rdfs:range rdf:resource="#ImagePart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#hasSegment -->
+
+    <owl:ObjectProperty rdf:about="#hasSegment">
+        <rdfs:label>hasSegment</rdfs:label>
+        <rdfs:domain rdf:resource="#Video"/>
+        <rdfs:range rdf:resource="#VideoSegment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#regionOf -->
+
+    <owl:ObjectProperty rdf:about="#regionOf">
+        <rdfs:label>regionOf</rdfs:label>
+        <rdfs:range rdf:resource="#DigitalMedia"/>
+        <rdfs:domain rdf:resource="#ImagePart"/>
+        <owl:inverseOf rdf:resource="#hasRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#segmentOf -->
+
+    <owl:ObjectProperty rdf:about="#segmentOf">
+        <rdfs:label>segmentOf</rdfs:label>
+        <rdfs:range rdf:resource="#Video"/>
+        <rdfs:domain rdf:resource="#VideoSegment"/>
+        <owl:inverseOf rdf:resource="#hasSegment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#visualDescriptor -->
+
+    <owl:ObjectProperty rdf:about="#visualDescriptor">
+        <rdfs:comment>Descriptor - applicable to images, videos, video segments, still regions and moving 
+regions.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#subPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="&owl;subPropertyOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depiction -->
+
+    <owl:ObjectProperty rdf:about="&foaf;depiction"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depicts -->
+
+    <owl:ObjectProperty rdf:about="&foaf;depicts"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#endFrame -->
+
+    <owl:DatatypeProperty rdf:about="#endFrame">
+        <rdfs:label>endFrame</rdfs:label>
+        <rdfs:domain rdf:resource="#VideoSegment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#frameNumber -->
+
+    <owl:DatatypeProperty rdf:about="#frameNumber">
+        <rdfs:label>frameNumber</rdfs:label>
+        <rdfs:domain rdf:resource="#VideoFrame"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#hasDurationSeconds -->
+
+    <owl:DatatypeProperty rdf:about="#hasDurationSeconds">
+        <rdfs:label>hasDurationSeconds</rdfs:label>
+        <rdfs:domain rdf:resource="#Video"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#hasTotalFrames -->
+
+    <owl:DatatypeProperty rdf:about="#hasTotalFrames">
+        <rdfs:label>hasTotalFrames</rdfs:label>
+        <rdfs:domain rdf:resource="#Video"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#startFrame -->
+
+    <owl:DatatypeProperty rdf:about="#startFrame">
+        <rdfs:label>startFrame</rdfs:label>
+        <rdfs:domain rdf:resource="#VideoSegment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#svgOutline -->
+
+    <owl:DatatypeProperty rdf:about="#svgOutline">
+        <rdfs:label>svgOutline</rdfs:label>
+        <rdfs:domain rdf:resource="#ImagePart"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#DigitalMedia -->
+
+    <owl:Class rdf:about="#DigitalMedia">
+        <rdfs:label>Digital Media</rdfs:label>
+        <rdfs:comment>The class of digital media data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#Image -->
+
+    <owl:Class rdf:about="#Image">
+        <rdfs:label>Image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DigitalMedia"/>
+        <rdfs:subClassOf rdf:resource="&foaf;Image"/>
+        <rdfs:comment>The class of images</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#ImagePart -->
+
+    <owl:Class rdf:about="#ImagePart">
+        <rdfs:label>Image Part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>2D spatial regions of an image or video frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#ImageText -->
+
+    <owl:Class rdf:about="#ImageText">
+        <rdfs:label>Image Text</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#StillRegion"/>
+        <rdfs:comment>Spatial regions of an image or video frame that correspond to text or 
+captions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#Mosaic -->
+
+    <owl:Class rdf:about="#Mosaic">
+        <rdfs:label>Mosaic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#StillRegion"/>
+        <rdfs:comment>Mosaic or panaoramic view of a video segment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#MovingRegion -->
+
+    <owl:Class rdf:about="#MovingRegion">
+        <rdfs:label>Moving Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>2D spatio-temporal regions of video data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#Segment -->
+
+    <owl:Class rdf:about="#Segment">
+        <rdfs:label>Segment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DigitalMedia"/>
+        <rdfs:comment>The class of  fragments of digital media content</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#StillRegion -->
+
+    <owl:Class rdf:about="#StillRegion">
+        <rdfs:label>Still Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:comment>2D spatial regions of an image or video frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#Video -->
+
+    <owl:Class rdf:about="#Video">
+        <rdfs:label>Video</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DigitalMedia"/>
+        <rdfs:comment>The class of videos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#VideoFrame -->
+
+    <owl:Class rdf:about="#VideoFrame">
+        <rdfs:label>VideoFrame</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DigitalMedia"/>
+        <rdfs:subClassOf rdf:resource="#Image"/>
+        <rdfs:comment>Frame of a video</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#VideoSegment -->
+
+    <owl:Class rdf:about="#VideoSegment">
+        <rdfs:label>Video Segment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Segment"/>
+        <rdfs:subClassOf rdf:resource="#Video"/>
+        <rdfs:comment>Temporal intervals or segments of video data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#VideoSegmentsOrStillRegions -->
+
+    <owl:Class rdf:about="#VideoSegmentsOrStillRegions">
+        <rdfs:label>VideoSegmentsOrStillRegions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#VideoText -->
+
+    <owl:Class rdf:about="#VideoText">
+        <rdfs:label>Video Text</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MovingRegion"/>
+        <rdfs:comment>Spatio-temporal regions of video data that correspond to text or captions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+
+    <owl:Class rdf:about="&foaf;Image"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#descriptor -->
+
+    <owl:NamedIndividual rdf:about="#descriptor"/>
+    
+
+
+    <!-- http://www.mindswap.org/2005/owl/digital-media#visualDescriptor -->
+
+    <owl:NamedIndividual rdf:about="#visualDescriptor">
+        <rdfs:comment>Descriptor - applicable to images, videos, video segments, still regions and moving 
+regions.</rdfs:comment>
+        <owl:subPropertyOf rdf:resource="#descriptor"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

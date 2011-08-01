@@ -1,0 +1,1023 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pers "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#" >
+    <!ENTITY dat "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#" >
+    <!ENTITY lang "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#" >
+    <!ENTITY org "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl"
+     xmlns:dat="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:pers="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#"
+     xmlns:org="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#"
+     xmlns:lang="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing Intellectual Property Rights management</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRCaption -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRCaption">
+        <rdfs:domain rdf:resource="#IPRDescription"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRCopyright -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRCopyright">
+        <rdfs:domain rdf:resource="#IPRDescription"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDate -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRDate">
+        <rdfs:range rdf:resource="#IPRDate"/>
+        <rdfs:domain rdf:resource="#IPRDates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDateTimeDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRDateTimeDescription">
+        <rdfs:domain rdf:resource="#IPRDate"/>
+        <rdfs:range rdf:resource="#IPRDateDescriptions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDates -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRDates">
+        <rdfs:domain rdf:resource="#IPR"/>
+        <rdfs:range rdf:resource="#IPRDates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRDescription">
+        <rdfs:domain rdf:resource="#IPR"/>
+        <rdfs:range rdf:resource="#IPRDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDescriptionLegend -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRDescriptionLegend">
+        <rdfs:domain rdf:resource="#IPRDescription"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDescriptionTitle -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRDescriptionTitle">
+        <rdfs:domain rdf:resource="#IPRDescription"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRExploitation -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRExploitation">
+        <rdfs:domain rdf:resource="#IPR"/>
+        <rdfs:range rdf:resource="#IPRExploitation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRExploitationObligation -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRExploitationObligation">
+        <rdfs:domain rdf:resource="#IPRExploitation"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRExploitationProtection -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRExploitationProtection">
+        <rdfs:domain rdf:resource="#IPRExploitation"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRExploitationUseRestriction -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRExploitationUseRestriction">
+        <rdfs:domain rdf:resource="#IPRExploitation"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRHistory -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRHistory">
+        <rdfs:domain rdf:resource="#IPR"/>
+        <rdfs:range rdf:resource="#IPRHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentification -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRIdentification">
+        <rdfs:domain rdf:resource="#IPR"/>
+        <rdfs:range rdf:resource="#IPRIdentification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationIdentifier -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRIdentificationIdentifier">
+        <rdfs:domain rdf:resource="#IPRIdentification"/>
+        <rdfs:range rdf:resource="#IPRIdentificationIdentifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationIdentifierID -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRIdentificationIdentifierID">
+        <rdfs:domain rdf:resource="#IPRIdentification"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationIdentifierMode -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRIdentificationIdentifierMode">
+        <rdfs:domain rdf:resource="#IPRIdentification"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationLicencePlate -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRIdentificationLicencePlate">
+        <rdfs:domain rdf:resource="#IPRIdentification"/>
+        <rdfs:range rdf:resource="#IPRIdentificationLP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRManagementSystem -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRManagementSystem">
+        <rdfs:domain rdf:resource="#IPRExploitation"/>
+        <rdfs:range rdf:resource="#IPRManagementSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRName -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRName">
+        <rdfs:domain rdf:resource="#IPR"/>
+        <rdfs:range rdf:resource="#IPRName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRNameChoice -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRNameChoice">
+        <rdfs:domain rdf:resource="#IPRName"/>
+        <rdfs:range rdf:resource="#IPRNameChoice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRNameDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRNameDescription">
+        <rdfs:range rdf:resource="#IPRNameDescriptions"/>
+        <rdfs:domain rdf:resource="#IPRNameReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPROrganizationDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasIPROrganizationDescription">
+        <rdfs:range rdf:resource="#IPRNameDescriptions"/>
+        <rdfs:domain rdf:resource="#IPROrganization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRPersonDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRPersonDescription">
+        <rdfs:range rdf:resource="#IPRNameDescriptions"/>
+        <rdfs:domain rdf:resource="#IPRPERSON"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRSubHistory -->
+
+    <owl:ObjectProperty rdf:about="#hasIPRSubHistory">
+        <rdfs:range rdf:resource="#IPR"/>
+        <rdfs:domain rdf:resource="#IPRHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDateLanguage -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRDateLanguage">
+        <rdfs:domain rdf:resource="#IPRDate"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDateTime -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRDateTime">
+        <rdfs:domain rdf:resource="#IPRDate"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDescriptionLanguage -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRDescriptionLanguage">
+        <rdfs:domain rdf:resource="#IPRDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRDescriptionTime -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRDescriptionTime">
+        <rdfs:domain rdf:resource="#IPRDescription"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRHistoryDate -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRHistoryDate">
+        <rdfs:domain rdf:resource="#IPRHistory"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRHistoryLanguage -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRHistoryLanguage">
+        <rdfs:domain rdf:resource="#IPRHistory"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationLPCountry -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRIdentificationLPCountry">
+        <rdfs:domain rdf:resource="#IPRIdentificationLP"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationLPDate -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRIdentificationLPDate">
+        <rdfs:domain rdf:resource="#IPRIdentificationLP"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationLPRegAut -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRIdentificationLPRegAut">
+        <rdfs:domain rdf:resource="#IPRIdentificationLP"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationLPRegnum -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRIdentificationLPRegnum">
+        <rdfs:domain rdf:resource="#IPRIdentificationLP"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationLanguage -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRIdentificationLanguage">
+        <rdfs:domain rdf:resource="#IPRIdentification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRIdentificationTime -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRIdentificationTime">
+        <rdfs:domain rdf:resource="#IPRIdentification"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRLanguage -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRLanguage">
+        <rdfs:domain rdf:resource="#IPRName"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRManagementSystemID -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRManagementSystemID">
+        <rdfs:domain rdf:resource="#IPRManagementSystem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRManagementSystemLanguage -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRManagementSystemLanguage">
+        <rdfs:domain rdf:resource="#IPRManagementSystem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRManagementSystemLocation -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRManagementSystemLocation">
+        <rdfs:domain rdf:resource="#IPRManagementSystem"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRManagementSystemTime -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRManagementSystemTime">
+        <rdfs:domain rdf:resource="#IPRManagementSystem"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRManagementSystemType -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRManagementSystemType">
+        <rdfs:domain rdf:resource="#IPRManagementSystem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#hasIPRTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="#hasIPRTimeStamp">
+        <rdfs:domain rdf:resource="#IPRName"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#DateTime -->
+
+    <owl:Class rdf:about="&dat;DateTime"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPR -->
+
+    <owl:Class rdf:about="#IPR">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentification"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRExploitation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRHistory"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRName"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDates"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRDate -->
+
+    <owl:Class rdf:about="#IPRDate">
+        <rdfs:subClassOf rdf:resource="&dat;DateTime"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDateTimeDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDateTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDateLanguage"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRDateDescription -->
+
+    <owl:Class rdf:about="#IPRDateDescription"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRDateDescriptions -->
+
+    <owl:Class rdf:about="#IPRDateDescriptions">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Modified"/>
+                    <rdf:Description rdf:about="#LastModified"/>
+                    <rdf:Description rdf:about="#OrigWorkCreation"/>
+                    <rdf:Description rdf:about="#PictureTaken"/>
+                    <rdf:Description rdf:about="#Processed"/>
+                    <rdf:Description rdf:about="#Scanned"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRDates -->
+
+    <owl:Class rdf:about="#IPRDates">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDate"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRDescription -->
+
+    <owl:Class rdf:about="#IPRDescription">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDescriptionTitle"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDescriptionLanguage"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRCopyright"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDescriptionTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRCaption"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRDescriptionLegend"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRExploitation -->
+
+    <owl:Class rdf:about="#IPRExploitation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRExploitationObligation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRExploitationUseRestriction"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRManagementSystem"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRExploitationProtection"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRHistory -->
+
+    <owl:Class rdf:about="#IPRHistory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRHistoryLanguage"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRHistoryDate"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRIdentification -->
+
+    <owl:Class rdf:about="#IPRIdentification">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationIdentifier"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationLicencePlate"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationLanguage"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRIdentificationIdentifier -->
+
+    <owl:Class rdf:about="#IPRIdentificationIdentifier">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationIdentifierID"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationIdentifierMode"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRIdentificationLP -->
+
+    <owl:Class rdf:about="#IPRIdentificationLP">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationLPRegnum"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationLPRegAut"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationLPDate"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRIdentificationLPCountry"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRManagementSystem -->
+
+    <owl:Class rdf:about="#IPRManagementSystem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRManagementSystemID"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRManagementSystemLanguage"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRManagementSystemType"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRManagementSystemTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRManagementSystemLocation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRName -->
+
+    <owl:Class rdf:about="#IPRName"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRNameChoice -->
+
+    <owl:Class rdf:about="#IPRNameChoice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#IPRNameReference"/>
+                    <rdf:Description rdf:about="#IPROrganization"/>
+                    <rdf:Description rdf:about="#IPRPerson"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRNameDescriptions -->
+
+    <owl:Class rdf:about="#IPRNameDescriptions">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#RightHolder"/>
+                    <rdf:Description rdf:about="#ImageCreator"/>
+                    <rdf:Description rdf:about="#RepresentedIndividuals"/>
+                    <rdf:Description rdf:about="#OrigAuthor"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRNameReference -->
+
+    <owl:Class rdf:about="#IPRNameReference">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRNameDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPROrganization -->
+
+    <owl:Class rdf:about="#IPROrganization">
+        <rdfs:subClassOf rdf:resource="&org;Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPROrganizationDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRPERSON -->
+
+    <owl:Class rdf:about="#IPRPERSON">
+        <rdfs:subClassOf rdf:resource="&pers;Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPRPersonDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPRPerson -->
+
+    <owl:Class rdf:about="#IPRPerson"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#NameDescription -->
+
+    <owl:Class rdf:about="#NameDescription"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#LangString -->
+
+    <owl:Class rdf:about="&lang;LangString"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#Organization -->
+
+    <owl:Class rdf:about="&org;Organization"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#Person -->
+
+    <owl:Class rdf:about="&pers;Person"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#ImageCreator -->
+
+    <owl:NamedIndividual rdf:about="#ImageCreator">
+        <rdf:type rdf:resource="#NameDescription"/>
+        <rdfs:label>Image Creator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#LastModified -->
+
+    <owl:NamedIndividual rdf:about="#LastModified">
+        <rdf:type rdf:resource="#IPRDateDescription"/>
+        <rdfs:label>Last modified</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#Modified -->
+
+    <owl:NamedIndividual rdf:about="#Modified">
+        <rdf:type rdf:resource="#IPRDateDescription"/>
+        <rdfs:label>Modified</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#OrigAuthor -->
+
+    <owl:NamedIndividual rdf:about="#OrigAuthor">
+        <rdf:type rdf:resource="#NameDescription"/>
+        <rdfs:label>Original Work Author</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#OrigWorkCreation -->
+
+    <owl:NamedIndividual rdf:about="#OrigWorkCreation">
+        <rdf:type rdf:resource="#IPRDateDescription"/>
+        <rdfs:label>Original work creation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#PictureTaken -->
+
+    <owl:NamedIndividual rdf:about="#PictureTaken">
+        <rdf:type rdf:resource="#IPRDateDescription"/>
+        <rdfs:label>Picture taken</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#Processed -->
+
+    <owl:NamedIndividual rdf:about="#Processed">
+        <rdf:type rdf:resource="#IPRDateDescription"/>
+        <rdfs:label>Processed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#RepresentedIndividuals -->
+
+    <owl:NamedIndividual rdf:about="#RepresentedIndividuals">
+        <rdf:type rdf:resource="#NameDescription"/>
+        <rdfs:label>Represented Individuals in the image ...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#RightHolder -->
+
+    <owl:NamedIndividual rdf:about="#RightHolder">
+        <rdf:type rdf:resource="#NameDescription"/>
+        <rdfs:label>Right holder ...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#Scanned -->
+
+    <owl:NamedIndividual rdf:about="#Scanned">
+        <rdf:type rdf:resource="#IPRDateDescription"/>
+        <rdfs:label>Scanned</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

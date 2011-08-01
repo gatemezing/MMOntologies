@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing phone numbers</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#phoneNumberType -->
+
+    <owl:ObjectProperty rdf:about="#phoneNumberType">
+        <rdfs:domain rdf:resource="#Phone"/>
+        <rdfs:range rdf:resource="#PhoneNumberTypes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#area -->
+
+    <owl:DatatypeProperty rdf:about="#area">
+        <rdfs:domain rdf:resource="#Phone"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#countryPhoneCode -->
+
+    <owl:DatatypeProperty rdf:about="#countryPhoneCode">
+        <rdfs:domain rdf:resource="#Phone"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#extension -->
+
+    <owl:DatatypeProperty rdf:about="#extension">
+        <rdfs:domain rdf:resource="#Phone"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#local -->
+
+    <owl:DatatypeProperty rdf:about="#local">
+        <rdfs:domain rdf:resource="#Phone"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Phone -->
+
+    <owl:Class rdf:about="#Phone">
+        <rdfs:label>Phone number</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#local"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#area"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#countryPhoneCode"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#extension"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#PhoneNumberType -->
+
+    <owl:Class rdf:about="#PhoneNumberType">
+        <rdfs:label>Phone number types</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#PhoneNumberTypes -->
+
+    <owl:Class rdf:about="#PhoneNumberTypes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Message"/>
+                    <rdf:Description rdf:about="#Work"/>
+                    <rdf:Description rdf:about="#ISDN"/>
+                    <rdf:Description rdf:about="#BBS"/>
+                    <rdf:Description rdf:about="#Modem"/>
+                    <rdf:Description rdf:about="#Cell"/>
+                    <rdf:Description rdf:about="#Video"/>
+                    <rdf:Description rdf:about="#PCS"/>
+                    <rdf:Description rdf:about="#Car"/>
+                    <rdf:Description rdf:about="#Voice"/>
+                    <rdf:Description rdf:about="#Home"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#BBS -->
+
+    <owl:NamedIndividual rdf:about="#BBS">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Bulletin board system telephone number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Car -->
+
+    <owl:NamedIndividual rdf:about="#Car">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>A car-phone telephone number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Cell -->
+
+    <owl:NamedIndividual rdf:about="#Cell">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Cellular  telephone number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Home -->
+
+    <owl:NamedIndividual rdf:about="#Home">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Phone number associated with a residence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#ISDN -->
+
+    <owl:NamedIndividual rdf:about="#ISDN">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>ISDN service  telephone number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Message -->
+
+    <owl:NamedIndividual rdf:about="#Message">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Phone number that has a voice message support</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Modem -->
+
+    <owl:NamedIndividual rdf:about="#Modem">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Modem connected telephone number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#PCS -->
+
+    <owl:NamedIndividual rdf:about="#PCS">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Personal communication service telephone number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Video -->
+
+    <owl:NamedIndividual rdf:about="#Video">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Video conference  telephone number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Voice -->
+
+    <owl:NamedIndividual rdf:about="#Voice">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Phone number to indicate a voice telephone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Phone.owl#Work -->
+
+    <owl:NamedIndividual rdf:about="#Work">
+        <rdf:type rdf:resource="#PhoneNumberType"/>
+        <rdfs:label>Phone number associated with a place of work</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

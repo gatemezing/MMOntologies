@@ -1,0 +1,1694 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pers "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#" >
+    <!ENTITY pos "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#" >
+    <!ENTITY loc "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#" >
+    <!ENTITY dir "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#" >
+    <!ENTITY lang "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#" >
+    <!ENTITY org "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#" >
+    <!ENTITY proddet "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#" >
+    <!ENTITY rect "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#" >
+    <!ENTITY nnd "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl"
+     xmlns:nnd="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl#"
+     xmlns:loc="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#"
+     xmlns:pers="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#"
+     xmlns:org="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#"
+     xmlns:rect="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#"
+     xmlns:lang="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#"
+     xmlns:pos="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dir="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:proddet="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for Image Creation metadata</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#accessory -->
+
+    <owl:ObjectProperty rdf:about="#accessory">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#autoFocus -->
+
+    <owl:ObjectProperty rdf:about="#autoFocus">
+        <rdfs:range rdf:resource="#AutoFocuss"/>
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#backLight -->
+
+    <owl:ObjectProperty rdf:about="#backLight">
+        <rdfs:range rdf:resource="#BackLights"/>
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#brand -->
+
+    <owl:ObjectProperty rdf:about="#brand">
+        <rdfs:domain rdf:resource="#Film"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#cameraInfo -->
+
+    <owl:ObjectProperty rdf:about="#cameraInfo">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#cameraLocation -->
+
+    <owl:ObjectProperty rdf:about="#cameraLocation">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&loc;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#cameraSoftwareInfo -->
+
+    <owl:ObjectProperty rdf:about="#cameraSoftwareInfo">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#captureItem -->
+
+    <owl:ObjectProperty rdf:about="#captureItem">
+        <rdfs:range rdf:resource="#CaptureItem"/>
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#category -->
+
+    <owl:ObjectProperty rdf:about="#category">
+        <rdfs:range rdf:resource="#Categories"/>
+        <rdfs:domain rdf:resource="#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#cfaPattern -->
+
+    <owl:ObjectProperty rdf:about="#cfaPattern">
+        <rdfs:range rdf:resource="#CFAPattern"/>
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#colorRow -->
+
+    <owl:ObjectProperty rdf:about="#colorRow">
+        <rdfs:domain rdf:resource="#CFAPattern"/>
+        <rdfs:range rdf:resource="#Colors"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#colorTemp -->
+
+    <owl:ObjectProperty rdf:about="#colorTemp">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#creationSoftwareInfo -->
+
+    <owl:ObjectProperty rdf:about="#creationSoftwareInfo">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#documentSize -->
+
+    <owl:ObjectProperty rdf:about="#documentSize">
+        <rdfs:domain rdf:resource="#ReflectionPrint"/>
+        <rdfs:range rdf:resource="&rect;DoubleRectangularSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#expProgram -->
+
+    <owl:ObjectProperty rdf:about="#expProgram">
+        <rdfs:range rdf:resource="#ExpPrograms"/>
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#filmSize -->
+
+    <owl:ObjectProperty rdf:about="#filmSize">
+        <rdfs:domain rdf:resource="#Film"/>
+        <rdfs:range rdf:resource="&rect;DoubleRectangularSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#flashEnergy -->
+
+    <owl:ObjectProperty rdf:about="#flashEnergy">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#focalLength -->
+
+    <owl:ObjectProperty rdf:about="#focalLength">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#focalPlaneResolution -->
+
+    <owl:ObjectProperty rdf:about="#focalPlaneResolution">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&rect;DoubleRectangularSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#horizontalSFR -->
+
+    <owl:ObjectProperty rdf:about="#horizontalSFR">
+        <rdfs:domain rdf:resource="#SpatialFrequencyResponse"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#imageCreator -->
+
+    <owl:ObjectProperty rdf:about="#imageCreator">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&pers;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#imageSource -->
+
+    <owl:ObjectProperty rdf:about="#imageSource">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#ImageSources"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#isoNoise -->
+
+    <owl:ObjectProperty rdf:about="#isoNoise">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#isoSaturation -->
+
+    <owl:ObjectProperty rdf:about="#isoSaturation">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#lensInfo -->
+
+    <owl:ObjectProperty rdf:about="#lensInfo">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#medium -->
+
+    <owl:ObjectProperty rdf:about="#medium">
+        <rdfs:range rdf:resource="#Mediums"/>
+        <rdfs:domain rdf:resource="#ReflectionPrint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#meteringMode -->
+
+    <owl:ObjectProperty rdf:about="#meteringMode">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#MeteringModes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#oecf -->
+
+    <owl:ObjectProperty rdf:about="#oecf">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#OECF"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#operatorID -->
+
+    <owl:ObjectProperty rdf:about="#operatorID">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#operatorOrg -->
+
+    <owl:ObjectProperty rdf:about="#operatorOrg">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&org;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#orientation -->
+
+    <owl:ObjectProperty rdf:about="#orientation">
+        <rdfs:range rdf:resource="&dir;Direction"/>
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#physicalScanResolution -->
+
+    <owl:ObjectProperty rdf:about="#physicalScanResolution">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&rect;DoubleRectangularSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#rollID -->
+
+    <owl:ObjectProperty rdf:about="#rollID">
+        <rdfs:domain rdf:resource="#Film"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#rpType -->
+
+    <owl:ObjectProperty rdf:about="#rpType">
+        <rdfs:domain rdf:resource="#ReflectionPrint"/>
+        <rdfs:range rdf:resource="#ReflectionPrintTypes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#scannerInfo -->
+
+    <owl:ObjectProperty rdf:about="#scannerInfo">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#scannerPixelSize -->
+
+    <owl:ObjectProperty rdf:about="#scannerPixelSize">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#scannerSoftwareInfo -->
+
+    <owl:ObjectProperty rdf:about="#scannerSoftwareInfo">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&proddet;ProductDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#sceneIlluminant -->
+
+    <owl:ObjectProperty rdf:about="#sceneIlluminant">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#SceneIlluminants"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#sceneType -->
+
+    <owl:ObjectProperty rdf:about="#sceneType">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#SceneTypes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#sensorTechnology -->
+
+    <owl:ObjectProperty rdf:about="#sensorTechnology">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#SensorTechnologies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#spatialFrequency -->
+
+    <owl:ObjectProperty rdf:about="#spatialFrequency">
+        <rdfs:domain rdf:resource="#SpatialFrequencyResponse"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#spatialFrequencyResponse -->
+
+    <owl:ObjectProperty rdf:about="#spatialFrequencyResponse">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#SpatialFrequencyResponse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#specialEffect -->
+
+    <owl:ObjectProperty rdf:about="#specialEffect">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="#SpecialEffects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#subjectDistance -->
+
+    <owl:ObjectProperty rdf:about="#subjectDistance">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#subjectPosition -->
+
+    <owl:ObjectProperty rdf:about="#subjectPosition">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&pos;Position"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#verticalSFR -->
+
+    <owl:ObjectProperty rdf:about="#verticalSFR">
+        <rdfs:domain rdf:resource="#SpatialFrequencyResponse"/>
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#brightness -->
+
+    <owl:DatatypeProperty rdf:about="#brightness">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#creationTime -->
+
+    <owl:DatatypeProperty rdf:about="#creationTime">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#exposureBias -->
+
+    <owl:DatatypeProperty rdf:about="#exposureBias">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#exposureIndex -->
+
+    <owl:DatatypeProperty rdf:about="#exposureIndex">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#exposureTime -->
+
+    <owl:DatatypeProperty rdf:about="#exposureTime">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#fNumber -->
+
+    <owl:DatatypeProperty rdf:about="#fNumber">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#filmSpeed -->
+
+    <owl:DatatypeProperty rdf:about="#filmSpeed">
+        <rdfs:domain rdf:resource="#Film"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#flash -->
+
+    <owl:DatatypeProperty rdf:about="#flash">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#flashReturn -->
+
+    <owl:DatatypeProperty rdf:about="#flashReturn">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#frameID -->
+
+    <owl:DatatypeProperty rdf:about="#frameID">
+        <rdfs:domain rdf:resource="#Film"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#logExposure -->
+
+    <owl:DatatypeProperty rdf:about="#logExposure">
+        <rdfs:domain rdf:resource="#OECF"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#minFNumber -->
+
+    <owl:DatatypeProperty rdf:about="#minFNumber">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#outputLevel -->
+
+    <owl:DatatypeProperty rdf:about="#outputLevel">
+        <rdfs:domain rdf:resource="#OECF"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#par -->
+
+    <owl:DatatypeProperty rdf:about="#par">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#spectralSensitivity -->
+
+    <owl:DatatypeProperty rdf:about="#spectralSensitivity">
+        <rdfs:domain rdf:resource="#ImageCreation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Direction.owl#Direction -->
+
+    <owl:Class rdf:about="&dir;Direction"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#AutoFocus -->
+
+    <owl:Class rdf:about="#AutoFocus"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#AutoFocuss -->
+
+    <owl:Class rdf:about="#AutoFocuss">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AutoFocusInterrupted"/>
+                    <rdf:Description rdf:about="#ManualFocus"/>
+                    <rdf:Description rdf:about="#SoftFocused"/>
+                    <rdf:Description rdf:about="#AutoFocusUsed"/>
+                    <rdf:Description rdf:about="#NearFocused"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#BackLight -->
+
+    <owl:Class rdf:about="#BackLight"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#BackLights -->
+
+    <owl:Class rdf:about="#BackLights">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BackLight1"/>
+                    <rdf:Description rdf:about="#BackLight2"/>
+                    <rdf:Description rdf:about="#FrontLight"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#CFAPattern -->
+
+    <owl:Class rdf:about="#CFAPattern"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#CaptureItem -->
+
+    <owl:Class rdf:about="#CaptureItem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Film"/>
+                    <rdf:Description rdf:about="#ReflectionPrint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Categories -->
+
+    <owl:Class rdf:about="#Categories">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#NegativeColor"/>
+                    <rdf:Description rdf:about="#NegativeBW"/>
+                    <rdf:Description rdf:about="#ReversalBW"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Category -->
+
+    <owl:Class rdf:about="#Category"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Color -->
+
+    <owl:Class rdf:about="#Color"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Colors -->
+
+    <owl:Class rdf:about="#Colors">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Blue"/>
+                    <rdf:Description rdf:about="#Yellow"/>
+                    <rdf:Description rdf:about="#Red"/>
+                    <rdf:Description rdf:about="#White"/>
+                    <rdf:Description rdf:about="#Green"/>
+                    <rdf:Description rdf:about="#Cyan"/>
+                    <rdf:Description rdf:about="#Magenta"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ExpProgram -->
+
+    <owl:Class rdf:about="#ExpProgram"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ExpPrograms -->
+
+    <owl:Class rdf:about="#ExpPrograms">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ProgramNormal"/>
+                    <rdf:Description rdf:about="#AperturePriority"/>
+                    <rdf:Description rdf:about="#Manual"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Film -->
+
+    <owl:Class rdf:about="#Film">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#filmSize"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#filmSpeed"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#frameID"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#rollID"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#category"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#brand"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ImageCreation -->
+
+    <owl:Class rdf:about="#ImageCreation">
+        <rdfs:label>ImageCreation Information</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#imageCreator"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#creationTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#operatorID"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#operatorOrg"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#sceneType"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#imageSource"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The class of image creation information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ImageSource -->
+
+    <owl:Class rdf:about="#ImageSource"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ImageSources -->
+
+    <owl:Class rdf:about="#ImageSources">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ComputerGraphics"/>
+                    <rdf:Description rdf:about="#DigitalCamera"/>
+                    <rdf:Description rdf:about="#ReflectionPrintScanner"/>
+                    <rdf:Description rdf:about="#StillFromVideo"/>
+                    <rdf:Description rdf:about="#FilmScanner"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Medium -->
+
+    <owl:Class rdf:about="#Medium"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Mediums -->
+
+    <owl:Class rdf:about="#Mediums">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#LineArt"/>
+                    <rdf:Description rdf:about="#ContinuousTone"/>
+                    <rdf:Description rdf:about="#HalfTone"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#MeteringMode -->
+
+    <owl:Class rdf:about="#MeteringMode"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#MeteringModes -->
+
+    <owl:Class rdf:about="#MeteringModes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Spot"/>
+                    <rdf:Description rdf:about="#Average"/>
+                    <rdf:Description rdf:about="#CenterWeightedAverage"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#OECF -->
+
+    <owl:Class rdf:about="#OECF">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#logExposure"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#outputLevel"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ReflectionPrint -->
+
+    <owl:Class rdf:about="#ReflectionPrint">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#documentSize"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#rpType"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#medium"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ReflectionPrintType -->
+
+    <owl:Class rdf:about="#ReflectionPrintType"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ReflectionPrintTypes -->
+
+    <owl:Class rdf:about="#ReflectionPrintTypes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BWPrint"/>
+                    <rdf:Description rdf:about="#ColorPrint"/>
+                    <rdf:Description rdf:about="#ColorDocument"/>
+                    <rdf:Description rdf:about="#BWDocument"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SceneIlluminant -->
+
+    <owl:Class rdf:about="#SceneIlluminant"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SceneIlluminants -->
+
+    <owl:Class rdf:about="#SceneIlluminants">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#FluorescentLight"/>
+                    <rdf:Description rdf:about="#TungstenLamp"/>
+                    <rdf:Description rdf:about="#Daylight"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SceneType -->
+
+    <owl:Class rdf:about="#SceneType"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SceneTypes -->
+
+    <owl:Class rdf:about="#SceneTypes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#OriginalScene"/>
+                    <rdf:Description rdf:about="#SecondGenerationScene"/>
+                    <rdf:Description rdf:about="#DigitalGenerationScene"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SensorTechnologies -->
+
+    <owl:Class rdf:about="#SensorTechnologies">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#OneChipColor"/>
+                    <rdf:Description rdf:about="#ColorSequential"/>
+                    <rdf:Description rdf:about="#ThreeChipColor"/>
+                    <rdf:Description rdf:about="#Trilinear"/>
+                    <rdf:Description rdf:about="#TwoChipColor"/>
+                    <rdf:Description rdf:about="#ColorSequentialLinear"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SensorTechnology -->
+
+    <owl:Class rdf:about="#SensorTechnology"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SpatialFrequencyResponse -->
+
+    <owl:Class rdf:about="#SpatialFrequencyResponse">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#horizontalSFR"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#spatialFrequency"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#verticalSFR"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SpecialEffect -->
+
+    <owl:Class rdf:about="#SpecialEffect"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SpecialEffects -->
+
+    <owl:Class rdf:about="#SpecialEffects">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Colored"/>
+                    <rdf:Description rdf:about="#Star"/>
+                    <rdf:Description rdf:about="#Polarizing"/>
+                    <rdf:Description rdf:about="#Diffusion"/>
+                    <rdf:Description rdf:about="#SplitField"/>
+                    <rdf:Description rdf:about="#Multi-Image"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#LangString -->
+
+    <owl:Class rdf:about="&lang;LangString"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#Location -->
+
+    <owl:Class rdf:about="&loc;Location"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl#NonNegativeDouble -->
+
+    <owl:Class rdf:about="&nnd;NonNegativeDouble"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Organization.owl#Organization -->
+
+    <owl:Class rdf:about="&org;Organization"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#Person -->
+
+    <owl:Class rdf:about="&pers;Person"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#Position -->
+
+    <owl:Class rdf:about="&pos;Position"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ProductDetails.owl#ProductDetails -->
+
+    <owl:Class rdf:about="&proddet;ProductDetails"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#DoubleRectangularSize -->
+
+    <owl:Class rdf:about="&rect;DoubleRectangularSize"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#AperturePriority -->
+
+    <owl:NamedIndividual rdf:about="#AperturePriority">
+        <rdf:type rdf:resource="#ExpProgram"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#AutoFocusInterrupted -->
+
+    <owl:NamedIndividual rdf:about="#AutoFocusInterrupted">
+        <rdf:type rdf:resource="#AutoFocus"/>
+        <rdfs:label>Auto Focus Interrupted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#AutoFocusUsed -->
+
+    <owl:NamedIndividual rdf:about="#AutoFocusUsed">
+        <rdf:type rdf:resource="#AutoFocus"/>
+        <rdfs:label>Auto Focus Used</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Average -->
+
+    <owl:NamedIndividual rdf:about="#Average">
+        <rdf:type rdf:resource="#MeteringMode"/>
+        <rdfs:label>average</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#BWDocument -->
+
+    <owl:NamedIndividual rdf:about="#BWDocument">
+        <rdf:type rdf:resource="#ReflectionPrintType"/>
+        <rdfs:label>B\W Document</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#BWPrint -->
+
+    <owl:NamedIndividual rdf:about="#BWPrint">
+        <rdf:type rdf:resource="#ReflectionPrintType"/>
+        <rdfs:label>B\W Print</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#BackLight1 -->
+
+    <owl:NamedIndividual rdf:about="#BackLight1">
+        <rdf:type rdf:resource="#BackLight"/>
+        <rdfs:label>Back Light 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#BackLight2 -->
+
+    <owl:NamedIndividual rdf:about="#BackLight2">
+        <rdf:type rdf:resource="#BackLight"/>
+        <rdfs:label>Back Light 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Blue -->
+
+    <owl:NamedIndividual rdf:about="#Blue">
+        <rdf:type rdf:resource="#Color"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#CenterWeightedAverage -->
+
+    <owl:NamedIndividual rdf:about="#CenterWeightedAverage">
+        <rdf:type rdf:resource="#MeteringMode"/>
+        <rdfs:label>Center weighted average</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ColorDocument -->
+
+    <owl:NamedIndividual rdf:about="#ColorDocument">
+        <rdf:type rdf:resource="#ReflectionPrintType"/>
+        <rdfs:label>Color Document</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ColorPrint -->
+
+    <owl:NamedIndividual rdf:about="#ColorPrint">
+        <rdf:type rdf:resource="#ReflectionPrintType"/>
+        <rdfs:label>Color Print</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ColorSequential -->
+
+    <owl:NamedIndividual rdf:about="#ColorSequential">
+        <rdf:type rdf:resource="#SensorTechnology"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ColorSequentialLinear -->
+
+    <owl:NamedIndividual rdf:about="#ColorSequentialLinear">
+        <rdf:type rdf:resource="#SensorTechnology"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Colored -->
+
+    <owl:NamedIndividual rdf:about="#Colored">
+        <rdf:type rdf:resource="#SpecialEffect"/>
+        <rdfs:label>Colored</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ComputerGraphics -->
+
+    <owl:NamedIndividual rdf:about="#ComputerGraphics">
+        <rdf:type rdf:resource="#ImageSource"/>
+        <rdfs:label>Image digitally created on computers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ContinuousTone -->
+
+    <owl:NamedIndividual rdf:about="#ContinuousTone">
+        <rdf:type rdf:resource="#Medium"/>
+        <rdfs:label>Continuous Tone Image</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Cyan -->
+
+    <owl:NamedIndividual rdf:about="#Cyan">
+        <rdf:type rdf:resource="#Color"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Daylight -->
+
+    <owl:NamedIndividual rdf:about="#Daylight">
+        <rdf:type rdf:resource="#SceneIlluminant"/>
+        <rdfs:label>daylight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Diffusion -->
+
+    <owl:NamedIndividual rdf:about="#Diffusion">
+        <rdf:type rdf:resource="#SpecialEffect"/>
+        <rdfs:label>Diffusion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#DigitalCamera -->
+
+    <owl:NamedIndividual rdf:about="#DigitalCamera">
+        <rdf:type rdf:resource="#ImageSource"/>
+        <rdfs:label>Image created by digital camera</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#DigitalGenerationScene -->
+
+    <owl:NamedIndividual rdf:about="#DigitalGenerationScene">
+        <rdf:type rdf:resource="#SceneType"/>
+        <rdfs:label>Graphic arts or image digitally composed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#FilmScanner -->
+
+    <owl:NamedIndividual rdf:about="#FilmScanner">
+        <rdf:type rdf:resource="#ImageSource"/>
+        <rdfs:label>Image created by film scanner</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#FluorescentLight -->
+
+    <owl:NamedIndividual rdf:about="#FluorescentLight">
+        <rdf:type rdf:resource="#SceneIlluminant"/>
+        <rdfs:label>Fluorescent Light</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#FrontLight -->
+
+    <owl:NamedIndividual rdf:about="#FrontLight">
+        <rdf:type rdf:resource="#BackLight"/>
+        <rdfs:label>Front Light</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Green -->
+
+    <owl:NamedIndividual rdf:about="#Green">
+        <rdf:type rdf:resource="#Color"/>
+        <rdfs:label>Green</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#HalfTone -->
+
+    <owl:NamedIndividual rdf:about="#HalfTone">
+        <rdf:type rdf:resource="#Medium"/>
+        <rdfs:label>Half Tone Image</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#LineArt -->
+
+    <owl:NamedIndividual rdf:about="#LineArt">
+        <rdf:type rdf:resource="#Medium"/>
+        <rdfs:label>Line Art</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Magenta -->
+
+    <owl:NamedIndividual rdf:about="#Magenta">
+        <rdf:type rdf:resource="#Color"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Manual -->
+
+    <owl:NamedIndividual rdf:about="#Manual">
+        <rdf:type rdf:resource="#ExpProgram"/>
+        <rdfs:label>Manual</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ManualFocus -->
+
+    <owl:NamedIndividual rdf:about="#ManualFocus">
+        <rdf:type rdf:resource="#AutoFocus"/>
+        <rdfs:label>Manual ...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Multi-Image -->
+
+    <owl:NamedIndividual rdf:about="#Multi-Image">
+        <rdf:type rdf:resource="#SpecialEffect"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#MultiImage -->
+
+    <owl:NamedIndividual rdf:about="#MultiImage">
+        <rdf:type rdf:resource="#SpecialEffect"/>
+        <rdfs:label>Multi-Image</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#NearFocused -->
+
+    <owl:NamedIndividual rdf:about="#NearFocused">
+        <rdf:type rdf:resource="#AutoFocus"/>
+        <rdfs:label>Near Focused ...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#NegativeBW -->
+
+    <owl:NamedIndividual rdf:about="#NegativeBW">
+        <rdf:type rdf:resource="#Category"/>
+        <rdfs:label>Negative B\W</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#NegativeColor -->
+
+    <owl:NamedIndividual rdf:about="#NegativeColor">
+        <rdf:type rdf:resource="#Category"/>
+        <rdfs:label>Negative Color</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#OneChipColor -->
+
+    <owl:NamedIndividual rdf:about="#OneChipColor">
+        <rdf:type rdf:resource="#SensorTechnology"/>
+        <rdfs:label>One Chip Color Area</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#OriginalScene -->
+
+    <owl:NamedIndividual rdf:about="#OriginalScene">
+        <rdf:type rdf:resource="#SceneType"/>
+        <rdfs:label>Direct capture of real-world scenes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Polarizing -->
+
+    <owl:NamedIndividual rdf:about="#Polarizing">
+        <rdf:type rdf:resource="#SpecialEffect"/>
+        <rdfs:label>Polarizing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ProgramNormal -->
+
+    <owl:NamedIndividual rdf:about="#ProgramNormal">
+        <rdf:type rdf:resource="#ExpProgram"/>
+        <rdfs:label>Program Normal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Red -->
+
+    <owl:NamedIndividual rdf:about="#Red">
+        <rdf:type rdf:resource="#Color"/>
+        <rdfs:label>Red</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ReflectionPrintScanner -->
+
+    <owl:NamedIndividual rdf:about="#ReflectionPrintScanner">
+        <rdf:type rdf:resource="#ImageSource"/>
+        <rdfs:label>Image created by a reflection print scanner (flat bed)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ReversalBW -->
+
+    <owl:NamedIndividual rdf:about="#ReversalBW">
+        <rdf:type rdf:resource="#Category"/>
+        <rdfs:label>Reversal B\W</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SecondGenerationScene -->
+
+    <owl:NamedIndividual rdf:about="#SecondGenerationScene">
+        <rdf:type rdf:resource="#SceneType"/>
+        <rdfs:label>Images captured from pre-existing hardcopy images such as photographs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SoftFocused -->
+
+    <owl:NamedIndividual rdf:about="#SoftFocused">
+        <rdf:type rdf:resource="#AutoFocus"/>
+        <rdfs:label>Soft Focused ...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#SplitField -->
+
+    <owl:NamedIndividual rdf:about="#SplitField">
+        <rdf:type rdf:resource="#SpecialEffect"/>
+        <rdfs:label>SplitField</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Spot -->
+
+    <owl:NamedIndividual rdf:about="#Spot">
+        <rdf:type rdf:resource="#MeteringMode"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Star -->
+
+    <owl:NamedIndividual rdf:about="#Star">
+        <rdf:type rdf:resource="#SpecialEffect"/>
+        <rdfs:label>Star</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#StillFromVideo -->
+
+    <owl:NamedIndividual rdf:about="#StillFromVideo">
+        <rdf:type rdf:resource="#ImageSource"/>
+        <rdfs:label>Image created from video</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ThreeChipColor -->
+
+    <owl:NamedIndividual rdf:about="#ThreeChipColor">
+        <rdf:type rdf:resource="#SensorTechnology"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Trilinear -->
+
+    <owl:NamedIndividual rdf:about="#Trilinear">
+        <rdf:type rdf:resource="#SensorTechnology"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#TungstenLamp -->
+
+    <owl:NamedIndividual rdf:about="#TungstenLamp">
+        <rdf:type rdf:resource="#SceneIlluminant"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#TwoChipColor -->
+
+    <owl:NamedIndividual rdf:about="#TwoChipColor">
+        <rdf:type rdf:resource="#SensorTechnology"/>
+        <rdfs:label>Two Chip Color Area</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#White -->
+
+    <owl:NamedIndividual rdf:about="#White">
+        <rdf:type rdf:resource="#Color"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#Yellow -->
+
+    <owl:NamedIndividual rdf:about="#Yellow">
+        <rdf:type rdf:resource="#Color"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

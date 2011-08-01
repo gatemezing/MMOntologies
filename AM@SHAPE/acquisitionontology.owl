@@ -1,0 +1,2185 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY ico "http://www.aimatshape.net/ontologies/infoCommonOntology.owl#" >
+    <!ENTITY cto "http://www.aimatshape.net/ontologies/toolCommonOntology.owl#" >
+    <!ENTITY sco "http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/acquisitionontology_amashape.owl#"
+     xml:base="http://www.owl-ontologies.com/acquisitionontology_amashape.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cto="http://www.aimatshape.net/ontologies/toolCommonOntology.owl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ico="http://www.aimatshape.net/ontologies/infoCommonOntology.owl#"
+     xmlns:sco="http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="file:/C:/infoOntology_v1.0.owl"/>
+        <owl:imports rdf:resource="file:/C:/shapeOntology_v2.3.1.owl"/>
+        <owl:imports rdf:resource="file:/C:/toolOntology_v1.12.1.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasAcquisitionConditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasAcquisitionConditions">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionCondition"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasAcquisitionDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasAcquisitionDevice">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasAuthor">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Trick"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ico;InstitutionInfo"/>
+                    <rdf:Description rdf:about="&ico;PersonInfo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasBeenAcquiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasBeenAcquiredBy">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasInput"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasBeenUsedInAcquisitionSession -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasBeenUsedInAcquisitionSession">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Trick"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasEnvironmentConditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasEnvironmentConditions">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasErrorDeclared -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasErrorDeclared">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasFunctionality -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasFunctionality">
+        <rdfs:range rdf:resource="&cto;Functionality"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasHistory -->
+
+    <owl:TransitiveProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasHistory">
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasInput">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasInputShapeType -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasInputShapeType">
+        <rdfs:range rdf:resource="&cto;ShapeType"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasLogisticConditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasLogisticConditions">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasMaxScanBBox -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasMaxScanBBox">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasMinScanBBox -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasMinScanBBox">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasNext">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasObjectBoundingBox -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasObjectBoundingBox">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasOutput">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasOutputShapeType -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasOutputShapeType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&cto;ShapeType"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasOwner">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ico;InstitutionInfo"/>
+                    <rdf:Description rdf:about="&ico;PersonInfo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasPrevious -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasPrevious">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasPreviousSession -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasPreviousSession">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasProcessingSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasProcessingSystem">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasShapeRepresentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasShapeRepresentation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&sco;ShapeRepresentationAndDescription"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasTrick -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasTrick">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Trick"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasBeenUsedInAcquisitionSession"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#useTool -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#useTool">
+        <rdfs:range rdf:resource="&cto;SoftwareTool"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasBrandName -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasBrandName">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasConditions -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasConditions">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasDate -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDate">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasDescription -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDescription">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Trick"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasDevicePrice -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDevicePrice">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasDiagonal -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDiagonal">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasInformalName -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasInformalName">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasLightingConditions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasLightingConditions">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasLocationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasLocationType">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasMaterial -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasMaterial">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasMaxDistanceInMeters -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasMaxDistanceInMeters">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasMechanicalToolSupport -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasMechanicalToolSupport">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasModelName -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasModelName">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasName -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasName">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Trick"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasObjectID -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasObjectID">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasObstacles -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasObstacles">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasPhysicalLocation -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasPhysicalLocation">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasPowerSupplyAvailability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasPowerSupplyAvailability">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasSessionPrice -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasSessionPrice">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasSpatialUnit -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasSpatialUnit">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasSystemPrice -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasSystemPrice">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasTemperatureInCelsius -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasTemperatureInCelsius">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasWeather -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasWeather">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#hasWeightKG -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#hasWeightKG">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToAcquireColor -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToAcquireColor">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanFragileObjects -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanFragileObjects">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanLightAbsorbentObjects -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanLightAbsorbentObjects">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanMediumAbsorbentObjects -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanMediumAbsorbentObjects">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanPreciousObjects -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanPreciousObjects">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanReflectiveObjects -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanReflectiveObjects">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanTransparentObjects -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanTransparentObjects">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanWaveAbsorbentObjects -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanWaveAbsorbentObjects">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isActive -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isActive">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isContactDevice -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isContactDevice">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isDestructive -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isDestructive">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isLightAbsorbent -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isLightAbsorbent">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isMovable -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isMovable">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isOptical -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isOptical">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isReflective -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isReflective">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isTransparent -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isTransparent">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedIndoor -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedIndoor">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedOutdoor -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedOutdoor">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedUnderwater -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedUnderwater">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#withErrorMeasurement -->
+
+    <owl:FunctionalProperty rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#withErrorMeasurement">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Error"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/infoCommonOntology.owl#InstitutionInfo -->
+
+    <owl:Class rdf:about="&ico;InstitutionInfo"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/infoCommonOntology.owl#PersonInfo -->
+
+    <owl:Class rdf:about="&ico;PersonInfo"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ShapeRepresentationAndDescription -->
+
+    <owl:Class rdf:about="&sco;ShapeRepresentationAndDescription"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#Functionality -->
+
+    <owl:Class rdf:about="&cto;Functionality"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#ShapeType -->
+
+    <owl:Class rdf:about="&cto;ShapeType"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#SoftwareTool -->
+
+    <owl:Class rdf:about="&cto;SoftwareTool"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionCondition -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionCondition"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice">
+        <rdfs:comment rdf:datatype="&xsd;string">A system of sensors connected to a storage device (usually a PC), designed for acquiring data.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">TO BE COMPLETED</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasEnvironmentConditions"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasInput"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasLogisticConditions"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasProcessingSystem"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasAcquisitionDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#CTScanDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#CTScanDevice">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#CameraDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#HapticDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#StructuredLightDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#TimeOfFlightDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Computer Tomography Scan Device. Applications: Medicine. (see DICOM as standard output shape)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#CameraDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#CameraDevice">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#HapticDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#StructuredLightDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#TimeOfFlightDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ColorAcquiringScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ColorAcquiringScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToAcquireColor"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionCondition"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#Error -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#Error"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Error"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FragileObjectScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FragileObjectScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanFragileObjects"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#HapticDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#HapticDevice">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#StructuredLightDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#TimeOfFlightDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A haptic device is a device which allows a user to interact with a computer by receiving tactile feed back. This feedback is achieved by applying a degree of opposing force to the user along the x, y, and z axes. 
+There are two main types of haptic devices:- glove or pen-type devices that allow the user to &quot;touch&quot; and manipulate 3-dimensional virtual objects
+- devices that allow users to &quot;feel&quot; textures of 2-dimensional objects with a pen or mouse-type interface</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#IndoorScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#IndoorScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedIndoor"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#StructuredLightDevice"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#TimeOfFlightDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Any of several devices that emit highly amplified and coherent radiation of one or more discrete frequencies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#LightAbsorbentObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#LightAbsorbentObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isLightAbsorbent"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#NotLightAbsorbentObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#LightAbsorbentObjectScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#LightAbsorbentObjectScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanLightAbsorbentObjects"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#LinearCamera -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#LinearCamera">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#MovableObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#MovableObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isMovable"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#NotMovableObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#MovableObjectScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#MovableObjectScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isMovable"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#NotLightAbsorbentObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#NotLightAbsorbentObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isLightAbsorbent"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#NotMovableObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#NotMovableObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isMovable"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#NotReflectiveObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#NotReflectiveObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isReflective"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ReflectiveObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#NotTransparentObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#NotTransparentObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isTransparent"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#TransparentObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#OutdoorScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#OutdoorScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedOutdoor"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#PreciousObjectScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#PreciousObjectScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanPreciousObjects"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasInput"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+                            <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSystem -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSystem"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasBeenAcquiredBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ReflectiveObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ReflectiveObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isReflective"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ReflectiveObjectScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ReflectiveObjectScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanReflectiveObjects"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#SoftwareTool -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#SoftwareTool">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&cto;SoftwareTool"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSystem"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#Step -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#StructuredLightDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#StructuredLightDevice">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#TimeOfFlightDevice"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A light pattern projected at a known angle onto a scene. Observing the lateral position elements of the light pattern in the image reveals depth information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#TimeOfFlightDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#TimeOfFlightDevice">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This scanning technology refers to device that calculate distance (3d point poisition in space) by measuring the time of flight of very short pulses of light</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ToolSession -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ToolSession">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ProcessingSession"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasProcessingSystem"/>
+                <owl:allValuesFrom rdf:resource="&cto;SoftwareTool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasInput"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#TransparentObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#TransparentObject">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isTransparent"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#TransparentObjectScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#TransparentObjectScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanTransparentObjects"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#Trick -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#Trick"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#UnderwaterScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#UnderwaterScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isUsedUnderwater"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#WaveAbsorbentObjectScanningDevice -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#WaveAbsorbentObjectScanningDevice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#hasDeviceType"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDeviceType"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#isAbleToScanWaveAbsorbentObjects"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBox1cm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBox1cm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">1</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBox40cm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBox40cm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">40</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxBimba -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxBimba">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">20</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxFrogUU -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxFrogUU">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">8</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMaxMinoltaVivid910 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMaxMinoltaVivid910">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">50</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMaxRolandLPX -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMaxRolandLPX">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">50</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMinMinoltaVivid910 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMinMinoltaVivid910">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">1</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMinRolandLPX -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMinRolandLPX">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">1</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaConNastrino -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaConNastrino">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <:hasWeightKG rdf:datatype="&xsd;float">18.0</:hasWeightKG>
+        <:hasInformalName rdf:datatype="&xsd;string">bimba con nastrino</:hasInformalName>
+        <:hasMaterial rdf:datatype="&xsd;string">chalk</:hasMaterial>
+        <:hasObjectID rdf:datatype="&xsd;string">dd23444</:hasObjectID>
+        <:isTransparent rdf:datatype="&xsd;boolean">false</:isTransparent>
+        <:isLightAbsorbent rdf:datatype="&xsd;boolean">false</:isLightAbsorbent>
+        <:isReflective rdf:datatype="&xsd;boolean">false</:isReflective>
+        <:hasPhysicalLocation rdf:datatype="&xsd;string">imati</:hasPhysicalLocation>
+        <:isMovable rdf:datatype="&xsd;boolean">true</:isMovable>
+        <:hasObjectBoundingBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxBimba"/>
+        <:hasBeenAcquiredBy rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaconNastrinoIMATISession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaIMATISessLogCond -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaIMATISessLogCond">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+        <:hasPowerSupplyAvailability xml:lang="en">yes</:hasPowerSupplyAvailability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaIMATISessionEnvCond -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaIMATISessionEnvCond">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <:hasLocationType xml:lang="en">indoor</:hasLocationType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaNastrino -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaNastrino">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaconNastrinoIMATISession -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaconNastrinoIMATISession">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <:hasDate rdf:datatype="&xsd;string">2006/10/07</:hasDate>
+        <:hasInput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaConNastrino"/>
+        <:hasLogisticConditions rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaIMATISessLogCond"/>
+        <:hasEnvironmentConditions rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaIMATISessionEnvCond"/>
+        <:hasOutput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BimbaNastrino"/>
+        <:hasProcessingSystem rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#IMATISystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BlackTire -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BlackTire">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <:hasWeightKG rdf:datatype="&xsd;float">3.0</:hasWeightKG>
+        <:hasObjectID rdf:datatype="&xsd;string">4DKS00023</:hasObjectID>
+        <:hasInformalName rdf:datatype="&xsd;string">Black Tire</:hasInformalName>
+        <:hasMaterial rdf:datatype="&xsd;string">Rubber</:hasMaterial>
+        <:isTransparent rdf:datatype="&xsd;boolean">false</:isTransparent>
+        <:isReflective rdf:datatype="&xsd;boolean">false</:isReflective>
+        <:isLightAbsorbent rdf:datatype="&xsd;boolean">true</:isLightAbsorbent>
+        <:isMovable rdf:datatype="&xsd;boolean">true</:isMovable>
+        <:hasObjectBoundingBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BlackTireBB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#BlackTireBB -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#BlackTireBB">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">50</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#CesarBB -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#CesarBB">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">30</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#CesarHead -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#CesarHead">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <:hasObjectID rdf:datatype="&xsd;string">456456</:hasObjectID>
+        <:hasWeightKG rdf:datatype="&xsd;float">8.0</:hasWeightKG>
+        <:hasInformalName rdf:datatype="&xsd;string">Cesar Head</:hasInformalName>
+        <:isTransparent rdf:datatype="&xsd;boolean">false</:isTransparent>
+        <:isReflective rdf:datatype="&xsd;boolean">false</:isReflective>
+        <:isLightAbsorbent rdf:datatype="&xsd;boolean">false</:isLightAbsorbent>
+        <:hasMaterial rdf:datatype="&xsd;string">marble</:hasMaterial>
+        <:isMovable rdf:datatype="&xsd;boolean">true</:isMovable>
+        <:hasObjectBoundingBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#CesarBB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#CesarHeadShapeData -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#CesarHeadShapeData">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#DISILaserScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#DISILaserScanner">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <:hasDevicePrice rdf:datatype="&xsd;string">10000</:hasDevicePrice>
+        <:hasMechanicalToolSupport rdf:datatype="&xsd;string">conveyor belt</:hasMechanicalToolSupport>
+        <:hasDeviceType rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#IMPACTSystemDISI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#DISIcameraScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#DISIcameraScanner">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <:hasDevicePrice rdf:datatype="&xsd;string">12222</:hasDevicePrice>
+        <:hasDeviceType rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LinearCameraDISI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer_41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer_41">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer"/>
+        <:withErrorMeasurement rdf:datatype="&xsd;string">1/10 millemeter</:withErrorMeasurement>
+        <:hasConditions rdf:datatype="&xsd;string">By using the telelens and the distance from the object exactly equals to  600 millimeters</:hasConditions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#ForgAtMPIILogCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#ForgAtMPIILogCondition">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+        <:hasPowerSupplyAvailability xml:lang="en">yes</:hasPowerSupplyAvailability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogAtMPIIEnvCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogAtMPIIEnvCondition">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <:hasLocationType rdf:datatype="&xsd;string"></:hasLocationType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogAtMPIIShapeData -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogAtMPIIShapeData">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogMT -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogMT">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUU -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUU">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <:hasWeightKG rdf:datatype="&xsd;float">0.3</:hasWeightKG>
+        <:hasObjectID rdf:datatype="&xsd;string">898329AS89</:hasObjectID>
+        <:hasPhysicalLocation rdf:datatype="&xsd;string">Utrecht University</:hasPhysicalLocation>
+        <:hasMaterial rdf:datatype="&xsd;string">chalk</:hasMaterial>
+        <:isReflective rdf:datatype="&xsd;boolean">false</:isReflective>
+        <:isTransparent rdf:datatype="&xsd;boolean">false</:isTransparent>
+        <:hasInformalName rdf:datatype="&xsd;string">frog</:hasInformalName>
+        <:isMovable rdf:datatype="&xsd;boolean">true</:isMovable>
+        <:isLightAbsorbent rdf:datatype="&xsd;boolean">true</:isLightAbsorbent>
+        <:hasObjectBoundingBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxFrogUU"/>
+        <:hasBeenAcquiredBy rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUSession"/>
+        <:hasBeenAcquiredBy rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIISession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUEnvCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUEnvCondition">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#EnvironmentCondition"/>
+        <:hasLocationType rdf:datatype="&xsd;string"></:hasLocationType>
+        <:hasWeather rdf:datatype="&xsd;string"></:hasWeather>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUULogCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUULogCondition">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LogisticCondition"/>
+        <:hasPowerSupplyAvailability xml:lang="en">yes</:hasPowerSupplyAvailability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUMPIIMT -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUMPIIMT">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ToolSession"/>
+        <:hasDate rdf:datatype="&xsd;string">2007/02/07</:hasDate>
+        <:hasOutput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogMT"/>
+        <:hasInput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIIRemeshed"/>
+        <:hasPreviousSession rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RemeshingFrogUUatMPII"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUSession -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUSession">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <:hasDate rdf:datatype="&xsd;string">2005/10/06</:hasDate>
+        <:hasInput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUU"/>
+        <:hasEnvironmentConditions rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUEnvCondition"/>
+        <:hasLogisticConditions rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUULogCondition"/>
+        <:hasOutput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUShapeData"/>
+        <:hasProcessingSystem rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#UUSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUShapeData -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUShapeData">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+        <:hasBeenAcquiredBy rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RemeshingFrogUUatMPII"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIIRemeshed -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIIRemeshed">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ShapeData"/>
+        <:hasBeenAcquiredBy rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUMPIIMT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIISession -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIISession">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSession"/>
+        <:hasDate rdf:datatype="&xsd;string">2006/12/07</:hasDate>
+        <:hasLogisticConditions rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ForgAtMPIILogCondition"/>
+        <:hasEnvironmentConditions rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogAtMPIIEnvCondition"/>
+        <:hasOutput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogAtMPIIShapeData"/>
+        <:hasInput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#GoldenGoblet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#GoldenGoblet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RealObject"/>
+        <:hasWeightKG rdf:datatype="&xsd;float">0.8</:hasWeightKG>
+        <:hasObjectID rdf:datatype="&xsd;string">3HGG2331</:hasObjectID>
+        <:hasInformalName rdf:datatype="&xsd;string">Golden Goblet</:hasInformalName>
+        <:hasMaterial rdf:datatype="&xsd;string">Metal</:hasMaterial>
+        <:hasPhysicalLocation rdf:datatype="&xsd;string">Utrecht University</:hasPhysicalLocation>
+        <:isMovable rdf:datatype="&xsd;boolean">false</:isMovable>
+        <:isTransparent rdf:datatype="&xsd;boolean">false</:isTransparent>
+        <:isLightAbsorbent rdf:datatype="&xsd;boolean">false</:isLightAbsorbent>
+        <:isReflective rdf:datatype="&xsd;boolean">true</:isReflective>
+        <:hasObjectBoundingBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#GoldenGobletBB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#GoldenGobletBB -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#GoldenGobletBB">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BoundingBox"/>
+        <:hasDiagonal rdf:datatype="&xsd;string">30</:hasDiagonal>
+        <:hasSpatialUnit rdf:datatype="&xsd;string">cm</:hasSpatialUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#IMATIScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#IMATIScanner">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <:hasDevicePrice rdf:datatype="&xsd;string">35000</:hasDevicePrice>
+        <:hasMechanicalToolSupport rdf:datatype="&xsd;string">Tripod</:hasMechanicalToolSupport>
+        <:hasDeviceType rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#MinoltaVivid910"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#IMATISystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#IMATISystem">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem"/>
+        <:hasAcquisitionDevice rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#IMATIScanner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#IMPACTSystemDISI -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#IMPACTSystemDISI">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+        <:hasBrandName rdf:datatype="&xsd;string">IMPACT - DISI</:hasBrandName>
+        <:isAbleToScanTransparentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanTransparentObjects>
+        <:isAbleToScanLightAbsorbentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanLightAbsorbentObjects>
+        <:isContactDevice rdf:datatype="&xsd;boolean">false</:isContactDevice>
+        <:isUsedUnderwater rdf:datatype="&xsd;boolean">false</:isUsedUnderwater>
+        <:isAbleToScanReflectiveObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanReflectiveObjects>
+        <:isDestructive rdf:datatype="&xsd;boolean">false</:isDestructive>
+        <:isMovable rdf:datatype="&xsd;boolean">false</:isMovable>
+        <:hasModelName rdf:datatype="&xsd;string">impact</:hasModelName>
+        <:isAbleToScanPreciousObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanPreciousObjects>
+        <:isAbleToScanMediumAbsorbentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanMediumAbsorbentObjects>
+        <:isOptical rdf:datatype="&xsd;boolean">true</:isOptical>
+        <:isAbleToScanFragileObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanFragileObjects>
+        <:isUsedOutdoor rdf:datatype="&xsd;boolean">true</:isUsedOutdoor>
+        <:isAbleToScanWaveAbsorbentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanWaveAbsorbentObjects>
+        <:isActive rdf:datatype="&xsd;boolean">true</:isActive>
+        <:isUsedIndoor rdf:datatype="&xsd;boolean">true</:isUsedIndoor>
+        <:hasMinScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBox1cm"/>
+        <:hasMaxScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBox40cm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#LinearCameraDISI -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#LinearCameraDISI">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LinearCamera"/>
+        <:hasBrandName rdf:datatype="&xsd;string">DISI - Canon</:hasBrandName>
+        <:isActive rdf:datatype="&xsd;boolean">false</:isActive>
+        <:isAbleToScanReflectiveObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanReflectiveObjects>
+        <:isUsedUnderwater rdf:datatype="&xsd;boolean">false</:isUsedUnderwater>
+        <:isMovable rdf:datatype="&xsd;boolean">false</:isMovable>
+        <:isContactDevice rdf:datatype="&xsd;boolean">false</:isContactDevice>
+        <:isDestructive rdf:datatype="&xsd;boolean">false</:isDestructive>
+        <:isAbleToScanFragileObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanFragileObjects>
+        <:isUsedOutdoor rdf:datatype="&xsd;boolean">true</:isUsedOutdoor>
+        <:isAbleToScanWaveAbsorbentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanWaveAbsorbentObjects>
+        <:isAbleToScanLightAbsorbentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanLightAbsorbentObjects>
+        <:isAbleToScanTransparentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanTransparentObjects>
+        <:isAbleToScanPreciousObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanPreciousObjects>
+        <:isUsedIndoor rdf:datatype="&xsd;boolean">true</:isUsedIndoor>
+        <:isAbleToAcquireColor rdf:datatype="&xsd;boolean">true</:isAbleToAcquireColor>
+        <:isAbleToScanMediumAbsorbentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanMediumAbsorbentObjects>
+        <:isOptical rdf:datatype="&xsd;boolean">true</:isOptical>
+        <:hasMinScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBox1cm"/>
+        <:hasMaxScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBox40cm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#MPIIScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#MPIIScanner">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <:hasDevicePrice rdf:datatype="&xsd;string">20000</:hasDevicePrice>
+        <:hasDeviceType rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RolandLPX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#MicrowaveScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#MicrowaveScanner">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+        <:isAbleToScanMediumAbsorbentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanMediumAbsorbentObjects>
+        <:isAbleToScanWaveAbsorbentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanWaveAbsorbentObjects>
+        <:isOptical rdf:datatype="&xsd;boolean">false</:isOptical>
+        <:isAbleToScanLightAbsorbentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanLightAbsorbentObjects>
+        <:isUsedOutdoor rdf:datatype="&xsd;boolean">false</:isUsedOutdoor>
+        <:isDestructive rdf:datatype="&xsd;boolean">false</:isDestructive>
+        <:isUsedUnderwater rdf:datatype="&xsd;boolean">false</:isUsedUnderwater>
+        <:isAbleToScanTransparentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanTransparentObjects>
+        <:isMovable rdf:datatype="&xsd;boolean">true</:isMovable>
+        <:isAbleToScanReflectiveObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanReflectiveObjects>
+        <:isAbleToScanPreciousObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanPreciousObjects>
+        <:isAbleToScanFragileObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanFragileObjects>
+        <:isUsedIndoor rdf:datatype="&xsd;boolean">true</:isUsedIndoor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#MinoltaVivid910 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#MinoltaVivid910">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+        <:hasBrandName rdf:datatype="&xsd;string">Minolta</:hasBrandName>
+        <:hasModelName rdf:datatype="&xsd;string">Minolta Vivid 910</:hasModelName>
+        <:isUsedUnderwater rdf:datatype="&xsd;boolean">false</:isUsedUnderwater>
+        <:isAbleToScanTransparentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanTransparentObjects>
+        <:isAbleToScanMediumAbsorbentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanMediumAbsorbentObjects>
+        <:isDestructive rdf:datatype="&xsd;boolean">false</:isDestructive>
+        <:isAbleToScanLightAbsorbentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanLightAbsorbentObjects>
+        <:isContactDevice rdf:datatype="&xsd;boolean">false</:isContactDevice>
+        <:isAbleToScanReflectiveObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanReflectiveObjects>
+        <:isAbleToScanFragileObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanFragileObjects>
+        <:isUsedOutdoor rdf:datatype="&xsd;boolean">true</:isUsedOutdoor>
+        <:isAbleToAcquireColor rdf:datatype="&xsd;boolean">true</:isAbleToAcquireColor>
+        <:isUsedIndoor rdf:datatype="&xsd;boolean">true</:isUsedIndoor>
+        <:isActive rdf:datatype="&xsd;boolean">true</:isActive>
+        <:isOptical rdf:datatype="&xsd;boolean">true</:isOptical>
+        <:isAbleToScanPreciousObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanPreciousObjects>
+        <:isMovable rdf:datatype="&xsd;boolean">true</:isMovable>
+        <:hasMaxScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMaxMinoltaVivid910"/>
+        <:hasMinScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMinMinoltaVivid910"/>
+        <:hasErrorDeclared rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ErrorDeclaredByProducer_41"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#PowderOn -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#PowderOn">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Trick"/>
+        <:hasDescription rdf:datatype="&xsd;string">Put white powder over the object</:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#RegistrationStep -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RegistrationStep">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+        <:hasNext rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Triangulation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#Remeshing -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#Remeshing">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+        <:hasPrevious rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Triangulation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#RemeshingFrogUUatMPII -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RemeshingFrogUUatMPII">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#ToolSession"/>
+        <:hasDate rdf:datatype="&xsd;string">2007/01/07</:hasDate>
+        <:hasInput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUShapeData"/>
+        <:hasOutput rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIIRemeshed"/>
+        <:hasPreviousSession rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#FrogUUatMPIISession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#RolandLPX -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#RolandLPX">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#LaserDevice"/>
+        <:hasBrandName rdf:datatype="&xsd;string">Qubic</:hasBrandName>
+        <:hasModelName rdf:datatype="&xsd;string">Roland LPX-250</:hasModelName>
+        <:isDestructive rdf:datatype="&xsd;boolean">false</:isDestructive>
+        <:isContactDevice rdf:datatype="&xsd;boolean">false</:isContactDevice>
+        <:isAbleToScanTransparentObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanTransparentObjects>
+        <:isAbleToAcquireColor rdf:datatype="&xsd;boolean">false</:isAbleToAcquireColor>
+        <:isAbleToScanReflectiveObjects rdf:datatype="&xsd;boolean">false</:isAbleToScanReflectiveObjects>
+        <:isUsedUnderwater rdf:datatype="&xsd;boolean">false</:isUsedUnderwater>
+        <:isMovable rdf:datatype="&xsd;boolean">true</:isMovable>
+        <:isAbleToScanPreciousObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanPreciousObjects>
+        <:isAbleToScanFragileObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanFragileObjects>
+        <:isOptical rdf:datatype="&xsd;boolean">true</:isOptical>
+        <:isAbleToScanMediumAbsorbentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanMediumAbsorbentObjects>
+        <:isActive rdf:datatype="&xsd;boolean">true</:isActive>
+        <:isUsedOutdoor rdf:datatype="&xsd;boolean">true</:isUsedOutdoor>
+        <:isAbleToScanLightAbsorbentObjects rdf:datatype="&xsd;boolean">true</:isAbleToScanLightAbsorbentObjects>
+        <:isUsedIndoor rdf:datatype="&xsd;boolean">true</:isUsedIndoor>
+        <:hasMaxScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMaxRolandLPX"/>
+        <:hasMinScanBBox rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#BBoxMinRolandLPX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#Triangulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#Triangulation">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#Step"/>
+        <:hasPrevious rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#RegistrationStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#UUScanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#UUScanner">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionDevice"/>
+        <:hasDevicePrice rdf:datatype="&xsd;string">25000</:hasDevicePrice>
+        <:hasDeviceType rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#MicrowaveScanner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1168858779.owl#UUSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/Ontology1168858779.owl#UUSystem">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#AcquisitionSystem"/>
+        <:hasAcquisitionDevice rdf:resource="http://www.owl-ontologies.com/Ontology1168858779.owl#UUScanner"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

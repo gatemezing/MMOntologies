@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY lang "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:lang="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing  date and time</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#century -->
+
+    <owl:ObjectProperty rdf:about="#century">
+        <rdfs:range rdf:resource="#Century"/>
+        <rdfs:domain rdf:resource="#ExtendedDate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#comment -->
+
+    <owl:ObjectProperty rdf:about="#comment">
+        <rdfs:domain rdf:resource="#DateTime"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#dateType -->
+
+    <owl:ObjectProperty rdf:about="#dateType">
+        <rdfs:domain rdf:resource="#DateTime"/>
+        <rdfs:range rdf:resource="#DateType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#month -->
+
+    <owl:ObjectProperty rdf:about="#month">
+        <rdfs:domain rdf:resource="#ExtendedDate"/>
+        <rdfs:range rdf:resource="#RecurringMonth"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#season -->
+
+    <owl:ObjectProperty rdf:about="#season">
+        <rdfs:domain rdf:resource="#DateTime"/>
+        <rdfs:range rdf:resource="#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#weekDay -->
+
+    <owl:ObjectProperty rdf:about="#weekDay">
+        <rdfs:domain rdf:resource="#DateTime"/>
+        <rdfs:range rdf:resource="#WeekDays"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#centuryInt -->
+
+    <owl:DatatypeProperty rdf:about="#centuryInt">
+        <rdfs:domain rdf:resource="#Century"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#date -->
+
+    <owl:DatatypeProperty rdf:about="#date">
+        <rdfs:domain rdf:resource="#Date"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#exactDate -->
+
+    <owl:DatatypeProperty rdf:about="#exactDate">
+        <rdfs:domain rdf:resource="#ExactDate"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#nrMonth -->
+
+    <owl:DatatypeProperty rdf:about="#nrMonth">
+        <rdfs:domain rdf:resource="#Month"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#nrWeekDay -->
+
+    <owl:DatatypeProperty rdf:about="#nrWeekDay">
+        <rdfs:domain rdf:resource="#WeekDay"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#year -->
+
+    <owl:DatatypeProperty rdf:about="#year">
+        <rdfs:domain rdf:resource="#ExtendedDate"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Century -->
+
+    <owl:Class rdf:about="#Century">
+        <rdfs:label>a class describing a Century</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#centuryInt"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Date -->
+
+    <owl:Class rdf:about="#Date">
+        <rdfs:label>Date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#DateTime -->
+
+    <owl:Class rdf:about="#DateTime">
+        <rdfs:label>Date and time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#DateType -->
+
+    <owl:Class rdf:about="#DateType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Date"/>
+                    <rdf:Description rdf:about="#ExactDate"/>
+                    <rdf:Description rdf:about="#ExtendedDate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#ExactDate -->
+
+    <owl:Class rdf:about="#ExactDate">
+        <rdfs:label>Exact date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#ExtendedDate -->
+
+    <owl:Class rdf:about="#ExtendedDate">
+        <rdfs:label>Date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Month -->
+
+    <owl:Class rdf:about="#Month">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#nrMonth"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#RecurringMonth -->
+
+    <owl:Class rdf:about="#RecurringMonth">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#May"/>
+                    <rdf:Description rdf:about="#Aug"/>
+                    <rdf:Description rdf:about="#Dec"/>
+                    <rdf:Description rdf:about="#Feb"/>
+                    <rdf:Description rdf:about="#Jun"/>
+                    <rdf:Description rdf:about="#Jul"/>
+                    <rdf:Description rdf:about="#Nov"/>
+                    <rdf:Description rdf:about="#Jan"/>
+                    <rdf:Description rdf:about="#Mar"/>
+                    <rdf:Description rdf:about="#Apr"/>
+                    <rdf:Description rdf:about="#Sep"/>
+                    <rdf:Description rdf:about="#Oct"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Month"/>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Season -->
+
+    <owl:Class rdf:about="#Season">
+        <rdfs:label>a Season</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#WeekDay -->
+
+    <owl:Class rdf:about="#WeekDay">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#nrWeekDay"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#WeekDays -->
+
+    <owl:Class rdf:about="#WeekDays">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Sun"/>
+                    <rdf:Description rdf:about="#Mon"/>
+                    <rdf:Description rdf:about="#Tue"/>
+                    <rdf:Description rdf:about="#Fri"/>
+                    <rdf:Description rdf:about="#Sat"/>
+                    <rdf:Description rdf:about="#Thu"/>
+                    <rdf:Description rdf:about="#Wed"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#LangString -->
+
+    <owl:Class rdf:about="&lang;LangString"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Apr -->
+
+    <owl:NamedIndividual rdf:about="#Apr">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of April</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">4</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Aug -->
+
+    <owl:NamedIndividual rdf:about="#Aug">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of August</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">8</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Dec -->
+
+    <owl:NamedIndividual rdf:about="#Dec">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of December</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">12</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Feb -->
+
+    <owl:NamedIndividual rdf:about="#Feb">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of February</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">2</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Fri -->
+
+    <owl:NamedIndividual rdf:about="#Fri">
+        <rdf:type rdf:resource="#WeekDay"/>
+        <rdfs:label>Friday</rdfs:label>
+        <nrWeekDay rdf:datatype="&xsd;integer">3</nrWeekDay>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Jan -->
+
+    <owl:NamedIndividual rdf:about="#Jan">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of January</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">1</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Jul -->
+
+    <owl:NamedIndividual rdf:about="#Jul">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of July</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">7</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Jun -->
+
+    <owl:NamedIndividual rdf:about="#Jun">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of June</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">6</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Mar -->
+
+    <owl:NamedIndividual rdf:about="#Mar">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of March</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">3</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#May -->
+
+    <owl:NamedIndividual rdf:about="#May">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of May</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">5</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Mon -->
+
+    <owl:NamedIndividual rdf:about="#Mon">
+        <rdf:type rdf:resource="#WeekDay"/>
+        <rdfs:label>Monday</rdfs:label>
+        <nrWeekDay rdf:datatype="&xsd;integer">1</nrWeekDay>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Nov -->
+
+    <owl:NamedIndividual rdf:about="#Nov">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of November</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">11</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Oct -->
+
+    <owl:NamedIndividual rdf:about="#Oct">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of October</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">10</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Sat -->
+
+    <owl:NamedIndividual rdf:about="#Sat">
+        <rdf:type rdf:resource="#WeekDay"/>
+        <rdfs:label>Saturday</rdfs:label>
+        <nrWeekDay rdf:datatype="&xsd;integer">3</nrWeekDay>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Sep -->
+
+    <owl:NamedIndividual rdf:about="#Sep">
+        <rdf:type rdf:resource="#Month"/>
+        <rdfs:label>The month of September</rdfs:label>
+        <nrMonth rdf:datatype="&xsd;integer">9</nrMonth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Sun -->
+
+    <owl:NamedIndividual rdf:about="#Sun">
+        <rdf:type rdf:resource="#WeekDay"/>
+        <rdfs:label>Sunday</rdfs:label>
+        <nrWeekDay rdf:datatype="&xsd;integer">3</nrWeekDay>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Thu -->
+
+    <owl:NamedIndividual rdf:about="#Thu">
+        <rdf:type rdf:resource="#WeekDay"/>
+        <rdfs:label>Thursday</rdfs:label>
+        <nrWeekDay rdf:datatype="&xsd;integer">3</nrWeekDay>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Tue -->
+
+    <owl:NamedIndividual rdf:about="#Tue">
+        <rdf:type rdf:resource="#WeekDay"/>
+        <rdfs:label>Tuesday</rdfs:label>
+        <nrWeekDay rdf:datatype="&xsd;integer">2</nrWeekDay>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#Wed -->
+
+    <owl:NamedIndividual rdf:about="#Wed">
+        <rdf:type rdf:resource="#WeekDay"/>
+        <rdfs:label>Wednesday</rdfs:label>
+        <nrWeekDay rdf:datatype="&xsd;integer">3</nrWeekDay>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

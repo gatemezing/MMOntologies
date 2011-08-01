@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY genc "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#" >
+    <!ENTITY rect "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#" >
+    <!ENTITY nnd "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl"
+     xmlns:nnd="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:genc="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rect="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing  the position of an object in a digital image</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#boundingBox -->
+
+    <owl:ObjectProperty rdf:about="#boundingBox">
+        <rdfs:range rdf:resource="#Rectangle"/>
+        <rdfs:domain rdf:resource="#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#hasPositionChoice -->
+
+    <owl:ObjectProperty rdf:about="#hasPositionChoice">
+        <rdfs:domain rdf:resource="#Position"/>
+        <rdfs:range rdf:resource="#PositionChoice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#hasPositionComment -->
+
+    <owl:ObjectProperty rdf:about="#hasPositionComment">
+        <rdfs:range rdf:resource="&genc;GeneralComment"/>
+        <rdfs:domain rdf:resource="#Position"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#hasRegionChoice -->
+
+    <owl:ObjectProperty rdf:about="#hasRegionChoice">
+        <rdfs:domain rdf:resource="#Region"/>
+        <rdfs:range rdf:resource="#RegionChoice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#startPoint -->
+
+    <owl:ObjectProperty rdf:about="#startPoint">
+        <rdfs:range rdf:resource="#Point"/>
+        <rdfs:domain rdf:resource="#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#topLeftPoint -->
+
+    <owl:ObjectProperty rdf:about="#topLeftPoint">
+        <rdfs:range rdf:resource="#Point"/>
+        <rdfs:domain rdf:resource="#Rectangle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#x -->
+
+    <owl:ObjectProperty rdf:about="#x">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#x1 -->
+
+    <owl:ObjectProperty rdf:about="#x1">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Spline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#x2 -->
+
+    <owl:ObjectProperty rdf:about="#x2">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Spline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#xEnd -->
+
+    <owl:ObjectProperty rdf:about="#xEnd">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Spline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#y -->
+
+    <owl:ObjectProperty rdf:about="#y">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#y1 -->
+
+    <owl:ObjectProperty rdf:about="#y1">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Spline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#y2 -->
+
+    <owl:ObjectProperty rdf:about="#y2">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Spline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#yEnd -->
+
+    <owl:ObjectProperty rdf:about="#yEnd">
+        <rdfs:range rdf:resource="&nnd;NonNegativeDouble"/>
+        <rdfs:domain rdf:resource="#Spline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#hasPositionTime -->
+
+    <owl:DatatypeProperty rdf:about="#hasPositionTime">
+        <rdfs:domain rdf:resource="#Position"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/GeneralComment.owl#GeneralComment -->
+
+    <owl:Class rdf:about="&genc;GeneralComment"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/NonNegativeDouble.owl#NonNegativeDouble -->
+
+    <owl:Class rdf:about="&nnd;NonNegativeDouble"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#Point -->
+
+    <owl:Class rdf:about="#Point">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#y"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#x"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#Position -->
+
+    <owl:Class rdf:about="#Position">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPositionTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPositionChoice"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPositionComment"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#PositionChoice -->
+
+    <owl:Class rdf:about="#PositionChoice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Point"/>
+                    <rdf:Description rdf:about="#Rectangle"/>
+                    <rdf:Description rdf:about="#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#Rectangle -->
+
+    <owl:Class rdf:about="#Rectangle">
+        <rdfs:subClassOf rdf:resource="&rect;DoubleRectangularSize"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#topLeftPoint"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#Region -->
+
+    <owl:Class rdf:about="#Region">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#startPoint"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRegionChoice"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#boundingBox"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#RegionChoice -->
+
+    <owl:Class rdf:about="#RegionChoice">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Point"/>
+                    <rdf:Description rdf:about="#Spline"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Position.owl#Spline -->
+
+    <owl:Class rdf:about="#Spline">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#yEnd"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#y2"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#xEnd"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#y1"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#x1"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#x2"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/RectangularSize.owl#DoubleRectangularSize -->
+
+    <owl:Class rdf:about="&rect;DoubleRectangularSize"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

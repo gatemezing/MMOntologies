@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ipr "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#" >
+    <!ENTITY cont "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#" >
+    <!ENTITY hist "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/History.owl#" >
+    <!ENTITY bip "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#" >
+    <!ENTITY imcr "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl"
+     xmlns:ipr="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bip="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#"
+     xmlns:hist="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/History.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:imcr="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#"
+     xmlns:cont="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">DIG35 Ontology for describing metadata for digital images</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/History.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl#hasBasicImPar -->
+
+    <owl:ObjectProperty rdf:about="#hasBasicImPar">
+        <rdfs:range rdf:resource="&bip;BasicImageInformation"/>
+        <rdfs:domain rdf:resource="#Metadata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl#hasContent -->
+
+    <owl:ObjectProperty rdf:about="#hasContent">
+        <rdfs:range rdf:resource="&cont;Content"/>
+        <rdfs:domain rdf:resource="#Metadata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl#hasHistory -->
+
+    <owl:ObjectProperty rdf:about="#hasHistory">
+        <rdfs:domain rdf:resource="#Metadata"/>
+        <rdfs:range rdf:resource="&hist;History"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl#hasIPR -->
+
+    <owl:ObjectProperty rdf:about="#hasIPR">
+        <rdfs:domain rdf:resource="#Metadata"/>
+        <rdfs:range rdf:resource="&ipr;IPR"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl#hasImageCreation -->
+
+    <owl:ObjectProperty rdf:about="#hasImageCreation">
+        <rdfs:domain rdf:resource="#Metadata"/>
+        <rdfs:range rdf:resource="&imcr;ImageCreation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/BasicImPar.owl#BasicImageInformation -->
+
+    <owl:Class rdf:about="&bip;BasicImageInformation"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Content.owl#Content -->
+
+    <owl:Class rdf:about="&cont;Content"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DIG35.owl#Metadata -->
+
+    <owl:Class rdf:about="#Metadata">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasIPR"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasHistory"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBasicImPar"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasImageCreation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasContent"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/History.owl#History -->
+
+    <owl:Class rdf:about="&hist;History"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/IPR.owl#IPR -->
+
+    <owl:Class rdf:about="&ipr;IPR"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/ImageCreation.owl#ImageCreation -->
+
+    <owl:Class rdf:about="&imcr;ImageCreation"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

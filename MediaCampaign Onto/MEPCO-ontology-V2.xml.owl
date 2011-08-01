@@ -1,0 +1,2206 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY mepco "http://proton.semanticweb.org/2006/05/mepco#" >
+    <!ENTITY protont "http://proton.semanticweb.org/2006/05/protons#" >
+    <!ENTITY protonu "http://proton.semanticweb.org/2006/05/protonu#" >
+]>
+
+
+<rdf:RDF xmlns="http://proton.semanticweb.org/2006/05/MEPCO#"
+     xml:base="http://proton.semanticweb.org/2006/05/MEPCO"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:protonu="http://proton.semanticweb.org/2006/05/protonu#"
+     xmlns:mepco="http://proton.semanticweb.org/2006/05/mepco#"
+     xmlns:protont="http://proton.semanticweb.org/2006/05/protons#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>0.9.27.02</owl:versionInfo>
+        <rdfs:comment>MEPCO</rdfs:comment>
+        <owl:imports rdf:resource="http://proton.semanticweb.org/2006/05/protons"/>
+        <owl:imports rdf:resource="http://proton.semanticweb.org/2006/05/protonu"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&protont;transitiveOver">
+        <rdfs:label>Transitive over</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&protont;systemPrimitive">
+        <rdfs:label>System Primitive</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#advertisesBrand -->
+
+    <owl:ObjectProperty rdf:about="&mepco;advertisesBrand">
+        <rdfs:label>advertises Brand</rdfs:label>
+        <rdfs:comment>A property that relates an Ad Agency and the Brand it adversises.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:range rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#announcedBy -->
+
+    <owl:ObjectProperty rdf:about="&mepco;announcedBy">
+        <rdfs:label>announced By</rdfs:label>
+        <rdfs:comment>A property that relates a Press Release and the Agent who announces it.&#160;</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;PressRelease"/>
+        <rdfs:range rdf:resource="&protont;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#appearsInMedia -->
+
+    <owl:ObjectProperty rdf:about="&mepco;appearsInMedia">
+        <rdfs:label>appears in Media</rdfs:label>
+        <rdfs:comment>The specific media of a given media event. The instances of the various media types.</rdfs:comment>
+        <rdfs:range rdf:resource="&mepco;Media"/>
+        <rdfs:domain rdf:resource="&mepco;MediaEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#brandedAs -->
+
+    <owl:ObjectProperty rdf:about="&mepco;brandedAs">
+        <rdfs:label>branded As</rdfs:label>
+        <rdfs:comment>A property that relates a Product and a Brand.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Product"/>
+        <owl:inverseOf rdf:resource="&mepco;isBrandOfProduct"/>
+        <rdfs:range rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#broadcastedDuringDayPart -->
+
+    <owl:ObjectProperty rdf:about="&mepco;broadcastedDuringDayPart">
+        <rdfs:label>broadcasted During Day Part</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&mepco;DayPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#broadcastedDuringProgram -->
+
+    <owl:ObjectProperty rdf:about="&mepco;broadcastedDuringProgram">
+        <rdfs:label>broadcasted During Program</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&mepco;Program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#broadcastedOn -->
+
+    <owl:ObjectProperty rdf:about="&mepco;broadcastedOn">
+        <rdfs:label>broadcasted On</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Broadcast"/>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#castsCelebrity -->
+
+    <owl:ObjectProperty rdf:about="&mepco;castsCelebrity">
+        <rdfs:label>casts Celebrity</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&protont;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#celebrityInCreative -->
+
+    <owl:ObjectProperty rdf:about="&mepco;celebrityInCreative">
+        <rdfs:label>celebrity In Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&protont;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#countryOfCreative -->
+
+    <owl:ObjectProperty rdf:about="&mepco;countryOfCreative">
+        <rdfs:label>country Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&protont;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#geographicalCoverage -->
+
+    <owl:ObjectProperty rdf:about="&mepco;geographicalCoverage">
+        <rdfs:label>geographical Coverage</rdfs:label>
+        <rdfs:comment>The specific geographic location where a given media event occurs.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&protont;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasAdAgency -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasAdAgency">
+        <rdfs:label>has Ad Agency</rdfs:label>
+        <rdfs:comment>Relates a Creative and an Ad Agency without to specify further the exact type of the relation, i.e. whether the Agency only paid for the posting of the advertisement or created it, etc.</rdfs:comment>
+        <rdfs:range rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasAdvertiser -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasAdvertiser">
+        <rdfs:label>has Advertiser</rdfs:label>
+        <rdfs:comment>Specifies the organization whose brand is advertised.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&protont;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasBrand -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasBrand">
+        <rdfs:label>has Brand</rdfs:label>
+        <rdfs:comment>Relates an Organization and the Brand it has.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&mepco;isBrandOfOrganization"/>
+        <rdfs:domain rdf:resource="&protont;Organization"/>
+        <rdfs:range rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasCampaigner -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasCampaigner">
+        <rdfs:label>has Campaigner</rdfs:label>
+        <rdfs:comment>The agent who will benefit from changing the attitudes and behavior of the target group towards the agent&#39;s image, company, product, service or politics.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&protont;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasCategory">
+        <rdfs:label>has Category</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Category"/>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasClient -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasClient">
+        <rdfs:label>has Client</rdfs:label>
+        <rdfs:comment>Relates an Ad Agency and its Client-Organization.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;AdvertisingAgency"/>
+        <owl:inverseOf rdf:resource="&mepco;isClientOf"/>
+        <rdfs:range rdf:resource="&protont;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasHorizontalPosition -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasHorizontalPosition">
+        <rdfs:label>has Horizontal Position</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&mepco;HorizontalPosition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasMediaCoverage -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasMediaCoverage">
+        <rdfs:label>has Media Coverage</rdfs:label>
+        <rdfs:comment>The media presence of a campaign as specified with the media where the campaing runs.</rdfs:comment>
+        <rdfs:range rdf:resource="&mepco;Media"/>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasMediaSource -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasMediaSource">
+        <rdfs:label>has Media Source</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Media"/>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasOfficialSponsor -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasOfficialSponsor">
+        <rdfs:label>has Official Sponsor</rdfs:label>
+        <rdfs:comment>Relates a Sport Event and its Sponsor</rdfs:comment>
+        <rdfs:range rdf:resource="&protont;Agent"/>
+        <rdfs:domain rdf:resource="&protont;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasRunTime -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasRunTime">
+        <rdfs:label>has Run Time</rdfs:label>
+        <rdfs:comment>The duration of a broadcast creative as measured in seconds.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&mepco;RunTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasSize -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasSize">
+        <rdfs:label>has Size</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&mepco;AdSize"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasSpot -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasSpot">
+        <rdfs:label>has Spot</rdfs:label>
+        <rdfs:comment>Relates a given Creative and any of its exemplifications.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&mepco;Spot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasVerticalOrientation -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasVerticalOrientation">
+        <rdfs:label>has Vertical Orientation</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&mepco;VerticalOrientation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasWebEdition -->
+
+    <owl:ObjectProperty rdf:about="&mepco;hasWebEdition">
+        <rdfs:label>has Web Edition</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Media"/>
+        <rdfs:range rdf:resource="&mepco;WebEdition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#includesCampaign -->
+
+    <owl:TransitiveProperty rdf:about="&mepco;includesCampaign">
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:label>includes Campaign</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Campaign"/>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#includesCreative -->
+
+    <owl:ObjectProperty rdf:about="&mepco;includesCreative">
+        <rdfs:label>includes Creative</rdfs:label>
+        <rdfs:comment>The creatives of which a given campaign consists. The creatives are the individual realizations of the goal of the campaign.</rdfs:comment>
+        <rdfs:range rdf:resource="&mepco;Creative"/>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <owl:inverseOf rdf:resource="&mepco;partOfMediaCampaign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="&mepco;includesEvent">
+        <rdfs:label>includes Event</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&protont;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#includesPlannedMediaEvent -->
+
+    <owl:ObjectProperty rdf:about="&mepco;includesPlannedMediaEvent">
+        <rdfs:label>includes Planned Media Event</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <rdfs:range rdf:resource="&mepco;PlannedMediaEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#invitedCelebrity -->
+
+    <owl:ObjectProperty rdf:about="&mepco;invitedCelebrity">
+        <rdfs:label>invited Celebrity</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&protont;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isBrandOfOrganization -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isBrandOfOrganization">
+        <rdfs:label>is Brand Of Organization</rdfs:label>
+        <rdfs:range rdf:resource="&protont;Organization"/>
+        <rdfs:domain rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isBrandOfProduct -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isBrandOfProduct">
+        <rdfs:label>is Brand Of Product</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Product"/>
+        <rdfs:domain rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isClientOf -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isClientOf">
+        <rdfs:label>is Client Of</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:domain rdf:resource="&protont;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isCreativeOfBrand -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isCreativeOfBrand">
+        <rdfs:label>is Creative Of Brand</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isMarketingCampaignOfProduct -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isMarketingCampaignOfProduct">
+        <rdfs:label>is Marketing Campaign Of Product</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MarketingCampaign"/>
+        <rdfs:range rdf:resource="&mepco;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isMediaCampaignOfBrand -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isMediaCampaignOfBrand">
+        <rdfs:label>is Media Campaign Of Brand</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <rdfs:range rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isPlacedOn -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isPlacedOn">
+        <rdfs:label>is Placed On</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&mepco;AdPlacement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isPoliticalCampaignOf -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isPoliticalCampaignOf">
+        <rdfs:label>is Political Campaign Of</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;PoliticalCampaign"/>
+        <rdfs:range rdf:resource="&protont;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#isWebEditionOf -->
+
+    <owl:ObjectProperty rdf:about="&mepco;isWebEditionOf">
+        <rdfs:label>is Web Edition Of</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Media"/>
+        <rdfs:domain rdf:resource="&mepco;WebEdition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#mediaSourceOfCreative -->
+
+    <owl:ObjectProperty rdf:about="&mepco;mediaSourceOfCreative">
+        <rdfs:label>media Source Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&mepco;Media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#ofBrand -->
+
+    <owl:ObjectProperty rdf:about="&mepco;ofBrand">
+        <rdfs:label>of Brand</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&protonu;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#offeredBy -->
+
+    <owl:ObjectProperty rdf:about="&mepco;offeredBy">
+        <rdfs:label>offered By</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Product"/>
+        <owl:inverseOf rdf:resource="&mepco;offersProduct"/>
+        <rdfs:range rdf:resource="&protont;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#offersProduct -->
+
+    <owl:ObjectProperty rdf:about="&mepco;offersProduct">
+        <rdfs:label>offers Product</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Product"/>
+        <rdfs:domain rdf:resource="&protont;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#onWebSite -->
+
+    <owl:ObjectProperty rdf:about="&mepco;onWebSite">
+        <rdfs:label>on Web Site</rdfs:label>
+        <rdfs:comment>The URL of the webpage containing a given creative.</rdfs:comment>
+        <rdfs:range rdf:resource="&mepco;WebSite"/>
+        <rdfs:domain rdf:resource="&mepco;WebSpot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#partOfMediaCampaign -->
+
+    <owl:ObjectProperty rdf:about="&mepco;partOfMediaCampaign">
+        <rdfs:label>part Of Media Campaign</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&mepco;MediaCampaign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#publishedIn -->
+
+    <owl:ObjectProperty rdf:about="&mepco;publishedIn">
+        <rdfs:label>published In</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&mepco;PrintMedia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#refersEntity -->
+
+    <owl:ObjectProperty rdf:about="&mepco;refersEntity">
+        <rdfs:label>refers Entity</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaEvent"/>
+        <rdfs:range rdf:resource="&protont;Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#refersTo -->
+
+    <owl:ObjectProperty rdf:about="&mepco;refersTo">
+        <rdfs:label>refers To</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <rdfs:range rdf:resource="&protont;Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#relatesToCreative -->
+
+    <owl:ObjectProperty rdf:about="&mepco;relatesToCreative">
+        <rdfs:label>relates To Creative</rdfs:label>
+        <rdfs:comment>Relates a given Spot and the Creative of which the Spot is a specific exemplification.</rdfs:comment>
+        <rdfs:range rdf:resource="&mepco;Creative"/>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#reportedInMedia -->
+
+    <owl:ObjectProperty rdf:about="&mepco;reportedInMedia">
+        <rdfs:label>reported In Media</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;Media"/>
+        <rdfs:domain rdf:resource="&protont;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#reportsEvent -->
+
+    <owl:ObjectProperty rdf:about="&mepco;reportsEvent">
+        <rdfs:label>reports Event</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaEvent"/>
+        <rdfs:range rdf:resource="&protont;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#runByAdAgency -->
+
+    <owl:ObjectProperty rdf:about="&mepco;runByAdAgency">
+        <rdfs:label>run By Ad Agency</rdfs:label>
+        <rdfs:range rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <owl:inverseOf rdf:resource="&mepco;runsCampaign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#runsCampaign -->
+
+    <owl:ObjectProperty rdf:about="&mepco;runsCampaign">
+        <rdfs:label>runs Campaign</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:range rdf:resource="&mepco;Campaign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#seenInCountry -->
+
+    <owl:ObjectProperty rdf:about="&mepco;seenInCountry">
+        <rdfs:label>seen In Country</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&protont;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#appearsOnDate -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;appearsOnDate">
+        <rdfs:label>appears On Date</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaEvent"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#brandID -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;brandID">
+        <rdfs:label>brand ID</rdfs:label>
+        <rdfs:domain rdf:resource="&protonu;Brand"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#campaignName -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;campaignName">
+        <rdfs:label>campaign Name</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsFocusWord -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsFocusWord">
+        <rdfs:label>contains Focus Word</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsJingle -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsJingle">
+        <rdfs:label>contains Jingle</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsLogo -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsLogo">
+        <rdfs:label>contains Logo</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsMusic -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsMusic">
+        <rdfs:label>contains Music</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsSlogan -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsSlogan">
+        <rdfs:label>contains Slogan</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsSubtitle -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsSubtitle">
+        <rdfs:label>contains Subtitle</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsTagline -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsTagline">
+        <rdfs:label>contains Tagline</rdfs:label>
+        <rdfs:comment>A variant of a slogan, usually appearing in commercials; here used to summarize the slogans across spots no matter in what media do they appear</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsText -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsText">
+        <rdfs:label>contains Text</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#containsTitle -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;containsTitle">
+        <rdfs:label>contains Title</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#creativeID -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;creativeID">
+        <rdfs:label>creative ID</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#descriptionOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;descriptionOfCreative">
+        <rdfs:label>description Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#endTime -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;endTime">
+        <rdfs:label>end Time</rdfs:label>
+        <rdfs:comment>the ending point in time of a broadcast creative; given in format hour, minutes, seconds.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#endsOnDate -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;endsOnDate">
+        <rdfs:label>ends On Date</rdfs:label>
+        <rdfs:comment>The last date of a campaign.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#estimatedBrandExpenditures -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;estimatedBrandExpenditures">
+        <rdfs:label>estimated Brand Expenditures</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#estimatedMediaExpenditures -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;estimatedMediaExpenditures">
+        <rdfs:label>estimated Media Expenditures</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#firstAppearance -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;firstAppearance">
+        <rdfs:label>first Appearance</rdfs:label>
+        <rdfs:comment>the date when a given creative was first seen</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#focusWordOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;focusWordOfCreative">
+        <rdfs:label>focus Word Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasArea -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasArea">
+        <rdfs:label>has Area</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasDescription">
+        <rdfs:label>has Description</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasDuration -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasDuration">
+        <rdfs:label>has Duration</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;WebSpot"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasFocusWord -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasFocusWord">
+        <rdfs:label>has Focus Word</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasHeight">
+        <rdfs:label>has Height</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasImageSimilarity -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasImageSimilarity">
+        <rdfs:label>has Image Similarity</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasJingle -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasJingle">
+        <rdfs:label>has Jingle</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasLanguage -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasLanguage">
+        <rdfs:label>has Language</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasLogo -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasLogo">
+        <rdfs:label>has Logo</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasMusic -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasMusic">
+        <rdfs:label>has Music</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasSlogan -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasSlogan">
+        <rdfs:label>has Slogan</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;MediaCampaign"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#hasWidth -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;hasWidth">
+        <rdfs:label>has Width</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#jingleOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;jingleOfCreative">
+        <rdfs:label>jingle Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#languageOfCampaign -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;languageOfCampaign">
+        <rdfs:label>language Of Campaign</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&xsd;language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#languageOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;languageOfCreative">
+        <rdfs:label>language Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#lastAppearance -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;lastAppearance">
+        <rdfs:label>last Appearance</rdfs:label>
+        <rdfs:comment>the date when a given creative was last seen</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#lasts -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;lasts">
+        <rdfs:label>lasts</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#logoOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;logoOfCreative">
+        <rdfs:label>logo Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#musicOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;musicOfCreative">
+        <rdfs:label>music Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#periodOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;periodOfCreative">
+        <rdfs:label>period Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#positionInTheBreak -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;positionInTheBreak">
+        <rdfs:label>position In The Break</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#positionOnTheScreen -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;positionOnTheScreen">
+        <rdfs:label>position On The Screen</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;WebSpot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#programInformation -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;programInformation">
+        <rdfs:label>program Information</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#publishedInIssue -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;publishedInIssue">
+        <rdfs:label>published In Issue</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Ad"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#sizeOnTheScreen -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;sizeOnTheScreen">
+        <rdfs:label>size On The Screen</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;TVCommercial"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#sloganOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;sloganOfCreative">
+        <rdfs:label>slogan Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#spotID -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;spotID">
+        <rdfs:label>spot ID</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Spot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#startTime -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;startTime">
+        <rdfs:label>start Time</rdfs:label>
+        <rdfs:comment>the starting point in time when a broadcast creative is on air, given in format hour, minutes, seconds.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Commercial"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#startsOnDate -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;startsOnDate">
+        <rdfs:label>starts On Date</rdfs:label>
+        <rdfs:comment>The starting date of a campaign.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mepco;Campaign"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#textOfCreative -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;textOfCreative">
+        <rdfs:label>text Of Creative</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;Creative"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#withSize -->
+
+    <owl:DatatypeProperty rdf:about="&mepco;withSize">
+        <rdfs:label>with Size</rdfs:label>
+        <rdfs:domain rdf:resource="&mepco;WebSpot"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Ad -->
+
+    <owl:Class rdf:about="&mepco;Ad">
+        <rdfs:label>Ad</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Spot"/>
+        <rdfs:comment>A spot printed in a magazine or a newspaper.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#AdFeature -->
+
+    <owl:Class rdf:about="&mepco;AdFeature">
+        <rdfs:label>Ad Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Abstract"/>
+        <rdfs:comment>The class of the important properties describing an ad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#AdPlacement -->
+
+    <owl:Class rdf:about="&mepco;AdPlacement">
+        <rdfs:label>Ad Placement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;AdFeature"/>
+        <rdfs:comment>Specifies the page on which an ad is placed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#AdSize -->
+
+    <owl:Class rdf:about="&mepco;AdSize">
+        <rdfs:label>Ad Size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;AdFeature"/>
+        <rdfs:comment>Specifies the space of a printed media occupied by an ad. Given as a ration ad/page size. The size thus specified is relative to the size of the page on which the ad appears, and so it varies among the individual media.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#AdvertisingAgency -->
+
+    <owl:Class rdf:about="&mepco;AdvertisingAgency">
+        <rdfs:label>Advertising Agency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protonu;Company"/>
+        <rdfs:comment>Professional advertising organisation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#AdvertisingCampaign -->
+
+    <owl:Class rdf:about="&mepco;AdvertisingCampaign">
+        <rdfs:label>Advertising Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;MarketingCampaign"/>
+        <rdfs:comment>A series of advertisements, similar in some respect. One of the marketing strategies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Advertorial -->
+
+    <owl:Class rdf:about="&mepco;Advertorial">
+        <rdfs:label>Advertorial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;PlannedMediaEvent"/>
+        <rdfs:comment>An ad that resembles an editorial in style, content and layout to confer the magazine&#39;s value upon the product or service. It may have the form of a news or of a journalistic report.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Broadcast -->
+
+    <owl:Class rdf:about="&mepco;Broadcast">
+        <rdfs:label>Broadcast</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Media"/>
+        <rdfs:comment>TV/Radio program transmitted for public use.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#BuyingAgency -->
+
+    <owl:Class rdf:about="&mepco;BuyingAgency">
+        <rdfs:label>Buying Agency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:comment>Professional advertising organisation that helps the advertiser in purchasing the advertisement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Campaign -->
+
+    <owl:Class rdf:about="&mepco;Campaign">
+        <rdfs:label>Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Event"/>
+        <rdfs:comment>A series of planned, co-ordinated and organized events (operations and actions) to achieve a certain goal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Category -->
+
+    <owl:Class rdf:about="&mepco;Category">
+        <rdfs:label>Category</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Commercial -->
+
+    <owl:Class rdf:about="&mepco;Commercial">
+        <rdfs:label>Commercial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Spot"/>
+        <rdfs:comment>A spot broadcasted on TV or Radio channel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#CommercialFeature -->
+
+    <owl:Class rdf:about="&mepco;CommercialFeature">
+        <rdfs:label>Commercial Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Abstract"/>
+        <rdfs:comment>The class of the important properties describing a commercial.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Creative -->
+
+    <owl:Class rdf:about="&mepco;Creative">
+        <rdfs:label>Creative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Abstract"/>
+        <rdfs:comment>A description of an advertisement; a recording of a Ad; generic ad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#CreativeAgency -->
+
+    <owl:Class rdf:about="&mepco;CreativeAgency">
+        <rdfs:label>Creative Agency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:comment>Professional advertising organisation that helps the advertiser in creating the advertisement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#DayPart -->
+
+    <owl:Class rdf:about="&mepco;DayPart">
+        <rdfs:label>Day Part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;CommercialFeature"/>
+        <rdfs:comment>The dividing of the day into several parts in broadcasting. During each of daypart a different type of radio programming or television programming is aired.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Goods -->
+
+    <owl:Class rdf:about="&mepco;Goods">
+        <rdfs:label>Goods</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Product"/>
+        <rdfs:comment>Consumer goods exchanged to satisfy human wants in consumption. Goods come with substantially physical, tangible form; are object of ownership, possession. In addition, consumer goods only incidentally may assisst in further production.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#HealthCampaign -->
+
+    <owl:Class rdf:about="&mepco;HealthCampaign">
+        <rdfs:label>Health Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;SocialCampaign"/>
+        <rdfs:comment>A campaign that aims to educate and/or alter the behavior in order to promote health.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#HorizontalPosition -->
+
+    <owl:Class rdf:about="&mepco;HorizontalPosition">
+        <rdfs:label>Horizontal Position</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;AdFeature"/>
+        <rdfs:comment>Specifies the location of an ad on a given page relative to the horizontal axis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Internet -->
+
+    <owl:Class rdf:about="&mepco;Internet">
+        <rdfs:label>Internet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Magazine -->
+
+    <owl:Class rdf:about="&mepco;Magazine">
+        <rdfs:label>Magazine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;PrintMedia"/>
+        <rdfs:comment>A periodical publication containing a variety of articles on various subjects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#MarketingCampaign -->
+
+    <owl:Class rdf:about="&mepco;MarketingCampaign">
+        <rdfs:label>Marketing Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Campaign"/>
+        <rdfs:comment>A series of advertisements and other marketing strategies that aim to increase the sales of a product, of a service or to promote a company.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Media -->
+
+    <owl:Class rdf:about="&mepco;Media">
+        <rdfs:label>Media</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Object"/>
+        <rdfs:comment>A means of mass communication. The meanings of the word such as the &quot;group of journalists and others who constitute the communications industry and profession&quot;, or &quot;an object or device, such as a disk, on which data is stored&quot;, or facilities used to transmit information are excluded.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#MediaCampaign -->
+
+    <owl:Class rdf:about="&mepco;MediaCampaign">
+        <rdfs:label>Media Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Campaign"/>
+        <rdfs:comment>Introduced to specify a campaign as it appears in media such as print media, TV, Radio and on internet. It might be extended so as to include outdoor meadia as bilboards or small-AdSize mediums like pens, bags, T-shirts, flyers, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#MediaEvent -->
+
+    <owl:Class rdf:about="&mepco;MediaEvent">
+        <rdfs:label>Media Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Event"/>
+        <rdfs:comment>An event as appears in a given medium (in press, on TV, radio or internet) and taken in isolation from any related event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#News -->
+
+    <owl:Class rdf:about="&mepco;News">
+        <rdfs:label>News</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;UnforeseenMediaEvent"/>
+        <rdfs:comment>Information about recent events or happenings, reported in mass media.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Newspaper -->
+
+    <owl:Class rdf:about="&mepco;Newspaper">
+        <rdfs:label>Newspaper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;PrintMedia"/>
+        <rdfs:comment>A daily or weekly publication on folded sheets; contains news and articles and advertisements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#PRCampaign -->
+
+    <owl:Class rdf:about="&mepco;PRCampaign">
+        <rdfs:label>PR Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Campaign"/>
+        <rdfs:comment>A campaign that aims to create or remodel the image of (the prestige of and/or the attitutes towards) a person, an institution, a company, a product, or a service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#PlannedMediaEvent -->
+
+    <owl:Class rdf:about="&mepco;PlannedMediaEvent">
+        <rdfs:label>Planned Media Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;MediaEvent"/>
+        <rdfs:comment>Media event carried out according to a plan to achieve a certain goal. The beneficiary is aware of and agreed to accept the outcomes of the event when published.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#PlanningAgency -->
+
+    <owl:Class rdf:about="&mepco;PlanningAgency">
+        <rdfs:label>Planning Agency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;AdvertisingAgency"/>
+        <rdfs:comment>Professional advertising organisation that helps the advertiser in planning the advertisement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#PoliticalCampaign -->
+
+    <owl:Class rdf:about="&mepco;PoliticalCampaign">
+        <rdfs:label>Political Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;PRCampaign"/>
+        <rdfs:comment>The campaign of a candidate for a position in elective office, for example - campaign for a governor, Mayor, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#PressRelease -->
+
+    <owl:Class rdf:about="&mepco;PressRelease">
+        <rdfs:label>Press Release</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;PlannedMediaEvent"/>
+        <rdfs:comment>A written announcement that seeks to draw attention to a specific event or product launch.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#PrintMedia -->
+
+    <owl:Class rdf:about="&mepco;PrintMedia">
+        <rdfs:label>Print Media</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Media"/>
+        <rdfs:comment>Any type of media, for the production of which the process of printing is involved. Print media class is meant to summarize periodicals, but also any other form of communication (advertisement) like flyers, brochures, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Product -->
+
+    <owl:Class rdf:about="&mepco;Product">
+        <rdfs:label>Product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protont;Object"/>
+        <rdfs:comment>A unit of exchange to satisfy consumer&#39;s wants and needs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Program -->
+
+    <owl:Class rdf:about="&mepco;Program">
+        <rdfs:label>Program</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;CommercialFeature"/>
+        <rdfs:comment>Represents the placement of the commercial within a given program.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Publicity -->
+
+    <owl:Class rdf:about="&mepco;Publicity">
+        <rdfs:label>Publicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;UnforeseenMediaEvent"/>
+        <rdfs:comment>Similar to advertorial in form and content. Unlike the advertorial, the advertiser is not expected to pay a fee for the placement of the ad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#RadioBroadcastingCompany -->
+
+    <owl:Class rdf:about="&mepco;RadioBroadcastingCompany">
+        <rdfs:label>Radio Broadcasting Company</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&protonu;MediaCompany"/>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#RadioCommercial -->
+
+    <owl:Class rdf:about="&mepco;RadioCommercial">
+        <rdfs:label>Radio Commercial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Commercial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#RadioStation -->
+
+    <owl:Class rdf:about="&mepco;RadioStation">
+        <rdfs:label>Radio Station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Broadcast"/>
+        <rdfs:comment>Sound broadcasting service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#RunTime -->
+
+    <owl:Class rdf:about="&mepco;RunTime">
+        <rdfs:label>Run Time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;CommercialFeature"/>
+        <rdfs:comment>The standardized lenght of a commercial as measured in seconds</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#SalesPromotions -->
+
+    <owl:Class rdf:about="&mepco;SalesPromotions">
+        <rdfs:label>Sales Promotions</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;MarketingCampaign"/>
+        <rdfs:comment>Marketing strategy with the aim to stimulate trial, increase demand for a product or make it more available.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Services -->
+
+    <owl:Class rdf:about="&mepco;Services">
+        <rdfs:label>Services</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Product"/>
+        <rdfs:comment>Immaterial equivalent of a good. It does not result in ownership and it is substantially intangible.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#SocialCampaign -->
+
+    <owl:Class rdf:about="&mepco;SocialCampaign">
+        <rdfs:label>Social Campaign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Campaign"/>
+        <rdfs:comment>A campaign with the goal to change the attitudes and/or behavior towards a socially significant cause. The beneficiary and the target group may overlap partially or fully. For example a campaign with the goal to modify the attitudes and/or behavior towards specific minority group.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Sponsorship -->
+
+    <owl:Class rdf:about="&mepco;Sponsorship">
+        <rdfs:label>Sponsorship</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;PlannedMediaEvent"/>
+        <rdfs:comment>Advertising where a sponsor (business agent) pays for radio, TV programming or for a long-term Ad in a return of advertising time or long-term occurence of an Ad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Spot -->
+
+    <owl:Class rdf:about="&mepco;Spot">
+        <rdfs:label>Spot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;PlannedMediaEvent"/>
+        <rdfs:comment>Expressive, imaginative advertisement. The specific and individual appearance of a given creative.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#TVChannel -->
+
+    <owl:Class rdf:about="&mepco;TVChannel">
+        <rdfs:label>TV Channel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Broadcast"/>
+        <rdfs:comment>A TV station and its programs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#TVCommercial -->
+
+    <owl:Class rdf:about="&mepco;TVCommercial">
+        <rdfs:label>TV Commercial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Commercial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#UnforeseenMediaEvent -->
+
+    <owl:Class rdf:about="&mepco;UnforeseenMediaEvent">
+        <rdfs:label>Unforeseen Media Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;MediaEvent"/>
+        <rdfs:comment>Media event like news, reportage and the likes. The event appears without deliberate intent of the Agent who will assume its effects. Sometimes, the event might have undesired or even disastrous effects for the agent&#39;s successful operations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#VerticalOrientation -->
+
+    <owl:Class rdf:about="&mepco;VerticalOrientation">
+        <rdfs:label>Vertical Orientation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;AdFeature"/>
+        <rdfs:comment>Specifies the location of an ad on a given page relative to the vertical axis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#WebEdition -->
+
+    <owl:Class rdf:about="&mepco;WebEdition">
+        <rdfs:label>Web Edition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;WebSite"/>
+        <rdfs:comment>The Internet version/edition of a Media Instance, i.e. nbc.com as a version of nbc channel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#WebSite -->
+
+    <owl:Class rdf:about="&mepco;WebSite">
+        <rdfs:label>Web site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Internet"/>
+        <rdfs:comment>The webpage that contains a given creative.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#WebSpot -->
+
+    <owl:Class rdf:about="&mepco;WebSpot">
+        <rdfs:label>Web Spot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mepco;Spot"/>
+        <rdfs:comment>A spot on a web-page.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Abstract -->
+
+    <owl:Class rdf:about="&protont;Abstract"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Agent -->
+
+    <owl:Class rdf:about="&protont;Agent"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Entity -->
+
+    <owl:Class rdf:about="&protont;Entity"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Event -->
+
+    <owl:Class rdf:about="&protont;Event"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Location -->
+
+    <owl:Class rdf:about="&protont;Location"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Object -->
+
+    <owl:Class rdf:about="&protont;Object"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Organization -->
+
+    <owl:Class rdf:about="&protont;Organization"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protons#Person -->
+
+    <owl:Class rdf:about="&protont;Person"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protonu#Brand -->
+
+    <owl:Class rdf:about="&protonu;Brand"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protonu#CommercialOrganization -->
+
+    <owl:Class rdf:about="&protonu;CommercialOrganization"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protonu#Company -->
+
+    <owl:Class rdf:about="&protonu;Company"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protonu#MediaCompany -->
+
+    <owl:Class rdf:about="&protonu;MediaCompany"/>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/protonu#Tournament -->
+
+    <owl:Class rdf:about="&protonu;Tournament"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#AirTime -->
+
+    <owl:NamedIndividual rdf:about="&mepco;AirTime">
+        <rdf:type rdf:resource="&mepco;Program"/>
+        <rdfs:label>AirTime</rdfs:label>
+        <rdfs:comment>Time at which an event is broadcasted, esp. useful to model the media presence of tournaments</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#BackCover -->
+
+    <owl:NamedIndividual rdf:about="&mepco;BackCover">
+        <rdf:type rdf:resource="&mepco;AdPlacement"/>
+        <rdfs:label>Back Cover</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Bottom -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Bottom">
+        <rdf:type rdf:resource="&mepco;HorizontalPosition"/>
+        <rdfs:label>Bottom</rdfs:label>
+        <rdfs:comment>Specifies that the ad is placed at the bottom of the page.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Clip -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Clip">
+        <rdf:type rdf:resource="&mepco;RunTime"/>
+        <rdfs:label>Clip</rdfs:label>
+        <rdfs:comment>The length of a commercial measured in seconds and greater than 60 seconds.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Daytime -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Daytime">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Daytime</rdfs:label>
+        <rdfs:comment>The time between noon to 4 p.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#EarlyFringe -->
+
+    <owl:NamedIndividual rdf:about="&mepco;EarlyFringe">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Early Fringe</rdfs:label>
+        <rdfs:comment>The time between 4 and 6 p.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#EarlyMorning -->
+
+    <owl:NamedIndividual rdf:about="&mepco;EarlyMorning">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Early Morning</rdfs:label>
+        <rdfs:comment>The time between 6 and 9 a.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#EarlyNews -->
+
+    <owl:NamedIndividual rdf:about="&mepco;EarlyNews">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Early News</rdfs:label>
+        <rdfs:comment>The time between 6 and 7 p.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#FifteenSecondsSpot -->
+
+    <owl:NamedIndividual rdf:about="&mepco;FifteenSecondsSpot">
+        <rdf:type rdf:resource="&mepco;RunTime"/>
+        <rdfs:label>Fifteen Seconds Spot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#FourPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;FourPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>Four Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#FrontCover -->
+
+    <owl:NamedIndividual rdf:about="&mepco;FrontCover">
+        <rdf:type rdf:resource="&mepco;AdPlacement"/>
+        <rdfs:label>Front Cover</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#FrontinsideCover -->
+
+    <owl:NamedIndividual rdf:about="&mepco;FrontinsideCover">
+        <rdf:type rdf:resource="&mepco;AdPlacement"/>
+        <rdfs:label>Frontinside Cover</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#FullPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;FullPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>Full Page</rdfs:label>
+        <rdfs:comment>The size of a printed ad stretching on a whole page.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#HalfPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;HalfPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>Half Page</rdfs:label>
+        <rdfs:comment>The size of a printed ad stretching on a half page.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#HalfSpread -->
+
+    <owl:NamedIndividual rdf:about="&mepco;HalfSpread">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>Half Spread</rdfs:label>
+        <rdfs:comment>The size of a printed ad stretching on two pages but occupying only their bottom half.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#InsidePage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;InsidePage">
+        <rdf:type rdf:resource="&mepco;AdPlacement"/>
+        <rdfs:label>Inside Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#LateFringe -->
+
+    <owl:NamedIndividual rdf:about="&mepco;LateFringe">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Late Fringe</rdfs:label>
+        <rdfs:comment>The time between 11.30 p.m. to 1 a.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#LateNews -->
+
+    <owl:NamedIndividual rdf:about="&mepco;LateNews">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Late News</rdfs:label>
+        <rdfs:comment>The time between 11 and 11.30 p.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#LateNight -->
+
+    <owl:NamedIndividual rdf:about="&mepco;LateNight">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Late Night</rdfs:label>
+        <rdfs:comment>The time between 1 a.m. to 6 a.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Left -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Left">
+        <rdf:type rdf:resource="&mepco;VerticalOrientation"/>
+        <rdfs:label>Left</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Middle -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Middle">
+        <rdf:type rdf:resource="&mepco;HorizontalPosition"/>
+        <rdfs:label>Middle</rdfs:label>
+        <rdfs:comment>Specifies that the ad is placed at the middle of the page.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Morning -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Morning">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Morning</rdfs:label>
+        <rdfs:comment>The time between 9 a.m. to noon.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#NewsEmission -->
+
+    <owl:NamedIndividual rdf:about="&mepco;NewsEmission">
+        <rdf:type rdf:resource="&mepco;Program"/>
+        <rdfs:label>News Emission</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#OneFourthPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;OneFourthPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>One Fourth Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#OneInch -->
+
+    <owl:NamedIndividual rdf:about="&mepco;OneInch">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>One Inch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#OneNinthPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;OneNinthPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>One Ninth Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#OneSixthPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;OneSixthPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>One Sixth Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#OneThirdPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;OneThirdPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>One Third Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#OneTwelfthPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;OneTwelfthPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>One Twelfth Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#OppositeInsideCover -->
+
+    <owl:NamedIndividual rdf:about="&mepco;OppositeInsideCover">
+        <rdf:type rdf:resource="&mepco;AdPlacement"/>
+        <rdfs:label>Opposite Inside Cover</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Prime -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Prime">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Prime</rdfs:label>
+        <rdfs:comment>The time between 8 and 11 p.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#PrimeAccess -->
+
+    <owl:NamedIndividual rdf:about="&mepco;PrimeAccess">
+        <rdf:type rdf:resource="&mepco;DayPart"/>
+        <rdfs:label>Prime Access</rdfs:label>
+        <rdfs:comment>The time between 7 and 8 p.m.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Right -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Right">
+        <rdf:type rdf:resource="&mepco;VerticalOrientation"/>
+        <rdfs:label>Right</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Show -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Show">
+        <rdf:type rdf:resource="&mepco;Program"/>
+        <rdfs:label>Show</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#SixtySecondsSpot -->
+
+    <owl:NamedIndividual rdf:about="&mepco;SixtySecondsSpot">
+        <rdf:type rdf:resource="&mepco;RunTime"/>
+        <rdfs:label>Sixty Seconds Spot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#SportEmission -->
+
+    <owl:NamedIndividual rdf:about="&mepco;SportEmission">
+        <rdf:type rdf:resource="&mepco;Program"/>
+        <rdfs:label>Sport Emission</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Spread -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Spread">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>Spread</rdfs:label>
+        <rdfs:comment>The size of a printed ad that stretches on two pages.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#TenSecondsSpot -->
+
+    <owl:NamedIndividual rdf:about="&mepco;TenSecondsSpot">
+        <rdf:type rdf:resource="&mepco;RunTime"/>
+        <rdfs:label>Ten Seconds Spot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#ThirtySecondsSpot -->
+
+    <owl:NamedIndividual rdf:about="&mepco;ThirtySecondsSpot">
+        <rdf:type rdf:resource="&mepco;RunTime"/>
+        <rdfs:label>Thirty Seconds Spot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#Top -->
+
+    <owl:NamedIndividual rdf:about="&mepco;Top">
+        <rdf:type rdf:resource="&mepco;HorizontalPosition"/>
+        <rdfs:label>Top</rdfs:label>
+        <rdfs:comment>Specifies that the ad is placed at the top of the page.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#TwoInches -->
+
+    <owl:NamedIndividual rdf:about="&mepco;TwoInches">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>Two Inches</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#TwoThirdsPage -->
+
+    <owl:NamedIndividual rdf:about="&mepco;TwoThirdsPage">
+        <rdf:type rdf:resource="&mepco;AdSize"/>
+        <rdfs:label>Two Thirds Page</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://proton.semanticweb.org/2006/05/mepco#WeatherForecast -->
+
+    <owl:NamedIndividual rdf:about="&mepco;WeatherForecast">
+        <rdf:type rdf:resource="&mepco;Program"/>
+        <rdfs:label>Weather Forecast</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,23 @@
+<!-- 
+	OWL ontology for the representation of the MPEG-7 MDS as defined in ISO/IEC 15938-5, March 2003
+	 Created by Chrisa Tsinaraki, TUC/MUSIC
+-->
+<!DOCTYPE rdf:RDF [
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY BaseURL "http://127.0.0.1:8080/ontologies/MPEG703/">
+	<!ENTITY datatypes "datatypes#">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY MPEG7 "MPEG7#">
+	<!ENTITY MDS "MDS#">
+	<!ENTITY Visual "Visual#">
+]>
+<rdf:RDF xmlns="&BaseURL;&MPEG7;" xmlns:MPEG7="&BaseURL;&MPEG7;" xmlns:MDS="&BaseURL;&MDS;" xmlns:Visual="&BaseURL;&Visual;" xml:base="&BaseURL;&MPEG7;" xmlns:owl="&owl;" xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;" xmlns:xsd="&xsd;" xmlns:datatypes="&BaseURL;&datatypes;">
+	<owl:Ontology rdf:about="">
+		<rdfs:label>Ontology for MPEG-7</rdfs:label>
+		<rdfs:comment>Ontology capable of fully representing the MPEG-7 MDS</rdfs:comment>
+		<owl:imports rdf:resource="&BaseURL;&MDS;"/>
+		<owl:imports rdf:resource="&BaseURL;&Visual;"/>
+	</owl:Ontology>
+</rdf:RDF>

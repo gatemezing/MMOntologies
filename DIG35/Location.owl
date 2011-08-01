@@ -1,0 +1,878 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pers "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#" >
+    <!ENTITY addr "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#" >
+    <!ENTITY dat "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#" >
+    <!ENTITY lang "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl"
+     xmlns:dat="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:addr="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#"
+     xmlns:pers="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#"
+     xmlns:lang="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing  a location</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/DateTime.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestBearingRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsDestBearingRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSDestBearings"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestDistanceRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsDestDistanceRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSDestDistances"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestLatRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsDestLatRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#LatitudeDirection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestLatitude -->
+
+    <owl:ObjectProperty rdf:about="#gpsDestLatitude">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestLongRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsDestLongRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#LongitudeDirection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestLongitude -->
+
+    <owl:ObjectProperty rdf:about="#gpsDestLongitude">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsImageDirRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsImageDirRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSImageDirections"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsImageTrackRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsImageTrackRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSImageTracks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsLatRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsLatRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#LatitudeDirection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsLatitude -->
+
+    <owl:ObjectProperty rdf:about="#gpsLatitude">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsLongRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsLongRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#LongitudeDirection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsLongitude -->
+
+    <owl:ObjectProperty rdf:about="#gpsLongitude">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsMeasureMode -->
+
+    <owl:ObjectProperty rdf:about="#gpsMeasureMode">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSMeasureModes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsSpeedRef -->
+
+    <owl:ObjectProperty rdf:about="#gpsSpeedRef">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSSpeedReferenceUnits"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsStatus -->
+
+    <owl:ObjectProperty rdf:about="#gpsStatus">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="#GPSStatusValues"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#locationAddress -->
+
+    <owl:ObjectProperty rdf:about="#locationAddress">
+        <rdfs:range rdf:resource="&addr;Address"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#locationComment -->
+
+    <owl:ObjectProperty rdf:about="#locationComment">
+        <rdfs:range rdf:resource="&lang;LangString"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#locationCoordinates -->
+
+    <owl:ObjectProperty rdf:about="#locationCoordinates">
+        <rdfs:range rdf:resource="#Coordinates"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#locationGPS -->
+
+    <owl:ObjectProperty rdf:about="#locationGPS">
+        <rdfs:range rdf:resource="#GPS"/>
+        <rdfs:domain rdf:resource="#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#altitude -->
+
+    <owl:DatatypeProperty rdf:about="#altitude">
+        <rdfs:domain rdf:resource="#Coordinates"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsAltitude -->
+
+    <owl:DatatypeProperty rdf:about="#gpsAltitude">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDOP -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDOP">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDegrees -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDegrees">
+        <rdfs:domain rdf:resource="#GPSUnit"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestBearing -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestBearing">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsDestDistance -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestDistance">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsImageDir -->
+
+    <owl:DatatypeProperty rdf:about="#gpsImageDir">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsImageTrack -->
+
+    <owl:DatatypeProperty rdf:about="#gpsImageTrack">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsMapDatum -->
+
+    <owl:DatatypeProperty rdf:about="#gpsMapDatum">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsMinutes -->
+
+    <owl:DatatypeProperty rdf:about="#gpsMinutes">
+        <rdfs:domain rdf:resource="#GPSUnit"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsSatellites -->
+
+    <owl:DatatypeProperty rdf:about="#gpsSatellites">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsSeconds -->
+
+    <owl:DatatypeProperty rdf:about="#gpsSeconds">
+        <rdfs:domain rdf:resource="#GPSUnit"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsSpeed -->
+
+    <owl:DatatypeProperty rdf:about="#gpsSpeed">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#gpsTime -->
+
+    <owl:DatatypeProperty rdf:about="#gpsTime">
+        <rdfs:domain rdf:resource="#GPS"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#latitude -->
+
+    <owl:DatatypeProperty rdf:about="#latitude">
+        <rdfs:domain rdf:resource="#Coordinates"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#longitude -->
+
+    <owl:DatatypeProperty rdf:about="#longitude">
+        <rdfs:domain rdf:resource="#Coordinates"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#Address -->
+
+    <owl:Class rdf:about="&addr;Address"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#LangString -->
+
+    <owl:Class rdf:about="&lang;LangString"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#CardinalDirection -->
+
+    <owl:Class rdf:about="#CardinalDirection"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#Coordinates -->
+
+    <owl:Class rdf:about="#Coordinates">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#altitude"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#latitude"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#longitude"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPS -->
+
+    <owl:Class rdf:about="#GPS">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#gpsAltitude"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#gpsLatitude"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#gpsLongitude"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSDestBearing -->
+
+    <owl:Class rdf:about="#GPSDestBearing"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSDestBearings -->
+
+    <owl:Class rdf:about="#GPSDestBearings">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DestBearingM"/>
+                    <rdf:Description rdf:about="#DestBearingT"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSDestDistance -->
+
+    <owl:Class rdf:about="#GPSDestDistance"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSDestDistances -->
+
+    <owl:Class rdf:about="#GPSDestDistances">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#DestDistanceN"/>
+                    <rdf:Description rdf:about="#DestDistanceK"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSImageDirection -->
+
+    <owl:Class rdf:about="#GPSImageDirection"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSImageDirections -->
+
+    <owl:Class rdf:about="#GPSImageDirections">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImageDirectionT"/>
+                    <rdf:Description rdf:about="#ImageDirectionM"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSImageTrack -->
+
+    <owl:Class rdf:about="#GPSImageTrack"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSImageTracks -->
+
+    <owl:Class rdf:about="#GPSImageTracks">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImageTrackM"/>
+                    <rdf:Description rdf:about="#ImageTrackT"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSMeasureMode -->
+
+    <owl:Class rdf:about="#GPSMeasureMode"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSMeasureModes -->
+
+    <owl:Class rdf:about="#GPSMeasureModes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MeasureMode2"/>
+                    <rdf:Description rdf:about="#MeasureMode3"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSSpeedReferenceUnit -->
+
+    <owl:Class rdf:about="#GPSSpeedReferenceUnit"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSSpeedReferenceUnits -->
+
+    <owl:Class rdf:about="#GPSSpeedReferenceUnits">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#SpeedReferenceUnitK"/>
+                    <rdf:Description rdf:about="#SpeedReferenceUnitN"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSStatusValue -->
+
+    <owl:Class rdf:about="#GPSStatusValue"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSStatusValues -->
+
+    <owl:Class rdf:about="#GPSStatusValues">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#V"/>
+                    <rdf:Description rdf:about="#A"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#GPSUnit -->
+
+    <owl:Class rdf:about="#GPSUnit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#gpsMinutes"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#gpsSeconds"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#gpsDegrees"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#LatitudeDirection -->
+
+    <owl:Class rdf:about="#LatitudeDirection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#North"/>
+                    <rdf:Description rdf:about="#South"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#Location -->
+
+    <owl:Class rdf:about="#Location">
+        <rdfs:label>Location</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locationAddress"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locationComment"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locationGPS"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locationCoordinates"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#LongitudeDirection -->
+
+    <owl:Class rdf:about="#LongitudeDirection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#West"/>
+                    <rdf:Description rdf:about="#East"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#A -->
+
+    <owl:NamedIndividual rdf:about="#A">
+        <rdf:type rdf:resource="#GPSStatusValue"/>
+        <rdfs:label>Measurement is in progress</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#DestBearingM -->
+
+    <owl:NamedIndividual rdf:about="#DestBearingM">
+        <rdf:type rdf:resource="#GPSDestBearing"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#DestBearingT -->
+
+    <owl:NamedIndividual rdf:about="#DestBearingT">
+        <rdf:type rdf:resource="#GPSDestBearing"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#DestDistanceK -->
+
+    <owl:NamedIndividual rdf:about="#DestDistanceK">
+        <rdf:type rdf:resource="#GPSDestDistance"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#DestDistanceN -->
+
+    <owl:NamedIndividual rdf:about="#DestDistanceN">
+        <rdf:type rdf:resource="#GPSDestDistance"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#East -->
+
+    <owl:NamedIndividual rdf:about="#East">
+        <rdf:type rdf:resource="#CardinalDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#ImageDirectionM -->
+
+    <owl:NamedIndividual rdf:about="#ImageDirectionM">
+        <rdf:type rdf:resource="#GPSImageDirection"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#ImageDirectionT -->
+
+    <owl:NamedIndividual rdf:about="#ImageDirectionT">
+        <rdf:type rdf:resource="#GPSImageDirection"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#ImageTrackM -->
+
+    <owl:NamedIndividual rdf:about="#ImageTrackM">
+        <rdf:type rdf:resource="#GPSImageTrack"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#ImageTrackT -->
+
+    <owl:NamedIndividual rdf:about="#ImageTrackT">
+        <rdf:type rdf:resource="#GPSImageTrack"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#MeasureMode2 -->
+
+    <owl:NamedIndividual rdf:about="#MeasureMode2">
+        <rdf:type rdf:resource="#GPSMeasureMode"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#MeasureMode3 -->
+
+    <owl:NamedIndividual rdf:about="#MeasureMode3">
+        <rdf:type rdf:resource="#GPSMeasureMode"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#North -->
+
+    <owl:NamedIndividual rdf:about="#North">
+        <rdf:type rdf:resource="#CardinalDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#South -->
+
+    <owl:NamedIndividual rdf:about="#South">
+        <rdf:type rdf:resource="#CardinalDirection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#SpeedReferenceUnitK -->
+
+    <owl:NamedIndividual rdf:about="#SpeedReferenceUnitK">
+        <rdf:type rdf:resource="#GPSSpeedReferenceUnit"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#SpeedReferenceUnitN -->
+
+    <owl:NamedIndividual rdf:about="#SpeedReferenceUnitN">
+        <rdf:type rdf:resource="#GPSSpeedReferenceUnit"/>
+        <rdfs:label>...</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#V -->
+
+    <owl:NamedIndividual rdf:about="#V">
+        <rdf:type rdf:resource="#GPSStatusValue"/>
+        <rdfs:label>Measurement is interrupted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Location.owl#West -->
+
+    <owl:NamedIndividual rdf:about="#West">
+        <rdf:type rdf:resource="#CardinalDirection"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,2474 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ico "http://www.aimatshape.net/ontologies/infoCommonOntology.owl#" >
+    <!ENTITY cto "http://www.aimatshape.net/ontologies/toolCommonOntology.owl#" >
+    <!ENTITY cso "http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#"
+     xml:base="http://www.aimatshape.net/ontologies/virtualHumansOntology.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cto="http://www.aimatshape.net/ontologies/toolCommonOntology.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ico="http://www.aimatshape.net/ontologies/infoCommonOntology.owl#"
+     xmlns:cso="http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="file:/C:/infoOntology_v1.0.owl"/>
+        <owl:imports rdf:resource="file:/C:/shapeOntology_v2.3.1.owl"/>
+        <owl:imports rdf:resource="file:/C:/toolOntology_v1.12.1.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#IsPartOf -->
+
+    <owl:ObjectProperty rdf:about="#IsPartOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ClothPattern"/>
+        <rdfs:range rdf:resource="#Garment"/>
+        <owl:inverseOf rdf:resource="#isComprisedOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#beolongsToModelPart -->
+
+    <owl:TransitiveProperty rdf:about="#beolongsToModelPart">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes to which model part the joint belongs to. e.g. the joint r_hip belongs to the Right Leg part.</rdfs:comment>
+        <rdfs:range rdf:resource="#ModelPart"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BodyPartSize"/>
+                    <rdf:Description rdf:about="#Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#canPerfromAnimation -->
+
+    <owl:ObjectProperty rdf:about="#canPerfromAnimation">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:range rdf:resource="#AnimationSequence"/>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#canUseObject -->
+
+    <owl:ObjectProperty rdf:about="#canUseObject">
+        <rdfs:range rdf:resource="#SmartObject"/>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#controls -->
+
+    <owl:ObjectProperty rdf:about="#controls">
+        <rdfs:comment rdf:datatype="&xsd;string">This is to describe the characteristics of the kind of Virtual Human  the controller is designed for.</rdfs:comment>
+        <rdfs:range rdf:resource="#VirtualHuman"/>
+        <rdfs:domain rdf:resource="#VirtualHumanController"/>
+        <owl:inverseOf rdf:resource="#isControlledBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#has -->
+
+    <owl:TransitiveProperty rdf:about="#has">
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This propoerty groups all VH properties</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasActorMorphology -->
+
+    <owl:ObjectProperty rdf:about="#hasActorMorphology">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes the morphology of the person that performed the mocap sequence.</rdfs:comment>
+        <rdfs:range rdf:resource="#MorphologyDescription"/>
+        <rdfs:domain rdf:resource="#MotionCaptureSequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasAlgorthm -->
+
+    <owl:ObjectProperty rdf:about="#hasAlgorthm">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&cto;Algorithm"/>
+        <rdfs:domain rdf:resource="#VirtualHumanController"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasAnimationParameter -->
+
+    <owl:ObjectProperty rdf:about="#hasAnimationParameter">
+        <rdfs:comment rdf:datatype="&xsd;string">For MPEG-4 only. This is to define each transformation parameter of the animation, for the body or the face. This is useful in the case the users want to perform an exahustive analysis of the data.</rdfs:comment>
+        <rdfs:domain rdf:resource="#KeyFrameSequence"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BodyAnimationParameter"/>
+                    <rdf:Description rdf:about="#FacialAnimationParameter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="#hasAttribute">
+        <rdfs:range rdf:resource="#ObjectAttribute"/>
+        <rdfs:domain rdf:resource="#SmartObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="#hasAuthor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#Resource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ico;InstitutionInfo"/>
+                    <rdf:Description rdf:about="&ico;PersonInfo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasBAPDefinition -->
+
+    <owl:ObjectProperty rdf:about="#hasBAPDefinition">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The corresponding BAP concept of the given BAP value</rdfs:comment>
+        <rdfs:domain rdf:resource="#BodyAnimationParameter"/>
+        <rdfs:range rdf:resource="#BodyAnimationParameterDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasBodyPartSize -->
+
+    <owl:ObjectProperty rdf:about="#hasBodyPartSize">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:range rdf:resource="#BodyPartSize"/>
+        <rdfs:domain rdf:resource="#MorphologyDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasCenter -->
+
+    <owl:ObjectProperty rdf:about="#hasCenter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">3D vector of the center</rdfs:comment>
+        <rdfs:range rdf:resource="#_3DVector"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#HandPosture"/>
+                    <rdf:Description rdf:about="#Location"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasChild -->
+
+    <owl:TransitiveProperty rdf:about="#hasChild">
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#Node"/>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasDimension -->
+
+    <owl:ObjectProperty rdf:about="#hasDimension">
+        <rdfs:domain rdf:resource="#Personality"/>
+        <rdfs:range rdf:resource="#PersonalityDimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasEmotionDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasEmotionDescription">
+        <rdfs:domain rdf:resource="#BodyPartMovement"/>
+        <rdfs:range rdf:resource="#EmotionalState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasExpression -->
+
+    <owl:ObjectProperty rdf:about="#hasExpression">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Emotional expression that could describe the movement</rdfs:comment>
+        <rdfs:domain rdf:resource="#BodyPartMovement"/>
+        <rdfs:range rdf:resource="#Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasFAPDefinition -->
+
+    <owl:ObjectProperty rdf:about="#hasFAPDefinition">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The corresponding FAP concept of the given FAP value or range of values</rdfs:comment>
+        <rdfs:range rdf:resource="#FacialAnimationParameterDefinition"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#FacialAnimationParameter"/>
+                    <rdf:Description rdf:about="#FacialAnimationParameterRange"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasFAPRange -->
+
+    <owl:ObjectProperty rdf:about="#hasFAPRange">
+        <rdfs:comment rdf:datatype="&xsd;string">A set of FAPs range values that are identified as a Facial Expression Profile which shows an emotion.</rdfs:comment>
+        <rdfs:domain rdf:resource="#ArchetypalExpressionProfile"/>
+        <rdfs:range rdf:resource="#FacialAnimationParameterRange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="#hasGeometry">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Geometry"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Segment"/>
+                    <rdf:Description rdf:about="#SmartObject"/>
+                    <rdf:Description rdf:about="#VirtualHuman"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasHeight -->
+
+    <owl:ObjectProperty rdf:about="#hasHeight">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">centimeters</rdfs:comment>
+        <rdfs:range rdf:resource="#Measurement"/>
+        <rdfs:domain rdf:resource="#MorphologyDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasImplementationTool -->
+
+    <owl:ObjectProperty rdf:about="#hasImplementationTool">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Link with upper ontology, the Comon Tools Ontology</rdfs:comment>
+        <rdfs:range rdf:resource="&cto;SoftwareTool"/>
+        <rdfs:domain rdf:resource="#VirtualHumanController"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasIndividualityDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasIndividualityDescription">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#IndividualDescription"/>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasLandmark -->
+
+    <owl:ObjectProperty rdf:about="#hasLandmark">
+        <rdfs:domain rdf:resource="#ClothPattern"/>
+        <rdfs:range rdf:resource="#Landmark"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="#hasLocation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">3D vector location of the node</rdfs:comment>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#_3DVector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasMorphologyDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasMorphologyDescription">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#MorphologyDescription"/>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasMotionCategory -->
+
+    <owl:ObjectProperty rdf:about="#hasMotionCategory">
+        <rdfs:domain rdf:resource="#AnimationSequence"/>
+        <rdfs:range rdf:resource="#MotionCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasPatternGeometry -->
+
+    <owl:ObjectProperty rdf:about="#hasPatternGeometry">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ClothPattern"/>
+        <rdfs:range rdf:resource="#Geometry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasProfile -->
+
+    <owl:ObjectProperty rdf:about="#hasProfile">
+        <rdfs:comment rdf:datatype="&xsd;string">A specific facial expression that can be defined inside a Profile.</rdfs:comment>
+        <rdfs:range rdf:resource="#ArchetypalExpressionProfile"/>
+        <rdfs:domain rdf:resource="#FacialExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasRootNode -->
+
+    <owl:TransitiveProperty rdf:about="#hasRootNode">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The starting node of the skeletal structure</rdfs:comment>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:domain rdf:resource="#StructureDescription"/>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasShapeRepresentation -->
+
+    <owl:TransitiveProperty rdf:about="#hasShapeRepresentation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;ObjectProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Link with upper ontology, the Comon Shape Ontology.</rdfs:comment>
+        <rdfs:range rdf:resource="&cso;ShapeRepresentationAndDescription"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AnimationSequence"/>
+                    <rdf:Description rdf:about="#Geometry"/>
+                    <rdf:Description rdf:about="#StructureDescription"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:TransitiveProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasSize -->
+
+    <owl:ObjectProperty rdf:about="#hasSize">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Measurement"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BodyPartSize"/>
+                    <rdf:Description rdf:about="#Segment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasSkinning -->
+
+    <owl:ObjectProperty rdf:about="#hasSkinning">
+        <rdfs:range rdf:resource="#Skinning"/>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasSmartObjectStructure -->
+
+    <owl:ObjectProperty rdf:about="#hasSmartObjectStructure">
+        <rdfs:comment rdf:datatype="&xsd;string">If the object has an internal structure such as a skeleton.</rdfs:comment>
+        <rdfs:domain rdf:resource="#SmartObject"/>
+        <rdfs:range rdf:resource="#SmartObjectStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasVirtualHumanStructure -->
+
+    <owl:ObjectProperty rdf:about="#hasVirtualHumanStructure">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describe the skeletal structure of the virtula human if it does have one.</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:range rdf:resource="#VirtualHumanStructure"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasWeight -->
+
+    <owl:ObjectProperty rdf:about="#hasWeight">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Kilograms</rdfs:comment>
+        <rdfs:range rdf:resource="#Measurement"/>
+        <rdfs:domain rdf:resource="#MorphologyDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#isBasedOn -->
+
+    <owl:ObjectProperty rdf:about="#isBasedOn">
+        <rdfs:comment rdf:datatype="&xsd;string">A Virtual human that was created using others Virtual Humans.</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:range rdf:resource="#VirtualHuman"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="#isComposedOf">
+        <rdfs:domain rdf:resource="#AnimationSequence"/>
+        <rdfs:range rdf:resource="#BodyPartMovement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#isComprisedOf -->
+
+    <owl:ObjectProperty rdf:about="#isComprisedOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="#ClothPattern"/>
+        <rdfs:domain rdf:resource="#Garment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#isControlledBy -->
+
+    <owl:ObjectProperty rdf:about="#isControlledBy">
+        <rdfs:comment rdf:datatype="&xsd;string">This is to descrine the characteristics  of Virtual Human that a controller is designed for.</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:range rdf:resource="#VirtualHumanController"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#isLyingOn -->
+
+    <owl:ObjectProperty rdf:about="#isLyingOn">
+        <rdfs:domain rdf:resource="#ClothPattern"/>
+        <rdfs:range rdf:resource="#HumanPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#isSewedWith -->
+
+    <owl:ObjectProperty rdf:about="#isSewedWith">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:range rdf:resource="#ClothPattern"/>
+        <rdfs:domain rdf:resource="#ClothPattern"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#performInBodyPart -->
+
+    <owl:ObjectProperty rdf:about="#performInBodyPart">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#BodyPartMovement"/>
+        <rdfs:range rdf:resource="#HumanPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#requires -->
+
+    <owl:ObjectProperty rdf:about="#requires">
+        <rdfs:domain rdf:resource="#VirtualHumanController"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AnimationSequence"/>
+                    <rdf:Description rdf:about="#IndividualDescription"/>
+                    <rdf:Description rdf:about="#Resource"/>
+                    <rdf:Description rdf:about="#VirtualHumanController"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#usesBDP -->
+
+    <owl:ObjectProperty rdf:about="#usesBDP">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#BodyAnimationParameterDefinition"/>
+        <rdfs:range rdf:resource="#BodyDefinitionParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#usesFDP -->
+
+    <owl:ObjectProperty rdf:about="#usesFDP">
+        <rdfs:domain rdf:resource="#FacialAnimationParameterDefinition"/>
+        <rdfs:range rdf:resource="#FacialDefinitionParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#wearsGarment -->
+
+    <owl:ObjectProperty rdf:about="#wearsGarment">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:range rdf:resource="#Garment"/>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:subPropertyOf rdf:resource="#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#X -->
+
+    <owl:FunctionalProperty rdf:about="#X">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#_3DVector"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Y -->
+
+    <owl:FunctionalProperty rdf:about="#Y">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#_3DVector"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Z -->
+
+    <owl:FunctionalProperty rdf:about="#Z">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#_3DVector"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#describesEmotion -->
+
+    <owl:FunctionalProperty rdf:about="#describesEmotion">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes a list of human emotion that defines an emotional state. Different theorist have proposed a list of basic emotions. In this list we are describing Plutchik theory.
+
+anger | fear | sadness | joy | disgust | surprise | curiosity | acceptance</rdfs:comment>
+        <rdfs:domain rdf:resource="#EmotionalState"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#endFrame -->
+
+    <owl:FunctionalProperty rdf:about="#endFrame">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Frame where the movement finishes</rdfs:comment>
+        <rdfs:domain rdf:resource="#BodyPartMovement"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasAge -->
+
+    <owl:FunctionalProperty rdf:about="#hasAge">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#MorphologyDescription"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasControllerPropose -->
+
+    <owl:DatatypeProperty rdf:about="#hasControllerPropose">
+        <rdfs:comment rdf:datatype="&xsd;string">Kinematic | Dynamic | Cognitive | Gesture | PathPlanning | Skinning | Perception | Other</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHumanController"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasDate -->
+
+    <owl:FunctionalProperty rdf:about="#hasDate">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:domain rdf:resource="#Resource"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasDescription -->
+
+    <owl:FunctionalProperty rdf:about="#hasDescription">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MotionCategory"/>
+                    <rdf:Description rdf:about="#ObjectAttribute"/>
+                    <rdf:Description rdf:about="#PersonalityDimension"/>
+                    <rdf:Description rdf:about="#Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasDuration -->
+
+    <owl:FunctionalProperty rdf:about="#hasDuration">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Duration in seconds of an emotonal state.</rdfs:comment>
+        <rdfs:domain rdf:resource="#EmotionalState"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasGenderType -->
+
+    <owl:FunctionalProperty rdf:about="#hasGenderType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Male | Female [required]</rdfs:comment>
+        <rdfs:domain rdf:resource="#MorphologyDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasInput -->
+
+    <owl:DatatypeProperty rdf:about="#hasInput">
+        <rdfs:comment rdf:datatype="&xsd;string">List of requirements considered as Input of a controller.</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHumanController"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasIntensity -->
+
+    <owl:FunctionalProperty rdf:about="#hasIntensity">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#EmotionalState"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasLevelOfArticulation -->
+
+    <owl:FunctionalProperty rdf:about="#hasLevelOfArticulation">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">LOA0 | LOA1 | LOA2 | LOA3</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHumanStructure"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasMaxFAPValue -->
+
+    <owl:FunctionalProperty rdf:about="#hasMaxFAPValue">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#FacialAnimationParameterRange"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasMinFAPValue -->
+
+    <owl:FunctionalProperty rdf:about="#hasMinFAPValue">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#FacialAnimationParameterRange"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasName -->
+
+    <owl:FunctionalProperty rdf:about="#hasName">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasOutput -->
+
+    <owl:DatatypeProperty rdf:about="#hasOutput">
+        <rdfs:comment rdf:datatype="&xsd;string">Lost of outputs produced by a controller.</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHumanController"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasPostureType -->
+
+    <owl:FunctionalProperty rdf:about="#hasPostureType">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">T posture | Stand | Sit | Other</rdfs:comment>
+        <rdfs:domain rdf:resource="#VirtualHuman"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasSystemUnitScale -->
+
+    <owl:FunctionalProperty rdf:about="#hasSystemUnitScale">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Meter | Centimeter | Milimeter | Feet | Inch | Mile | Kilogram | Pound |Other [required]</rdfs:comment>
+        <rdfs:domain rdf:resource="#Measurement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasValue -->
+
+    <owl:FunctionalProperty rdf:about="#hasValue">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BodyAnimationParameter"/>
+                    <rdf:Description rdf:about="#FacialAnimationParameter"/>
+                    <rdf:Description rdf:about="#Measurement"/>
+                    <rdf:Description rdf:about="#Personality"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#hasVersion -->
+
+    <owl:FunctionalProperty rdf:about="#hasVersion">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#Resource"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#nodeType -->
+
+    <owl:DatatypeProperty rdf:about="#nodeType">
+        <rdfs:comment rdf:datatype="&xsd;string">Joint | Segment | Landmark | Other</rdfs:comment>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#startFrame -->
+
+    <owl:FunctionalProperty rdf:about="#startFrame">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#BodyPartMovement"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:FunctionalProperty>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#usesJoint -->
+
+    <owl:DatatypeProperty rdf:about="#usesJoint">
+        <rdfs:comment rdf:datatype="&xsd;string">List of joints names used by an animation</rdfs:comment>
+        <rdfs:domain rdf:resource="#KeyFrameSequence"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/infoCommonOntology.owl#InstitutionInfo -->
+
+    <owl:Class rdf:about="&ico;InstitutionInfo">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#EmotionalState"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#Personality"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/infoCommonOntology.owl#PersonInfo -->
+
+    <owl:Class rdf:about="&ico;PersonInfo">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#EmotionalState"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#Personality"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#Animation3D -->
+
+    <owl:Class rdf:about="&cso;Animation3D"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#FileInfo -->
+
+    <owl:Class rdf:about="&cso;FileInfo">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#EmotionalState"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#Personality"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#GeometricalRepresentation -->
+
+    <owl:Class rdf:about="&cso;GeometricalRepresentation"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#KeyFrame -->
+
+    <owl:Class rdf:about="&cso;KeyFrame"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#MotionCapture -->
+
+    <owl:Class rdf:about="&cso;MotionCapture"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ShapeGroup -->
+
+    <owl:Class rdf:about="&cso;ShapeGroup">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#EmotionalState"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#Personality"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#ShapeRepresentationAndDescription -->
+
+    <owl:Class rdf:about="&cso;ShapeRepresentationAndDescription">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#StructuralDescriptor -->
+
+    <owl:Class rdf:about="&cso;StructuralDescriptor"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/shapeCommonOntology.owl#SubGroup -->
+
+    <owl:Class rdf:about="&cso;SubGroup">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#Algorithm -->
+
+    <owl:Class rdf:about="&cto;Algorithm">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#CompilationPlatform -->
+
+    <owl:Class rdf:about="&cto;CompilationPlatform">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#Functionality -->
+
+    <owl:Class rdf:about="&cto;Functionality">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#PersonInfo -->
+
+    <owl:Class rdf:about="&cto;PersonInfo">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#ShapeInfo -->
+
+    <owl:Class rdf:about="&cto;ShapeInfo">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#ShapeType -->
+
+    <owl:Class rdf:about="&cto;ShapeType">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#SoftwareRelease -->
+
+    <owl:Class rdf:about="&cto;SoftwareRelease">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/toolCommonOntology.owl#SoftwareTool -->
+
+    <owl:Class rdf:about="&cto;SoftwareTool">
+        <owl:disjointWith rdf:resource="#AnimationSequence"/>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#AnimationSequence -->
+
+    <owl:Class rdf:about="#AnimationSequence">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasShapeRepresentation"/>
+                <owl:someValuesFrom rdf:resource="&cso;Animation3D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ArchetypalExpressionProfile"/>
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A file that contains animation values applied to the skeletal structure to produce animations. These files are prerecorded sequences.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#ArchetypalExpressionProfile -->
+
+    <owl:Class rdf:about="#ArchetypalExpressionProfile">
+        <owl:disjointWith rdf:resource="#BodyPartMovement"/>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Contains a set of FAPs and values that correspons to a facial expression.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#BodyAnimationParameter -->
+
+    <owl:Class rdf:about="#BodyAnimationParameter">
+        <rdfs:comment rdf:datatype="&xsd;string">MPEG4 BAP (Body Animation Parameter) contains 296 parameters describing the topology of the skeleton. These BAPs can be applied to any MPEG-4 compliant body and produce the same animation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#BodyAnimationParameterDefinition -->
+
+    <owl:Class rdf:about="#BodyAnimationParameterDefinition"/>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#BodyDefinitionParameter -->
+
+    <owl:Class rdf:about="#BodyDefinitionParameter">
+        <rdfs:subClassOf rdf:resource="#Node"/>
+        <rdfs:comment rdf:datatype="&xsd;string">In MPEG-4, the BDP set defines the set of parametres to transform the default body to a customised body with its body surface, body dimensions, and (optionally) texture. BDPs define the receiving terminal geometric body model to use for rendering. BDP is synonim of the Virtual Human Structure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#BodyExpression -->
+
+    <owl:Class rdf:about="#BodyExpression">
+        <rdfs:subClassOf rdf:resource="#Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#BodyPartMovement -->
+
+    <owl:Class rdf:about="#BodyPartMovement">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#performInBodyPart"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#BodyPartSize"/>
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes a meaning movement from an animation in a body part, specifically if it has an expressive or emotional gesture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#BodyPartSize -->
+
+    <owl:Class rdf:about="#BodyPartSize">
+        <owl:disjointWith rdf:resource="#ClothPattern"/>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The length of a given body part.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#ClothPattern -->
+
+    <owl:Class rdf:about="#ClothPattern">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isSewedWith"/>
+                <owl:someValuesFrom rdf:resource="#ClothPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#IsPartOf"/>
+                <owl:someValuesFrom rdf:resource="#Garment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Expression"/>
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Cloth patterns that are sewing each other to create a Garment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#CompleteVirtualHuman -->
+
+    <owl:Class rdf:about="#CompleteVirtualHuman">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasVirtualHumanStructure"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#StructureDescription"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#Head"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#LeftArm"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#LeftFoot"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#LeftHand"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#LeftLeg"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#RightArm"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#RightFoot"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#RightHand"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#RightLeg"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="#Joint"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                                <owl:hasValue rdf:resource="#Trunk"/>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Joint"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#beolongsToModelPart"/>
+                                                <owl:hasValue rdf:resource="#Pelvis"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#VirtualHumanWithSkeleton"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Has all articulations corresponfing to all body parts</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#ComunicationAndGesture -->
+
+    <owl:Class rdf:about="#ComunicationAndGesture">
+        <rdfs:subClassOf rdf:resource="#MotionCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#EmotionalState -->
+
+    <owl:Class rdf:about="#EmotionalState">
+        <rdfs:subClassOf rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#Personality"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This class group the models of emotion used for animating virtual humans.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Expression -->
+
+    <owl:Class rdf:about="#Expression">
+        <owl:disjointWith rdf:resource="#FacialAnimationParameterRange"/>
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Can be an emotional expression which is observable verbal and nonverbal behaviour that communicates emotion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#FacialAnimationParameter -->
+
+    <owl:Class rdf:about="#FacialAnimationParameter">
+        <rdfs:comment rdf:datatype="&xsd;string">MPEG4 Facial Animation Parameters contain animation values that are positions of facial landmarks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#FacialAnimationParameterDefinition -->
+
+    <owl:Class rdf:about="#FacialAnimationParameterDefinition">
+        <rdfs:comment rdf:datatype="&xsd;string">Facial Animation Parameter Definition</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#FacialAnimationParameterRange -->
+
+    <owl:Class rdf:about="#FacialAnimationParameterRange">
+        <owl:disjointWith rdf:resource="#Geometry"/>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Facial Animation Parameters Range values</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#FacialDefinitionParameter -->
+
+    <owl:Class rdf:about="#FacialDefinitionParameter">
+        <rdfs:subClassOf rdf:resource="#Landmark"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Feature point of MPEG-4</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#FacialExpression -->
+
+    <owl:Class rdf:about="#FacialExpression">
+        <rdfs:subClassOf rdf:resource="#Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Garment -->
+
+    <owl:Class rdf:about="#Garment">
+        <rdfs:subClassOf rdf:resource="#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isComprisedOf"/>
+                <owl:someValuesFrom rdf:resource="#ClothPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#SmartObject"/>
+        <owl:disjointWith rdf:resource="#VirtualHuman"/>
+        <owl:disjointWith rdf:resource="#VirtualHumanController"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Definition of a virtual cloth that can be suited to a virtual human.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Geometry -->
+
+    <owl:Class rdf:about="#Geometry">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasShapeRepresentation"/>
+                <owl:someValuesFrom rdf:resource="&cso;GeometricalRepresentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A 3D shape</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#HandPosture -->
+
+    <owl:Class rdf:about="#HandPosture">
+        <rdfs:subClassOf rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#Location"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Specification of joint values describing the hand posture to grab or manipulate a Smart Object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#HumanInteraction -->
+
+    <owl:Class rdf:about="#HumanInteraction">
+        <rdfs:subClassOf rdf:resource="#MotionCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#HumanPart -->
+
+    <owl:Class rdf:about="#HumanPart">
+        <rdfs:subClassOf rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#ObjectPart"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Face | Head | LeftArm | LeftFoot | LeftHand | LeftLeg | Pelvis | RightArm | RightFoot | RightHand | RightLeg  | Trunk</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#IndividualDescription -->
+
+    <owl:Class rdf:about="#IndividualDescription">
+        <owl:disjointWith rdf:resource="#Measurement"/>
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Human like traits that can be represented for virtual characters like personality, emotions, mood, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#InteractionWithEnvironment -->
+
+    <owl:Class rdf:about="#InteractionWithEnvironment">
+        <rdfs:subClassOf rdf:resource="#MotionCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Joint -->
+
+    <owl:Class rdf:about="#Joint">
+        <rdfs:subClassOf rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#Landmark"/>
+        <owl:disjointWith rdf:resource="#Segment"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Joint node, basic building block for an H-Anim skeleton. A joint can have segments (typically used to store the actual geometry of each limb), or other joints. Under certain cases (not H-Anim 1.0 compliant) a joint could directly store a geometry.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#KeyFrameSequence -->
+
+    <owl:Class rdf:about="#KeyFrameSequence">
+        <rdfs:subClassOf rdf:resource="#AnimationSequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasShapeRepresentation"/>
+                <owl:someValuesFrom rdf:resource="&cso;KeyFrame"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#MotionCaptureSequence"/>
+        <rdfs:comment rdf:datatype="&xsd;string">For animations where important key frames are defined and the computer calculates with an interpolator the frames in between.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Landmark -->
+
+    <owl:Class rdf:about="#Landmark">
+        <rdfs:subClassOf rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#Segment"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A place holder to store information associated to a particular location in a 3D geometry.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Location -->
+
+    <owl:Class rdf:about="#Location">
+        <rdfs:subClassOf rdf:resource="#ObjectAttribute"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Specifies the locations on a Smart Object where a hand posture or any other given functionality has been defined.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Locomotion -->
+
+    <owl:Class rdf:about="#Locomotion">
+        <rdfs:subClassOf rdf:resource="#MotionCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Measurement -->
+
+    <owl:Class rdf:about="#Measurement">
+        <owl:disjointWith rdf:resource="#ModelPart"/>
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This class is to specify a value that indicates a measurement. It contains a numerical value and a Unit System Scale that can be meter, kilogram, inch, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#ModelPart -->
+
+    <owl:Class rdf:about="#ModelPart">
+        <owl:disjointWith rdf:resource="#MorphologyDescription"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Part of a human or object model e.g. a Leg  an Arm etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#MorphologyDescription -->
+
+    <owl:Class rdf:about="#MorphologyDescription">
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#Personality"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes the morphology of a human like: age, weight, height, gender, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#MotionCaptureSequence -->
+
+    <owl:Class rdf:about="#MotionCaptureSequence">
+        <rdfs:subClassOf rdf:resource="#AnimationSequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasShapeRepresentation"/>
+                <owl:someValuesFrom rdf:resource="&cso;MotionCapture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">Animation created from recorded movements of a real person using a motion capture system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#MotionCategory -->
+
+    <owl:Class rdf:about="#MotionCategory">
+        <rdfs:comment rdf:datatype="&xsd;string">This class is to classify animations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Node -->
+
+    <owl:Class rdf:about="#Node">
+        <owl:disjointWith rdf:resource="#ObjectAttribute"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An abstract class to describe a family of  graph-like nodes that can constitue diverse structural descriptors such as H-Anim skeletons topological graphs etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#ObjectAttribute -->
+
+    <owl:Class rdf:about="#ObjectAttribute">
+        <owl:disjointWith rdf:resource="#Personality"/>
+        <owl:disjointWith rdf:resource="#PersonalityDimension"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Abstract class for Smart object attributes which can be divided into two main classes: Hand Posture and Location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#ObjectPart -->
+
+    <owl:Class rdf:about="#ObjectPart">
+        <rdfs:subClassOf rdf:resource="#ModelPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Personality -->
+
+    <owl:Class rdf:about="#Personality">
+        <rdfs:subClassOf rdf:resource="#IndividualDescription"/>
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Personality can be described in several dimensions with associated values.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#PersonalityDimension -->
+
+    <owl:Class rdf:about="#PersonalityDimension">
+        <owl:disjointWith rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This class is to definea kind of personality usig different dimensions. A value for a dimention can be set.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#PhysicalActivityAndSport -->
+
+    <owl:Class rdf:about="#PhysicalActivityAndSport">
+        <rdfs:subClassOf rdf:resource="#MotionCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Resource -->
+
+    <owl:Class rdf:about="#Resource">
+        <owl:disjointWith rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An available means.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Segment -->
+
+    <owl:Class rdf:about="#Segment">
+        <rdfs:subClassOf rdf:resource="#Node"/>
+        <rdfs:comment rdf:datatype="&xsd;string">General specification of geometry placeholders for H-Anim and Smart Object skeletons.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Skinning -->
+
+    <owl:Class rdf:about="#Skinning">
+        <rdfs:subClassOf rdf:resource="#VirtualHumanController"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#SmartObject -->
+
+    <owl:Class rdf:about="#SmartObject">
+        <rdfs:subClassOf rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#VirtualHuman"/>
+        <owl:disjointWith rdf:resource="#VirtualHumanController"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Many virtual reality applications require virtual humans that are capable of manipulating objects in their environment. To implement this usually requires that the environment should be extended with some form of knowledge on how interactions between virtual humans and objects are to be carried out. A Smart Object is constituted by a hierarchical collection of nodes. The hierarchical organization specifies the relations between different Geometry and Attribute Sets composing an object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#SmartObjectStructure -->
+
+    <owl:Class rdf:about="#SmartObjectStructure">
+        <rdfs:subClassOf rdf:resource="#StructureDescription"/>
+        <owl:disjointWith rdf:resource="#VirtualHumanStructure"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Any kind of skeletal structure used to animate or attribute objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#StructureDescription -->
+
+    <owl:Class rdf:about="#StructureDescription">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasShapeRepresentation"/>
+                <owl:someValuesFrom rdf:resource="&cso;StructuralDescriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#_3DVector"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Skeletal structure defined for a geometry that allows to animate the geometry. Also it may contain aannotations to the shape such as Landmark and segments of the shape</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#VirtualHuman -->
+
+    <owl:Class rdf:about="#VirtualHuman">
+        <rdfs:subClassOf rdf:resource="#Resource"/>
+        <owl:disjointWith rdf:resource="#VirtualHumanController"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The main class of this ontology. A Virtual Human is a full-body or partial representation of a Human being. The model can be synthesized in a variety of ways and can represent a real or a virtual person. VHs are characterized by a set of general attributes (sex, nationality, race), and structural descriptors. A VH can have animation sequences, behavior controllers or smart objects associated to it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#VirtualHumanController -->
+
+    <owl:Class rdf:about="#VirtualHumanController">
+        <rdfs:subClassOf rdf:resource="#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOutput"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInput"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">Algorithms used to produce animations. The class specifies the inputs required for the algorithm to work and the outputs (usually animation sequences or specific joint values) it is capable to produce.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#VirtualHumanStructure -->
+
+    <owl:Class rdf:about="#VirtualHumanStructure">
+        <rdfs:subClassOf rdf:resource="#StructureDescription"/>
+        <rdfs:comment rdf:datatype="&xsd;string">This is the container of a human like Skeleton that can contain several nodes of different types: Joint, Landmarks and Segments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#VirtualHumanWithLandmark -->
+
+    <owl:Class rdf:about="#VirtualHumanWithLandmark">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasVirtualHumanStructure"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#VirtualHumanStructure"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRootNode"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="#Node"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#hasChild"/>
+                                                <owl:someValuesFrom rdf:resource="#Landmark"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#VirtualHuman"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#VirtualHumanWithSkeleton -->
+
+    <owl:Class rdf:about="#VirtualHumanWithSkeleton">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasVirtualHumanStructure"/>
+                        <owl:someValuesFrom rdf:resource="#VirtualHumanStructure"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasRootNode"/>
+                        <owl:allValuesFrom rdf:resource="#Joint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#VirtualHuman"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#_3DVector -->
+
+    <owl:Class rdf:about="#_3DVector">
+        <rdfs:comment rdf:datatype="&xsd;string">Generic class to store 3D vectors (possibly already defined in other ontology clusters).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Agreeableness -->
+
+    <owl:NamedIndividual rdf:about="#Agreeableness">
+        <rdf:type rdf:resource="#PersonalityDimension"/>
+        <hasDescription rdf:datatype="&xsd;string">Agreeableness</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Conscientiousness -->
+
+    <owl:NamedIndividual rdf:about="#Conscientiousness">
+        <rdf:type rdf:resource="#PersonalityDimension"/>
+        <hasDescription rdf:datatype="&xsd;string">Conscientiousness</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#EmotionalExpression -->
+
+    <owl:NamedIndividual rdf:about="#EmotionalExpression">
+        <rdf:type rdf:resource="#ComunicationAndGesture"/>
+        <hasDescription rdf:datatype="&xsd;string">Emotional Expression</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Extraversion -->
+
+    <owl:NamedIndividual rdf:about="#Extraversion">
+        <rdf:type rdf:resource="#PersonalityDimension"/>
+        <hasDescription rdf:datatype="&xsd;string">Extraversion</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Face -->
+
+    <owl:NamedIndividual rdf:about="#Face">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Head -->
+
+    <owl:NamedIndividual rdf:about="#Head">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#LeftArm -->
+
+    <owl:NamedIndividual rdf:about="#LeftArm">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#LeftFoot -->
+
+    <owl:NamedIndividual rdf:about="#LeftFoot">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#LeftHand -->
+
+    <owl:NamedIndividual rdf:about="#LeftHand">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#LeftLeg -->
+
+    <owl:NamedIndividual rdf:about="#LeftLeg">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Neuroticism -->
+
+    <owl:NamedIndividual rdf:about="#Neuroticism">
+        <rdf:type rdf:resource="#PersonalityDimension"/>
+        <hasDescription rdf:datatype="&xsd;string">Neuroticism</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Openness -->
+
+    <owl:NamedIndividual rdf:about="#Openness">
+        <rdf:type rdf:resource="#PersonalityDimension"/>
+        <hasDescription rdf:datatype="&xsd;string">Openness</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Pelvis -->
+
+    <owl:NamedIndividual rdf:about="#Pelvis">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#RightArm -->
+
+    <owl:NamedIndividual rdf:about="#RightArm">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#RightFoot -->
+
+    <owl:NamedIndividual rdf:about="#RightFoot">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#RightHand -->
+
+    <owl:NamedIndividual rdf:about="#RightHand">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#RightLeg -->
+
+    <owl:NamedIndividual rdf:about="#RightLeg">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.aimatshape.net/ontologies/virtualHumansOntology.owl#Trunk -->
+
+    <owl:NamedIndividual rdf:about="#Trunk">
+        <rdf:type rdf:resource="#HumanPart"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,2713 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://repository.boemie.org/ontology_repository_tbox/gio.owl#"
+    xmlns:mco="http://repository.boemie.org/ontology_repository_tbox/mco.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:aeo="http://repository.boemie.org/ontology_repository_tbox/aeo.owl#"
+  xml:base="http://repository.boemie.org/ontology_repository_tbox/gio.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Distributed by Eleni Tsalapati</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GIO 2.5 - 24 November 2008 - OET: 1</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio-2.5</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="ArtificialPond">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ManMadeFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Courthouse">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment that houses judicial courts where trials and other legal cases take place</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="GovernmentAndPublicServicesPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Leisure">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Bay">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An indentation of a shoreline larger than a cove but smaller than a gulf</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="RoutePoint">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="RoutePointName"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasRoutePointName"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="LabelKm"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasLabelKm"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SportsPOI"/>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Point of the Route of Road Races, such as Marathon, and Walking Events.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Ocean">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large body of water constituting a principal part of the hydro-sphere</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Memorial">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A structure erected to commemorate persons or events</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#GovernmentAndPublicServicesPOI">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="POI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A facility providing academic or technical education, training or tuition and related supporting services, as well as public services such as libraries and post offices</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Winery">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Winery contains vineyards, places open to the public where one can view wine grapes being produced.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LeisurePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Building">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >secondVersion</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ManMadeFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Valley">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MountainAndSlopeLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A long depression in the surface of the land that usually contains a river</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Gulf">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An arm of a sea or ocean partly enclosed by land; larger than a bay</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="CulturalCenter">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A facility, mostly a building that has different performing arts as main activity</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ParkingGarage">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AutomotivePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A facility especially designed for and designated to the parking of cars typically within a building</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Transport">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cinema">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Cinema refers to  places where films/movies are shown in front of a large audience</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MountainPeak">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="TourismPOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mountain Peak is the representation of the top of a mountain</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Meter">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The basic unit of length adopted under the Systeme International d'Unites (approximately 1.094 yards)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DistanceUoM"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Delta">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A llandform where the mouth of a river flows into an ocean, sea, desert, estuary or lake</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="FluvialLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Prefecture">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The district administered by a prefect (as in France or Japan or the Roman Empire)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="GeopoliticalArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ThermalSpring">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Heated groundwater that naturally flows to the land surface</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Curve">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasPoint"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Surface"/>
+    </owl:disjointWith>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1-dimensional geometric primitive, representing the continuous image of a line</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="GeometryObject"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasLength"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="isRing"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:hasValue>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasDimension"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="isClosed"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Point"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Cathedral">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LeisureCentre">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Leisure centres refer to places where people engage to leisure activities</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ShoppingMall">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CoordinateSystem">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >set of mathematical rules for specifying how coordinates are to be assigned to point</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="GeoreferenceObject"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="coordinateDimension"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#TourismPOI">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A facility where tourist information and advice can be sought out by the public</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Degree">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A measure for arcs and angles</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AngleUoM"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SportsCentre">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sports Centre contains football ground, cricket grounds, hiking organizations, squash courts and many others, places providing in- or outdoor facilities where any sport may be enjoyed.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SportsPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="WaterSports">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SportsPOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Water Sport contains diving schools, scuba diving &amp; sub aquatic sports, rental of boats, canoes, kayaks and sailboards, sailing schools, sailing, boating, nautical and aquatic sports. Places where a variety of water and underwater sports can be enjoyed</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Village">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeopoliticalArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A community of people smaller than a town</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Cemetary">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A tract of land used for burials, assigned with national or state importance, mostly related to cemeteries with victims of great wars</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Parish">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeopoliticalArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A local church community</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Battlefield">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An area related to historical battle(s)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Latitude">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The angular distance between an imaginary line around a heavenly body parallel to its equator and the equator itself</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Measure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#AngleUoM"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasUnitOfMeasure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GeometryCollection">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A GeometryCollection is a geometric object that is a collection of 1 or more geometric objects.
+All the elements in a GeometryCollection shall be in the same Spatial Reference. This is also the Spatial
+Reference for the GeometryCollection.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasGeometryObject"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#GeometryObject"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="numOfGeometries"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeometryObject"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasGeometryObject"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="Hippodrome">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SportsPOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A stadium for horse shows or horse races</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="LinearRing">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:hasValue>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="isSimple"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:hasValue>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#isClosed"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LineString"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A LinearRing is a LineString that is both closed and simple.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Desert">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="FloraLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Desert is a landscape form or region that receives very little precipitation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Zoo">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A place where animals are kept and exhibited to the public</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="IndustrialBuilding">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:about="#POI">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Point Of Interest (interesting areas)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Point"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isLocatedIn"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="GeographicObject"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasAttribute"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="POIAttribute"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeographicObject"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Measure">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A basis for comparison of geographic objects</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeoreferenceObject"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="UnitOfMeasure"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="#hasUnitOfMeasure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OpenParkingArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AutomotivePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An open-air facility especially designed for and designated to the parking of cars</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Scale">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeoreferenceObject"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The scale of a map is the ratio of a single unit of distance on the map to the equivalent distance on the ground</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="HospitalOrPolyclinic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="HealthcarePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CashDispenser">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BusinessPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OutdoorStraightTrackArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="OutdoorTrackArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cliff">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A significant vertical, or near vertical, rock exposure</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MountainAndSlopeLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AccessibleBuildingEntrances">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Building entrances specially designed for people using wheel chairs</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="HandicappedPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#GeopoliticalArea">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Any geographic area, which is associated with some sort of political structure</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeographicObject"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OpeningPeriod">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MoutainPass">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="TransportPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialName">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasOfficialNameValue"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#GeoreferenceObject">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Any type of information used for reffering to the location of a specific geographical object by means of coordinates.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Map"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="GeographicObjectAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeographicObject"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeometryObject"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="GIO_Thing"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Angle">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#AngleUoM"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="#hasUnitOfMeasure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Measure"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The space between two lines or planes that intersect; the inclination of one line to another; measured in degrees or radians</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="TollGate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AutomotivePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Toll Gate is the representation of a toll booth or a series of toll booths next to each other</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Doctor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HealthcarePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FaxNumber">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Beach">
+    <rdfs:subClassOf rdf:resource="#TourismPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An area of sand or stones beside the sea or other water area.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Tourism">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EndPoint">
+    <rdfs:subClassOf rdf:resource="#RoutePoint"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Monument">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An important site that is marked and preserved as public property; landmark, structure or other object of historic or scientific interest</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ImportantTouristAttraction"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PublicTransportStop">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TransportPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#AutomotivePOI">
+    <rdfs:subClassOf rdf:resource="#POI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A facility where automotive repairs and related products and services are available, for example parking garage, petrol station and rest area</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="GolfCourse">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Course consisting of a large landscaped area for playing golf)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SportsPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GovernmentAndPublicServices">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MultiLineString">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A MultiLineString is a MultiCurve whose elements are LineStrings.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasGeometryObject"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#LineString"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MultiCurve"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Municipality">
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An urban district having corporate status and powers of self-government</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Bridge">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ManMadeFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#FloraLandform">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Landform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A geographic area, which is related to its flora</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="WildernessArea">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Preservation of special wilderness land</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Waterfall">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A steep descent of the water of a river</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GeopoliticalAreaName">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeographicObjectAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Line">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasPoint"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LineString"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Line is a LineString with exactly 2 Points.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="PoliceStation">
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment responsible for public law and order and where members of the public can report crime</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Park">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large natural area having a wide variety of attributes, at times including significant historic assets.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ExhibitionCenter">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BusinessPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="UnderwaterTunnel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ManMadeFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Pharmacy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HealthcarePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Estuary">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The wide part of a river where it nears the sea; fresh and salt water mix</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AmusementPark">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A commercially operated park with stalls and shows for amusement, a place where one can relax, at their leisure or enjoy thrilling rides (e.g. roller-coasters) and other games and attractions for all the family</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="GovernmentalOffice">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An office for local, regional, national or supra national government activities.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Preserve">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An area having characteristics associated with parks but in which government has permitted continued public hunting, trapping, oil/gas exploration and extraction</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="CapitolBuilding">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PetrolStation">
+    <rdfs:subClassOf rdf:resource="#AutomotivePOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A garage or service station offering petrol for sale.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="FerryTerminal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TransportPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#GeographicObject">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="belongsToTimeZone"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="TimeZone"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeographicObjectAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#GeoreferenceObject"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Map"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GIO_Thing"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#GeographicObject"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="geopoliticalRelation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#GeographicObject"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="mereologicalRelation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#isLocatedIn"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Location"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="projectedOn"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Map"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="topologicalRelation"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#GeographicObject"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="directionalRelation"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#GeographicObject"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Any type of object used for reffering to geographically related information</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="SpecialPurposeArea">
+    <rdfs:subClassOf rdf:resource="#GeographicObject"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >secondVersion</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Includes legal and admistratibve</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Library">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment where the public can access library services, including the borrowing of books and other reading, study and reference material, and sometimes audio/visual media</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+  </owl:Class>
+  <owl:Class rdf:about="#OutdoorTrackArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="TrackArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Continent">
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >One of the large landmasses of the earth</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Grove">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A place with a small group of trees</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#FloraLandform"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Channel">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A passage for water (or other fluids) to flow through</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GeographicCoordinateSystem">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A coordinate system that expresses every location on Earth by two of the three coordinates of a spherical coordinate system, which is aligned with the spin axis of Earth.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#CoordinateSystem"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:ID="geographic_theta"/>
+                </owl:onProperty>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:ID="geographic_ro"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="#geographic_theta"/>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:ID="geographic_z"/>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="#geographic_z"/>
+                </owl:onProperty>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="#geographic_ro"/>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ScenicOrPanoramicView">
+    <rdfs:subClassOf rdf:resource="#TourismPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Scenic/Panoramic View is the representation of a location offering a beautiful and particular country sight</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AngleUoM">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#UnitOfMeasure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NaturalAttraction">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ImportantTouristAttraction"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A natural feature that is of major interest to a tourist.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="FieldOfStadium">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="StadiumArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Emirate">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The domain controlled by an emir</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="StreetMap">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A map showing georgaphical objects, mostly focusing on street depiction</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Map"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CircleArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="FieldArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="RailwayStation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A facility for loading and unloading passengers and goods traveling on a rail network</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#PublicTransportStop"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CafeOrPub">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Café/Pub contains establishments where ready-to-eat food and beverages can be purchased</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="EatingAndDrinkingPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EmailAddress">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="High">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="PositionalAccuracy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Town">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An urban area with a fixed boundary that is smaller than a city</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Tower">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Nation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A politically organized body of people under a single govern-ment</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Normal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PositionalAccuracy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#BusinessPOI">
+    <rdfs:subClassOf rdf:resource="#POI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Embassy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment that constitutes the official premises where those who represent their government in a foreign country work in</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="InternetAddress">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Paddy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A flooded parcel of arable land used for growing rice and other semiaquatic crops</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#FloraLandform"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FieldArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StadiumArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Geocode">
+    <rdfs:subClassOf rdf:resource="#GeoreferenceObject"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Geocode is code that represents geospatial coordinate measurement of an exact geographic location and time at, below and above the surface of the earth</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Business">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="VotingDistricts">
+    <rdfs:subClassOf rdf:resource="#SpecialPurposeArea"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SportsPOI">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An indoor or outdoor facility where sport and other recreational activities can be enjoyed, for example Stadium, Hippodrome, Golf and Tennis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#POI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Castle">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Casino">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment used for gambling and other entertainment</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="OutdoorStadium">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Stadium"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GeocodingAccuracy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#HandicappedPOI">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >POIs for people with special abilities</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#POI"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >version2</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="Tunnel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ManMadeFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PoliticalMap">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Map"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A map showing georgaphical objects, mostly focusing on geopolitical area depiction</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Canyon">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A ravine formed by a river in an area with little rainfall.  A deep valley between cliffs often carved from the landscape by a river</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ErosionLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Lake">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A body of (usually fresh) water surrounded by land</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#FluvialLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Automotive">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Museum2">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:about="#GeographicObjectAttribute">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GIO_Thing"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeometryObject"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Map"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#GeoreferenceObject"/>
+    <owl:disjointWith rdf:resource="#GeographicObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PlaceOfWorship">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A place where member of the general public may go for prayer or take part in a religious service.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#TourismPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HotelOrMotel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LodgingPOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment where lodging is available to the public for one or more nights, which also provides extra services, such as a restaurant and bar, concierge services, and recreational or sporting facilities</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="GeographicalMap">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Map"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A map showing georgaphical objects, mostly focusing on landform depiction</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Nightlife">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nightlife contains nightclubs, discos &amp; music halls, venues where entertainment, in the form of music and dancing is provided usually until late at night</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="River">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large natural stream of water</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#FluvialLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hill">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MountainAndSlopeLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A local and well-defined elevation of the land</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Forest">
+    <rdfs:subClassOf rdf:resource="#FloraLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An area with a high density of trees</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Low">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PositionalAccuracy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Marsh">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#FluvialLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A  type of wetland which is subject to almost continuous inundation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Airport">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An airfield equipped with control tower and hangers that accommodates either cargo or passenger traffic of commercial, private or military nature.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TransportPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Point">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeometryObject"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDimension"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0-dimensional geometric primitive representing a position</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Surface"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Curve"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CartesianCoordinateSystem">
+    <rdfs:subClassOf rdf:resource="#CoordinateSystem"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="cartesian_x"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="cartesian_y"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >In mathematics, it is used to uniquely determine each point in the plane through two numbers, usually called the x-coordinate and the y-coordinate of the point.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:about="#LabelKm">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasLabelKmValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Peninsula">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large mass of land projecting into a body of water</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="YaghtBasin">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LeisurePOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Yacht-Basin contains marinas, places that have docks, moorings, supplies, and other facilities for boats</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Restaurant">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#EatingAndDrinkingPOI"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Establishment where refreshments or meals are served to paying guests.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="PostalCodes">
+    <rdfs:subClassOf rdf:resource="#SpecialPurposeArea"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Postal codes is a series of letters and/or digits appended to a postal address for the purpose of sorting mail</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Mountain">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A and mass that projects well above its surroundings; higher than a hill</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MountainAndSlopeLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="IndoorStraightTrackArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IndoorTrackArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Company">
+    <rdfs:subClassOf rdf:resource="#BusinessPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dam">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ManMadeFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#LeisurePOI">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An indoor or outdoor facility where recreational and entertainment activities can be enjoyed</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#POI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CompositeAddressInformation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#DistanceUoM">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#UnitOfMeasure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OutdoorField">
+    <rdfs:subClassOf rdf:resource="#FieldOfStadium"/>
+  </owl:Class>
+  <owl:Class rdf:about="#RoutePointName">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasRoutePointNameValue"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ImportantTouristAttraction">
+    <rdfs:subClassOf rdf:resource="#TourismPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A feature that is of major interest to a tourist.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Sport">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Radian">
+    <rdfs:subClassOf rdf:resource="#AngleUoM"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Island">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A land mass (smaller than a continent) that is surrounded by water, possibly connected to other land by means of a bridge or tunnel or accessible by ferry</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Spring">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A point at which water issues forth</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EatingAndDrinking">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="IndoorField">
+    <rdfs:subClassOf rdf:resource="#FieldOfStadium"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AirlineAccess">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TransportPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MultiPolygon">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A MultiPolygon is a MultiSurface whose elements are Polygons.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MultiSurface"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ManMadeFeature">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >secondVersion</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Man made bjects of geographical interest</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeographicObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Church">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A place for public -especially Christian- worship</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#PlaceOfWorship"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MultiSurface">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A MultiSurface is a 2-dimensional GeometryCollection whose elements are Surfaces. The interiors of any two
+Surfaces in a MultiSurface may not intersect. The boundaries of any two elements in a MultiSurface may intersect,
+at most, at a finite number of Points.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasGeometryObject"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Surface"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GeometryCollection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDimension"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="area"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Point"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="cendroid"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Point"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="pointOnSurface"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="Jungle">
+    <rdfs:subClassOf rdf:resource="#FloraLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A dense forest in a hot climate, such as a tropical rainforest</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="School">
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Contains an establishment where primary or secondary education takes place, which can be public or private, and includes boarding schools</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="PostOffice">
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment where mail can be posted in addition to the purchase of stamps and other postal materials</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Iceberg">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large mass of ice floating at sea; usually broken off of a polar glacier</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CoastalAndOceanicLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Dentist">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HealthcarePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Location">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >secondVersion</owl:versionInfo>
+    <rdfs:subClassOf rdf:resource="#GeoreferenceObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ClockTower">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="RestaurantArea">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Restaurant Area is the representation of an area where you can find a concentration of restaurants characterized by a specific name</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#EatingAndDrinkingPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#LineString">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A LineString is a Curve with linear interpolation between Points. Each consecutive pair of Points defines a Line
+segment.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="numOfPoints"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Curve"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TakeOffArea">
+    <rdfs:subClassOf rdf:resource="#FieldArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BusStation">
+    <rdfs:subClassOf rdf:resource="#PublicTransportStop"/>
+  </owl:Class>
+  <owl:Class rdf:about="#IndoorTrackArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TrackArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ShoppingPOI">
+    <rdfs:subClassOf rdf:resource="#POI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Polygon">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="numInteriorRing"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="exteriorRing"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#LineString"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Surface"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior
+boundary defines a hole in the Polygon.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="SwimmingPool">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Pool that provides a facility for swimming</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#SportsPOI"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CoastalAndOceanicLandform">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Landform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A geographic area, which is predominantly of sea water</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Biotope">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An area of uniform environmental conditions providing living place for a specific assemblage of plants and animals</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#TourismPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CourtHouse">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Longitude">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The angular distance between a point on any meridian and the prime meridian at Greenwich</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Measure"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasUnitOfMeasure"/>
+        <owl:someValuesFrom rdf:resource="#AngleUoM"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Stadium2">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MultiPoint">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Point"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasGeometryObject"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GeometryCollection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDimension"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A MultiPoint is a 0-dimensional GeometryCollection. The elements of a MultiPoint are restricted to Points. The
+Points are not connected or ordered.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Map">
+    <owl:disjointWith rdf:resource="#GeoreferenceObject"/>
+    <owl:disjointWith rdf:resource="#GeographicObject"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A map is a symbolized depiction of a space which highlights relations between components of that space.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#GeographicObjectAttribute"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GIO_Thing"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeometryObject"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasID"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="depictsGeographicObject"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#GeographicObject"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasScale"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Scale"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Isthmus">
+    <rdfs:subClassOf rdf:resource="#CoastalAndOceanicLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A relatively narrow strip of land (with water on both sides) connecting two larger land areas</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Stadium">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large structure for open-air sports or entertainments</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SportPOI"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasStadiumNameValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CarRepairFacility">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Establishments that specialize in replacement/repair of a wide range of automotive parts</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AutomotivePOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Veterinarian">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HealthcarePOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Plateau">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A relatively flat highland</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MountainAndSlopeLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Healthcare">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ServiceGroupName"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AlternateName">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Imprortance">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ConventionCenter">
+    <rdfs:subClassOf rdf:resource="#BusinessPOI"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FluvialLandform">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A geographic area, which is related to a river</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Landform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TouristInformationOffice">
+    <rdfs:subClassOf rdf:resource="#TourismPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Tourist Information Office contains establishments which provide travel and tourism services to members or to the general public</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Route">
+    <rdfs:subClassOf rdf:resource="#Curve"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasPoint"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#RoutePoint"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasRouteName"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="RouteName"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GeographicObject"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EatingAndDrinkingPOI">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment offering ready-to-eat food and/or drink, including eat-in dining and takeaway dining</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#POI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cave">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A natural underground void large enough for a human to enter</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ErosionLandform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FrontierCrossing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#TransportPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Fjord">
+    <rdfs:subClassOf rdf:resource="#CoastalAndOceanicLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A long narrow inlet of the sea between steep cliffs; common in Norway</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Plantation">
+    <rdfs:subClassOf rdf:resource="#FloraLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A
+ large farm or estate, especially in a tropical or semitropical country</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="WarmingUpArea">
+    <rdfs:subClassOf rdf:resource="#FieldArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Distance">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Meter"/>
+        <owl:onProperty rdf:resource="#hasUnitOfMeasure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Measure"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The property created by the space between two objects or points; size of the gap between two places</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="HistoricalPark">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A park that extends beyond single property or building and has historical value</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Camping">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A facility that provides areas for the public to pitch tents &amp; caravans for one or more nights</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LodgingPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Statue">
+    <rdfs:subClassOf rdf:resource="#ImportantTouristAttraction"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A sculpture representing a human or an animal</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ShoppingCentre">
+    <rdfs:subClassOf rdf:resource="#ShoppingPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Runway">
+    <rdfs:subClassOf rdf:resource="#FieldArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BrandName">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Bank">
+    <rdfs:subClassOf rdf:resource="#BusinessPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CompetitionArea">
+    <rdfs:subClassOf rdf:resource="#FieldArea"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Landform">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A landform comprises a geomorphological unit and is largely defined by its surface form and location in the landscape, as part of the terain, and as such is typically an element of topography.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >secondVersion. To replace the previous version GeographicArea.</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#directionalRelation"/>
+        <owl:someValuesFrom rdf:resource="#Landform"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#mereologicalRelation"/>
+        <owl:someValuesFrom rdf:resource="#Landform"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#geopoliticalRelation"/>
+        <owl:someValuesFrom rdf:resource="#Landform"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GeographicObject"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#topologicalRelation"/>
+        <owl:someValuesFrom rdf:resource="#Landform"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Field">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MountainAndSlopeLandform"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A piece of land cleared of trees and usually enclosed</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ServiceGroupName">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Marina">
+    <rdfs:subClassOf rdf:resource="#ManMadeFeature"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Track">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StadiumArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CityCentre">
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A central activity point of a city</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="OutdoorOvalTrackArea">
+    <rdfs:subClassOf rdf:resource="#OutdoorTrackArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Lodging">
+    <rdfs:subClassOf rdf:resource="#ServiceGroupName"/>
+  </owl:Class>
+  <owl:Class rdf:ID="County">
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A region created by territorial division for the purpose of local government</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="RestArea">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Rest Area is the representation of a service located along freeways offering one or more recreational facilities or service functions to the car driver</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AutomotivePOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="RentACarFacility">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An establishment involved in the short-term rental or long-term leasing of passenger cars and light commercial vehicles without drivers</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AutomotivePOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="RefreshmentStation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SportPOI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Elevation">
+    <rdfs:subClassOf rdf:resource="#Measure"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasUnitOfMeasure"/>
+        <owl:someValuesFrom rdf:resource="#Meter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Distance of something above a reference point (such as sea level))</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Seats">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StadiumArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Shopping">
+    <rdfs:subClassOf rdf:resource="#ServiceGroupName"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Oasis">
+    <rdfs:subClassOf rdf:resource="#FluvialLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An  isolated area of vegetation in a desert, typically surrounding a spring or similar water source</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LodgingPOI">
+    <rdfs:subClassOf rdf:resource="#POI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A commercial or non-commercial establishment where lodging, or lodging and meals, or camping space and facilities are available to the public for one or more nights.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MountainAndSlopeLandform">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A geographic area, which is related to a mountain</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mosque">
+    <rdfs:subClassOf rdf:resource="#PlaceOfWorship"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Islam or Muslim place of worship</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="HistoricSite">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ParkAndRecreationArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A singly historical feature</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="StartPoint">
+    <rdfs:subClassOf rdf:resource="#RoutePoint"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AccessibleParkingSpot">
+    <rdfs:subClassOf rdf:resource="#HandicappedPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Parking spots reserved for people with special needs</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="SchoolDistricts">
+    <rdfs:subClassOf rdf:resource="#SpecialPurposeArea"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MultiCurve">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDimension"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#hasLength"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#isClosed"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasGeometryObject"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Curve"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GeometryCollection"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A MultiCurve is a 1-dimensional GeometryCollection whose elements are Curves</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:about="#HealthcarePOI">
+    <rdfs:subClassOf rdf:resource="#POI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LandingArea">
+    <rdfs:subClassOf rdf:resource="#FieldArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="State">
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >•	The group of people comprising the government of a sovereign stat
+•	A politically organized body of people under a single government
+•	The territory occupied by one of the constituent admin-istrative districts of a nation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Church2">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PictorialMap">
+    <rdfs:subClassOf rdf:resource="#Map"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Pictorial maps usually present a georgraphical area as seen from the above at an oblique angle
+They can feature diverse topics such as illustrations of buildings and historical events.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UnitOfMeasure">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A function of a topological space that gives, for any two points in the space, a value equal to the distance between them; used for geographic measurements</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeoreferenceObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cape">
+    <rdfs:subClassOf rdf:resource="#CoastalAndOceanicLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A strip of land projecting into a body of water</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="TelephoneNumber">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CarDealer">
+    <rdfs:subClassOf rdf:resource="#AutomotivePOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Car Dealer is the representation of a facility where new and/or second hand cars are sold to the public</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Surface">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#area"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDimension"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Point"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#pointOnSurface"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2-dimensional geometric primitive locally representing a continuous image of a region of a plane</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GeometryObject"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#cendroid"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Point"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Point"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#cendroid"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Curve"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Archipelago">
+    <rdfs:subClassOf rdf:resource="#CoastalAndOceanicLandform"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Archipelagois a subclass of LandForm that consists of groups of_islands lying together</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="RentACarParking">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Rent-a-Car Facility contains establishments involved in the short-term rental or long-term leasing of passenger cars and light commercial vehicles without drivers</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AutomotivePOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OutdoorTrack">
+    <rdfs:subClassOf rdf:resource="#Track"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TennisCourt">
+    <rdfs:subClassOf rdf:resource="#SportsPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The court on which tennis is played</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Sea">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large body of salt water partially enclosed by land</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#CoastalAndOceanicLandform"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IndoorStadium">
+    <rdfs:subClassOf rdf:resource="#Stadium"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IndoorTrack">
+    <rdfs:subClassOf rdf:resource="#Track"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SportPOI">
+    <rdfs:subClassOf rdf:resource="#SportsPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Shop">
+    <rdfs:subClassOf rdf:resource="#ShoppingPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Country">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The territory occupied by a nation; An area that is officially bordered</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasCountryNameValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ParkAndRecreationArea">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An area designed and maintained as park and recreation area</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#LeisurePOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CentreOfSettlement">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Centre of Settlement is the representation of a central activity point of a settlement or administrative area</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+  </owl:Class>
+  <owl:Class rdf:about="#StadiumArea">
+    <rdfs:subClassOf rdf:resource="#SportPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DepartmentStore">
+    <rdfs:subClassOf rdf:resource="#ShoppingPOI"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Hospital">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Museum">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A depository for collecting and displaying objects having scientific, historical or artistic value</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#LeisurePOI"/>
+  </owl:Class>
+  <owl:Class rdf:about="#RouteName">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasRouteNameValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="RouteAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ErosionLandform">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Landforms produced by erosion and weathering usually occur in coastal or fluvial environments, and many appear under those headings</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+  <owl:Class rdf:about="#GeometryObject">
+    <owl:disjointWith rdf:resource="#GeographicObjectAttribute"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#topologicalRelation"/>
+        <owl:someValuesFrom rdf:resource="#GeometryObject"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The GeometryObject class has subclasses for Point, Curve, Surface and GeometryCollection.
+Each geometric object is associated with a Coordinate System, which describes the coordinate space in
+which the geometric object is defined.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="describedByCoordinateSystem"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#CoordinateSystem"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <owl:disjointWith rdf:resource="#Map"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GIO_Thing"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasDimension"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#GeoreferenceObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IndoorOvalTrackArea">
+    <rdfs:subClassOf rdf:resource="#IndoorTrackArea"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Local">
+    <rdfs:subClassOf rdf:resource="#Imprortance"/>
+  </owl:Class>
+  <owl:Class rdf:about="#GIO_Thing">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GIO_Thing is the root class of the hierarchy. GIO-Thing is a non-instantiable class</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PositionalAccuracy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#POIAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="IceSkatingRink">
+    <rdfs:subClassOf rdf:resource="#SportsPOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A place providing facilities where ice skating and/or ice hockey can be played.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="City">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A large and densely populated urban area; may include several independent administrative districts</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasCityNameValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Theatre">
+    <rdfs:subClassOf rdf:resource="#LeisurePOI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A building where theatrical performances or motion-picture shows can be presented</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="National">
+    <rdfs:subClassOf rdf:resource="#Imprortance"/>
+  </owl:Class>
+  <owl:Class rdf:about="#RouteAttribute">
+    <rdfs:subClassOf rdf:resource="#GeographicObjectAttribute"/>
+  </owl:Class>
+  <owl:Class rdf:about="#POIAttribute">
+    <rdfs:subClassOf rdf:resource="#GeographicObjectAttribute"/>
+  </owl:Class>
+  <owl:Class rdf:ID="District">
+    <rdfs:subClassOf rdf:resource="#GeopoliticalArea"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A region marked off for administrative or other purposes</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Harbor">
+    <rdfs:subClassOf rdf:resource="#ManMadeFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TimeZone">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >one of the 24 established divisionsor sectors into which the earth is divided for convenience in reckoning time. Each sector represents 15 degrees of longtitude or a time interval of 1 hour</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GeoreferenceObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GeopoliticalMap">
+    <rdfs:subClassOf rdf:resource="#Map"/>
+  </owl:Class>
+  <owl:Class rdf:ID="House">
+    <rdfs:subClassOf rdf:resource="#Building"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CollegeOrUniversity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A place that contains facilities where further/higher education can be studied either part-time or full-time to gain an academic qualification</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GovernmentAndPublicServicesPOI"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TrackArea">
+    <rdfs:subClassOf rdf:resource="#StadiumArea"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TransportPOI">
+    <rdfs:subClassOf rdf:resource="#POI"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A point location used for transportation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="TrafficAnalysisZones">
+    <rdfs:subClassOf rdf:resource="#SpecialPurposeArea"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="routePointNameToLabelKm">
+    <rdfs:range rdf:resource="#LabelKm"/>
+    <rdfs:domain rdf:resource="#RoutePointName"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="contains">
+    <rdfs:subPropertyOf rdf:resource="#topologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasRoutePoint">
+    <rdfs:range rdf:resource="#RoutePoint"/>
+    <rdfs:domain rdf:resource="#Route"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isWholeOf">
+    <rdfs:subPropertyOf rdf:resource="#mereologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isEastOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="overlaps">
+    <rdfs:subPropertyOf rdf:resource="#topologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="within">
+    <rdfs:subPropertyOf rdf:resource="#topologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSportsRoutePointName">
+    <rdfs:domain rdf:resource="#RoutePoint"/>
+    <rdfs:range rdf:resource="#RoutePointName"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="equals">
+    <rdfs:subPropertyOf rdf:resource="#topologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isSouthOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasRoutePointName">
+    <rdfs:domain rdf:resource="#RoutePoint"/>
+    <rdfs:range rdf:resource="#RoutePointName"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasAttribute"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasStartPoint">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The start Point of this Curve.</rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasPoint"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Curve"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isNorthOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isPartOf">
+    <rdfs:subPropertyOf rdf:resource="#mereologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isWestOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="includes">
+    <rdfs:subPropertyOf rdf:resource="#geopoliticalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="routeNameToSportsRoutePointName">
+    <rdfs:domain rdf:resource="#RouteName"/>
+    <rdfs:range rdf:resource="#RoutePointName"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="providesService"/>
+  <owl:ObjectProperty rdf:ID="isFarFrom">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="qualitativeRelation"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#pointOnSurface">
+    <rdfs:range rdf:resource="#Point"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:domain rdf:resource="#Surface"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Point guaranteed to be on this Surface.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasPoint">
+    <rdfs:domain rdf:resource="#GeometryObject"/>
+    <rdfs:range rdf:resource="#Point"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Geometry Object includes a certain Point</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isSouthWestOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasLabelKm">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasAttribute"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#RoutePoint"/>
+    <rdfs:range rdf:resource="#LabelKm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="belongsTo">
+    <rdfs:subPropertyOf rdf:resource="#geopoliticalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasRouteName">
+    <rdfs:domain rdf:resource="#Route"/>
+    <rdfs:range rdf:resource="#RouteName"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasAttribute">
+    <rdfs:range rdf:resource="#GeographicObjectAttribute"/>
+    <rdfs:domain rdf:resource="#GeographicObject"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="intersects">
+    <rdfs:subPropertyOf rdf:resource="#topologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isNorrthEastOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasScale">
+    <rdfs:domain rdf:resource="#Map"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEndPoint">
+    <rdfs:domain rdf:resource="#Curve"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The end Point of a Curve</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="#hasPoint"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="consistsOf">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="crosses"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isBehindOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#describedByCoordinateSystem">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:range rdf:resource="#CoordinateSystem"/>
+    <rdfs:domain rdf:resource="#GeometryObject"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Every Geometric Object can be described in a Coordinate System</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#crosses">
+    <rdfs:subPropertyOf rdf:resource="#topologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isLocatedIn">
+    <rdfs:subPropertyOf rdf:resource="#geopoliticalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isLeftOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isCloseTo">
+    <rdfs:subPropertyOf rdf:resource="#qualitativeRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isNorthWestOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="disjoint">
+    <rdfs:subPropertyOf rdf:resource="#topologicalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasGeometryObject">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Refers to the specific member GeometryObject of  this GeometryCollection</rdfs:comment>
+    <rdfs:range rdf:resource="#GeometryObject"/>
+    <rdfs:domain rdf:resource="#GeometryCollection"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isSouthEastOf">
+    <rdfs:subPropertyOf rdf:resource="#directionalRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#depictsGeographicObject">
+    <rdfs:range rdf:resource="#GeographicObject"/>
+    <rdfs:domain rdf:resource="#Map"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >secondVersion</owl:versionInfo>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="#hasOfficialNameValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#OfficialName"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#numOfPoints">
+    <rdfs:domain rdf:resource="#LineString"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The number of Points in this LineString.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasGeopoliticalAreaNameValue">
+    <rdfs:domain rdf:resource="#GeopoliticalArea"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#geographic_ro">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds the value of coordinate ro of the geographic coordinate system</rdfs:comment>
+    <rdfs:domain rdf:resource="#GeographicCoordinateSystem"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasRouteNameValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#RouteName"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="alternateName">
+    <rdfs:domain rdf:resource="#POI"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="compositeAddress">
+    <rdfs:domain rdf:resource="#POI"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasCityNameValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#City"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#cartesian_x">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds the value of coordinate x of the cartesian coordinate system</rdfs:comment>
+    <rdfs:domain rdf:resource="#CartesianCoordinateSystem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="importance">
+    <rdfs:domain rdf:resource="#POI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#area">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The area of this Surface, as measured in the spatial reference system of this Surface.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:domain rdf:resource="#Surface"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasStadiumNameValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Stadium"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="officialName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#POI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#geographic_z">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds the value of coordinate z of the geographic coordinate system</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CartesianCoordinateSystem"/>
+          <owl:Class rdf:about="#GeographicCoordinateSystem"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#geographic_theta">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#GeographicCoordinateSystem"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds the value of coordinate theta of the geographic coordinate system</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasCountryNameValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Country"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasLabelKmValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#LabelKm"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="contact">
+    <rdfs:domain rdf:resource="#POI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#numInteriorRing">
+    <rdfs:domain rdf:resource="#Polygon"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds the number of interiorRings in this Polygon.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#cartesian_y">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds the value of coordinate y of the cartesian coordinate system</rdfs:comment>
+    <rdfs:domain rdf:resource="#CartesianCoordinateSystem"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasLength">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Curve"/>
+          <owl:Class rdf:about="#MultiCurve"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The length of this Curve in its associated spatial reference.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasRoutePointNameValue">
+    <rdfs:domain rdf:resource="#RoutePointName"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:about="#exteriorRing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Returns the exteriorRing of this Polygon.</rdfs:comment>
+    <rdfs:range rdf:resource="#LineString"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Polygon"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#cendroid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >he mathematical centroid for this Surface as a Point. The result is not guaranteed to be
+on this Surface.</rdfs:comment>
+    <rdfs:range rdf:resource="#Point"/>
+    <rdfs:domain rdf:resource="#Surface"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#coordinateDimension">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >number of measurements or axes needed to describe a position in a coordinate system</rdfs:comment>
+    <rdfs:domain rdf:resource="#CoordinateSystem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isClosed">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Curve"/>
+          <owl:Class rdf:about="#MultiCurve"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds 1 (TRUE) if this Curve is closed [StartPoint ( ) = EndPoint ( )].</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isRing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Holds 1 (TRUE) if this Curve is closed [StartPoint ( ) = EndPoint ( )] and this Curve is
+simple (does not pass through the same Point more than once).</rdfs:comment>
+    <rdfs:domain rdf:resource="#Curve"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#numOfGeometries">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Returns the number of geometries in this GeometryCollection.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:domain rdf:resource="#GeometryCollection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasDimension">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+    <rdfs:domain rdf:resource="#GeometryObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >holds the dimension of the geometry object</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isSimple">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Curve"/>
+          <owl:Class rdf:about="#MultiCurve"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Holds the value 1 if a Curve is simple, i.e.  if it does not pass through the same Point twice. Otherwise it holds 0.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gio_v2_4</owl:versionInfo>
+  </owl:FunctionalProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->

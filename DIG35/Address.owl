@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY lang "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:lang="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for describing addresses</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#addressCode -->
+
+    <owl:ObjectProperty rdf:about="#addressCode">
+        <rdfs:domain rdf:resource="#Address"/>
+        <rdfs:range rdf:resource="#AddressCodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#addressComponent -->
+
+    <owl:ObjectProperty rdf:about="#addressComponent">
+        <rdfs:domain rdf:resource="#Address"/>
+        <rdfs:range rdf:resource="#AddressComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#addressComponentType -->
+
+    <owl:ObjectProperty rdf:about="#addressComponentType">
+        <rdfs:domain rdf:resource="#AddressComponent"/>
+        <rdfs:range rdf:resource="#AddressComponentTypes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#addressComponentValue -->
+
+    <owl:ObjectProperty rdf:about="#addressComponentValue">
+        <rdfs:domain rdf:resource="#AddressComponent"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#addressCountry -->
+
+    <owl:ObjectProperty rdf:about="#addressCountry">
+        <rdfs:domain rdf:resource="#Address"/>
+        <rdfs:range rdf:resource="#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#addressName -->
+
+    <owl:ObjectProperty rdf:about="#addressName">
+        <rdfs:domain rdf:resource="#Address"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#addressType -->
+
+    <owl:ObjectProperty rdf:about="#addressType">
+        <rdfs:domain rdf:resource="#Address"/>
+        <rdfs:range rdf:resource="#AddressTypes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#countryCode -->
+
+    <owl:ObjectProperty rdf:about="#countryCode">
+        <rdfs:domain rdf:resource="#Country"/>
+        <rdfs:range rdf:resource="&lang;LangString"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#post -->
+
+    <owl:DatatypeProperty rdf:about="#post">
+        <rdfs:domain rdf:resource="#PostCode"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#zip -->
+
+    <owl:DatatypeProperty rdf:about="#zip">
+        <rdfs:domain rdf:resource="#ZipCode"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#Address -->
+
+    <owl:Class rdf:about="#Address">
+        <rdfs:label>Address</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#addressName"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#addressCode"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressCodes -->
+
+    <owl:Class rdf:about="#AddressCodes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#PostCode"/>
+                    <rdf:Description rdf:about="#ZipCode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressComponent -->
+
+    <owl:Class rdf:about="#AddressComponent"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressComponentType -->
+
+    <owl:Class rdf:about="#AddressComponentType"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressComponentTypes -->
+
+    <owl:Class rdf:about="#AddressComponentTypes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AddressRoom"/>
+                    <rdf:Description rdf:about="#AddressUnit"/>
+                    <rdf:Description rdf:about="#AddressPostbox"/>
+                    <rdf:Description rdf:about="#AddressCity"/>
+                    <rdf:Description rdf:about="#AddressStreet"/>
+                    <rdf:Description rdf:about="#AddressState"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressType -->
+
+    <owl:Class rdf:about="#AddressType"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressTypes -->
+
+    <owl:Class rdf:about="#AddressTypes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Postal"/>
+                    <rdf:Description rdf:about="#Domestic"/>
+                    <rdf:Description rdf:about="#International"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#Country -->
+
+    <owl:Class rdf:about="#Country">
+        <rdfs:label>Class representing Countries</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#countryCode"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#PostCode -->
+
+    <owl:Class rdf:about="#PostCode"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#ZipCode -->
+
+    <owl:Class rdf:about="#ZipCode"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/LangString.owl#LangString -->
+
+    <owl:Class rdf:about="&lang;LangString"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressCity -->
+
+    <owl:NamedIndividual rdf:about="#AddressCity">
+        <rdf:type rdf:resource="#AddressComponentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressPostbox -->
+
+    <owl:NamedIndividual rdf:about="#AddressPostbox">
+        <rdf:type rdf:resource="#AddressComponentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressRoom -->
+
+    <owl:NamedIndividual rdf:about="#AddressRoom">
+        <rdf:type rdf:resource="#AddressComponentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressState -->
+
+    <owl:NamedIndividual rdf:about="#AddressState">
+        <rdf:type rdf:resource="#AddressComponentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressStreet -->
+
+    <owl:NamedIndividual rdf:about="#AddressStreet">
+        <rdf:type rdf:resource="#AddressComponentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#AddressUnit -->
+
+    <owl:NamedIndividual rdf:about="#AddressUnit">
+        <rdf:type rdf:resource="#AddressComponentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#Domestic -->
+
+    <owl:NamedIndividual rdf:about="#Domestic">
+        <rdf:type rdf:resource="#AddressType"/>
+        <rdfs:label>The domestic delivery address</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#International -->
+
+    <owl:NamedIndividual rdf:about="#International">
+        <rdf:type rdf:resource="#AddressType"/>
+        <rdfs:label>The international delivery address</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Address.owl#Postal -->
+
+    <owl:NamedIndividual rdf:about="#Postal">
+        <rdf:type rdf:resource="#AddressType"/>
+        <rdfs:label>The postal delivery address</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

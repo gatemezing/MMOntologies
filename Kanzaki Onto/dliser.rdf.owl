@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY webmaster "mailto:webmaster@" >
+    <!ENTITY www "http://www.w3.org/1999/" >
+    <!ENTITY ex "http://purl.org/net/ns/ex#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY music "http://www.kanzaki.com/ns/music#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ont "http://purl.org/net/ns/ontology-annot#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ns "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.kanzaki.com/ns/dliser.rdf#"
+     xml:base="http://www.kanzaki.com/ns/dliser.rdf"
+     xmlns:music="http://www.kanzaki.com/ns/music#"
+     xmlns:webmaster="mailto:webmaster@"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ex="http://purl.org/net/ns/ex#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:www="http://www.w3.org/1999/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ont="http://purl.org/net/ns/ontology-annot#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="&www;02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment>An OWL DLiser. Declarations of Classes and Properties that would be used in some ontologies for documentation purpose. With owl:imports this file, the parent ontology will be valid OWL DL/Lite.</rdfs:comment>
+        <owl:versionInfo>Version 0.22, as of 2007-12-13 .</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&www;xhtmlimg"/>
+    <owl:AnnotationProperty rdf:about="&ex;image"/>
+    <owl:AnnotationProperty rdf:about="&ns;term_status"/>
+    <owl:AnnotationProperty rdf:about="&ont;seeOther"/>
+    <owl:AnnotationProperty rdf:about="&ont;creator"/>
+    <owl:AnnotationProperty rdf:about="&ont;description"/>
+    <owl:AnnotationProperty rdf:about="&ex;trial"/>
+    <owl:AnnotationProperty rdf:about="&ont;source"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&ex;example"/>
+    <owl:AnnotationProperty rdf:about="&ont;created"/>
+    <owl:AnnotationProperty rdf:about="&ex;pfx"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&ont;deprecatedBy"/>
+    <owl:AnnotationProperty rdf:about="&ont;relation"/>
+    <owl:AnnotationProperty rdf:about="&ex;code"/>
+    <owl:AnnotationProperty rdf:about="&ont;modified"/>
+    <owl:AnnotationProperty rdf:about="&ex;exampleOf"/>
+    <owl:AnnotationProperty rdf:about="&ont;format"/>
+    <owl:AnnotationProperty rdf:about="&ont;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:ObjectProperty rdf:about="&foaf;mbox"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="&foaf;name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/ns/ex#Example -->
+
+    <owl:Class rdf:about="&ex;Example"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="&foaf;Document"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+
+    <owl:Class rdf:about="&foaf;Image"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="&foaf;Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- mailto:webmaster@kanzaki.com -->
+
+    <owl:Thing rdf:about="&webmaster;kanzaki.com">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    <ex:Example/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="#genid1">
+        <rdfs:comment>Import this file to make an ontology OWL DL. Note that owl:Ontology can only have annotation properties. The ont: terms are defiend as substitutions for dc:/dcterms: properties.</rdfs:comment>
+        <ex:code>&lt;owl:Ontology rdf:about=&quot;&quot;&gt;
+  &lt;owl:imports rdf:resource=&quot;http://www.kanzaki.com/ns/dliser.rdf&quot;/&gt;
+  &lt;rdfs:label&gt;Music Vocabulary&lt;/rdfs:label&gt;
+  
+  &lt;ont:creator&gt;
+   &lt;foaf:Person&gt;
+    &lt;foaf:name&gt;Masahide Kanzaki&lt;/foaf:name&gt;
+    &lt;foaf:mbox rdf:resource=&quot;mailto:webmaster@kanzaki.com&quot;/&gt;
+    &lt;rdfs:seeAlso rdf:resource=&quot;http://www.kanzaki.com/info/webwho.rdf&quot;/&gt;
+   &lt;/foaf:Person&gt;
+  &lt;/ont:creator&gt;
+ &lt;/owl:Ontology&gt;</ex:code>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

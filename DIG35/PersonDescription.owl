@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pers "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#" >
+    <!ENTITY some "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/SomeProperty.owl#" >
+    <!ENTITY posloc "http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PositionLocation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#"
+     xml:base="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl"
+     xmlns:posloc="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PositionLocation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:pers="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#"
+     xmlns:some="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/SomeProperty.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">version 0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Ontology for relating a person to a position in images with location</rdfs:comment>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl"/>
+        <owl:imports rdf:resource="http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PositionLocation.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#personAtPositionLocation -->
+
+    <owl:ObjectProperty rdf:about="#personAtPositionLocation">
+        <rdfs:range rdf:resource="&pers;Person"/>
+        <rdfs:domain rdf:resource="#PersonDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#personHasPositionLocation -->
+
+    <owl:ObjectProperty rdf:about="#personHasPositionLocation">
+        <rdfs:domain rdf:resource="#PersonDescription"/>
+        <rdfs:range rdf:resource="&posloc;PositionLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#personHasProperty -->
+
+    <owl:ObjectProperty rdf:about="#personHasProperty">
+        <rdfs:domain rdf:resource="#PersonDescription"/>
+        <rdfs:range rdf:resource="&some;SomeProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/Person.owl#Person -->
+
+    <owl:Class rdf:about="&pers;Person"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PersonDescription.owl#PersonDescription -->
+
+    <owl:Class rdf:about="#PersonDescription">
+        <rdfs:label>Person-Position-Location</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#personHasPositionLocation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#personAtPositionLocation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>class to relate a person with a postion-location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/PositionLocation.owl#PositionLocation -->
+
+    <owl:Class rdf:about="&posloc;PositionLocation"/>
+    
+
+
+    <!-- http://multimedialab.elis.ugent.be/users/chpoppe/Ontologies/SomeProperty.owl#SomeProperty -->
+
+    <owl:Class rdf:about="&some;SomeProperty"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+
