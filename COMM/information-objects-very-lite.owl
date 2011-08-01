@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://comm.semanticweb.org/information-objects-very-lite.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dol="http://comm.semanticweb.org/dolce-very-lite.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:sem="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:edns="http://comm.semanticweb.org/extended-dns-very-lite.owl#"
+  xml:base="http://comm.semanticweb.org/information-objects-very-lite.owl">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >397
+    </owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A minimal ontology of information objects and communication theory, plugin to DnS. OWL engineering by Aldo Gangemi.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Imports: Extended DnS</rdfs:comment>
+    <owl:imports rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="information-realization">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Any physical entity that realizes an information object.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#physical-realization"/>
+  </owl:Class>
+  <owl:Class rdf:ID="formal-expression">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object"/>
+  </owl:Class>
+  <owl:Class rdf:ID="formal-system">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-encoding-system"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A code that orders the generation of information objects according to formally defined vocabulary, axioms, rules, etc.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#language">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#semiotic-code"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#communication-situation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Any situation that satisfies Jakobson's communication theory.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#situation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="writing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information realization based on conventional symbols.
+It is a secondary code of communication (secondary means that it is about an original bodily expression, i.e. a primary code). Therefore, we are not considering here early forms of iconic expression, which could be considered primary.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#information-realization"/>
+  </owl:Class>
+  <owl:Class rdf:ID="grammar">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A set of rules for the generation of a (closed or open set of) information objects.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="combinatorial-system"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="text">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A complex linguistic object, expressed according to a language and still independent from a particular physical realization.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="linguistic-object"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="narrative">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A description expressed by a text, and ordered by additional semiotic codes (narratological structures).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#description"/>
+  </owl:Class>
+  <owl:Class rdf:ID="grapheme">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A part of a word as it can be realized by writing.
+A spoken information realization can be 'about' a grapheme (as in reading), but it does not 'realize' it. BTW, since spoken realizations are a 'primary' code of communication, the difference between direct and indirect spoken realizations (reading) is often ontologically understated.
+A grapheme is not necessarily able to express a meaning (description), although it can in principle (e.g. 'a' in English).</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#linguistic-object"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#interpretation-situation">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#situation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of situations that satisfy the semiotic interpretation function (given an expression and a context, a meaning is provided).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#communication-role">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#role"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The roles employed to characterize communication. E.g. the roles from Jakobson's theory of communication.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="voicing">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#stative"/>
+    <rdfs:subClassOf rdf:resource="#information-realization"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information realization based on conventional sounds. It is a primary code of communication (primary means that it is an original bodily expression, specially if firstly learnt).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#semiotic-code">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A combinatorial code intended to ordering of information objects involved in the semiotic 'interpretation function'.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#combinatorial-system"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="morpheme">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#linguistic-object"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A part of a word that can express a meaning.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#linguistic-object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information object ordered by (encoded according to) a language.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object"/>
+  </owl:Class>
+  <owl:Class rdf:ID="iconic-object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information object ordered by a visual code.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object"/>
+  </owl:Class>
+  <owl:Class rdf:ID="word">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A linguistic object consisting of a string (independently of its physical realization). Its topological unity can change according to its physical realization: as a written realization, its boundaries are blank spaces, as a spoken realization, sometimes is silence, sometimes not, and higher order features intervene.
+Grammatical entities such as nouns, verbs, adjectives, etc. are roles defined by a grammar, and words (or larger linguistic objects) can play those roles in a given language. E.g., the word 'share' can play both 'verb' and 'noun' roles in contemporary English, while the word 'come' can only play the 'verb' role in English, and the 'adverb' or 'conjunction' roles in Italian (but if we consider a word as only realized by phonemes, i.e. if we consider the oral realizations of 'come', there is no common word in the two languages).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#linguistic-object"/>
+  </owl:Class>
+  <owl:Class rdf:ID="gesturing">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#action"/>
+    <rdfs:subClassOf rdf:resource="#information-realization"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information realization based on conventional body movements. It is a primary code of communication (primary means that it is an original bodily expression, specially if firstly learnt).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="subject">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A domain of knowledge, typically expressed by one term, related to other subjects in a partial order hierarchy and with some topological properties; e.g. biology, sport, politics.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#description"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#semiotic-role">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#role"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A semiotic role is a non-agentive role defined by the interpretation function.It should be specialized within a communication setting by a role that is played by some entity in a communication situation. Semiotic roles are used to fill the universe of the so-called 'interpretation function'.Two of them are specialized by two communication roles (message and context).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="classification-system">
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-encoding-system"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information encoding system that provides rules for (ev. ordered) lists of information objects, e.g terminologies, subjects, knowledge domains.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="diagrammatic-object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information object ordered by a shematic iconic code</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object"/>
+  </owl:Class>
+  <owl:Class rdf:ID="phoneme">
+    <rdfs:subClassOf rdf:resource="#linguistic-object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A part of a word as it can be realized by voicing.
+A written information realization can be 'about' a phoneme (as in the case of transcription systems), but it does not 'realize' it.
+A phoneme is not necessarily able to express a meaning (description), although it can in principle (e.g. 'a' in English).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#combinatorial-system">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An information encoding system that provides roles and operations to create valid information objects (e.g. grammars, templates, codes).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-encoding-system"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="narrower-than">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="broader-than"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#subject"/>
+    <rdfs:domain rdf:resource="#subject"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#proper-part-of"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#part-of"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#immediate-relation-i"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="referred-by">
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#particular"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#agent"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="refers-to"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#mediated-relation-i"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="identified-by">
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#aboutness-of"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="identifies"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="q-represents">
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#region"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="q-represented-by"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#mediated-relation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This relation supports the representation of conceptual regions by information objects. It is defined as a composed relation: an information object is expressed according to an information encoding description that maps a quality space. In other words, this means that a representation of conceptual regions within quality spaces requires an explicit conceptualization of the dimensions operating in the quality space. In still other words, a quality space can be mapped to a theory, which can be reified as a special kind of 'information encoding description'.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#q-represented-by">
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#region"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#mediated-relation-i"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object"/>
+    <owl:inverseOf rdf:resource="#q-represents"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#identifies">
+    <owl:inverseOf rdf:resource="#identified-by"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Being about an antity with the main purpose of conventionally naming that entity. Typically, proper nouns identify entities.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#about"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="prototype-for">
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#immediate-relation-i"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#particular"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#particular"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="prototype"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#refers-to">
+    <owl:inverseOf rdf:resource="#referred-by"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Referring to something is assumed here under a 'negotiated reference' approach, i.e. agents refer to entities by conceiving a description appropriate to context.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#agent"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#mediated-relation"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#particular"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#prototype">
+    <owl:inverseOf rdf:resource="#prototype-for"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The relation between an entity (playing the role of example, sample, prototype, master, etc.), and another that has all the properties of the first (or a given set of them), except space-time.</rdfs:comment>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#particular"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#particular"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#immediate-relation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#broader-than">
+    <rdfs:domain rdf:resource="#subject"/>
+    <owl:inverseOf rdf:resource="#narrower-than"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The proper part relation between subjects.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#proper-part"/>
+    <rdfs:range rdf:resource="#subject"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="title">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2.1, Build 365)  http://protege.stanford.edu -->

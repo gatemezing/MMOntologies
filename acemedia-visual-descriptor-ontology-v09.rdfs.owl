@@ -1,0 +1,3166 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY a "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY VDO "http://www.acemedia.org/ontologies/VDO#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.acemedia.org/aceMedia/files/software/m-ontomat/acemedia-visual-descriptor-ontology-v09.rdfs#"
+     xml:base="http://www.acemedia.org/aceMedia/files/software/m-ontomat/acemedia-visual-descriptor-ontology-v09.rdfs"
+     xmlns:VDO="http://www.acemedia.org/ontologies/VDO#"
+     xmlns:a="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&a;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION -->
+
+    <owl:ObjectProperty rdf:about="&VDO;DEFAULT_ROOT_RELATION">
+        <a:comment></a:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#aggregation -->
+
+    <owl:ObjectProperty rdf:about="&VDO;aggregation">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;AggregationMode"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;GoFGoPColorDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#amountOfMotion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;amountOfMotion">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#amountOfMotion___MixtureCameraMotionSegmentType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;amountOfMotion___MixtureCameraMotionSegmentType">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:domain rdf:resource="&VDO;MixtureCameraMotionSegmentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;amountOfMotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#amountOfMotion___NonMixtureCameraMotionSegmentType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;amountOfMotion___NonMixtureCameraMotionSegmentType">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:domain rdf:resource="&VDO;NonMixtureCameraMotionSegmentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;amountOfMotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#artDE -->
+
+    <owl:ObjectProperty rdf:about="&VDO;artDE">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionShapeDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#binCount -->
+
+    <owl:ObjectProperty rdf:about="&VDO;binCount">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;EdgeHistogramDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#binNumber -->
+
+    <owl:ObjectProperty rdf:about="&VDO;binNumber">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorQuantizationDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#bitplane -->
+
+    <owl:ObjectProperty rdf:about="&VDO;bitplane">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ScalableColorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#bitsPerBins -->
+
+    <owl:ObjectProperty rdf:about="&VDO;bitsPerBins">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Shape3D"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#blockValues -->
+
+    <owl:ObjectProperty rdf:about="&VDO;blockValues">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorLayoutDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomDown -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomDown">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomDown___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomDown___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;boomDown"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomDown___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomDown___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;boomDown"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomDown___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomDown___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;boomDown"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomUp -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomUp">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomUp___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomUp___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;boomUp"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomUp___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomUp___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;boomUp"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#boomUp___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;boomUp___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;boomUp"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#box -->
+
+    <owl:ObjectProperty rdf:about="&VDO;box">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#cameraFollows -->
+
+    <owl:ObjectProperty rdf:about="&VDO;cameraFollows">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionTrajectoryDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coefficientPattern -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coefficientPattern">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorLayoutDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coefficientSign -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coefficientSign">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ScalableColorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coefficients -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coefficients">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ScalableColorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorQuant -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorQuant">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorStructureDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorQuantization -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorQuantization">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;ColorQuantizationDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;DominantColorDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorRefFlag -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorRefFlag">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorSpaceDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorSpace -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorSpace">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;ColorSpaceDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;DominantColorDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorValueIndex1 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorValueIndex1">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;DCValueElement"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorValueIndex2 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorValueIndex2">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;DCValueElement"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorValueIndex3 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorValueIndex3">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;DCValueElement"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorVariance1 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorVariance1">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;DCValueElement"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorVariance2 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorVariance2">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;DCValueElement"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#colorVariance3 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;colorVariance3">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;DCValueElement"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#component -->
+
+    <owl:ObjectProperty rdf:about="&VDO;component">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorQuantizationDescriptor"/>
+        <a:range rdf:resource="&VDO;ComponentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#componentNumberFlag -->
+
+    <owl:ObjectProperty rdf:about="&VDO;componentNumberFlag">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TextureBrowsingDescriptor"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#constantTypeInterval -->
+
+    <owl:ObjectProperty rdf:about="&VDO;constantTypeInterval">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#containedLocator -->
+
+    <owl:ObjectProperty rdf:about="&VDO;containedLocator">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;ContainedLocatorType"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#contentModel -->
+
+    <owl:ObjectProperty rdf:about="&VDO;contentModel">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;CameraMotionPolymorphismType"/>
+        <a:range rdf:resource="&VDO;CameraMotionSegmentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordPointX -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordPointX">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordPointY -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordPointY">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordRef -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordRef">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordRef___MotionTrajectoryDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordRef___MotionTrajectoryDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MotionTrajectoryDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;coordRef"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordRef___ParametricMotion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordRef___ParametricMotion">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricMotion"/>
+        <a:subPropertyOf rdf:resource="&VDO;coordRef"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordRef___RegionLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordRef___RegionLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;coordRef"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordRef___SpatioTemporalLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordRef___SpatioTemporalLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;SpatioTemporalLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;coordRef"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coordinateMapping -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coordinateMapping">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#coords -->
+
+    <owl:ObjectProperty rdf:about="&VDO;coords">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dataSetLength -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dataSetLength">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dataset -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dataset">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#depth -->
+
+    <owl:ObjectProperty rdf:about="&VDO;depth">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#depth___FigureTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;depth___FigureTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FigureTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;depth"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#depth___ParametricTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;depth___ParametricTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;depth"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dimension -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dimension">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#direction1 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;direction1">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TextureBrowsingDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#direction2 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;direction2">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TextureBrowsingDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyBackward -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyBackward">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyBackward___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyBackward___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;dollyBackward"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyBackward___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyBackward___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;dollyBackward"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyBackward___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyBackward___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;dollyBackward"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyForward -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyForward">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyForward___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyForward___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;dollyForward"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyForward___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyForward___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;dollyForward"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dollyForward___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dollyForward___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;dollyForward"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#dominantDirection -->
+
+    <owl:ObjectProperty rdf:about="&VDO;dominantDirection">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionActivityDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#duration -->
+
+    <owl:ObjectProperty rdf:about="&VDO;duration">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ParametricMotion"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ellipseFlag -->
+
+    <owl:ObjectProperty rdf:about="&VDO;ellipseFlag">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ParametricTrajectoryType"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#energy -->
+
+    <owl:ObjectProperty rdf:about="&VDO;energy">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;HomogeneousTextureDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#energyDeviation -->
+
+    <owl:ObjectProperty rdf:about="&VDO;energyDeviation">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;HomogeneousTextureDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#energyDeviationFlag -->
+
+    <owl:ObjectProperty rdf:about="&VDO;energyDeviationFlag">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;HomogeneousTextureDescriptor"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#figureTrajectory -->
+
+    <owl:ObjectProperty rdf:about="&VDO;figureTrajectory">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&VDO;FigureTrajectoryType"/>
+        <a:domain rdf:resource="&VDO;SpatioTemporalLocatorDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#firstVertexX -->
+
+    <owl:ObjectProperty rdf:about="&VDO;firstVertexX">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#firstVertexY -->
+
+    <owl:ObjectProperty rdf:about="&VDO;firstVertexY">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#focusOfExpansion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;focusOfExpansion">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#focusOfExpansion___MixtureCameraMotionSegmentType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;focusOfExpansion___MixtureCameraMotionSegmentType">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;FocusOfExpansionType"/>
+        <a:domain rdf:resource="&VDO;MixtureCameraMotionSegmentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;focusOfExpansion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#focusOfExpansion___NonMixtureCameraMotionSegmentType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;focusOfExpansion___NonMixtureCameraMotionSegmentType">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;FocusOfExpansionType"/>
+        <a:domain rdf:resource="&VDO;NonMixtureCameraMotionSegmentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;focusOfExpansion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#fractionalPresence -->
+
+    <owl:ObjectProperty rdf:about="&VDO;fractionalPresence">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:domain rdf:resource="&VDO;MixtureCameraMotionSegmentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#globalCurvatureCircularity -->
+
+    <owl:ObjectProperty rdf:about="&VDO;globalCurvatureCircularity">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#globalCurvatureEccentricity -->
+
+    <owl:ObjectProperty rdf:about="&VDO;globalCurvatureEccentricity">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#hasColorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;hasColorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;Color"/>
+        <a:range rdf:resource="&VDO;ColorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#hasVisualDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;hasVisualDescriptor">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Region"/>
+        <a:range rdf:resource="&VDO;VisualDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#highestPeakY -->
+
+    <owl:ObjectProperty rdf:about="&VDO;highestPeakY">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;DOUBLE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#homogeneousTextureAverage -->
+
+    <owl:ObjectProperty rdf:about="&VDO;homogeneousTextureAverage">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;HomogeneousTextureDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#horizontalPosition -->
+
+    <owl:ObjectProperty rdf:about="&VDO;horizontalPosition">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;FocusOfExpansionType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#id -->
+
+    <owl:ObjectProperty rdf:about="&VDO;id">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#intensity -->
+
+    <owl:ObjectProperty rdf:about="&VDO;intensity">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionActivityDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#intergratedCoordinateSystem -->
+
+    <owl:ObjectProperty rdf:about="&VDO;intergratedCoordinateSystem">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&VDO;IntergratedCoordinateSystemType"/>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#keyPointNum -->
+
+    <owl:ObjectProperty rdf:about="&VDO;keyPointNum">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#keyTimePoint -->
+
+    <owl:ObjectProperty rdf:about="&VDO;keyTimePoint">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#keyTimePointDataType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;keyTimePointDataType">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#keyValue -->
+
+    <owl:ObjectProperty rdf:about="&VDO;keyValue">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#location -->
+
+    <owl:ObjectProperty rdf:about="&VDO;location">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ParametricTrajectoryType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#loopSegments -->
+
+    <owl:ObjectProperty rdf:about="&VDO;loopSegments">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionCameraDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#majorComponent -->
+
+    <owl:ObjectProperty rdf:about="&VDO;majorComponent">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#mappingFunct -->
+
+    <owl:ObjectProperty rdf:about="&VDO;mappingFunct">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&VDO;MappingFunctType"/>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#mappingFunctLength -->
+
+    <owl:ObjectProperty rdf:about="&VDO;mappingFunctLength">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MappingFunctType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#mappingFunction -->
+
+    <owl:ObjectProperty rdf:about="&VDO;mappingFunction">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MappingFunctType"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#mediaRealIncrTimePoint -->
+
+    <owl:ObjectProperty rdf:about="&VDO;mediaRealIncrTimePoint">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#mediaRealTimePoint -->
+
+    <owl:ObjectProperty rdf:about="&VDO;mediaRealTimePoint">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#mediaTimePoint -->
+
+    <owl:ObjectProperty rdf:about="&VDO;mediaTimePoint">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#minorComponent -->
+
+    <owl:ObjectProperty rdf:about="&VDO;minorComponent">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#modelType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;modelType">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;IntergratedCoordinateSystemType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#motionModel -->
+
+    <owl:ObjectProperty rdf:about="&VDO;motionModel">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#motionModel___ParametricMotion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;motionModel___ParametricMotion">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;MotionModelType"/>
+        <a:domain rdf:resource="&VDO;ParametricMotion"/>
+        <a:subPropertyOf rdf:resource="&VDO;motionModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#motionModel___ParametricTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;motionModel___ParametricTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;motionModel"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#motionParameters -->
+
+    <owl:ObjectProperty rdf:about="&VDO;motionParameters">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;IntergratedCoordinateSystemType"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#name -->
+
+    <owl:ObjectProperty rdf:about="&VDO;name">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#nameLength -->
+
+    <owl:ObjectProperty rdf:about="&VDO;nameLength">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#nlr -->
+
+    <owl:ObjectProperty rdf:about="&VDO;nlr">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;SpatialDistributionParameters"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#nmr -->
+
+    <owl:ObjectProperty rdf:about="&VDO;nmr">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;SpatialDistributionParameters"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#nsr -->
+
+    <owl:ObjectProperty rdf:about="&VDO;nsr">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;SpatialDistributionParameters"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfCCoeff -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfCCoeff">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorLayoutDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfMotionParameterSets -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfMotionParameterSets">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;IntergratedCoordinateSystemType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfPixels -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfPixels">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfPolygons -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfPolygons">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfVertices -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfVertices">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfVertices___FigureTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfVertices___FigureTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FigureTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;numOfVertices"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfVertices___RegionLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfVertices___RegionLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;numOfVertices"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numOfYCoeff -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numOfYCoeff">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorLayoutDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numberOfBins -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numberOfBins">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Shape3D"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numberOfBitPlanesDiscarded -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numberOfBitPlanesDiscarded">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ScalableColorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numberOfCoefficients -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numberOfCoefficients">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;ScalableColorDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numberOfPeaks -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numberOfPeaks">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#numberOfReferenceRegions -->
+
+    <owl:ObjectProperty rdf:about="&VDO;numberOfReferenceRegions">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;SpatioTemporalLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#octan -->
+
+    <owl:ObjectProperty rdf:about="&VDO;octan">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originX -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originX">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originX___ParametricMotion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originX___ParametricMotion">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricMotion"/>
+        <a:subPropertyOf rdf:resource="&VDO;originX"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originX___RegionLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originX___RegionLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;originX"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originX___Spatial2DCoordinates -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originX___Spatial2DCoordinates">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+        <a:subPropertyOf rdf:resource="&VDO;originX"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originY -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originY">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originY___ParametricMotion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originY___ParametricMotion">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricMotion"/>
+        <a:subPropertyOf rdf:resource="&VDO;originY"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originY___RegionLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originY___RegionLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;originY"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#originY___Spatial2DCoordinates -->
+
+    <owl:ObjectProperty rdf:about="&VDO;originY___Spatial2DCoordinates">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+        <a:subPropertyOf rdf:resource="&VDO;originY"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panLeft -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panLeft">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panLeft___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panLeft___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;panLeft"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panLeft___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panLeft___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;panLeft"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panLeft___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panLeft___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;panLeft"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panRight -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panRight">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panRight___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panRight___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;panRight"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panRight___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panRight___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;panRight"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#panRight___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;panRight___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;panRight"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#param -->
+
+    <owl:ObjectProperty rdf:about="&VDO;param">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#parameterTrajectory -->
+
+    <owl:ObjectProperty rdf:about="&VDO;parameterTrajectory">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&VDO;ParametricTrajectoryType"/>
+        <a:domain rdf:resource="&VDO;SpatioTemporalLocatorDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#parameters -->
+
+    <owl:ObjectProperty rdf:about="&VDO;parameters">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#parameters___ParametricMotion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;parameters___ParametricMotion">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricMotion"/>
+        <a:subPropertyOf rdf:resource="&VDO;parameters"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#parameters___ParametricTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;parameters___ParametricTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;parameters"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#peakX -->
+
+    <owl:ObjectProperty rdf:about="&VDO;peakX">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#peakY -->
+
+    <owl:ObjectProperty rdf:about="&VDO;peakY">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#percentage -->
+
+    <owl:ObjectProperty rdf:about="&VDO;percentage">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;DCValueElement"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#pixelX -->
+
+    <owl:ObjectProperty rdf:about="&VDO;pixelX">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#pixelX___LocalCoordinateSystem -->
+
+    <owl:ObjectProperty rdf:about="&VDO;pixelX___LocalCoordinateSystem">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:subPropertyOf rdf:resource="&VDO;pixelX"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#pixelX___RegionLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;pixelX___RegionLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;pixelX"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#pixelY -->
+
+    <owl:ObjectProperty rdf:about="&VDO;pixelY">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#planarSurfaces -->
+
+    <owl:ObjectProperty rdf:about="&VDO;planarSurfaces">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Shape3D"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#poly -->
+
+    <owl:ObjectProperty rdf:about="&VDO;poly">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#prototypeCurvatureCircularity -->
+
+    <owl:ObjectProperty rdf:about="&VDO;prototypeCurvatureCircularity">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#prototypeCurvatureEccentricity -->
+
+    <owl:ObjectProperty rdf:about="&VDO;prototypeCurvatureEccentricity">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ContourShapeDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#regularity -->
+
+    <owl:ObjectProperty rdf:about="&VDO;regularity">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&VDO;RegularityDegree"/>
+        <a:domain rdf:resource="&VDO;TextureBrowsingDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollAnticlockwise -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollAnticlockwise">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollAnticlockwise___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollAnticlockwise___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;rollAnticlockwise"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollAnticlockwise___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollAnticlockwise___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;rollAnticlockwise"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollAnticlockwise___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollAnticlockwise___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;rollAnticlockwise"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollClockwise -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollClockwise">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollClockwise___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollClockwise___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;rollClockwise"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollClockwise___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollClockwise___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;rollClockwise"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#rollClockwise___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;rollClockwise___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;rollClockwise"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#scalableColor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;scalableColor">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;GoFGoPColorDescriptor"/>
+        <a:range rdf:resource="&VDO;ScalableColorDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#scale1 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;scale1">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TextureBrowsingDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#scale2 -->
+
+    <owl:ObjectProperty rdf:about="&VDO;scale2">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TextureBrowsingDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#segment -->
+
+    <owl:ObjectProperty rdf:about="&VDO;segment">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;CameraMotionPolymorphismType"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionCameraDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#singularSurfaces -->
+
+    <owl:ObjectProperty rdf:about="&VDO;singularSurfaces">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Shape3D"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spaLocNumber -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spaLocNumber">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionActivityDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialCoherency -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialCoherency">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;DominantColorDescriptor"/>
+        <a:range rdf:resource="&xsd;DOUBLE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialDistribution -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialDistribution">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionActivityDescriptor"/>
+        <a:range rdf:resource="&VDO;SpatialDistributionParameters"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialLocalizationParamters -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialLocalizationParamters">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionActivityDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialReference -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialReference">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialReference___MotionTrajectoryDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialReference___MotionTrajectoryDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MotionTrajectoryDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;spatialReference"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialReference___ParametricMotion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialReference___ParametricMotion">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricMotion"/>
+        <a:subPropertyOf rdf:resource="&VDO;spatialReference"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialReference___RegionLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialReference___RegionLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;spatialReference"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spatialReference___SpatioTemporalLocatorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spatialReference___SpatioTemporalLocatorDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;SpatioTemporalLocatorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;spatialReference"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#spectrum -->
+
+    <owl:ObjectProperty rdf:about="&VDO;spectrum">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Shape3D"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#srcPixelX -->
+
+    <owl:ObjectProperty rdf:about="&VDO;srcPixelX">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#srcPixelY -->
+
+    <owl:ObjectProperty rdf:about="&VDO;srcPixelY">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;LocalCoordinateSystem"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#standardDeviation -->
+
+    <owl:ObjectProperty rdf:about="&VDO;standardDeviation">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;HomogeneousTextureDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#temporalParameters -->
+
+    <owl:ObjectProperty rdf:about="&VDO;temporalParameters">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionActivityDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltDown -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltDown">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltDown___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltDown___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;tiltDown"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltDown___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltDown___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;tiltDown"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltDown___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltDown___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;tiltDown"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltUp -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltUp">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltUp___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltUp___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;tiltUp"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltUp___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltUp___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;tiltUp"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#tiltUp___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;tiltUp___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;tiltUp"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#time -->
+
+    <owl:ObjectProperty rdf:about="&VDO;time">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#timeIncr -->
+
+    <owl:ObjectProperty rdf:about="&VDO;timeIncr">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;IntergratedCoordinateSystemType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#time___FigureTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;time___FigureTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FigureTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;time"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#time___MixtureCameraMotionSegmentType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;time___MixtureCameraMotionSegmentType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureCameraMotionSegmentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;time"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#time___NonMixtureCameraMotionSegmentType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;time___NonMixtureCameraMotionSegmentType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureCameraMotionSegmentType"/>
+        <a:subPropertyOf rdf:resource="&VDO;time"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#time___ParametricTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;time___ParametricTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ParametricTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;time"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackLeft -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackLeft">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackLeft___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackLeft___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;trackLeft"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackLeft___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackLeft___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;trackLeft"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackLeft___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackLeft___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;trackLeft"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackRight -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackRight">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackRight___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackRight___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;trackRight"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackRight___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackRight___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;trackRight"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trackRight___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trackRight___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;trackRight"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#trajParameters -->
+
+    <owl:ObjectProperty rdf:about="&VDO;trajParameters">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionTrajectoryDescriptor"/>
+        <a:range rdf:resource="&VDO;TemporalInterpolation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#type -->
+
+    <owl:ObjectProperty rdf:about="&VDO;type">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#typeOfTrajectory -->
+
+    <owl:ObjectProperty rdf:about="&VDO;typeOfTrajectory">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;SpatioTemporalLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#type___ColorSpaceDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;type___ColorSpaceDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorSpaceDescriptor"/>
+        <a:range rdf:resource="&VDO;ColorSpaceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#type___FigureTrajectoryType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;type___FigureTrajectoryType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FigureTrajectoryType"/>
+        <a:subPropertyOf rdf:resource="&VDO;type"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#type___TemporalInterpolation -->
+
+    <owl:ObjectProperty rdf:about="&VDO;type___TemporalInterpolation">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:subPropertyOf rdf:resource="&VDO;type"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#unit -->
+
+    <owl:ObjectProperty rdf:about="&VDO;unit">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+        <a:range rdf:resource="&VDO;UnitType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#units -->
+
+    <owl:ObjectProperty rdf:about="&VDO;units">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;MotionTrajectoryDescriptor"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#unlocatedRegion -->
+
+    <owl:ObjectProperty rdf:about="&VDO;unlocatedRegion">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#values -->
+
+    <owl:ObjectProperty rdf:about="&VDO;values">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#values___ColorStructureDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;values___ColorStructureDescriptor">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;ColorStructureDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;values"/>
+        <a:range rdf:resource="&xsd;STRING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#values___DominantColorDescriptor -->
+
+    <owl:ObjectProperty rdf:about="&VDO;values___DominantColorDescriptor">
+        <a:comment></a:comment>
+        <a:range rdf:resource="&VDO;DCValueElement"/>
+        <a:domain rdf:resource="&VDO;DominantColorDescriptor"/>
+        <a:subPropertyOf rdf:resource="&VDO;values"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#verticalPosition -->
+
+    <owl:ObjectProperty rdf:about="&VDO;verticalPosition">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;FocusOfExpansionType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#vertices -->
+
+    <owl:ObjectProperty rdf:about="&VDO;vertices">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;FigureTrajectoryType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#wholeInterval -->
+
+    <owl:ObjectProperty rdf:about="&VDO;wholeInterval">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;TemporalInterpolation"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#xDynamicRange -->
+
+    <owl:ObjectProperty rdf:about="&VDO;xDynamicRange">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#xOrigin -->
+
+    <owl:ObjectProperty rdf:about="&VDO;xOrigin">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;IntergratedCoordinateSystemType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#xSrcSize -->
+
+    <owl:ObjectProperty rdf:about="&VDO;xSrcSize">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#xsiTypeID -->
+
+    <owl:ObjectProperty rdf:about="&VDO;xsiTypeID">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;CameraMotionPolymorphismType"/>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:range rdf:resource="&xsd;BOOLEAN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#yDynamicRange -->
+
+    <owl:ObjectProperty rdf:about="&VDO;yDynamicRange">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;RegionLocatorDescriptor"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#yOrigin -->
+
+    <owl:ObjectProperty rdf:about="&VDO;yOrigin">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;IntergratedCoordinateSystemType"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ySrcSize -->
+
+    <owl:ObjectProperty rdf:about="&VDO;ySrcSize">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+        <a:domain rdf:resource="&VDO;Spatial2DCoordinates"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomIn -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomIn">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomIn___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomIn___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;zoomIn"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomIn___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomIn___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;zoomIn"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomIn___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomIn___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;zoomIn"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomOut -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomOut">
+        <a:comment></a:comment>
+        <a:subPropertyOf rdf:resource="&VDO;DEFAULT_ROOT_RELATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomOut___FractionalPresenceType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomOut___FractionalPresenceType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;FractionalPresenceType"/>
+        <a:subPropertyOf rdf:resource="&VDO;zoomOut"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomOut___MixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomOut___MixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;MixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;zoomOut"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#zoomOut___NonMixtureAmountOfMotionType -->
+
+    <owl:ObjectProperty rdf:about="&VDO;zoomOut___NonMixtureAmountOfMotionType">
+        <a:comment></a:comment>
+        <a:domain rdf:resource="&VDO;NonMixtureAmountOfMotionType"/>
+        <a:subPropertyOf rdf:resource="&VDO;zoomOut"/>
+        <a:range rdf:resource="&xsd;INTEGER"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#AggregationMode -->
+
+    <owl:Class rdf:about="&VDO;AggregationMode">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#BasicDescriptors -->
+
+    <owl:Class rdf:about="&VDO;BasicDescriptors">
+        <a:subClassOf rdf:resource="&VDO;VisualDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#CameraMotionPolymorphismType -->
+
+    <owl:Class rdf:about="&VDO;CameraMotionPolymorphismType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#CameraMotionSegmentType -->
+
+    <owl:Class rdf:about="&VDO;CameraMotionSegmentType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Color -->
+
+    <owl:Class rdf:about="&VDO;Color">
+        <a:subClassOf rdf:resource="&VDO;Feature"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ColorDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ColorDescriptor">
+        <a:subClassOf rdf:resource="&VDO;VisualDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ColorLayoutDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ColorLayoutDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ColorDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ColorQuantizationDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ColorQuantizationDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ColorDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ColorSpaceDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ColorSpaceDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ColorDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ColorSpaceType -->
+
+    <owl:Class rdf:about="&VDO;ColorSpaceType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ColorStructureDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ColorStructureDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ColorDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ComponentType -->
+
+    <owl:Class rdf:about="&VDO;ComponentType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ContainedLocatorType -->
+
+    <owl:Class rdf:about="&VDO;ContainedLocatorType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ContourShapeDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ShapeDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#DCValueElement -->
+
+    <owl:Class rdf:about="&VDO;DCValueElement">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#DominantColorDescriptor -->
+
+    <owl:Class rdf:about="&VDO;DominantColorDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ColorDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#EdgeHistogramDescriptor -->
+
+    <owl:Class rdf:about="&VDO;EdgeHistogramDescriptor">
+        <a:subClassOf rdf:resource="&VDO;TextureDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Feature -->
+
+    <owl:Class rdf:about="&VDO;Feature">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType -->
+
+    <owl:Class rdf:about="&VDO;FigureTrajectoryType">
+        <a:subClassOf rdf:resource="&VDO;LocalizationDescriptors"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#FocusOfExpansionType -->
+
+    <owl:Class rdf:about="&VDO;FocusOfExpansionType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#FractionalPresenceType -->
+
+    <owl:Class rdf:about="&VDO;FractionalPresenceType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#GoFGoPColorDescriptor -->
+
+    <owl:Class rdf:about="&VDO;GoFGoPColorDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ColorDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#HomogeneousTextureDescriptor -->
+
+    <owl:Class rdf:about="&VDO;HomogeneousTextureDescriptor">
+        <a:subClassOf rdf:resource="&VDO;TextureDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType -->
+
+    <owl:Class rdf:about="&VDO;IntergratedCoordinateSystemType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem -->
+
+    <owl:Class rdf:about="&VDO;LocalCoordinateSystem">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#LocalizationDescriptors -->
+
+    <owl:Class rdf:about="&VDO;LocalizationDescriptors">
+        <a:subClassOf rdf:resource="&VDO;VisualDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MappingFunctType -->
+
+    <owl:Class rdf:about="&VDO;MappingFunctType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MetaConcepts -->
+
+    <owl:Class rdf:about="&VDO;MetaConcepts">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType -->
+
+    <owl:Class rdf:about="&VDO;MixtureAmountOfMotionType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MixtureCameraMotionSegmentType -->
+
+    <owl:Class rdf:about="&VDO;MixtureCameraMotionSegmentType">
+        <a:subClassOf rdf:resource="&VDO;CameraMotionSegmentType"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Motion -->
+
+    <owl:Class rdf:about="&VDO;Motion">
+        <a:subClassOf rdf:resource="&VDO;Feature"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor -->
+
+    <owl:Class rdf:about="&VDO;MotionActivityDescriptor">
+        <a:subClassOf rdf:resource="&VDO;MotionDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MotionCameraDescriptor -->
+
+    <owl:Class rdf:about="&VDO;MotionCameraDescriptor">
+        <a:subClassOf rdf:resource="&VDO;MotionDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MotionDescriptor -->
+
+    <owl:Class rdf:about="&VDO;MotionDescriptor">
+        <a:subClassOf rdf:resource="&VDO;VisualDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MotionModelType -->
+
+    <owl:Class rdf:about="&VDO;MotionModelType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#MotionTrajectoryDescriptor -->
+
+    <owl:Class rdf:about="&VDO;MotionTrajectoryDescriptor">
+        <a:subClassOf rdf:resource="&VDO;MotionDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType -->
+
+    <owl:Class rdf:about="&VDO;NonMixtureAmountOfMotionType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#NonMixtureCameraMotionSegmentType -->
+
+    <owl:Class rdf:about="&VDO;NonMixtureCameraMotionSegmentType">
+        <a:subClassOf rdf:resource="&VDO;CameraMotionSegmentType"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ParametricMotion -->
+
+    <owl:Class rdf:about="&VDO;ParametricMotion">
+        <a:subClassOf rdf:resource="&VDO;MotionDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType -->
+
+    <owl:Class rdf:about="&VDO;ParametricTrajectoryType">
+        <a:subClassOf rdf:resource="&VDO;LocalizationDescriptors"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Region -->
+
+    <owl:Class rdf:about="&VDO;Region">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor -->
+
+    <owl:Class rdf:about="&VDO;RegionLocatorDescriptor">
+        <a:subClassOf rdf:resource="&VDO;LocalizationDescriptors"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#RegionShapeDescriptor -->
+
+    <owl:Class rdf:about="&VDO;RegionShapeDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ShapeDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#RegularityDegree -->
+
+    <owl:Class rdf:about="&VDO;RegularityDegree">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ScalableColorDescriptor">
+        <a:subClassOf rdf:resource="&VDO;ColorDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Shape -->
+
+    <owl:Class rdf:about="&VDO;Shape">
+        <a:subClassOf rdf:resource="&VDO;Feature"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Shape3D -->
+
+    <owl:Class rdf:about="&VDO;Shape3D">
+        <a:subClassOf rdf:resource="&VDO;ShapeDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#ShapeDescriptor -->
+
+    <owl:Class rdf:about="&VDO;ShapeDescriptor">
+        <a:subClassOf rdf:resource="&VDO;VisualDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates -->
+
+    <owl:Class rdf:about="&VDO;Spatial2DCoordinates">
+        <a:subClassOf rdf:resource="&VDO;BasicDescriptors"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#SpatialDistributionParameters -->
+
+    <owl:Class rdf:about="&VDO;SpatialDistributionParameters">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor -->
+
+    <owl:Class rdf:about="&VDO;SpatioTemporalLocatorDescriptor">
+        <a:subClassOf rdf:resource="&VDO;LocalizationDescriptors"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#TemporalInterpolation -->
+
+    <owl:Class rdf:about="&VDO;TemporalInterpolation">
+        <a:subClassOf rdf:resource="&VDO;BasicDescriptors"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#Texture -->
+
+    <owl:Class rdf:about="&VDO;Texture">
+        <a:subClassOf rdf:resource="&VDO;Feature"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor -->
+
+    <owl:Class rdf:about="&VDO;TextureBrowsingDescriptor">
+        <a:subClassOf rdf:resource="&VDO;TextureDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#TextureDescriptor -->
+
+    <owl:Class rdf:about="&VDO;TextureDescriptor">
+        <a:subClassOf rdf:resource="&VDO;VisualDescriptor"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#UnitType -->
+
+    <owl:Class rdf:about="&VDO;UnitType">
+        <a:subClassOf rdf:resource="&VDO;MetaConcepts"/>
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.acemedia.org/ontologies/VDO#VisualDescriptor -->
+
+    <owl:Class rdf:about="&VDO;VisualDescriptor">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#BOOLEAN -->
+
+    <owl:Class rdf:about="&xsd;BOOLEAN">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#DOUBLE -->
+
+    <owl:Class rdf:about="&xsd;DOUBLE">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#INTEGER -->
+
+    <owl:Class rdf:about="&xsd;INTEGER">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#STRING -->
+
+    <owl:Class rdf:about="&xsd;STRING">
+        <a:comment></a:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&VDO;VDOcolorSpace">
+        <a:comment></a:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="&VDO;VDOhasColorDescriptor">
+        <a:comment></a:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

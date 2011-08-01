@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:loc="http://comm.semanticweb.org/localization.owl#"
+    xmlns:core="http://comm.semanticweb.org/core.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:media="http://comm.semanticweb.org/media.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:visual="http://comm.semanticweb.org/visual.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns="http://comm.semanticweb.org/multimedia-ontology.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://comm.semanticweb.org/multimedia-ontology.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://comm.semanticweb.org/visual.owl"/>
+    <owl:imports rdf:resource="http://comm.semanticweb.org/text.owl"/>
+    <owl:imports rdf:resource="http://comm.semanticweb.org/media.owl"/>
+    <owl:imports rdf:resource="http://comm.semanticweb.org/localization.owl"/>
+    <owl:imports rdf:resource="http://comm.semanticweb.org/datatype.owl"/>
+    <owl:imports rdf:resource="http://comm.semanticweb.org/core.owl"/>
+  </owl:Ontology>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2.1, Build 365)  http://protege.stanford.edu -->

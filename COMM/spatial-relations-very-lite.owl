@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:dol="http://comm.semanticweb.org/dolce-very-lite.owl#"
+    xmlns:edns="http://comm.semanticweb.org/extended-dns-very-lite.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="http://comm.semanticweb.org/spatial-relations-very-lite.owl#"
+  xml:base="http://comm.semanticweb.org/spatial-relations-very-lite.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An Ontology of spatial relations, extending the location relations from DOLCE. OWL engineering by Aldo Gangemi.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >
+    >397
+    </owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Imports: DOLCE-Lite</rdfs:comment>
+    <owl:imports rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl"/>
+  </owl:Ontology>
+  <owl:ObjectProperty rdf:ID="descriptive-place-of">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="descriptive-place"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="approximate-location-of"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#non-physical-endurant"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="material-place-of">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="material-place"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="place-of"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#place-of">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#approximate-location-of"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="place"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="approximate-location">
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#generic-location"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#approximate-location-of"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#spatio-temporal-particular"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A  spatial location relation holding between any two entities but regions. It assumes a mereotopological association (part, connection, overlaps, etc.) between shared spatial regions.</rdfs:comment>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#spatio-temporal-particular"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="spatial-location">
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="spatial-location-of"/>
+    </owl:inverseOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Analytical location holding between physical endurants and spatial regions.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-location"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#space-region"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#place">
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A relation of approximate location holding between any endurant and physical endurants. It assumes a shared physical region. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+    <rdfs:subPropertyOf rdf:resource="#approximate-location"/>
+    <owl:inverseOf rdf:resource="#place-of"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="participant-place-of">
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#perdurant"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#approximate-location-of"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="participant-place"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="origin">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The physical 'origin' of a physical endurant in the space region of the spatial quality of another physical endurant.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="origin-of"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#material-place"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="p-spatial-location">
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#perdurant"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="p-spatial-location-of"/>
+    </owl:inverseOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Analytical indirect location holding between perdurants and space regions.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#exact-location"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#space-region"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="descriptive-origin-of">
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="descriptive-origin"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#non-physical-endurant"/>
+    <rdfs:subPropertyOf rdf:resource="#descriptive-place-of"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#descriptive-origin">
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#non-physical-endurant"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#descriptive-place"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Original location of an endurant in a non-physical one. It assumes a shared region between the first and the depend-on of the second (see descriptive place).</rdfs:comment>
+    <owl:inverseOf rdf:resource="#descriptive-origin-of"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#spatial-location-of">
+    <owl:inverseOf rdf:resource="#spatial-location"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#space-region"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-location-of"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#origin-of">
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <rdfs:subPropertyOf rdf:resource="#material-place-of"/>
+    <owl:inverseOf rdf:resource="#origin"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="d-spatial-location-of">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="d-spatial-location"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#non-physical-endurant"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#space-region"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#exact-location-of"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#approximate-location-of">
+    <owl:inverseOf rdf:resource="#approximate-location"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#spatio-temporal-particular"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#generic-location-of"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#spatio-temporal-particular"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#d-spatial-location">
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#exact-location"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#non-physical-endurant"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#space-region"/>
+    <owl:inverseOf rdf:resource="#d-spatial-location-of"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Analytical indirect location holding between non-physical endurants and space regions.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#p-spatial-location-of">
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#perdurant"/>
+    <owl:inverseOf rdf:resource="#p-spatial-location"/>
+    <rdfs:subPropertyOf rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#exact-location-of"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#space-region"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#participant-place">
+    <rdfs:subPropertyOf rdf:resource="#approximate-location"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#perdurant"/>
+    <owl:inverseOf rdf:resource="#participant-place-of"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The place of a perdurant as provided by a reference region at which the spatial quality of a certain endurant is q-located.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#material-place">
+    <rdfs:subPropertyOf rdf:resource="#place"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A relation of approximate location holding for physical endurants. It assumes a physical region that is shared by two physical endurants. Sharedness can be any mereotopological association, but no analytical definition can be done in OWL due to the lack of role value maps.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#physical-endurant"/>
+    <owl:inverseOf rdf:resource="#material-place-of"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#descriptive-place">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Approximate location of an endurant in a non-physical one. It assumes a shared region.AKA fiat-place.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#endurant"/>
+    <rdfs:range rdf:resource="http://comm.semanticweb.org/dolce-very-lite.owl#non-physical-endurant"/>
+    <rdfs:subPropertyOf rdf:resource="#approximate-location"/>
+    <owl:inverseOf rdf:resource="#descriptive-place-of"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2, Build 339)  http://protege.stanford.edu -->

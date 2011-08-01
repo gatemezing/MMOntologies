@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog id="file:/C:/Users/gatemezing/Documents/My%20Dropbox/BuscaMedia/PT3/MultimediaOntolgoies/Ontologies/COMM/" prefer="public" xml:base="file:/C:/Users/gatemezing/Documents/My%20Dropbox/BuscaMedia/PT3/MultimediaOntolgoies/Ontologies/COMM/" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="http://comm.semanticweb.org/core.owl" uri="core.owl"/>
+    <uri name="http://comm.semanticweb.org/datatype.owl" uri="datatype.owl"/>
+    <uri name="http://comm.semanticweb.org/dolce-very-lite.owl" uri="dolce-very-lite.owl"/>
+    <uri name="http://comm.semanticweb.org/extended-dns-very-lite.owl" uri="extended-dns-very-lite.owl"/>
+    <uri name="http://comm.semanticweb.org/information-objects-very-lite.owl" uri="information-objects-very-lite.owl"/>
+    <uri name="http://comm.semanticweb.org/localization.owl" uri="localization.owl"/>
+    <uri name="http://comm.semanticweb.org/media.owl" uri="media.owl"/>
+    <uri name="http://comm.semanticweb.org/multimedia-ontology.owl" uri="multimedia-ontology.owl"/>
+    <uri name="http://comm.semanticweb.org/spatial-relations-very-lite.owl" uri="spatial-relations-very-lite.owl"/>
+    <uri name="http://comm.semanticweb.org/temporal-relations-very-lite.owl" uri="temporal-relations-very-lite.owl"/>
+    <uri name="http://comm.semanticweb.org/text.owl" uri="text.owl"/>
+    <uri name="http://comm.semanticweb.org/visual.owl" uri="visual.owl"/>
+</catalog>

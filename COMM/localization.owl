@@ -1,0 +1,971 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p2 "http://comm.semanticweb.org/core.owl#" >
+    <!ENTITY p1 "http://comm.semanticweb.org/datatype.owl#" >
+    <!ENTITY p3 "http://comm.semanticweb.org/extended-dns-very-lite.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://comm.semanticweb.org/localization.owl#"
+     xml:base="http://comm.semanticweb.org/localization.owl"
+     xmlns:p3="http://comm.semanticweb.org/extended-dns-very-lite.owl#"
+     xmlns:p1="http://comm.semanticweb.org/datatype.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:p2="http://comm.semanticweb.org/core.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/core.owl"/>
+        </owl:imports>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#descriptor -->
+
+    <owl:Class rdf:about="&p2;descriptor"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#digital-data -->
+
+    <owl:Class rdf:about="&p2;digital-data"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#mask-role -->
+
+    <owl:Class rdf:about="&p2;mask-role"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#structured-data-parameter -->
+
+    <owl:Class rdf:about="&p2;structured-data-parameter"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#basic-duration -->
+
+    <owl:Class rdf:about="&p1;basic-duration"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#basic-time-point -->
+
+    <owl:Class rdf:about="&p1;basic-time-point"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#boolean -->
+
+    <owl:Class rdf:about="&p1;boolean"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#enumeration -->
+
+    <owl:Class rdf:about="&p1;enumeration"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#float-scalar -->
+
+    <owl:Class rdf:about="&p1;float-scalar"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#non-negative-integer -->
+
+    <owl:Class rdf:about="&p1;non-negative-integer"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#polygon -->
+
+    <owl:Class rdf:about="&p1;polygon"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#positive-integer -->
+
+    <owl:Class rdf:about="&p1;positive-integer"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#rectangle -->
+
+    <owl:Class rdf:about="&p1;rectangle"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#ascii-text-length -->
+
+    <owl:Class rdf:about="#ascii-text-length">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#ascii-text-locator-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;positive-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#ascii-text-locator-descriptor -->
+
+    <owl:Class rdf:about="#ascii-text-locator-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#ascii-text-locator-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#ascii-text-locator-descriptor-parameter -->
+
+    <owl:Class rdf:about="#ascii-text-locator-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#ascii-text-mask-role -->
+
+    <owl:Class rdf:about="#ascii-text-mask-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#textual-mask-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#ascii-text-offset -->
+
+    <owl:Class rdf:about="#ascii-text-offset">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#ascii-text-locator-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#bounding-box -->
+
+    <owl:Class rdf:about="#bounding-box">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;Box&quot;-element of &quot;RegionLocatorType&quot; (see part 3, page 92 - 93)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;rectangle"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#region-locator-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#figure-trajectory-descriptor -->
+
+    <owl:Class rdf:about="#figure-trajectory-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex &quot;FigureTrajectory&quot; element of the &quot;SpatioTemporalLocatorType&quot; (part 3, page  99 - 100)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#temporal-interpolation-descriptor"/>
+                            <owl:Class rdf:about="#figure-trajectory-descriptor-parameter"/>
+                            <owl:Class rdf:about="#media-time-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#figure-trajectory-descriptor-parameter -->
+
+    <owl:Class rdf:about="#figure-trajectory-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#figure-trajectory-type -->
+
+    <owl:Class rdf:about="#figure-trajectory-type">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;type&quot; attribute of the &quot;FigureTrajectoryType&quot; (part 3, page  99 - 100). the value is a sring of {ellipse rechtanlge polygon }</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#figure-trajectory-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#figure-trajectory-type-enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#figure-trajectory-type-enumeration -->
+
+    <owl:Class rdf:about="#figure-trajectory-type-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#figure-trajectory-type-ellipse"/>
+                    <owl:Thing rdf:about="#figure-trajectory-type-polygon"/>
+                    <owl:Thing rdf:about="#figure-trajectory-type-rechtanlge"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#interpolation-functions-descriptor -->
+
+    <owl:Class rdf:about="#interpolation-functions-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex &quot;InetrpolationFunctions&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#key-value-descriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-media-time-point -->
+
+    <owl:Class rdf:about="#key-media-time-point">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaTimePoint&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;basic-time-point"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#key-time-point-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-time-point-descriptor -->
+
+    <owl:Class rdf:about="#key-time-point-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;KeyTimePoint&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#key-time-point-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-time-point-descriptor-parameter -->
+
+    <owl:Class rdf:about="#key-time-point-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-value -->
+
+    <owl:Class rdf:about="#key-value">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;KeyValue&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#key-value-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-value-descriptor -->
+
+    <owl:Class rdf:about="#key-value-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex &quot;KeyValue&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#key-value-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-value-descriptor-parameter -->
+
+    <owl:Class rdf:about="#key-value-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-value-parameter -->
+
+    <owl:Class rdf:about="#key-value-parameter">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;param&quot; attribute of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;float-scalar"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#key-value-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-value-type -->
+
+    <owl:Class rdf:about="#key-value-type">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;type&quot; attribute of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25). The value is a string of {startPoint firstPoint notDetermined secondOrder}.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#key-value-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#key-value-type-enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#key-value-type-enumeration -->
+
+    <owl:Class rdf:about="#key-value-type-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#key-value-type-second-order"/>
+                    <owl:Thing rdf:about="#key-value-type-start-point"/>
+                    <owl:Thing rdf:about="#key-value-type-first-point"/>
+                    <owl:Thing rdf:about="#key-value-type-not-determined"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#localization-descriptor -->
+
+    <owl:Class rdf:about="#localization-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#localization-descriptor-parameter -->
+
+    <owl:Class rdf:about="#localization-descriptor-parameter">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >These parameters encode parts of localization descriptors.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;structured-data-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#media-duration -->
+
+    <owl:Class rdf:about="#media-duration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MediaDuration&quot;-element of the &quot;MediaTimeType&quot; (see part 5, page 86)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-time-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;basic-duration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#media-time-descriptor -->
+
+    <owl:Class rdf:about="#media-time-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MediaTimeType&quot; (see part 5, page 86 - 87)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#media-time-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#media-time-descriptor-parameter -->
+
+    <owl:Class rdf:about="#media-time-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#media-time-point -->
+
+    <owl:Class rdf:about="#media-time-point">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MediaTimePoint&quot;-element of the &quot;MediaTimeType&quot; (see part 5, page 86)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-time-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;basic-time-point"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#parameter-traejctory-motion-model -->
+
+    <owl:Class rdf:about="#parameter-traejctory-motion-model">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;motionModel&quot; attribute of the &quot;ParameterTrajectoryType&quot; (part 3, page  101 - 102). The value is a string of {still affine parabolic perspective translation rotationAndScaling }.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parameter-trajectory-motion-model-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parameter-trajectory-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#parameter-trajectory-descriptor -->
+
+    <owl:Class rdf:about="#parameter-trajectory-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex &quot;ParameterTrajectory&quot; element of the &quot;SpatioTemporalLocatorType&quot; (part 3, page  101 - 102)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#region-locator-descriptor"/>
+                            <owl:Class rdf:about="#temporal-interpolation-descriptor"/>
+                            <owl:Class rdf:about="#media-time-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#parameter-trajectory-descriptor-parameter -->
+
+    <owl:Class rdf:about="#parameter-trajectory-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#parameter-trajectory-ellipse-flag -->
+
+    <owl:Class rdf:about="#parameter-trajectory-ellipse-flag">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ellipseFlag&quot; attribute of the &quot;ParameterTrajectoryType&quot; (part 3, page  101 - 102)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;boolean"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parameter-trajectory-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#parameter-trajectory-motion-model-enumeration -->
+
+    <owl:Class rdf:about="#parameter-trajectory-motion-model-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#parameter-trajectory-motion-model-translation"/>
+                    <owl:Thing rdf:about="#parameter-trajectory-motion-model-perspective"/>
+                    <owl:Thing rdf:about="#parameter-trajectory-motion-model-still"/>
+                    <owl:Thing rdf:about="#parameter-trajectory-motion-model-affine"/>
+                    <owl:Thing rdf:about="#parameter-trajectory-motion-model-rotation-and-scaling"/>
+                    <owl:Thing rdf:about="#parameter-trajectory-motion-model-parabolic"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#region-boundary -->
+
+    <owl:Class rdf:about="#region-boundary">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to &quot;Polygon&quot;-element of &quot;RegionLocatorType&quot; (see part 3, page 92 - 93)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;polygon"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#region-locator-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#region-locator-descriptor -->
+
+    <owl:Class rdf:about="#region-locator-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;RegionLocatorType&quot; (see part 3, page 92 - 96)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#region-locator-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#region-locator-descriptor-parameter -->
+
+    <owl:Class rdf:about="#region-locator-descriptor-parameter">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#spatial-mask-role -->
+
+    <owl:Class rdf:about="#spatial-mask-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;mask-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#spatio-temporal-locator-descriptor -->
+
+    <owl:Class rdf:about="#spatio-temporal-locator-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#parameter-trajectory-descriptor"/>
+                            <owl:Class rdf:about="#figure-trajectory-descriptor"/>
+                            <owl:Class rdf:about="#media-time-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#temporal-interpolation-descriptor -->
+
+    <owl:Class rdf:about="#temporal-interpolation-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;TemporalInterpolationType&quot;, specified in part 3, page 23-29.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#whole-interval-descriptor"/>
+                            <owl:Class rdf:about="#interpolation-functions-descriptor"/>
+                            <owl:Class rdf:about="#key-time-point-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#temporal-mask-role -->
+
+    <owl:Class rdf:about="#temporal-mask-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;mask-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#textual-mask-role -->
+
+    <owl:Class rdf:about="#textual-mask-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;mask-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#whole-interval-descriptor -->
+
+    <owl:Class rdf:about="#whole-interval-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaDuration&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#whole-interval-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#whole-interval-descriptor-parameter -->
+
+    <owl:Class rdf:about="#whole-interval-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#localization-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#whole-interval-media-duration -->
+
+    <owl:Class rdf:about="#whole-interval-media-duration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaDuration&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;basic-duration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#whole-interval-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#about -->
+
+    <owl:ObjectProperty rdf:about="&p3;about"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#played-by -->
+
+    <owl:ObjectProperty rdf:about="&p3;played-by"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#figure-trajectory-type-ellipse -->
+
+    <owl:Thing rdf:about="#figure-trajectory-type-ellipse"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#figure-trajectory-type-polygon -->
+
+    <owl:Thing rdf:about="#figure-trajectory-type-polygon"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#figure-trajectory-type-rechtanlge -->
+
+    <owl:Thing rdf:about="#figure-trajectory-type-rechtanlge"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#key-value-type-first-point -->
+
+    <owl:Thing rdf:about="#key-value-type-first-point"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#key-value-type-not-determined -->
+
+    <owl:Thing rdf:about="#key-value-type-not-determined"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#key-value-type-second-order -->
+
+    <owl:Thing rdf:about="#key-value-type-second-order"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#key-value-type-start-point -->
+
+    <owl:Thing rdf:about="#key-value-type-start-point"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#parameter-trajectory-motion-model-affine -->
+
+    <owl:Thing rdf:about="#parameter-trajectory-motion-model-affine"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#parameter-trajectory-motion-model-parabolic -->
+
+    <owl:Thing rdf:about="#parameter-trajectory-motion-model-parabolic"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#parameter-trajectory-motion-model-perspective -->
+
+    <owl:Thing rdf:about="#parameter-trajectory-motion-model-perspective"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#parameter-trajectory-motion-model-rotation-and-scaling -->
+
+    <owl:Thing rdf:about="#parameter-trajectory-motion-model-rotation-and-scaling"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#parameter-trajectory-motion-model-still -->
+
+    <owl:Thing rdf:about="#parameter-trajectory-motion-model-still"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/localization.owl#parameter-trajectory-motion-model-translation -->
+
+    <owl:Thing rdf:about="#parameter-trajectory-motion-model-translation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="#bounding-box">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#region-boundary"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#region-boundary">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#bounding-box"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#ascii-text-length">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#ascii-text-offset"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#ascii-text-offset">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#ascii-text-length"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#media-time-descriptor-parameter">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#ascii-text-locator-descriptor-parameter"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#ascii-text-locator-descriptor-parameter">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#media-time-descriptor-parameter"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#media-time-descriptor-parameter">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#region-locator-descriptor-parameter"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#region-locator-descriptor-parameter">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#media-time-descriptor-parameter"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#ascii-text-locator-descriptor-parameter">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#region-locator-descriptor-parameter"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#region-locator-descriptor-parameter">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#ascii-text-locator-descriptor-parameter"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#media-time-point">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#media-duration"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#media-duration">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#media-time-point"/>
+        </owl:disjointWith>
+    </owl:Class>
+</rdf:RDF>

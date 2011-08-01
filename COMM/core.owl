@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p1 "http://comm.semanticweb.org/extended-dns-very-lite.owl#" >
+    <!ENTITY p2 "http://comm.semanticweb.org/information-objects-very-lite.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://comm.semanticweb.org/core.owl#"
+     xml:base="http://comm.semanticweb.org/core.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:p2="http://comm.semanticweb.org/information-objects-very-lite.owl#"
+     xmlns:p1="http://comm.semanticweb.org/extended-dns-very-lite.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/extended-dns-very-lite.owl"/>
+        </owl:imports>
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/information-objects-very-lite.owl"/>
+        </owl:imports>
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/datatype.owl"/>
+        </owl:imports>
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/dolce-very-lite.owl"/>
+        </owl:imports>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#algorithm -->
+
+    <owl:Class rdf:about="#algorithm">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An algorithm is a method to solve a computational problem. The associated situation would be the execution of the algorithm. Such a situation compasses 1) digital data that is being involved in the computation (Endurants), 2) regions that value parameters of the algorithm, 3) perdurants that course the computational tasks, i.e. the processing steps of the algorithm. An algorithm defines roles which are played by digital data. These roles encode the meaning / purpose of data. In other words, the meaning of digital data depends on the algorithm that has been used to create it. In order to solve a problem, an algorithm has to process input data and return some output data</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;method"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;defines"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#annotated-data-role -->
+
+    <owl:Class rdf:about="#annotated-data-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This role can be only played within an annotation or a semantic annotation situation. The role identifies the multimedia data entity that is being annotated.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#input-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;played-by"/>
+                <owl:allValuesFrom rdf:resource="#multimedia-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#annotated-media-role -->
+
+    <owl:Class rdf:about="#annotated-media-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This role has to be played within an annotation situation. The role identifies the media of a multimedia-data entity that is being annotated.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#input-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;played-by"/>
+                <owl:allValuesFrom rdf:resource="#media"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#annotation -->
+
+    <owl:Class rdf:about="#annotation">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The D&amp;S pattern allows us to represent annotations as situations that represent the state of affairs of all related digital data (metadata and annotated multimedia data or physical media respectively). Digital data entities play so called annotation roles that specify their interpretation as metadata. These roles are defined by methods or algorithms. The first ones are used to express manual or semiautomatic annotation while the latter serve as explanation for automatic derived annotations (features) like a color histogram of a still region.  An example for a manual annotation is the attachment of creation information like author or capturing device. It is mandatory that the entity that is being annotated plays an input role in an annotation situation. Digital data entities that represent the annotation have to play output roles.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;situation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#annotation-role -->
+
+    <owl:Class rdf:about="#annotation-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Digital data entities play so called annotation roles that specify their interpretation as metadata. These roles are defined by methods or algorithms. Digital data entities that represent the annotation have also to play output roles. The annotation roles that are used to specify the actual meaning of these entities should be at a generic level as detailed descriptions of the data are formalized using the formalization of structured digital data.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#output-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;played-by"/>
+                <owl:allValuesFrom rdf:resource="#digital-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#audio-data -->
+
+    <owl:Class rdf:about="#audio-data">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#multimedia-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#computational-task -->
+
+    <owl:Class rdf:about="#computational-task">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Computational tasks are perdurants that occour in the context of algorithms. An example for a computational task would be the loading of a file content.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;defined-by"/>
+                <owl:allValuesFrom rdf:resource="#algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;task"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#content-annotation -->
+
+    <owl:Class rdf:about="#content-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#descriptor -->
+
+    <owl:Class rdf:about="#descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#structured-data-description"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#digital-data -->
+
+    <owl:Class rdf:about="#digital-data">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Digital data entities of arbitrary size are conisedered as information objects that have a certain meaning and are used for communication between humans, machines or for human machine interaction. Digital data can be realized in various forms, e.g. it could be stored on a HD-drive or in the main memory of a PC.
+Digital data entities express structured data descriptions that define how the carried information has to be interpreted. The information (the facts) that digital data is about is embodied through mathematical entities like numbers, vectors or matrices but also strings or polygons. With respect to DOLCE these entities are abstract regions.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;information-object"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#image-data -->
+
+    <owl:Class rdf:about="#image-data">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#multimedia-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#input-role -->
+
+    <owl:Class rdf:about="#input-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Digital data that plays this role is used as an input for a method / algorithm.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#processing-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#input-segment-role -->
+
+    <owl:Class rdf:about="#input-segment-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This role has to be played by within a decomposition situation. The role identifies the mutlimedia data entity that is beeing decomposed into segments.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#input-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;played-by"/>
+                <owl:allValuesFrom rdf:resource="#multimedia-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#mask-role -->
+
+    <owl:Class rdf:about="#mask-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#output-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#media -->
+
+    <owl:Class rdf:about="#media">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Multimedia data is realized by some physical media. An image is an example for a media. In the case of a JPEG image we would consider JPEG as the corresponding information encoding system that orders the physical image. For the multimedia ontology it is important to include the physical realization of multimedia data as some MPEG-7 description tools have to be attached to the physical media of multimedia content. This holds for the media information description tools that are specified in MPEG-7 part 5, clause 8.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;realizes"/>
+                <owl:allValuesFrom rdf:resource="#multimedia-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;information-realization"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#media-annotation -->
+
+    <owl:Class rdf:about="#media-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#multimedia-data -->
+
+    <owl:Class rdf:about="#multimedia-data">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >We think that the main idea of MPEG-7 is to describe digital multimedia content by the means of some (XML-) metadata. Thus, we will consider multimedia data which is a subconcept of digital data and that is described by some other digital data. Multimedia data is an abstract base concept that has to be specialized for specific media types, e.g. image data carries the visual content of an image. Multimedia data is realized by some physical media. An image is an example for a media. In the case of a JPEG image we would consider For the multimedia ontology it is important to include the physical realization of multimedia data as some MPEG-7 description tools have to be attached to the physical media of multimedia content. This holds for the media information description tools that are specified in MPEG-7 part 5, clause 8.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;realized-by"/>
+                <owl:allValuesFrom rdf:resource="#media"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;realized-by"/>
+                <owl:someValuesFrom rdf:resource="#media"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;plays"/>
+                <owl:someValuesFrom rdf:resource="#output-segment-role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#output-role -->
+
+    <owl:Class rdf:about="#output-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Digital data that plays this role represents th output of a method / algorithm.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#processing-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#output-segment-role -->
+
+    <owl:Class rdf:about="#output-segment-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A multimedia data entity that plays this role represents a segment in a segment decomposition. Segment roles are only defined by methods or algorithms. The segment role coresponds to the name of the MPEG-7 &quot;SegmentType&quot; in part 5, page 254. The MPEG-7 description tools that are listed inside the &quot;SegmentType&quot; can be attached to the multimedia data entities that play a segment role.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#output-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;played-by"/>
+                <owl:allValuesFrom rdf:resource="#multimedia-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#processing-role -->
+
+    <owl:Class rdf:about="#processing-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Processing roles are defined by methods and in particular algorithms. In the context of algorithms they are used to describe the purpose of digital data within situations where data is modifed / generated.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;defined-by"/>
+                <owl:allValuesFrom rdf:resource="&p1;method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#root-segment-role -->
+
+    <owl:Class rdf:about="#root-segment-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;played-by"/>
+                <owl:allValuesFrom rdf:resource="#multimedia-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#segment-decomposition -->
+
+    <owl:Class rdf:about="#segment-decomposition">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The decomposition of a multimedia data entity is considered as a situation which satisfies a description that is provided by a segmentation algorithm or a method which has been applied to perform the segmentation. The application of methods corresponds to manual or semiautomatic segmentations. An example would be the handcrafted selection of segments using a magic wand tool. The segment decomposition coresponds to the MPEG-7 &quot;SegmentDecompositionType&quot; in part 5, page 257.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;setting-for"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#multimedia-data"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&p1;plays"/>
+                                <owl:someValuesFrom rdf:resource="#output-segment-role"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;setting-for"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#multimedia-data"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&p1;plays"/>
+                                <owl:someValuesFrom rdf:resource="#input-segment-role"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;situation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#segmentation-algorithm -->
+
+    <owl:Class rdf:about="#segmentation-algorithm">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A segmentation algorithm decomposes a multimedia data entity in one or more other multimedia data entities. It always defines exactly one input role for the multimedia entity that is decomposed.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#algorithm"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#semantic-annotation -->
+
+    <owl:Class rdf:about="#semantic-annotation">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Semantic annotations are used to link the donmain independent multimedia ontology with domain ontologies which cover the concepts that are depicted in multimedia files. They can satisfy either automatic classification algorithms or manual annotation methods. A semantic annotation serves as setting for one piece of multimedia data that is beeing annotated and has to play a labeled data role. The situation is also a setting for several particulars / things that play the role of a semantic label for the multimedia data.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#semantic-label-role -->
+
+    <owl:Class rdf:about="#semantic-label-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This role is played by particulars / things of a domain ontology. The role is used to indicate that a certain instance of a domain ontology has to be considered as a semantic label for a piece of multimedia data within a semantic annotation situation.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#output-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#structured-data-description -->
+
+    <owl:Class rdf:about="#structured-data-description">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Digital data entities express structured data descriptions that define how the carried information has to be interpreted. The information (the facts) that digital data is about is embodied through mathematical entities like numbers, vectors or matrices but also strings or polygons. With respect to DOLCE these entities are abstract regions. Thus, a structured data description that is expressed by digital data has to define structured data parameters (according to the D&amp;S design pattern). These parameters encode the meaning of the carried information and are valued by the just introduced mathematical abstract regions. Situations which satisfy structured data descriptions are called structured data instantiations. In order to cope with nested structured data descriptions within structured data descriptions it is needed that some descriptions also define structured data roles that can be played by digital data. These data entities express the nested structured data description.
+Structured data descriptions as well as structured data parameters and roles will be encoded as permanent instances of the multimedia ontology. It doesn&#8217;t make sense to have concepts for e.g. all MPEG-7 data types as their definition is static. This approach is analogous to the representation of classes in object oriented software. They are also only loaded once in the memory and not for every object.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;description"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#structured-data-instantiation -->
+
+    <owl:Class rdf:about="#structured-data-instantiation">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >These situations arise from the instantiation of a structured data description. Actually, they are not needed for application.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;situation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#structured-data-parameter -->
+
+    <owl:Class rdf:about="#structured-data-parameter">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >These parameters are only defined by structured data descriptions. They describe the meaning of parts of digital data. The following example demonstrates how they are meant to be used. Samples are atomic parts of multimedia data entities and are defined through a position and a sample value. A pixel of a RGB image for example is defined through a 2D image coordinate and a 3D colour vector. A structured data description of a pixel would therefore define 2 parameters, one called pixel coordinate and one called pixel colour. The former would be valued by 2D vectore while the latter would be valued by a 3D vector.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#structured-data-role -->
+
+    <owl:Class rdf:about="#structured-data-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Structured data roles are only defined by structured data descriptions. They describe digital data entities that express nested structured data descriptions. For the application ontology, this concept is not needed.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p1;played-by"/>
+                <owl:allValuesFrom rdf:resource="#digital-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#text-data -->
+
+    <owl:Class rdf:about="#text-data">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#multimedia-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#video-data -->
+
+    <owl:Class rdf:about="#video-data">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#multimedia-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/extended-dns-very-lite.owl#description -->
+
+    <owl:Class rdf:about="&p1;description"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/extended-dns-very-lite.owl#information-object -->
+
+    <owl:Class rdf:about="&p1;information-object"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/extended-dns-very-lite.owl#method -->
+
+    <owl:Class rdf:about="&p1;method"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/extended-dns-very-lite.owl#parameter -->
+
+    <owl:Class rdf:about="&p1;parameter"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/extended-dns-very-lite.owl#role -->
+
+    <owl:Class rdf:about="&p1;role"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/extended-dns-very-lite.owl#situation -->
+
+    <owl:Class rdf:about="&p1;situation"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/extended-dns-very-lite.owl#task -->
+
+    <owl:Class rdf:about="&p1;task"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/information-objects-very-lite.owl#information-realization -->
+
+    <owl:Class rdf:about="&p2;information-realization"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#defined-by -->
+
+    <owl:ObjectProperty rdf:about="&p1;defined-by"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&p1;defines"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#played-by -->
+
+    <owl:ObjectProperty rdf:about="&p1;played-by"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#plays -->
+
+    <owl:ObjectProperty rdf:about="&p1;plays"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#realized-by -->
+
+    <owl:ObjectProperty rdf:about="&p1;realized-by"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#realizes -->
+
+    <owl:ObjectProperty rdf:about="&p1;realizes"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#requires -->
+
+    <owl:ObjectProperty rdf:about="&p1;requires"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&p1;satisfies"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#setting-for -->
+
+    <owl:ObjectProperty rdf:about="&p1;setting-for"/>
+    
+
+
+    <!-- Object property: http://www.w3.org/2002/07/owl#valuesFrom -->
+
+    <owl:ObjectProperty rdf:about="&owl;valuesFrom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="#annotated-media-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#input-segment-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#input-segment-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#annotated-media-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#output-segment-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#semantic-label-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#semantic-label-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#output-segment-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#output-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#input-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#input-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#output-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#annotated-data-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#input-segment-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#input-segment-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#annotated-data-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#annotation-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#semantic-label-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#semantic-label-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#annotation-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#output-segment-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#annotation-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#annotation-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#output-segment-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#audio-data">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#video-data"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#video-data">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#audio-data"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#image-data">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#video-data"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#video-data">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#image-data"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#annotated-media-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#annotated-data-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#annotated-data-role">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#annotated-media-role"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#audio-data">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#image-data"/>
+        </owl:disjointWith>
+    </owl:Class>
+    <owl:Class rdf:about="#image-data">
+        <owl:disjointWith>
+            <owl:Class rdf:about="#audio-data"/>
+        </owl:disjointWith>
+    </owl:Class>
+</rdf:RDF>

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p1 "http://comm.semanticweb.org/core.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://comm.semanticweb.org/text.owl#"
+     xml:base="http://comm.semanticweb.org/text.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:p1="http://comm.semanticweb.org/core.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/localization.owl"/>
+        </owl:imports>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#output-segment-role -->
+
+    <owl:Class rdf:about="&p1;output-segment-role"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#root-segment-role -->
+
+    <owl:Class rdf:about="&p1;root-segment-role"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#segment-decomposition -->
+
+    <owl:Class rdf:about="&p1;segment-decomposition"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/text.owl#ascii-text-segment-decomposition -->
+
+    <owl:Class rdf:about="#ascii-text-segment-decomposition">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#textual-segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/text.owl#ascii-text-segment-role -->
+
+    <owl:Class rdf:about="#ascii-text-segment-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#text-segment-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/text.owl#root-ascii-text-segment-role -->
+
+    <owl:Class rdf:about="#root-ascii-text-segment-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#root-text-segment-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#ascii-text-segment-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/text.owl#root-text-segment-role -->
+
+    <owl:Class rdf:about="#root-text-segment-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#text-segment-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;root-segment-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/text.owl#text-segment-role -->
+
+    <owl:Class rdf:about="#text-segment-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;output-segment-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/text.owl#textual-segment-decomposition -->
+
+    <owl:Class rdf:about="#textual-segment-decomposition">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>

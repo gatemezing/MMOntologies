@@ -1,0 +1,5006 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p2 "http://comm.semanticweb.org/core.owl#" >
+    <!ENTITY p1 "http://comm.semanticweb.org/datatype.owl#" >
+    <!ENTITY p3 "http://comm.semanticweb.org/localization.owl#" >
+    <!ENTITY p4 "http://comm.semanticweb.org/extended-dns-very-lite.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://comm.semanticweb.org/visual.owl#"
+     xml:base="http://comm.semanticweb.org/visual.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:p4="http://comm.semanticweb.org/extended-dns-very-lite.owl#"
+     xmlns:p3="http://comm.semanticweb.org/localization.owl#"
+     xmlns:p2="http://comm.semanticweb.org/core.owl#"
+     xmlns:p1="http://comm.semanticweb.org/datatype.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/localization.owl"/>
+        </owl:imports>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#content-annotation -->
+
+    <owl:Class rdf:about="&p2;content-annotation"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#descriptor -->
+
+    <owl:Class rdf:about="&p2;descriptor"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#digital-data -->
+
+    <owl:Class rdf:about="&p2;digital-data"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#image-data -->
+
+    <owl:Class rdf:about="&p2;image-data">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;plays"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#output-segment-role -->
+
+    <owl:Class rdf:about="&p2;output-segment-role"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#root-segment-role -->
+
+    <owl:Class rdf:about="&p2;root-segment-role"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#segment-decomposition -->
+
+    <owl:Class rdf:about="&p2;segment-decomposition"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#segmentation-algorithm -->
+
+    <owl:Class rdf:about="&p2;segmentation-algorithm"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#structured-data-parameter -->
+
+    <owl:Class rdf:about="&p2;structured-data-parameter"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#video-data -->
+
+    <owl:Class rdf:about="&p2;video-data"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#basic-duration -->
+
+    <owl:Class rdf:about="&p1;basic-duration"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#basic-time-point -->
+
+    <owl:Class rdf:about="&p1;basic-time-point"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#boolean -->
+
+    <owl:Class rdf:about="&p1;boolean"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#enumeration -->
+
+    <owl:Class rdf:about="&p1;enumeration"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#float-scalar -->
+
+    <owl:Class rdf:about="&p1;float-scalar"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#integer-vector -->
+
+    <owl:Class rdf:about="&p1;integer-vector"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#parameters-vector-max-dim-12 -->
+
+    <owl:Class rdf:about="&p1;parameters-vector-max-dim-12"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-1 -->
+
+    <owl:Class rdf:about="&p1;unsigned-1"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-1-vector-dim-3 -->
+
+    <owl:Class rdf:about="&p1;unsigned-1-vector-dim-3"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-11 -->
+
+    <owl:Class rdf:about="&p1;unsigned-11"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12 -->
+
+    <owl:Class rdf:about="&p1;unsigned-12"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12-vector-dim-3 -->
+
+    <owl:Class rdf:about="&p1;unsigned-12-vector-dim-3"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12-vector-max-dim-255 -->
+
+    <owl:Class rdf:about="&p1;unsigned-12-vector-max-dim-255"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12-vector-max-dim-256 -->
+
+    <owl:Class rdf:about="&p1;unsigned-12-vector-max-dim-256"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-16-matrix-dim-3-3 -->
+
+    <owl:Class rdf:about="&p1;unsigned-16-matrix-dim-3-3"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3 -->
+
+    <owl:Class rdf:about="&p1;unsigned-3"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-dim-5 -->
+
+    <owl:Class rdf:about="&p1;unsigned-3-dim-5"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-16 -->
+
+    <owl:Class rdf:about="&p1;unsigned-3-vector-dim-16"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-256 -->
+
+    <owl:Class rdf:about="&p1;unsigned-3-vector-dim-256"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-4 -->
+
+    <owl:Class rdf:about="&p1;unsigned-3-vector-dim-4"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-64 -->
+
+    <owl:Class rdf:about="&p1;unsigned-3-vector-dim-64"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-80 -->
+
+    <owl:Class rdf:about="&p1;unsigned-3-vector-dim-80"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-4 -->
+
+    <owl:Class rdf:about="&p1;unsigned-4"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-4-vector-dim-35 -->
+
+    <owl:Class rdf:about="&p1;unsigned-4-vector-dim-35"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-14 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5-vector-dim-14"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-2 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5-vector-dim-2"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-20 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5-vector-dim-20"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-27 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5-vector-dim-27"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-5 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5-vector-dim-5"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-63 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5-vector-dim-63"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-9 -->
+
+    <owl:Class rdf:about="&p1;unsigned-5-vector-dim-9"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-6 -->
+
+    <owl:Class rdf:about="&p1;unsigned-6"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-6-vector-dim-2 -->
+
+    <owl:Class rdf:about="&p1;unsigned-6-vector-dim-2"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-7 -->
+
+    <owl:Class rdf:about="&p1;unsigned-7"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-8 -->
+
+    <owl:Class rdf:about="&p1;unsigned-8"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-8-vector-dim-30 -->
+
+    <owl:Class rdf:about="&p1;unsigned-8-vector-dim-30"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-8-vector-max-dim-256 -->
+
+    <owl:Class rdf:about="&p1;unsigned-8-vector-max-dim-256"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#media-duration -->
+
+    <owl:Class rdf:about="&p3;media-duration"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#media-time-descriptor -->
+
+    <owl:Class rdf:about="&p3;media-time-descriptor"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/localization.owl#temporal-interpolation-descriptor -->
+
+    <owl:Class rdf:about="&p3;temporal-interpolation-descriptor"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#aggregation -->
+
+    <owl:Class rdf:about="#aggregation">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;aggregation&quot; attribute of the &quot;GoFGoPColorType&quot; (part 3, page 56). The value of the &quot;aggregation&quot; is a string of {Intersection Median Average}</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#gof-gop-color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#aggregation-enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#aggregation-enumeration -->
+
+    <owl:Class rdf:about="#aggregation-enumeration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >the string of {Median Intersection Average}</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#aggregation-median"/>
+                    <owl:Thing rdf:about="#aggregation-average"/>
+                    <owl:Thing rdf:about="#aggregation-intersection"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#average-texture -->
+
+    <owl:Class rdf:about="#average-texture">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Average&quot; element of the &quot;HomogeneousTextureType&quot; (part 3, page 59)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#homogeneous-texture-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-8"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#bin-counts -->
+
+    <owl:Class rdf:about="#bin-counts">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;BinCounts&quot; element of the &quot;EdgeHistogramType&quot; (part 3, page 64)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#edge-histogram-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3-vector-dim-80"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#bits-per-bin -->
+
+    <owl:Class rdf:about="#bits-per-bin">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;bitsPerBin&quot; attribute of the &quot;Shape3DType&quot; (part 3, page 72)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-3d-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-4"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#camera-follows -->
+
+    <owl:Class rdf:about="#camera-follows">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;cameraFollows&quot; attribute of the &quot;MotionTrjectoryType&quot; (part 3, page 81)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;boolean"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-trajectory-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#camera-motion-annotation -->
+
+    <owl:Class rdf:about="#camera-motion-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#camera-motion-descriptor -->
+
+    <owl:Class rdf:about="#camera-motion-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;CameraMotionType&quot;, specified in part 3, page 73-81</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#camera-motion-segment-descriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#camera-motion-segment-descriptor -->
+
+    <owl:Class rdf:about="#camera-motion-segment-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type which consits of two local complex types of the &quot;CameraMotionSegmentType&quot;, specified in part 3, page 44 - 46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-coefficient-14 -->
+
+    <owl:Class rdf:about="#cbac-coefficient-14">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CbACCoeff14&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 45)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-14-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-14"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-coefficient-2 -->
+
+    <owl:Class rdf:about="#cbac-coefficient-2">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CbACCoeff2&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 44)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-2-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-2"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-coefficient-20 -->
+
+    <owl:Class rdf:about="#cbac-coefficient-20">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff20&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 45-46)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-20"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-20-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-coefficient-27 -->
+
+    <owl:Class rdf:about="#cbac-coefficient-27">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff27&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 46)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-27-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-27"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-coefficient-5 -->
+
+    <owl:Class rdf:about="#cbac-coefficient-5">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff5&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 44-45)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-5-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-5"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-coefficient-63 -->
+
+    <owl:Class rdf:about="#cbac-coefficient-63">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff63&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 46)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-63-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-63"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-coefficient-9 -->
+
+    <owl:Class rdf:about="#cbac-coefficient-9">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff9&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 45)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-9-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-9"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-14-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-14-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#cbac-crac-coefficient-14-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-14-descriptor-parameter -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-14-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-2-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-2-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 44.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#cbac-crac-coefficient-2-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-2-descriptor-parameter -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-2-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-20-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-20-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#cbac-crac-coefficient-20-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-20-descriptor-parameter -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-20-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-27-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-27-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#cbac-crac-coefficient-27-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-27-descriptor-parameter -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-27-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-5-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-5-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 44 - 45.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#cbac-crac-coefficient-5-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-5-descriptor-parameter -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-5-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-63-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-63-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#cbac-crac-coefficient-63-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-63-descriptor-parameter -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-63-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-9-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-9-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#cbac-crac-coefficient-9-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-9-descriptor-parameter -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-9-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbac-crac-coefficient-descriptor -->
+
+    <owl:Class rdf:about="#cbac-crac-coefficient-descriptor">
+        <rdfs:comment xml:lang="en"
+            >Corresponds to the local complex type which consits of further seven  local complex types of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 44 - 46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#cbdc-coefficient -->
+
+    <owl:Class rdf:about="#cbdc-coefficient">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CbDCCoeff&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-6"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-layout-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-component -->
+
+    <owl:Class rdf:about="#color-component">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Component&quot; element of the &quot;ColorQuantizationType&quot; (part 3, page 33 -34). The value of the &quot;aggregation&quot; is a string of {B R Max Sum H V G Min S Cr Y Diff Cb }</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-component-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-quantization-component-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-component-enumeration -->
+
+    <owl:Class rdf:about="#color-component-enumeration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >the string of {B R Max Sum H V G Min S Cr Y Diff Cb }</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#color-component-g"/>
+                    <owl:Thing rdf:about="#color-component-max"/>
+                    <owl:Thing rdf:about="#color-component-b"/>
+                    <owl:Thing rdf:about="#color-component-s"/>
+                    <owl:Thing rdf:about="#color-component-y"/>
+                    <owl:Thing rdf:about="#color-component-h"/>
+                    <owl:Thing rdf:about="#color-component-diff"/>
+                    <owl:Thing rdf:about="#color-component-sum"/>
+                    <owl:Thing rdf:about="#color-component-v"/>
+                    <owl:Thing rdf:about="#color-component-cb"/>
+                    <owl:Thing rdf:about="#color-component-cr"/>
+                    <owl:Thing rdf:about="#color-component-r"/>
+                    <owl:Thing rdf:about="#color-component-min"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-descriptor -->
+
+    <owl:Class rdf:about="#color-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-index -->
+
+    <owl:Class rdf:about="#color-index">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Index&quot; element of the &quot;DominantColorType&quot; (part 3, page 35)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#dominant-color-value-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-12-vector-dim-3"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-layout-annotation -->
+
+    <owl:Class rdf:about="#color-layout-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-layout-descriptor -->
+
+    <owl:Class rdf:about="#color-layout-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ColorLayoutType&quot;, specified in part 3, page 42 - 50</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+                            <owl:Class rdf:about="#cbac-crac-coefficient-descriptor"/>
+                            <owl:Class rdf:about="#color-layout-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-layout-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-layout-descriptor-parameter">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-percentage -->
+
+    <owl:Class rdf:about="#color-percentage">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Percentage&quot; element of the &quot;DominantColorType&quot; (part 3, page 35)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#dominant-color-value-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-quantization -->
+
+    <owl:Class rdf:about="#color-quantization">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;colorQuant&quot; attribute of the &quot;ColorStructureType&quot; (part 3, page 51)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-structure-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-quantization-component-descriptor -->
+
+    <owl:Class rdf:about="#color-quantization-component-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type which consits of the two  elements &quot;Component&quot; and &quot;NumOfBins&quot; of the &quot;ColorQuantizationType&quot;, specified in part 3, page 33 - 34.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#color-quantization-component-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-quantization-component-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-quantization-component-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-quantization-descriptor -->
+
+    <owl:Class rdf:about="#color-quantization-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ColorQuantizationType&quot;, specified in part 3, page 33 - 34.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#color-quantization-component-descriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-reference-flag -->
+
+    <owl:Class rdf:about="#color-reference-flag">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;colorReferenceFlag&quot; element of the &quot;ColorSpaceType&quot; (part 3, page 30)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-space-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;boolean"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-space-descriptor -->
+
+    <owl:Class rdf:about="#color-space-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;DominantColorType&quot;, specified in part 3, page 29 - 33.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#color-space-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-space-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-space-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-space-transformation-matrix -->
+
+    <owl:Class rdf:about="#color-space-transformation-matrix">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ColorTransMat&quot; element of the &quot;ColorSpaceType&quot; (part 3, page 29 - 30)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-space-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-16-matrix-dim-3-3"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-space-type -->
+
+    <owl:Class rdf:about="#color-space-type">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;type&quot; element of the &quot;ColorSpaceType&quot; (part 3, page 30). The value of the &quot;aggregation&quot; is a string of {RGB HSV HMMD LinearMatrix YCbCr Monochrome }.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-space-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-space-type-enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-space-type-enumeration -->
+
+    <owl:Class rdf:about="#color-space-type-enumeration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >the string of {RGB HSV HMMD LinearMatrix YCbCr Monochrome }</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#color-space-type-hsv"/>
+                    <owl:Thing rdf:about="#color-space-type-monochrome"/>
+                    <owl:Thing rdf:about="#color-space-type-hmmd"/>
+                    <owl:Thing rdf:about="#color-space-type-ycbcr"/>
+                    <owl:Thing rdf:about="#color-space-type-linearmatrix"/>
+                    <owl:Thing rdf:about="#color-space-type-rgb"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-structure-annotation -->
+
+    <owl:Class rdf:about="#color-structure-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-structure-descriptor -->
+
+    <owl:Class rdf:about="#color-structure-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ColorStructureType&quot;, specified in part 3, page 50 - 56.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#color-structure-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-structure-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-structure-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-structure-values -->
+
+    <owl:Class rdf:about="#color-structure-values">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Values&quot; element of the &quot;ColorStructureType&quot; (part 3, page 51)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-8-vector-max-dim-256"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-structure-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#color-variance -->
+
+    <owl:Class rdf:about="#color-variance">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ColorVariance&quot; element of the &quot;DominantColorType&quot; (part 3, page 35)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-1-vector-dim-3"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#dominant-color-value-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#contour-shape-annotation -->
+
+    <owl:Class rdf:about="#contour-shape-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#contour-shape-descriptor -->
+
+    <owl:Class rdf:about="#contour-shape-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ContourShapeType&quot;, specified in part 3, page 68-71</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#contour-shape-peak-descriptor"/>
+                            <owl:Class rdf:about="#contour-shape-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#contour-shape-descriptor-parameter -->
+
+    <owl:Class rdf:about="#contour-shape-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#contour-shape-peak-descriptor -->
+
+    <owl:Class rdf:about="#contour-shape-peak-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ContourShapeType&quot;, specified in part 3, page 68-71.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#contour-shape-peak-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#contour-shape-peak-descriptor-parameter -->
+
+    <owl:Class rdf:about="#contour-shape-peak-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crac-coefficient-14 -->
+
+    <owl:Class rdf:about="#crac-coefficient-14">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff14&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 45)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-14-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-14"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crac-coefficient-2 -->
+
+    <owl:Class rdf:about="#crac-coefficient-2">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff2&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 44)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-2-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-2"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crac-coefficient-20 -->
+
+    <owl:Class rdf:about="#crac-coefficient-20">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff20&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 45-46)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-20"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-20-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crac-coefficient-27 -->
+
+    <owl:Class rdf:about="#crac-coefficient-27">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff27&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 46)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-27-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-27"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crac-coefficient-5 -->
+
+    <owl:Class rdf:about="#crac-coefficient-5">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff5&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 44-45)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-5-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-5"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crac-coefficient-63 -->
+
+    <owl:Class rdf:about="#crac-coefficient-63">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff63&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 46)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-63-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-63"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crac-coefficient-9 -->
+
+    <owl:Class rdf:about="#crac-coefficient-9">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrACCoeff9&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 45)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#cbac-crac-coefficient-9-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-9"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#crdc-coefficient -->
+
+    <owl:Class rdf:about="#crdc-coefficient">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;CrDCCoeff&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-6"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-layout-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#dominant-color-annotation -->
+
+    <owl:Class rdf:about="#dominant-color-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#dominant-color-descriptor -->
+
+    <owl:Class rdf:about="#dominant-color-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;DominantColorType&quot;, specified in part 3, page 35 - 37</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#dominant-color-descriptor-parameter"/>
+                            <owl:Class rdf:about="#color-quantization-descriptor"/>
+                            <owl:Class rdf:about="#color-space-descriptor"/>
+                            <owl:Class rdf:about="#dominant-color-value-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#dominant-color-descriptor-parameter -->
+
+    <owl:Class rdf:about="#dominant-color-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#dominant-color-value-descriptor -->
+
+    <owl:Class rdf:about="#dominant-color-value-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Value&quot; of the &quot;DominantColorType&quot;, specified in part 3, page 35 - 37.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#dominant-color-value-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#dominant-color-value-descriptor-parameter -->
+
+    <owl:Class rdf:about="#dominant-color-value-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#dominant-direction -->
+
+    <owl:Class rdf:about="#dominant-direction">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;DominantDirection&quot; element of the &quot;MotionActivityType&quot; (part 3, page 87)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-activity-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#edge-histogram-annotation -->
+
+    <owl:Class rdf:about="#edge-histogram-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#edge-histogram-descriptor -->
+
+    <owl:Class rdf:about="#edge-histogram-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;EdgeHistorgramType&quot;, specified in part 3, page 63-66</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#edge-histogram-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#edge-histogram-descriptor-parameter -->
+
+    <owl:Class rdf:about="#edge-histogram-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#energy -->
+
+    <owl:Class rdf:about="#energy">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Energy&quot; element of the &quot;HomogeneousTextureType&quot; (part 3, page 59)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#homogeneous-texture-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-8-vector-dim-30"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#energy-deviation -->
+
+    <owl:Class rdf:about="#energy-deviation">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;EnergyDerivation&quot; element of the &quot;HomogeneousTextureType&quot; (part 3, page 59)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#homogeneous-texture-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-8-vector-dim-30"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#focus-of-expansion-descriptor -->
+
+    <owl:Class rdf:about="#focus-of-expansion-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex &quot;FocusOfExpansionType&quot; element of the &quot;CameraMotionType&quot; (part 3, page  74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#focus-of-expansion-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#focus-of-expansion-descriptor-parameter -->
+
+    <owl:Class rdf:about="#focus-of-expansion-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-boom-down -->
+
+    <owl:Class rdf:about="#fractional-boom-down">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;BoomDown&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-boom-up -->
+
+    <owl:Class rdf:about="#fractional-boom-up">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;BoomUp&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-dolly-backward -->
+
+    <owl:Class rdf:about="#fractional-dolly-backward">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;DollyBackward&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-dolly-forward -->
+
+    <owl:Class rdf:about="#fractional-dolly-forward">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;DollyForward&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-fixed -->
+
+    <owl:Class rdf:about="#fractional-fixed">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Fixed&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-pan-left -->
+
+    <owl:Class rdf:about="#fractional-pan-left">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PanLeft&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-pan-right -->
+
+    <owl:Class rdf:about="#fractional-pan-right">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PanRight&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-presence-descriptor -->
+
+    <owl:Class rdf:about="#fractional-presence-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex &quot;FractioanlPresence&quot; element of the &quot;MixtureCameraMotionSegmentType&quot; (part 3, page  74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#fractional-presence-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-presence-descriptor-parameter -->
+
+    <owl:Class rdf:about="#fractional-presence-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-roll-anti-clockwise -->
+
+    <owl:Class rdf:about="#fractional-roll-anti-clockwise">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;RollAntiClockwise&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-roll-clockwise -->
+
+    <owl:Class rdf:about="#fractional-roll-clockwise">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;RollClockwise&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-tilt-down -->
+
+    <owl:Class rdf:about="#fractional-tilt-down">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TiltDown&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-tilt-up -->
+
+    <owl:Class rdf:about="#fractional-tilt-up">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TiltUp&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-track-left -->
+
+    <owl:Class rdf:about="#fractional-track-left">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TrackLeft&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-track-right -->
+
+    <owl:Class rdf:about="#fractional-track-right">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TrackRight&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-zoom-in -->
+
+    <owl:Class rdf:about="#fractional-zoom-in">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ZoomIn&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#fractional-zoom-out -->
+
+    <owl:Class rdf:about="#fractional-zoom-out">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ZoomOut&quot; element of the local comlex type &quot;FractionalPresenceType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#fractional-presence-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#global-curvature -->
+
+    <owl:Class rdf:about="#global-curvature">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;GlobalCurvature&quot; element of the &quot;ContourShapeType&quot; (part 3, page 69)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-6-vector-dim-2"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#contour-shape-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#gof-gop-color-annotation -->
+
+    <owl:Class rdf:about="#gof-gop-color-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#gof-gop-color-descriptor -->
+
+    <owl:Class rdf:about="#gof-gop-color-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;GoFGoPColorType&quot;, specified in part 3, page 56 - 57</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#scalable-color-descriptor"/>
+                            <owl:Class rdf:about="#gof-gop-color-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#gof-gop-color-descriptor-parameter -->
+
+    <owl:Class rdf:about="#gof-gop-color-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#highest-peak-y -->
+
+    <owl:Class rdf:about="#highest-peak-y">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;HighestPeakY&quot; element of the &quot;ContourShapeType&quot; (part 3, page 69)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-7"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#contour-shape-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#homogeneous-texture-annotation -->
+
+    <owl:Class rdf:about="#homogeneous-texture-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#homogeneous-texture-descriptor -->
+
+    <owl:Class rdf:about="#homogeneous-texture-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;HomogeneousTextureType&quot;, specified in part 3, page 57-61</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#homogeneous-texture-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#homogeneous-texture-descriptor-parameter -->
+
+    <owl:Class rdf:about="#homogeneous-texture-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#horzontal-position -->
+
+    <owl:Class rdf:about="#horzontal-position">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;HorizontalPostion&quot; element of the local comlex type &quot;FocusOfExpansionType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#focus-of-expansion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#image-segmentation-algorithm -->
+
+    <owl:Class rdf:about="#image-segmentation-algorithm">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;segmentation-algorithm"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;satisfied-by"/>
+                <owl:allValuesFrom rdf:resource="#still-region-spatial-decomposition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#image-text-role -->
+
+    <owl:Class rdf:about="#image-text-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The still region role coresponds to the name of the MPEG-7 &quot;StillRegionType&quot; in part 5, page 285-286. It is defined according to the MPEG-7 Segment DS hierarchy.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#still-region-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#intensity -->
+
+    <owl:Class rdf:about="#intensity">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Intensity&quot; element of the &quot;MotionActivityType&quot; (part 3, page 87)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-activity-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3-dim-5"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#key-media-time-point -->
+
+    <owl:Class rdf:about="#key-media-time-point">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaTimePoint&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;basic-time-point"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#magnitude-of-art -->
+
+    <owl:Class rdf:about="#magnitude-of-art">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MagnitudeOfArt&quot; element of the &quot;RegionShapeType&quot; (part 3, page 67)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-4-vector-dim-35"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#region-shape-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#media-source-segment-decomposition -->
+
+    <owl:Class rdf:about="#media-source-segment-decomposition">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-boom-down -->
+
+    <owl:Class rdf:about="#mixture-amount-boom-down">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;BoomDown&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-boom-up -->
+
+    <owl:Class rdf:about="#mixture-amount-boom-up">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;BoomUp&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-dolly-backward -->
+
+    <owl:Class rdf:about="#mixture-amount-dolly-backward">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;DollyBackward&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-dolly-forward -->
+
+    <owl:Class rdf:about="#mixture-amount-dolly-forward">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;DollyForward&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-of-motion-descriptor -->
+
+    <owl:Class rdf:about="#mixture-amount-of-motion-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;AmountOfMotion&quot; of the &quot;CameraMotionSegmentType&quot;, specified in part 3, page 73-74.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#mixture-amount-of-motion-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-of-motion-descriptor-parameter -->
+
+    <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-pan-left -->
+
+    <owl:Class rdf:about="#mixture-amount-pan-left">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PanLeft&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-pan-right -->
+
+    <owl:Class rdf:about="#mixture-amount-pan-right">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PanRight&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-roll-anti-clockwise -->
+
+    <owl:Class rdf:about="#mixture-amount-roll-anti-clockwise">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;RollAntiClockwise&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-roll-clockwise -->
+
+    <owl:Class rdf:about="#mixture-amount-roll-clockwise">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;RollClockwise&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-tilt-down -->
+
+    <owl:Class rdf:about="#mixture-amount-tilt-down">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TiltDown&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-tilt-up -->
+
+    <owl:Class rdf:about="#mixture-amount-tilt-up">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TiltUp&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-track-left -->
+
+    <owl:Class rdf:about="#mixture-amount-track-left">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TrackLeft&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-track-right -->
+
+    <owl:Class rdf:about="#mixture-amount-track-right">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TrackRight&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-zoom-in -->
+
+    <owl:Class rdf:about="#mixture-amount-zoom-in">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ZoomIn&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-amount-zoom-out -->
+
+    <owl:Class rdf:about="#mixture-amount-zoom-out">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ZoomOut&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#mixture-camera-motion-segment-descriptor -->
+
+    <owl:Class rdf:about="#mixture-camera-motion-segment-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type &quot;MixtureCameraMotionSegmentType&quot; of the &quot;CameraMotionSegmentType&quot;, specified in part 3, page 73-74.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#fractional-presence-descriptor"/>
+                            <owl:Class rdf:about="#focus-of-expansion-descriptor"/>
+                            <owl:Class rdf:about="#mixture-amount-of-motion-descriptor"/>
+                            <owl:Class rdf:about="&p3;media-time-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#camera-motion-segment-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-activity-annotation -->
+
+    <owl:Class rdf:about="#motion-activity-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-activity-descriptor -->
+
+    <owl:Class rdf:about="#motion-activity-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MotionActivityType&quot;, specified in part 3, page 87-92</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#spatial-distribution-parameters-descriptor"/>
+                            <owl:Class rdf:about="#motion-activity-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-activity-descriptor-parameter -->
+
+    <owl:Class rdf:about="#motion-activity-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-descriptor -->
+
+    <owl:Class rdf:about="#motion-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-descriptor-parameter -->
+
+    <owl:Class rdf:about="#motion-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-trajectory-annotation -->
+
+    <owl:Class rdf:about="#motion-trajectory-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-trajectory-descriptor -->
+
+    <owl:Class rdf:about="#motion-trajectory-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MotionTrjectoryType&quot;, specified in part 3, page 81-84</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#trajectory-coordinate-definition-descriptor"/>
+                            <owl:Class rdf:about="&p3;temporal-interpolation-descriptor"/>
+                            <owl:Class rdf:about="#motion-trajectory-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#motion-trajectory-descriptor-parameter -->
+
+    <owl:Class rdf:about="#motion-trajectory-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#nested-visual-descriptor -->
+
+    <owl:Class rdf:about="#nested-visual-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#nested-visual-descriptor-parameter -->
+
+    <owl:Class rdf:about="#nested-visual-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;structured-data-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-boom-down -->
+
+    <owl:Class rdf:about="#non-mixture-amount-boom-down">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;BoomDown&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-boom-up -->
+
+    <owl:Class rdf:about="#non-mixture-amount-boom-up">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;BoomUp&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-dolly-backward -->
+
+    <owl:Class rdf:about="#non-mixture-amount-dolly-backward">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;DollyBackward&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-dolly-forward -->
+
+    <owl:Class rdf:about="#non-mixture-amount-dolly-forward">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;DollyForward&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-fixed -->
+
+    <owl:Class rdf:about="#non-mixture-amount-fixed">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Fixed&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-of-motion-descriptor -->
+
+    <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;AmountOfMotion&quot; of the &quot;CameraMotionSegmentType&quot;, specified in part 3, page 73-74.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#non-mixture-amount-of-motion-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-of-motion-descriptor-parameter -->
+
+    <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-pan-left -->
+
+    <owl:Class rdf:about="#non-mixture-amount-pan-left">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PanLeft&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-pan-right -->
+
+    <owl:Class rdf:about="#non-mixture-amount-pan-right">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PanRight&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-roll-anti-clockwise -->
+
+    <owl:Class rdf:about="#non-mixture-amount-roll-anti-clockwise">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;RollAntiClockwise&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-roll-clockwise -->
+
+    <owl:Class rdf:about="#non-mixture-amount-roll-clockwise">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;RollClockwise&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-tilt-down -->
+
+    <owl:Class rdf:about="#non-mixture-amount-tilt-down">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TiltDown&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-tilt-up -->
+
+    <owl:Class rdf:about="#non-mixture-amount-tilt-up">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TiltUp&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-track-left -->
+
+    <owl:Class rdf:about="#non-mixture-amount-track-left">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TrackLeft&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-track-right -->
+
+    <owl:Class rdf:about="#non-mixture-amount-track-right">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TrackRight&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-zoom-in -->
+
+    <owl:Class rdf:about="#non-mixture-amount-zoom-in">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ZoomIn&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-amount-zoom-out -->
+
+    <owl:Class rdf:about="#non-mixture-amount-zoom-out">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ZoomOut&quot; element of the local comlex type &quot;CameraMotionSegmentType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-11"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#non-mixture-camera-motion-segment-descriptor -->
+
+    <owl:Class rdf:about="#non-mixture-camera-motion-segment-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type &quot;NonMixtureCameraMotionSegmentType&quot; of the &quot;CameraMotionSegmentType&quot;, specified in part 3, page 73-74.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#focus-of-expansion-descriptor"/>
+                            <owl:Class rdf:about="&p3;media-time-descriptor"/>
+                            <owl:Class rdf:about="#non-mixture-amount-of-motion-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#camera-motion-segment-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-bins-per-component -->
+
+    <owl:Class rdf:about="#number-of-bins-per-component">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;NumOfBins&quot; element of the &quot;ColorQuantizationType&quot; (part 3, page 33 -34)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-12"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-quantization-component-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded -->
+
+    <owl:Class rdf:about="#number-of-bitplanes-discarded">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;numOfBitplanesDiscarded&quot; element of the &quot;ScalableColorType&quot; (part 3, page 37 -38). the value ist a string of {0 1 2 3 4 6 8}</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#number-of-bitplanes-discarded-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#scalable-color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-enumeration -->
+
+    <owl:Class rdf:about="#number-of-bitplanes-discarded-enumeration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The string of {0 1 2 3 4 6 8}</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#number-of-bitplanes-discarded-0"/>
+                    <owl:Thing rdf:about="#number-of-bitplanes-discarded-8"/>
+                    <owl:Thing rdf:about="#number-of-bitplanes-discarded-6"/>
+                    <owl:Thing rdf:about="#number-of-bitplanes-discarded-4"/>
+                    <owl:Thing rdf:about="#number-of-bitplanes-discarded-1"/>
+                    <owl:Thing rdf:about="#number-of-bitplanes-discarded-3"/>
+                    <owl:Thing rdf:about="#number-of-bitplanes-discarded-2"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-coefficents -->
+
+    <owl:Class rdf:about="#number-of-coefficents">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;numOfCoeff&quot; element of the &quot;ScalableColorType&quot; (part 3, page 37 -38). The value is a string of {16 32 64 128 256}.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#number-of-coefficents-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#scalable-color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-coefficents-enumeration -->
+
+    <owl:Class rdf:about="#number-of-coefficents-enumeration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The string of {16 32 64 128 256}.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#number-of-coefficents-16"/>
+                    <owl:Thing rdf:about="#number-of-coefficents-32"/>
+                    <owl:Thing rdf:about="#number-of-coefficents-128"/>
+                    <owl:Thing rdf:about="#number-of-coefficents-256"/>
+                    <owl:Thing rdf:about="#number-of-coefficentsv-64"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-long-runs -->
+
+    <owl:Class rdf:about="#number-of-long-runs">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;numOfSLongRuns&quot; attribute of the &quot;MotionActivityType&quot; (part 3, page 87)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-distribution-parameters-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-medium-runs -->
+
+    <owl:Class rdf:about="#number-of-medium-runs">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;numOfMediumRuns&quot; attribute of the &quot;MotionActivityType&quot; (part 3, page 87)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-distribution-parameters-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#number-of-short-runs -->
+
+    <owl:Class rdf:about="#number-of-short-runs">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;numOfShortRuns&quot; attribute of the &quot;MotionActivityType&quot; (part 3, page 87)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-distribution-parameters-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#origin-x -->
+
+    <owl:Class rdf:about="#origin-x">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;originX&quot; attribute of the &quot;ParametricMotionType&quot; (part 3, page 85)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;float-scalar"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parametric-coordinate-definition-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#origin-y -->
+
+    <owl:Class rdf:about="#origin-y">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;originY&quot; attribute of the &quot;ParametricMotionType&quot; (part 3, page 85)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;float-scalar"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parametric-coordinate-definition-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-coordinate-definition-descriptor -->
+
+    <owl:Class rdf:about="#parametric-coordinate-definition-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;CoordDef&quot; of the &quot;ParametricMotionType&quot;, specified in part 3, page 84-85.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#parametric-coordinate-definition-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-coordinate-definition-descriptor-parameter -->
+
+    <owl:Class rdf:about="#parametric-coordinate-definition-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-motion-annotation -->
+
+    <owl:Class rdf:about="#parametric-motion-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-motion-descriptor -->
+
+    <owl:Class rdf:about="#parametric-motion-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ParametricMotionType&quot;, specified in part 3, page 84-87</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="&p3;media-duration"/>
+                            <owl:Class rdf:about="#parametric-coordinate-definition-descriptor"/>
+                            <owl:Class rdf:about="#parametric-motion-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-motion-descriptor-parameter -->
+
+    <owl:Class rdf:about="#parametric-motion-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-motion-media-duration -->
+
+    <owl:Class rdf:about="#parametric-motion-media-duration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaDuration&quot; element of the &quot;ParametricMotionType&quot; (part 3, page 85)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;basic-duration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parametric-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-motion-model -->
+
+    <owl:Class rdf:about="#parametric-motion-model">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;modelMotion&quot; attribute of the &quot;ParametricMotionType&quot; (part 3, page 85). The value is a string of {affine translational rotationOrScaling quadric perspective}</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parametric-motion-model-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parametric-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-motion-model-enumeration -->
+
+    <owl:Class rdf:about="#parametric-motion-model-enumeration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >the string of {affine translational rotationOrScaling quadric perspective}</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#parametric-motion-model-affine"/>
+                    <owl:Thing rdf:about="#parametric-motion-model-perspective"/>
+                    <owl:Thing rdf:about="#parametric-motion-model-translational"/>
+                    <owl:Thing rdf:about="#parametric-motion-model-quadric"/>
+                    <owl:Thing rdf:about="#parametric-motion-model-rotation-or-scaling"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#parametric-motion-parameters -->
+
+    <owl:Class rdf:about="#parametric-motion-parameters">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Params&quot; element of the &quot;ParametricMotionType&quot; (part 3, page 85)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;parameters-vector-max-dim-12"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#parametric-motion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#peak-x -->
+
+    <owl:Class rdf:about="#peak-x">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;peakX&quot; attibute of the &quot;ContourShapeType&quot; (part 3, page 69)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#contour-shape-peak-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-6"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#peak-y -->
+
+    <owl:Class rdf:about="#peak-y">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;peakY&quot; attibute of the &quot;ContourShapeType&quot; (part 3, page 69)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#contour-shape-peak-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#planar-surfaces -->
+
+    <owl:Class rdf:about="#planar-surfaces">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PlanarSurfaces&quot; element of the &quot;Shape3DType&quot; (part 3, page 72)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-12"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-3d-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#prototype-curvature -->
+
+    <owl:Class rdf:about="#prototype-curvature">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;PrototypeCurvature&quot; element of the &quot;ContourShapeType&quot; (part 3, page 69)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-6-vector-dim-2"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#contour-shape-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#region-shape-annotation -->
+
+    <owl:Class rdf:about="#region-shape-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#region-shape-descriptor -->
+
+    <owl:Class rdf:about="#region-shape-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;RegionShapeType&quot;, specified in part 3, page 66-68</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#region-shape-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#region-shape-descriptor-parameter -->
+
+    <owl:Class rdf:about="#region-shape-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#root-image-text-role -->
+
+    <owl:Class rdf:about="#root-image-text-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#image-text-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#root-still-region-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#root-still-region-role -->
+
+    <owl:Class rdf:about="#root-still-region-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;root-segment-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#still-region-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#root-video-segment-role -->
+
+    <owl:Class rdf:about="#root-video-segment-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;root-segment-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#video-segment-role"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#scalable-color-annotation -->
+
+    <owl:Class rdf:about="#scalable-color-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#scalable-color-coefficients -->
+
+    <owl:Class rdf:about="#scalable-color-coefficients">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Coeff&quot; element of the &quot;ScalableColorType&quot; (part 3, page 37 -38)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;integer-vector"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#scalable-color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#scalable-color-descriptor -->
+
+    <owl:Class rdf:about="#scalable-color-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ScalableColorType&quot;, specified in part 3, page 37 - 42.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#scalable-color-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#scalable-color-descriptor-parameter -->
+
+    <owl:Class rdf:about="#scalable-color-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#shape-3d-annotation -->
+
+    <owl:Class rdf:about="#shape-3d-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#shape-3d-descriptor -->
+
+    <owl:Class rdf:about="#shape-3d-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;RegionhapeType&quot;, specified in part 3, page 66-68</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#shape-3d-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#shape-3d-descriptor-parameter -->
+
+    <owl:Class rdf:about="#shape-3d-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#shape-descriptor -->
+
+    <owl:Class rdf:about="#shape-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#shape-descriptor-parameter -->
+
+    <owl:Class rdf:about="#shape-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#singular-surfaces -->
+
+    <owl:Class rdf:about="#singular-surfaces">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;SingularSurfaces&quot; element of the &quot;Shape3DType&quot; (part 3, page 72)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-12"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-3d-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#spatial-coherency -->
+
+    <owl:Class rdf:about="#spatial-coherency">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#dominant-color-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#spatial-distribution-parameters-descriptor -->
+
+    <owl:Class rdf:about="#spatial-distribution-parameters-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the element with three attributes &quot;numOfShortRuns&quot; , &quot;numOfMediumRuns&quot; and &quot;numOfLongRuns&quot; of the &quot;MotionActivityType&quot;, specified in part 3, page 87</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#spatial-distribution-parameters-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#spatial-distribution-parameters-descriptor-parameter -->
+
+    <owl:Class rdf:about="#spatial-distribution-parameters-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#spatial-localization-parameters-descriptor -->
+
+    <owl:Class rdf:about="#spatial-localization-parameters-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the choice of four elements &quot;Vector4&quot; , &quot;Vector16&quot;, &quot;Vector64&quot; and &quot;Vector256&quot; of the &quot;MotionActivityType&quot;, specified in part 3, page 87-88</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#spatial-segment-decomposition -->
+
+    <owl:Class rdf:about="#spatial-segment-decomposition">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This specialization of segment-decomposition follows the MPEG-7 hierarchy of decompositions. It coresponds to the MPEG-7 &quot;SpatialSegmentDecompositionType&quot; in part 5, page 257-258.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#spectrum -->
+
+    <owl:Class rdf:about="#spectrum">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Specturm&quot; element of the &quot;Shape3DType&quot; (part 3, page 72)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-3d-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-12-vector-max-dim-255"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#standard-deviation -->
+
+    <owl:Class rdf:about="#standard-deviation">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;StandardDeviation&quot; element of the &quot;HomogeneousTextureType&quot; (part 3, page 59)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#homogeneous-texture-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-8"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#still-region-role -->
+
+    <owl:Class rdf:about="#still-region-role">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The still region role coresponds to the name of the MPEG-7 &quot;StillRegionType&quot; in part 5, page 280-281. It is defined according to the MPEG-7 Segment DS hierarchy.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;output-segment-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;played-by"/>
+                <owl:allValuesFrom rdf:resource="&p2;image-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#still-region-spatial-decomposition -->
+
+    <owl:Class rdf:about="#still-region-spatial-decomposition">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This specialization follows the MPEG-7 hierarchy of decompositions. It coresponds to the MPEG-7 &quot;StillRegionSpatialDecompositionType&quot; in part 5, page 283.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#temporal-segment-decomposition -->
+
+    <owl:Class rdf:about="#temporal-segment-decomposition">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-annotation -->
+
+    <owl:Class rdf:about="#texture-browsing-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-component-descriptor -->
+
+    <owl:Class rdf:about="#texture-browsing-component-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the sequence of the two elements &quot;Derection&quot; and &quot;Scale&quot;of the &quot;TextureBrowsingType&quot;, specified in part 3, page 61-63</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#texture-browsing-component-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-component-descriptor-parameter -->
+
+    <owl:Class rdf:about="#texture-browsing-component-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-descriptor -->
+
+    <owl:Class rdf:about="#texture-browsing-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;TextureBrowsingType&quot;, specified in part 3, page 61-63</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#texture-browsing-descriptor-parameter"/>
+                            <owl:Class rdf:about="#texture-browsing-component-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-descriptor-parameter -->
+
+    <owl:Class rdf:about="#texture-browsing-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-direction -->
+
+    <owl:Class rdf:about="#texture-browsing-direction">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Direction&quot; element of the &quot;TextureBrowsingType&quot; (part 3, page 61-62). The value is a string of {150Degree 120Degree noDirectionality 30Degree 90Degree 0Degree 60Degree }</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-browsing-direction-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-browsing-component-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-enumeration -->
+
+    <owl:Class rdf:about="#texture-browsing-direction-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#texture-browsing-direction-60-degree"/>
+                    <owl:Thing rdf:about="#texture-browsing-direction-no-directionality"/>
+                    <owl:Thing rdf:about="#texture-browsing-direction-150-degree"/>
+                    <owl:Thing rdf:about="#texture-browsing-direction-0-degree"/>
+                    <owl:Thing rdf:about="#texture-browsing-direction-120-degree"/>
+                    <owl:Thing rdf:about="#texture-browsing-direction-90-degree"/>
+                    <owl:Thing rdf:about="#texture-browsing-direction-30-degree"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-regularity -->
+
+    <owl:Class rdf:about="#texture-browsing-regularity">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Regularity&quot; element of the &quot;TextureBrowsingType&quot; (part 3, page 61). The value is a string of {iiregular regular highlyRegular slightlyRegular}.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-browsing-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-browsing-regularity-enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-regularity-enumeration -->
+
+    <owl:Class rdf:about="#texture-browsing-regularity-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#texture-browsing-regularity-slightly-regular"/>
+                    <owl:Thing rdf:about="#texture-browsing-regularity-highly-regular"/>
+                    <owl:Thing rdf:about="#texture-browsing-regularity-irregular"/>
+                    <owl:Thing rdf:about="#texture-browsing-regularity-regular"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-scale -->
+
+    <owl:Class rdf:about="#texture-browsing-scale">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Scale&quot; element of the &quot;TextureBrowsingType&quot; (part 3, page 61-62). The value is a string of {veryCoarse medium coarse fine }</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-browsing-scale-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#texture-browsing-component-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-browsing-scale-enumeration -->
+
+    <owl:Class rdf:about="#texture-browsing-scale-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#texture-browsing-scale-coarse"/>
+                    <owl:Thing rdf:about="#texture-browsing-scale-very-coarse"/>
+                    <owl:Thing rdf:about="#texture-browsing-scale-medium"/>
+                    <owl:Thing rdf:about="#texture-browsing-scale-fine"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-descriptor -->
+
+    <owl:Class rdf:about="#texture-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#texture-descriptor-parameter -->
+
+    <owl:Class rdf:about="#texture-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-descriptor -->
+
+    <owl:Class rdf:about="#trajectory-coordinate-definition-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;CoordDef&quot; of the &quot;MotionTrajectoryType&quot;, specified in part 3, page 81-84.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#trajectory-coordinate-representation-descriptor"/>
+                            <owl:Class rdf:about="#trajectory-coordinate-definition-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-descriptor-parameter -->
+
+    <owl:Class rdf:about="#trajectory-coordinate-definition-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-units -->
+
+    <owl:Class rdf:about="#trajectory-coordinate-definition-units">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;units&quot; attribute of the &quot;TrajectoryMotionType&quot; (part 3, page 81). The value is a string of {meter pictureHeight pictureWidthAndHeight pictureWidth }.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#trajectory-coordinate-definition-units-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#trajectory-coordinate-definition-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-units-enumeration -->
+
+    <owl:Class rdf:about="#trajectory-coordinate-definition-units-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-picture-width-and-height"/>
+                    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-picture-width"/>
+                    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-meter"/>
+                    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-picture-height"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-representation-descriptor -->
+
+    <owl:Class rdf:about="#trajectory-coordinate-representation-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Repr&quot; of the &quot;MotionTrajectoryType&quot;, specified in part 3, page 81-84.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#trajectory-coordinate-representation-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-representation-descriptor-parameter -->
+
+    <owl:Class rdf:about="#trajectory-coordinate-representation-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-x -->
+
+    <owl:Class rdf:about="#trajectory-x">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;X&quot; element of the &quot;TrajectoryMotionType&quot; (part 3, page 81)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#trajectory-coordinate-representation-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-8"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#trajectory-y -->
+
+    <owl:Class rdf:about="#trajectory-y">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Y&quot; element of the &quot;TrajectoryMotionType&quot; (part 3, page 81)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#trajectory-coordinate-representation-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-8"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-16 -->
+
+    <owl:Class rdf:about="#vector-16">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Vector16&#8221; element of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#vector-16-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3-vector-dim-16"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-16-descriptor -->
+
+    <owl:Class rdf:about="#vector-16-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex type of one choice  &quot;Vector16&quot;  of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#vector-16-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-localization-parameters-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-16-descriptor-parameter -->
+
+    <owl:Class rdf:about="#vector-16-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-256 -->
+
+    <owl:Class rdf:about="#vector-256">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Vector256&#8221; element of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3-vector-dim-256"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#vector-256-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-256-descriptor -->
+
+    <owl:Class rdf:about="#vector-256-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex type of one choice &quot;Vector256&quot;  of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-localization-parameters-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#vector-256-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-256-descriptor-parameter -->
+
+    <owl:Class rdf:about="#vector-256-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-4 -->
+
+    <owl:Class rdf:about="#vector-4">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Vector4&#8221; element of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#vector-4-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3-vector-dim-4"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-4-descriptor -->
+
+    <owl:Class rdf:about="#vector-4-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex type of one choice  &quot;Vector4&quot;  of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-localization-parameters-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#vector-4-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-4-descriptor-parameter -->
+
+    <owl:Class rdf:about="#vector-4-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-64 -->
+
+    <owl:Class rdf:about="#vector-64">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Vector64&#8221; element of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-3-vector-dim-64"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#vector-64-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-64-descriptor -->
+
+    <owl:Class rdf:about="#vector-64-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the local complex type of one choice  &quot;Vector64&quot;  of the &quot;MotionActivityType&quot; (part 3, page 87-88)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#vector-64-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#spatial-localization-parameters-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vector-64-descriptor-parameter -->
+
+    <owl:Class rdf:about="#vector-64-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#vertical-postition -->
+
+    <owl:Class rdf:about="#vertical-postition">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;VerticalPostion&quot; element of the local comlex type &quot;FocusOfExpansionType&quot; (part 3, page 74)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#focus-of-expansion-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#video-segment-media-source-decomposition -->
+
+    <owl:Class rdf:about="#video-segment-media-source-decomposition">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-source-segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#video-segment-role -->
+
+    <owl:Class rdf:about="#video-segment-role">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;output-segment-role"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;played-by"/>
+                <owl:allValuesFrom rdf:resource="&p2;video-data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#video-segment-temporal-decomposition -->
+
+    <owl:Class rdf:about="#video-segment-temporal-decomposition">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#temporal-segment-decomposition"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#visual-descriptor -->
+
+    <owl:Class rdf:about="#visual-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#visual-descriptor-annotation -->
+
+    <owl:Class rdf:about="#visual-descriptor-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;content-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#visual-descriptor-parameter -->
+
+    <owl:Class rdf:about="#visual-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;structured-data-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#whole-interval-media-duration -->
+
+    <owl:Class rdf:about="#whole-interval-media-duration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaDuration&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  24-25)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;basic-duration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-14 -->
+
+    <owl:Class rdf:about="#yac-coefficient-14">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YACCoeff14&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-14-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-14"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-14-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-14-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#yac-coefficient-14-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-14-descriptor-parameter -->
+
+    <owl:Class rdf:about="#yac-coefficient-14-descriptor-parameter">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-2 -->
+
+    <owl:Class rdf:about="#yac-coefficient-2">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YACCoeff2&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-2-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-2"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-2-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-2-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#yac-coefficient-2-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-2-descriptor-parameter -->
+
+    <owl:Class rdf:about="#yac-coefficient-2-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-20 -->
+
+    <owl:Class rdf:about="#yac-coefficient-20">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YACCoeff20&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43-44)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-20-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-20"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-20-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-20-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#yac-coefficient-20-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-20-descriptor-parameter -->
+
+    <owl:Class rdf:about="#yac-coefficient-20-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-27 -->
+
+    <owl:Class rdf:about="#yac-coefficient-27">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YACCoeff27&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 44)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-27"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-27-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-27-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-27-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#yac-coefficient-27-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-27-descriptor-parameter -->
+
+    <owl:Class rdf:about="#yac-coefficient-27-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-5 -->
+
+    <owl:Class rdf:about="#yac-coefficient-5">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YACCoeff5&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-5"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-5-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-5-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-5-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#yac-coefficient-5-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-5-descriptor-parameter -->
+
+    <owl:Class rdf:about="#yac-coefficient-5-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-63 -->
+
+    <owl:Class rdf:about="#yac-coefficient-63">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YACCoeff63&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 44)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-63-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-63"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-63-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-63-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#yac-coefficient-63-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-63-descriptor-parameter -->
+
+    <owl:Class rdf:about="#yac-coefficient-63-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-9 -->
+
+    <owl:Class rdf:about="#yac-coefficient-9">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YACCoeff9&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-9-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-5-vector-dim-9"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-9-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-9-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 45-46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#yac-coefficient-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p4;about"/>
+                <owl:allValuesFrom rdf:resource="#yac-coefficient-9-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-9-descriptor-parameter -->
+
+    <owl:Class rdf:about="#yac-coefficient-9-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#yac-coefficient-descriptor -->
+
+    <owl:Class rdf:about="#yac-coefficient-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type which consits of further seven  local complex types of one choice element of the &quot;ColorLayoutType&quot;, specified in part 3, page 44 - 46.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-visual-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/visual.owl#ydc-coefficient -->
+
+    <owl:Class rdf:about="#ydc-coefficient">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;YDCCoeff&#8221; element of the &quot;ColorLayoutType&quot; (part 3, page 43)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;unsigned-6"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-layout-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#about -->
+
+    <owl:ObjectProperty rdf:about="&p4;about"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#played-by -->
+
+    <owl:ObjectProperty rdf:about="&p4;played-by"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#plays -->
+
+    <owl:ObjectProperty rdf:about="&p4;plays"/>
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#satisfied-by -->
+
+    <owl:ObjectProperty rdf:about="&p4;satisfied-by"/>
+    
+
+
+    <!-- Object property: http://www.w3.org/2002/07/owl#valuesFrom -->
+
+    <owl:ObjectProperty rdf:about="&owl;valuesFrom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#aggregation-average -->
+
+    <owl:Thing rdf:about="#aggregation-average">
+        <rdf:type rdf:resource="#aggregation-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#aggregation-intersection -->
+
+    <owl:Thing rdf:about="#aggregation-intersection">
+        <rdf:type rdf:resource="#aggregation-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#aggregation-median -->
+
+    <owl:Thing rdf:about="#aggregation-median">
+        <rdf:type rdf:resource="#aggregation-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-b -->
+
+    <color-component-enumeration rdf:about="#color-component-b">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-cb -->
+
+    <color-component-enumeration rdf:about="#color-component-cb">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-cr -->
+
+    <color-component-enumeration rdf:about="#color-component-cr">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-diff -->
+
+    <color-component-enumeration rdf:about="#color-component-diff">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-g -->
+
+    <color-component-enumeration rdf:about="#color-component-g">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-h -->
+
+    <color-component-enumeration rdf:about="#color-component-h">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-max -->
+
+    <color-component-enumeration rdf:about="#color-component-max">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-min -->
+
+    <color-component-enumeration rdf:about="#color-component-min">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-r -->
+
+    <color-component-enumeration rdf:about="#color-component-r">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-s -->
+
+    <color-component-enumeration rdf:about="#color-component-s">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-sum -->
+
+    <color-component-enumeration rdf:about="#color-component-sum">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-v -->
+
+    <color-component-enumeration rdf:about="#color-component-v">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-component-y -->
+
+    <color-component-enumeration rdf:about="#color-component-y">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-component-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-space-type-hmmd -->
+
+    <color-space-type-enumeration rdf:about="#color-space-type-hmmd">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-space-type-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-space-type-hsv -->
+
+    <color-space-type-enumeration rdf:about="#color-space-type-hsv">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-space-type-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-space-type-linearmatrix -->
+
+    <color-space-type-enumeration rdf:about="#color-space-type-linearmatrix">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-space-type-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-space-type-monochrome -->
+
+    <color-space-type-enumeration rdf:about="#color-space-type-monochrome">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-space-type-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-space-type-rgb -->
+
+    <color-space-type-enumeration rdf:about="#color-space-type-rgb">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-space-type-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#color-space-type-ycbcr -->
+
+    <color-space-type-enumeration rdf:about="#color-space-type-ycbcr">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </color-space-type-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-0 -->
+
+    <number-of-bitplanes-discarded-enumeration rdf:about="#number-of-bitplanes-discarded-0">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-bitplanes-discarded-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-1 -->
+
+    <number-of-bitplanes-discarded-enumeration rdf:about="#number-of-bitplanes-discarded-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-bitplanes-discarded-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-2 -->
+
+    <number-of-bitplanes-discarded-enumeration rdf:about="#number-of-bitplanes-discarded-2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-bitplanes-discarded-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-3 -->
+
+    <number-of-bitplanes-discarded-enumeration rdf:about="#number-of-bitplanes-discarded-3">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-bitplanes-discarded-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-4 -->
+
+    <number-of-bitplanes-discarded-enumeration rdf:about="#number-of-bitplanes-discarded-4">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-bitplanes-discarded-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-6 -->
+
+    <number-of-bitplanes-discarded-enumeration rdf:about="#number-of-bitplanes-discarded-6">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-bitplanes-discarded-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-bitplanes-discarded-8 -->
+
+    <number-of-bitplanes-discarded-enumeration rdf:about="#number-of-bitplanes-discarded-8">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-bitplanes-discarded-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-coefficents-128 -->
+
+    <number-of-coefficents-enumeration rdf:about="#number-of-coefficents-128">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-coefficents-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-coefficents-16 -->
+
+    <number-of-coefficents-enumeration rdf:about="#number-of-coefficents-16">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-coefficents-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-coefficents-256 -->
+
+    <number-of-coefficents-enumeration rdf:about="#number-of-coefficents-256">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-coefficents-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-coefficents-32 -->
+
+    <number-of-coefficents-enumeration rdf:about="#number-of-coefficents-32">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-coefficents-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#number-of-coefficentsv-64 -->
+
+    <number-of-coefficents-enumeration rdf:about="#number-of-coefficentsv-64">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </number-of-coefficents-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#parametric-motion-model-affine -->
+
+    <parametric-motion-model-enumeration rdf:about="#parametric-motion-model-affine">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </parametric-motion-model-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#parametric-motion-model-perspective -->
+
+    <parametric-motion-model-enumeration rdf:about="#parametric-motion-model-perspective">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </parametric-motion-model-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#parametric-motion-model-quadric -->
+
+    <parametric-motion-model-enumeration rdf:about="#parametric-motion-model-quadric">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </parametric-motion-model-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#parametric-motion-model-rotation-or-scaling -->
+
+    <parametric-motion-model-enumeration rdf:about="#parametric-motion-model-rotation-or-scaling">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </parametric-motion-model-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#parametric-motion-model-translational -->
+
+    <parametric-motion-model-enumeration rdf:about="#parametric-motion-model-translational">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </parametric-motion-model-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-0-degree -->
+
+    <texture-browsing-direction-enumeration rdf:about="#texture-browsing-direction-0-degree">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-direction-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-120-degree -->
+
+    <texture-browsing-direction-enumeration rdf:about="#texture-browsing-direction-120-degree">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-direction-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-150-degree -->
+
+    <texture-browsing-direction-enumeration rdf:about="#texture-browsing-direction-150-degree">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-direction-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-30-degree -->
+
+    <texture-browsing-direction-enumeration rdf:about="#texture-browsing-direction-30-degree">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-direction-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-60-degree -->
+
+    <texture-browsing-direction-enumeration rdf:about="#texture-browsing-direction-60-degree">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-direction-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-90-degree -->
+
+    <texture-browsing-direction-enumeration rdf:about="#texture-browsing-direction-90-degree">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-direction-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-direction-no-directionality -->
+
+    <texture-browsing-direction-enumeration rdf:about="#texture-browsing-direction-no-directionality">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-direction-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-regularity-highly-regular -->
+
+    <owl:Thing rdf:about="#texture-browsing-regularity-highly-regular">
+        <rdf:type rdf:resource="#texture-browsing-regularity-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-regularity-irregular -->
+
+    <owl:Thing rdf:about="#texture-browsing-regularity-irregular">
+        <rdf:type rdf:resource="#texture-browsing-regularity-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-regularity-regular -->
+
+    <owl:Thing rdf:about="#texture-browsing-regularity-regular">
+        <rdf:type rdf:resource="#texture-browsing-regularity-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-regularity-slightly-regular -->
+
+    <owl:Thing rdf:about="#texture-browsing-regularity-slightly-regular">
+        <rdf:type rdf:resource="#texture-browsing-regularity-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-scale-coarse -->
+
+    <texture-browsing-scale-enumeration rdf:about="#texture-browsing-scale-coarse">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-scale-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-scale-fine -->
+
+    <texture-browsing-scale-enumeration rdf:about="#texture-browsing-scale-fine">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-scale-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-scale-medium -->
+
+    <texture-browsing-scale-enumeration rdf:about="#texture-browsing-scale-medium">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-scale-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#texture-browsing-scale-very-coarse -->
+
+    <texture-browsing-scale-enumeration rdf:about="#texture-browsing-scale-very-coarse">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </texture-browsing-scale-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-units-meter -->
+
+    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-meter">
+        <rdf:type rdf:resource="#trajectory-coordinate-definition-units-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-units-picture-height -->
+
+    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-picture-height">
+        <rdf:type rdf:resource="#trajectory-coordinate-definition-units-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-units-picture-width -->
+
+    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-picture-width">
+        <rdf:type rdf:resource="#trajectory-coordinate-definition-units-enumeration"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/visual.owl#trajectory-coordinate-definition-units-picture-width-and-height -->
+
+    <owl:Thing rdf:about="#trajectory-coordinate-definition-units-picture-width-and-height">
+        <rdf:type rdf:resource="#trajectory-coordinate-definition-units-enumeration"/>
+    </owl:Thing>
+</rdf:RDF>

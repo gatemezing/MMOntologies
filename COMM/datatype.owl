@@ -1,0 +1,1043 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p1 "http://comm.semanticweb.org/dolce-very-lite.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://comm.semanticweb.org/datatype.owl#"
+     xml:base="http://comm.semanticweb.org/datatype.owl"
+     xmlns:p1="http://comm.semanticweb.org/dolce-very-lite.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/dolce-very-lite.owl"/>
+        </owl:imports>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#any-uri -->
+
+    <owl:Class rdf:about="#any-uri">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#base64Binary -->
+
+    <owl:Class rdf:about="#base64Binary">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#basic-duration -->
+
+    <owl:Class rdf:about="#basic-duration">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#basic-time-point -->
+
+    <owl:Class rdf:about="#basic-time-point">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#boolean -->
+
+    <owl:Class rdf:about="#boolean">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#character-set-code -->
+
+    <owl:Class rdf:about="#character-set-code">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#controlled-term-use-type -->
+
+    <owl:Class rdf:about="#controlled-term-use-type">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#country-code -->
+
+    <owl:Class rdf:about="#country-code">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#currency-code -->
+
+    <owl:Class rdf:about="#currency-code">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#double-diagronal-matrix -->
+
+    <owl:Class rdf:about="#double-diagronal-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#double-matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#double-matrix -->
+
+    <owl:Class rdf:about="#double-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#double-scalar -->
+
+    <owl:Class rdf:about="#double-scalar">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#double-vector -->
+
+    <owl:Class rdf:about="#double-vector">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#enumeration -->
+
+    <owl:Class rdf:about="#enumeration">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#float-diagonal-matrix -->
+
+    <owl:Class rdf:about="#float-diagonal-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#float-matrix -->
+
+    <owl:Class rdf:about="#float-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#float-scalar -->
+
+    <owl:Class rdf:about="#float-scalar">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#float-vector -->
+
+    <owl:Class rdf:about="#float-vector">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#hexBinary -->
+
+    <owl:Class rdf:about="#hexBinary">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#integer-diagonal-matrix -->
+
+    <owl:Class rdf:about="#integer-diagonal-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#integer-matrix -->
+
+    <owl:Class rdf:about="#integer-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#integer-scalar -->
+
+    <owl:Class rdf:about="#integer-scalar">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#integer-vector -->
+
+    <owl:Class rdf:about="#integer-vector">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#matrix -->
+
+    <owl:Class rdf:about="#matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#mime-type -->
+
+    <owl:Class rdf:about="#mime-type">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#minus-one-to-one -->
+
+    <owl:Class rdf:about="#minus-one-to-one">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#minus-one-to-one-matrix -->
+
+    <owl:Class rdf:about="#minus-one-to-one-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#minus-one-to-one-vector -->
+
+    <owl:Class rdf:about="#minus-one-to-one-vector">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#nmtoken -->
+
+    <owl:Class rdf:about="#nmtoken">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#non-negative-integer -->
+
+    <owl:Class rdf:about="#non-negative-integer">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#non-negative-real -->
+
+    <owl:Class rdf:about="#non-negative-real">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#double-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#parameters-vector-max-dim-12 -->
+
+    <owl:Class rdf:about="#parameters-vector-max-dim-12">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#polygon -->
+
+    <owl:Class rdf:about="#polygon">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#positive-integer -->
+
+    <owl:Class rdf:about="#positive-integer">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#probability-matrix -->
+
+    <owl:Class rdf:about="#probability-matrix">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#probability-vector -->
+
+    <owl:Class rdf:about="#probability-vector">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#rectangle -->
+
+    <owl:Class rdf:about="#rectangle">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#region-code -->
+
+    <owl:Class rdf:about="#region-code">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#scalar -->
+
+    <owl:Class rdf:about="#scalar">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#string -->
+
+    <owl:Class rdf:about="#string">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#term-use-type -->
+
+    <owl:Class rdf:about="#term-use-type">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#union -->
+
+    <owl:Class rdf:about="#union">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-1 -->
+
+    <owl:Class rdf:about="#unsigned-1">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-1-vector-dim-3 -->
+
+    <owl:Class rdf:about="#unsigned-1-vector-dim-3">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-10 -->
+
+    <owl:Class rdf:about="#unsigned-10">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-11 -->
+
+    <owl:Class rdf:about="#unsigned-11">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12 -->
+
+    <owl:Class rdf:about="#unsigned-12">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12-vector-dim-3 -->
+
+    <owl:Class rdf:about="#unsigned-12-vector-dim-3">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12-vector-max-dim-255 -->
+
+    <owl:Class rdf:about="#unsigned-12-vector-max-dim-255">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-12-vector-max-dim-256 -->
+
+    <owl:Class rdf:about="#unsigned-12-vector-max-dim-256">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-13 -->
+
+    <owl:Class rdf:about="#unsigned-13">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-14 -->
+
+    <owl:Class rdf:about="#unsigned-14">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-15 -->
+
+    <owl:Class rdf:about="#unsigned-15">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-16 -->
+
+    <owl:Class rdf:about="#unsigned-16">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-16-matrix-dim-3-3 -->
+
+    <owl:Class rdf:about="#unsigned-16-matrix-dim-3-3">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-matrix"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-2 -->
+
+    <owl:Class rdf:about="#unsigned-2">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3 -->
+
+    <owl:Class rdf:about="#unsigned-3">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-dim-5 -->
+
+    <owl:Class rdf:about="#unsigned-3-dim-5">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#positive-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-16 -->
+
+    <owl:Class rdf:about="#unsigned-3-vector-dim-16">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-256 -->
+
+    <owl:Class rdf:about="#unsigned-3-vector-dim-256">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-4 -->
+
+    <owl:Class rdf:about="#unsigned-3-vector-dim-4">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-64 -->
+
+    <owl:Class rdf:about="#unsigned-3-vector-dim-64">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-3-vector-dim-80 -->
+
+    <owl:Class rdf:about="#unsigned-3-vector-dim-80">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-32 -->
+
+    <owl:Class rdf:about="#unsigned-32">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-4 -->
+
+    <owl:Class rdf:about="#unsigned-4">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-4-vector-dim-35 -->
+
+    <owl:Class rdf:about="#unsigned-4-vector-dim-35">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5 -->
+
+    <owl:Class rdf:about="#unsigned-5">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-14 -->
+
+    <owl:Class rdf:about="#unsigned-5-vector-dim-14">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-2 -->
+
+    <owl:Class rdf:about="#unsigned-5-vector-dim-2">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-20 -->
+
+    <owl:Class rdf:about="#unsigned-5-vector-dim-20">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-27 -->
+
+    <owl:Class rdf:about="#unsigned-5-vector-dim-27">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-5 -->
+
+    <owl:Class rdf:about="#unsigned-5-vector-dim-5">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-63 -->
+
+    <owl:Class rdf:about="#unsigned-5-vector-dim-63">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-5-vector-dim-9 -->
+
+    <owl:Class rdf:about="#unsigned-5-vector-dim-9">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-6 -->
+
+    <owl:Class rdf:about="#unsigned-6">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-6-vector-dim-2 -->
+
+    <owl:Class rdf:about="#unsigned-6-vector-dim-2">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-7 -->
+
+    <owl:Class rdf:about="#unsigned-7">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-8 -->
+
+    <owl:Class rdf:about="#unsigned-8">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-8-vector-dim-30 -->
+
+    <owl:Class rdf:about="#unsigned-8-vector-dim-30">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-8-vector-max-dim-256 -->
+
+    <owl:Class rdf:about="#unsigned-8-vector-max-dim-256">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#integer-vector"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#unsigned-9 -->
+
+    <owl:Class rdf:about="#unsigned-9">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#vector -->
+
+    <owl:Class rdf:about="#vector">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;abstract-region"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#zero-to-one -->
+
+    <owl:Class rdf:about="#zero-to-one">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/dolce-very-lite.owl#abstract-region -->
+
+    <owl:Class rdf:about="&p1;abstract-region"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Data Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-boolean -->
+
+    <owl:DatatypeProperty rdf:about="#has-boolean">
+        <rdfs:domain>
+            <owl:Class rdf:about="#boolean"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;boolean"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-double -->
+
+    <owl:DatatypeProperty rdf:about="#has-double">
+        <rdfs:domain>
+            <owl:Class rdf:about="#double-scalar"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;double"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-duration -->
+
+    <owl:DatatypeProperty rdf:about="#has-duration">
+        <rdfs:domain>
+            <owl:Class rdf:about="#basic-duration"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;duration"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-float -->
+
+    <owl:DatatypeProperty rdf:about="#has-float">
+        <rdfs:domain>
+            <owl:Class rdf:about="#float-scalar"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;float"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-integer -->
+
+    <owl:DatatypeProperty rdf:about="#has-integer">
+        <rdfs:domain>
+            <owl:Class rdf:about="#integer-scalar"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;integer"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-matrix -->
+
+    <owl:DatatypeProperty rdf:about="#has-matrix">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The matrix is represented by a string. The first two numbers must be integers and identify the number of rows and collumns in this order. The following numbers are interpreted as floats and identify the data of the matrix. The numbers are serialized row by row. A 3D identity matrix
+1 0 0 
+0 1 0 
+0 0 1
+is represented as a string as follows: &quot;3 3 1 0 0 0 1 0 0 0 1&quot;. The matrix 
+1   2   3   4
+5   6   7   8
+9 10 11 12
+is represented as a string as follows: &quot;3 4 1 2 3 4 5 6 7 8 9 10 11 12&quot;.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class rdf:about="#matrix"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;string"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-polygon -->
+
+    <owl:DatatypeProperty rdf:about="#has-polygon">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A polygon is represented by a string which contains the dimension of the polygon points at the first position and the coordinates of the points subsequently. The 2D polygon with the 4 points (1,1) (3,4) (5,9) and (9,15) is represented by the following string: &quot;2 1 1 3 4 5 9 9 15&quot;.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class rdf:about="#polygon"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;string"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-rectangle -->
+
+    <owl:DatatypeProperty rdf:about="#has-rectangle">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A rectangle is represented by a string which describes its top left and bottom right point. The first number indicates the dimension of each point (usually 2 --&gt; 2D points on the image plane). The follwing numbers identify the float coordinates of the top left and the bottom right point. The 2D rectangle which is defined by the two points (5,6) and (10,12) is represented as &quot;2 5 6 10 12&quot;.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class rdf:about="#rectangle"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;string"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-string -->
+
+    <owl:DatatypeProperty rdf:about="#has-string">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:domain>
+            <owl:Class rdf:about="#string"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;string"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-time -->
+
+    <owl:DatatypeProperty rdf:about="#has-time">
+        <rdfs:domain>
+            <owl:Class rdf:about="#basic-time-point"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;dateTime"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Data property: http://comm.semanticweb.org/datatype.owl#has-vector -->
+
+    <owl:DatatypeProperty rdf:about="#has-vector">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A vector is also represented by a string which contains all elements, e.g. the vector (1, 2, 3, 4, 5, 6, 7) is represented as &quot;1 2 3 4 5 6 7&quot;.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class rdf:about="#vector"/>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype rdf:about="&xsd;string"/>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+</rdf:RDF>

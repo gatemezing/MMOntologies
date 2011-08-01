@@ -1,0 +1,2673 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p1 "http://comm.semanticweb.org/core.owl#" >
+    <!ENTITY p2 "http://comm.semanticweb.org/datatype.owl#" >
+    <!ENTITY p3 "http://comm.semanticweb.org/extended-dns-very-lite.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://comm.semanticweb.org/media.owl#"
+     xml:base="http://comm.semanticweb.org/media.owl"
+     xmlns:p3="http://comm.semanticweb.org/extended-dns-very-lite.owl#"
+     xmlns:p1="http://comm.semanticweb.org/core.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:p2="http://comm.semanticweb.org/datatype.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports>
+            <owl:Ontology rdf:about="http://comm.semanticweb.org/core.owl"/>
+        </owl:imports>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#descriptor -->
+
+    <owl:Class rdf:about="&p1;descriptor"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#digital-data -->
+
+    <owl:Class rdf:about="&p1;digital-data"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#media -->
+
+    <owl:Class rdf:about="&p1;media"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#media-annotation -->
+
+    <owl:Class rdf:about="&p1;media-annotation"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/core.owl#structured-data-parameter -->
+
+    <owl:Class rdf:about="&p1;structured-data-parameter"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#any-uri -->
+
+    <owl:Class rdf:about="&p2;any-uri"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#base64Binary -->
+
+    <owl:Class rdf:about="&p2;base64Binary"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#boolean -->
+
+    <owl:Class rdf:about="&p2;boolean"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#controlled-term-use-type -->
+
+    <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#enumeration -->
+
+    <owl:Class rdf:about="&p2;enumeration"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#float-scalar -->
+
+    <owl:Class rdf:about="&p2;float-scalar"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#hexBinary -->
+
+    <owl:Class rdf:about="&p2;hexBinary"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#mime-type -->
+
+    <owl:Class rdf:about="&p2;mime-type"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#nmtoken -->
+
+    <owl:Class rdf:about="&p2;nmtoken"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#non-negative-integer -->
+
+    <owl:Class rdf:about="&p2;non-negative-integer"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#non-negative-real -->
+
+    <owl:Class rdf:about="&p2;non-negative-real"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#positive-integer -->
+
+    <owl:Class rdf:about="&p2;positive-integer"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#string -->
+
+    <owl:Class rdf:about="&p2;string"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#term-use-type -->
+
+    <owl:Class rdf:about="&p2;term-use-type"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#union -->
+
+    <owl:Class rdf:about="&p2;union"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/datatype.owl#zero-to-one -->
+
+    <owl:Class rdf:about="&p2;zero-to-one"/>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#agent-descriptor -->
+
+    <owl:Class rdf:about="#agent-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;RatingSource&quot; of the  &quot;AgentType&quot; specified in mpeg 7, part 5 page 158.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#media-locator-descriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#anchor-frame-distance -->
+
+    <owl:Class rdf:about="#anchor-frame-distance">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;anchorFrameDistance&quot; element of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#coding-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;positive-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-channels -->
+
+    <owl:Class rdf:about="#audio-channels">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;AudioChannels&quot; element of the &quot;MediaFormatType&quot; (part 5, page 203 - 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-channels-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-channels-descriptor -->
+
+    <owl:Class rdf:about="#audio-channels-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;AudioChannels&quot; of the &quot;MediaFormatType&quot;, specified in part 5, page 203 - 204.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#audio-channels-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-channels-descriptor-parameter -->
+
+    <owl:Class rdf:about="#audio-channels-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-coding-descriptor -->
+
+    <owl:Class rdf:about="#audio-coding-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;AudioCoding&quot; of the &quot;MediaFormatType&quot;, specified in part 5, page 203 - 204.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#audio-coding-descriptor-parameter"/>
+                            <owl:Class rdf:about="#audio-channels-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-coding-descriptor-parameter -->
+
+    <owl:Class rdf:about="#audio-coding-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-coding-format -->
+
+    <owl:Class rdf:about="#audio-coding-format">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;Format&quot; element of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-coding-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-defects -->
+
+    <owl:Class rdf:about="#audio-defects">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;VisualDefects&quot; element of the &quot;MediaQualityType&quot; (part 5, page 213)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#perceptible-defects-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#audio-presentation -->
+
+    <owl:Class rdf:about="#audio-presentation">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;Presentation&quot; element of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-coding-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#authority -->
+
+    <owl:Class rdf:about="#authority">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;authority&quot; attribute of the &quot;UniqueIDType&quot; (part 5, page 76)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#unique-id-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;nmtoken"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#average-bitrate -->
+
+    <owl:Class rdf:about="#average-bitrate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;average&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#bitrate-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#average-quantization-scale -->
+
+    <owl:Class rdf:about="#average-quantization-scale">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;avgQuantScale&quot; element of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#coding-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#bandwidth -->
+
+    <owl:Class rdf:about="#bandwidth">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Bandwidth&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#bitrate -->
+
+    <owl:Class rdf:about="#bitrate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;BitRate&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#bitrate-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#bitrate-descriptor -->
+
+    <owl:Class rdf:about="#bitrate-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;BitRate&quot; of the &quot;MediaFormatType&quot;, specified in part 5, page 202.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#bitrate-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#bitrate-descriptor-parameter -->
+
+    <owl:Class rdf:about="#bitrate-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#bits-per-pixel -->
+
+    <owl:Class rdf:about="#bits-per-pixel">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;bitsPer&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#pixel-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#bits-per-sample -->
+
+    <owl:Class rdf:about="#bits-per-sample">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;bitsPer&quot; attribute of the &quot;Sample&quot; element of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-coding-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#coding-hints-descriptor -->
+
+    <owl:Class rdf:about="#coding-hints-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;CodingHints&quot; of the &quot;MediaTranscodingType&quot;, specified in part 5, page 211.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#coding-hints-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#coding-hints-descriptor-parameter -->
+
+    <owl:Class rdf:about="#coding-hints-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-domain -->
+
+    <owl:Class rdf:about="#color-domain">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;colorDomain&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 202 - 203). The type union can collect a string of {binary color colorized graylevel } or anyuri</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-coding-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-domain-union"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-domain-union -->
+
+    <owl:Class rdf:about="#color-domain-union">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;union"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-component -->
+
+    <owl:Class rdf:about="#color-sampling-component">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;Component&quot; element of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-component-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-component-descriptor -->
+
+    <owl:Class rdf:about="#color-sampling-component-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Component&quot; of the &quot;ColorSamplingType&quot;, specified in part 5, page 205</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#color-sampling-offset-descriptor"/>
+                            <owl:Class rdf:about="#color-sampling-period-descriptor"/>
+                            <owl:Class rdf:about="#color-sampling-component-descriptor-parameter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-component-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-sampling-component-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-descriptor -->
+
+    <owl:Class rdf:about="#color-sampling-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;ColorSamplingType&quot;, specified in part 5, page 204 - 210.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:someValuesFrom rdf:resource="#color-sampling-field-descriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#color-sampling-field-descriptor"/>
+                            <owl:Class rdf:about="#color-sampling-lattice-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-field-descriptor -->
+
+    <owl:Class rdf:about="#color-sampling-field-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Field&quot; of the &quot;ColorSamplingType&quot;, specified in part 5, page 205.
+
+about some color-sampling-component-descriptor</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#color-sampling-field-descriptor-parameter"/>
+                            <owl:Class rdf:about="#color-sampling-component-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:someValuesFrom rdf:resource="#color-sampling-component-descriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-field-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-sampling-field-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-lattice-descriptor -->
+
+    <owl:Class rdf:about="#color-sampling-lattice-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Lattice&quot; of the &quot;ColorSamplingType&quot;, specified in part 5, page 204 - 205.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#color-sampling-lattice-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-lattice-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-sampling-lattice-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-offset-descriptor -->
+
+    <owl:Class rdf:about="#color-sampling-offset-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Offset&quot; of the &quot;ColorSamplingType&quot;, specified in part 5, page 205</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#color-sampling-offset-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-offset-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-sampling-offset-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-period-descriptor -->
+
+    <owl:Class rdf:about="#color-sampling-period-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Period&quot; of the &quot;ColorSamplingType&quot;, specified in part 5, page 205</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#color-sampling-period-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#color-sampling-period-descriptor-parameter -->
+
+    <owl:Class rdf:about="#color-sampling-period-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#difficulty -->
+
+    <owl:Class rdf:about="#difficulty">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;difficulty&quot; attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-transcoding-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;zero-to-one"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#emphasis -->
+
+    <owl:Class rdf:about="#emphasis">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;Emphasis&quot; element of the &quot;MediaFormatType&quot; (part 5, page 204). The type union can collect a string of {none _50-over-15-microseconds ccittJ17 } or anyuri.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#emphasis-union"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-coding-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#emphasis-union -->
+
+    <owl:Class rdf:about="#emphasis-union">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;union"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#file-format -->
+
+    <owl:Class rdf:about="#file-format">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;FileFormat&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#file-size -->
+
+    <owl:Class rdf:about="#file-size">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;FileSize&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-aspect-ratio -->
+
+    <owl:Class rdf:about="#frame-aspect-ratio">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;aspectRatio&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#frame-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-descriptor -->
+
+    <owl:Class rdf:about="#frame-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Frame&quot; of the &quot;MediaFormatType&quot;, specified in part 5, page 203.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#frame-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-descriptor-parameter -->
+
+    <owl:Class rdf:about="#frame-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-height -->
+
+    <owl:Class rdf:about="#frame-height">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;height&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#frame-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-rate -->
+
+    <owl:Class rdf:about="#frame-rate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;rate&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#frame-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-structure -->
+
+    <owl:Class rdf:about="#frame-structure">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The type union can collect a string of {progressive interlaced } or anyuri.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#frame-structure-union"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#frame-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-structure-union -->
+
+    <owl:Class rdf:about="#frame-structure-union">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;union"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#frame-width -->
+
+    <owl:Class rdf:about="#frame-width">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;width&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#frame-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#front-channels -->
+
+    <owl:Class rdf:about="#front-channels">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;front&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203 - 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-channels-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#graphics-coding-format -->
+
+    <owl:Class rdf:about="#graphics-coding-format">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;GraphicsCodingFormat&quot; element of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#horizontal-offset -->
+
+    <owl:Class rdf:about="#horizontal-offset">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;horizontal&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-offset-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#horizontal-period -->
+
+    <owl:Class rdf:about="#horizontal-period">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;horizontal&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-period-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#importance -->
+
+    <owl:Class rdf:about="#importance">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;importance&quot; attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-transcoding-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;zero-to-one"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#inline-media-descriptor -->
+
+    <owl:Class rdf:about="#inline-media-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;InlineMediaType&quot;, specified in part 5, page 97.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#inline-media-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#inline-media-descriptor-parameter -->
+
+    <owl:Class rdf:about="#inline-media-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#inline-media-descriptor-type -->
+
+    <owl:Class rdf:about="#inline-media-descriptor-type">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;type&quot; attribute of the &quot;InlineMediaType&quot; (part 5, page 97)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#inline-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;mime-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#intensity -->
+
+    <owl:Class rdf:about="#intensity">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;intensity&quot;  attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 210)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;zero-to-one"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#intra-frame-distance -->
+
+    <owl:Class rdf:about="#intra-frame-distance">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;intraFrameDistance&quot; element of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#coding-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#lattice-height -->
+
+    <owl:Class rdf:about="#lattice-height">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;height&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-lattice-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;positive-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#lattice-width -->
+
+    <owl:Class rdf:about="#lattice-width">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;width&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-lattice-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;positive-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#lfe-channels -->
+
+    <owl:Class rdf:about="#lfe-channels">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;lfe&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-channels-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#maximum-bitrate -->
+
+    <owl:Class rdf:about="#maximum-bitrate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;maximum&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#bitrate-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-content -->
+
+    <owl:Class rdf:about="#media-content">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Content&quot; element of the &quot;MediaFormatType&quot; (part 5, page 201)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-data-16 -->
+
+    <owl:Class rdf:about="#media-data-16">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaData16&quot; element of the &quot;InlineMediaType&quot; (part 5, page 97)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#inline-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;hexBinary"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-data-64 -->
+
+    <owl:Class rdf:about="#media-data-64">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaData64&quot; element of the &quot;InlineMediaType&quot; (part 5, page 97)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#inline-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;base64Binary"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-descriptor -->
+
+    <owl:Class rdf:about="#media-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-descriptor-parameter -->
+
+    <owl:Class rdf:about="#media-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;structured-data-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-format-annotation -->
+
+    <owl:Class rdf:about="#media-format-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;media-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-format-descriptor -->
+
+    <owl:Class rdf:about="#media-format-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MediaFormatType&quot;, specified in part 5, page 201 - 210.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#audio-coding-descriptor"/>
+                            <owl:Class rdf:about="#visual-coding-descriptor"/>
+                            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+                            <owl:Class rdf:about="#bitrate-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-format-descriptor-parameter -->
+
+    <owl:Class rdf:about="#media-format-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-instance-annotation -->
+
+    <owl:Class rdf:about="#media-instance-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;media-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-instance-descriptor -->
+
+    <owl:Class rdf:about="#media-instance-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MediaInstanceType&quot;, specified in part 5, page 215 - 216. The element &quot;LocationDescription&quot; is not supported.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#media-locator-descriptor"/>
+                            <owl:Class rdf:about="#unique-id-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-locator-descriptor -->
+
+    <owl:Class rdf:about="#media-locator-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MediaLocatorType&quot;, specified in part 5, page 96.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#media-locator-descriptor-parameter"/>
+                            <owl:Class rdf:about="#inline-media-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                <owl:valuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#media-uri"/>
+                            <owl:Class rdf:about="#inline-media-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:valuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-locator-descriptor-parameter -->
+
+    <owl:Class rdf:about="#media-locator-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-profile -->
+
+    <owl:Class rdf:about="#media-profile">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;media"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-quality-annotation -->
+
+    <owl:Class rdf:about="#media-quality-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;media-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-quality-descriptor -->
+
+    <owl:Class rdf:about="#media-quality-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;MediaQualityType&quot;, specified in part 5, page 212 - 215.The element &quot;RatingInformationLocator&quot; is not supported.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#perceptible-defects-descriptor"/>
+                            <owl:Class rdf:about="#agent-descriptor"/>
+                            <owl:Class rdf:about="#quality-rating-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-transcoding-hints-annotation -->
+
+    <owl:Class rdf:about="#media-transcoding-hints-annotation">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;media-annotation"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-transcoding-hints-descriptor -->
+
+    <owl:Class rdf:about="#media-transcoding-hints-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="#media-transcoding-hints-descriptor-parameter"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p3;about"/>
+                        <owl:allValuesFrom rdf:resource="#shape-hint-descriptor"/>
+                    </owl:Restriction>
+                    <owl:Class rdf:about="#coding-hints-descriptor"/>
+                    <owl:Class rdf:about="#motion-hints-descriptor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-transcoding-hints-descriptor-parameter -->
+
+    <owl:Class rdf:about="#media-transcoding-hints-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#media-uri -->
+
+    <owl:Class rdf:about="#media-uri">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;MediaURI&quot; element of the &quot;MediaLocatorType&quot; (part 5, page 96)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;any-uri"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-locator-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#medium -->
+
+    <owl:Class rdf:about="#medium">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Medium&quot; element of the &quot;MediaFormatType&quot; (part 5, page 201)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#minimum-bitrate -->
+
+    <owl:Class rdf:about="#minimum-bitrate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;minimum&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#bitrate-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-hints-descriptor -->
+
+    <owl:Class rdf:about="#motion-hints-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;MotionHints&quot; of the &quot;MediaTranscodingType&quot;, specified in part 5, page 210.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p3;about"/>
+                        <owl:allValuesFrom rdf:resource="#motion-hints-descriptor-parameter"/>
+                    </owl:Restriction>
+                    <owl:Class rdf:about="#motion-range-descriptor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-hints-descriptor-parameter -->
+
+    <owl:Class rdf:about="#motion-hints-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-range-descriptor -->
+
+    <owl:Class rdf:about="#motion-range-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;MotionRange&quot; of the &quot;MediaTranscodingType&quot;, specified in part 5, page 210.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#motion-range-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-range-descriptor-parameter -->
+
+    <owl:Class rdf:about="#motion-range-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-range-x-left -->
+
+    <owl:Class rdf:about="#motion-range-x-left">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;xLeft&quot;  attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 210)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-range-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-range-x-right -->
+
+    <owl:Class rdf:about="#motion-range-x-right">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;xRight&quot;  attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 210)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-range-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-range-y-down -->
+
+    <owl:Class rdf:about="#motion-range-y-down">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;yDown&quot;  attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 210)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-range-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#motion-range-y-up -->
+
+    <owl:Class rdf:about="#motion-range-y-up">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;yUp&quot;  attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 210)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-range-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#nested-media-descriptor -->
+
+    <owl:Class rdf:about="#nested-media-descriptor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#nested-media-descriptor-parameter -->
+
+    <owl:Class rdf:about="#nested-media-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;structured-data-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#number-of-non-transcoding-per-blocks -->
+
+    <owl:Class rdf:about="#number-of-non-transcoding-per-blocks">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;numOfNonTranspBlocks&quot; element of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-hint-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#number-of-tracks -->
+
+    <owl:Class rdf:about="#number-of-tracks">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;track&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-channels-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#organization -->
+
+    <owl:Class rdf:about="#organization">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;organization&quot; attribute of the &quot;UniqueIDType&quot; (part 5, page 76)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#unique-id-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;nmtoken"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#other-coding-format -->
+
+    <owl:Class rdf:about="#other-coding-format">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;OtherCodingFormat&quot; element of the &quot;MediaFormatType&quot; (part 5, page 204</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#perceptible-defects-descriptor -->
+
+    <owl:Class rdf:about="#perceptible-defects-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;PerceptibleDefects&quot; of the &quot;MediaQualityType&quot;, specified in part 5, page 213- 214.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#perceptible-defects-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#perceptible-defects-descriptor-parameter -->
+
+    <owl:Class rdf:about="#perceptible-defects-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#pixel-aspect-ratio -->
+
+    <owl:Class rdf:about="#pixel-aspect-ratio">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;aspectRatio&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#pixel-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#pixel-descriptor -->
+
+    <owl:Class rdf:about="#pixel-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Pixel&quot; of the &quot;MediaFormatType&quot;, specified in part 5, page 203.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#pixel-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#pixel-descriptor-parameter -->
+
+    <owl:Class rdf:about="#pixel-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#pixel-resolution -->
+
+    <owl:Class rdf:about="#pixel-resolution">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;resoultion&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#pixel-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#positional-order -->
+
+    <owl:Class rdf:about="#positional-order">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;positionalOrder&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-field-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#quality-rating-descriptor -->
+
+    <owl:Class rdf:about="#quality-rating-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;RatingQualityType&quot; of the &quot;MediaQualityType&quot;, specified in part 5, page 213- 214.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#quality-rating-descriptor-parameter"/>
+                            <owl:Class rdf:about="#rating-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#quality-rating-descriptor-parameter -->
+
+    <owl:Class rdf:about="#quality-rating-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#quality-rating-type -->
+
+    <owl:Class rdf:about="#quality-rating-type">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;type&quot; attribute of the &quot;MediaQualityType&quot; (part 5, page 213)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#quality-rating-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#quality-rating-type-enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#quality-rating-type-enumeration -->
+
+    <owl:Class rdf:about="#quality-rating-type-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#quality-rating-type-subjective"/>
+                    <owl:Thing rdf:about="#quality-rating-type-objective"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-descriptor -->
+
+    <owl:Class rdf:about="#rating-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;RatingType&quot; of the &quot;MediaQualityType&quot;, specified in part 5, page 213- 214.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p3;about"/>
+                        <owl:allValuesFrom rdf:resource="#rating-descriptor-parameter"/>
+                    </owl:Restriction>
+                    <owl:Class rdf:about="#rating-scheme-descriptor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-descriptor-parameter -->
+
+    <owl:Class rdf:about="#rating-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-scheme -->
+
+    <owl:Class rdf:about="#rating-scheme">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;RatingScheme&quot; element of the local comlex element &quot;RatingType&quot; of the &quot;MediaQualityType&quot; (part 5, page 213 - 214)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#rating-scheme-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-scheme-best -->
+
+    <owl:Class rdf:about="#rating-scheme-best">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;best&quot; attribute of the local comlex element &quot;RatingType&quot; of the &quot;MediaQualityType&quot; (part 5, page 213 - 214)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;float-scalar"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#rating-scheme-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-scheme-descriptor -->
+
+    <owl:Class rdf:about="#rating-scheme-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;RatingType&quot; of the &quot;MediaQualityType&quot;, specified in part 5, page 213- 214.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#rating-scheme-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-scheme-descriptor-parameter -->
+
+    <owl:Class rdf:about="#rating-scheme-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-scheme-style -->
+
+    <owl:Class rdf:about="#rating-scheme-style">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;style&quot; attribute of the local comlex element &quot;RatingType&quot; of the &quot;MediaQualityType&quot; (part 5, page 213 - 214)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#rating-scheme-style-enumeration"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#rating-scheme-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-scheme-style-enumeration -->
+
+    <owl:Class rdf:about="#rating-scheme-style-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#rating-scheme-style-higher-better"/>
+                    <owl:Thing rdf:about="#rating-scheme-style-lower-better"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-scheme-worst -->
+
+    <owl:Class rdf:about="#rating-scheme-worst">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;worst&quot; attribute of the local comlex element &quot;RatingType&quot; of the &quot;MediaQualityType&quot; (part 5, page 213 - 214)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;float-scalar"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#rating-scheme-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rating-value -->
+
+    <owl:Class rdf:about="#rating-value">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;RatingValue&quot; element of the &quot;MediaQualityType&quot; (part 5, page 213)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#rating-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#rear-channels -->
+
+    <owl:Class rdf:about="#rear-channels">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;rear&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-channels-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#sample-rate -->
+
+    <owl:Class rdf:about="#sample-rate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;rate&quot; attribute of the &quot;Sample&quot; element of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-coding-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#scalable-coding -->
+
+    <owl:Class rdf:about="#scalable-coding">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;ScalableCoding&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202). The type union can collect a string of {fgs temporal spatial snr} or anyuri.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#scalable-coding-union"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#scalable-coding-union -->
+
+    <owl:Class rdf:about="#scalable-coding-union">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;union"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#scene-coding-format -->
+
+    <owl:Class rdf:about="#scene-coding-format">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;SceneCodingFormat&quot; element of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#shape-change -->
+
+    <owl:Class rdf:about="#shape-change">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;shapeChange&quot; element of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#shape-hint-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;float-scalar"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#shape-hint-descriptor -->
+
+    <owl:Class rdf:about="#shape-hint-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;ShapeHint&quot; of the &quot;MediaTranscodingType&quot;, specified in part 5, page 211.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#shape-hint-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#shape-hint-descriptor-parameter -->
+
+    <owl:Class rdf:about="#shape-hint-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#side-channels -->
+
+    <owl:Class rdf:about="#side-channels">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;side&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 204)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#audio-channels-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#spatial-resolution-hint -->
+
+    <owl:Class rdf:about="#spatial-resolution-hint">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;spatialResolutionHint&quot; attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 211)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-transcoding-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;zero-to-one"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#stream-id -->
+
+    <owl:Class rdf:about="#stream-id">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;StreamID&quot; element of the &quot;MediaLocatorType&quot; (part 5, page 96)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-locator-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#system -->
+
+    <owl:Class rdf:about="#system">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;System&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#target-channel-bit-rate -->
+
+    <owl:Class rdf:about="#target-channel-bit-rate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;TargetChannelBitRate&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#media-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#temporal-order -->
+
+    <owl:Class rdf:about="#temporal-order">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;temporalOrder&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-field-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-integer"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#uncompensability -->
+
+    <owl:Class rdf:about="#uncompensability">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;uncompensability&quot; attribute of the &quot;MediaTranscodingHintsType&quot; (part 5, page 210)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#motion-hints-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;zero-to-one"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#unique-id-descriptor -->
+
+    <owl:Class rdf:about="#unique-id-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;UniqueIDType&quot;, specified in part 5, page 76.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#unique-id-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#unique-id-descriptor-parameter -->
+
+    <owl:Class rdf:about="#unique-id-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#unique-id-descriptor-type -->
+
+    <owl:Class rdf:about="#unique-id-descriptor-type">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;type&quot; attribute of the &quot;UniqueIDType&quot; (part 5, page 76)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#unique-id-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;nmtoken"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#unique-id-encoding -->
+
+    <owl:Class rdf:about="#unique-id-encoding">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;encoding&quot; attribute of the &quot;UniqueIDType&quot; (part 5, page 76). The value is a string of {base16 base64 text}</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#unique-id-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#unique-id-encoding-enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#unique-id-encoding-enumeration -->
+
+    <owl:Class rdf:about="#unique-id-encoding-enumeration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <owl:Thing rdf:about="#unique-id-encoding-base-16"/>
+                    <owl:Thing rdf:about="#unique-id-encoding-text"/>
+                    <owl:Thing rdf:about="#unique-id-encoding-base-64"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;enumeration"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#unique-id-string -->
+
+    <owl:Class rdf:about="#unique-id-string">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the value of the &quot;UniqueIDType&quot; (part 5, page 76)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#unique-id-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;string"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#variable-bitrate -->
+
+    <owl:Class rdf:about="#variable-bitrate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;variable&quot; attribute of the &quot;MediaFormatType&quot; (part 5, page 202)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;boolean"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#bitrate-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#vertical-offset -->
+
+    <owl:Class rdf:about="#vertical-offset">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;vertical&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-offset-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#vertical-period -->
+
+    <owl:Class rdf:about="#vertical-period">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;vertical&quot; attribute of the &quot;ColorSamplingType&quot; (part 5, page 205)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;non-negative-real"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#color-sampling-period-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#visual-coding-descriptor -->
+
+    <owl:Class rdf:about="#visual-coding-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;VisualCoding&quot; of the &quot;MediaFormatType&quot;, specified in part 5, page 202 - 203.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#visual-coding-format-descriptor"/>
+                            <owl:Class rdf:about="#color-sampling-descriptor"/>
+                            <owl:Class rdf:about="#frame-descriptor"/>
+                            <owl:Class rdf:about="#pixel-descriptor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#visual-coding-format -->
+
+    <owl:Class rdf:about="#visual-coding-format">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;Format&quot; element of the &quot;MediaFormatType&quot; (part 5, page 202 - 203)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#visual-coding-format-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#visual-coding-format-descriptor -->
+
+    <owl:Class rdf:about="#visual-coding-format-descriptor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the local complex type of the element &quot;Format&quot; of the &quot;MediaFormatType&quot;, specified in part 5, page 202 - 203.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p3;about"/>
+                <owl:allValuesFrom rdf:resource="#visual-coding-format-descriptor-parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p1;digital-data"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#visual-coding-format-descriptor-parameter -->
+
+    <owl:Class rdf:about="#visual-coding-format-descriptor-parameter">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#nested-media-descriptor-parameter"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- Class: http://comm.semanticweb.org/media.owl#visual-defects -->
+
+    <owl:Class rdf:about="#visual-defects">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corresponds to the &quot;AudioDefects&quot; element of the &quot;MediaQualityType&quot; (part 5, page 213)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="#perceptible-defects-descriptor-parameter"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="&p2;controlled-term-use-type"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Object property: http://comm.semanticweb.org/extended-dns-very-lite.owl#about -->
+
+    <owl:ObjectProperty rdf:about="&p3;about"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //   OWL Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#color-domain-binary -->
+
+    <owl:Thing rdf:about="#color-domain-binary">
+        <rdf:type rdf:resource="#color-domain-union"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#color-domain-color -->
+
+    <owl:Thing rdf:about="#color-domain-color">
+        <rdf:type rdf:resource="#color-domain-union"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#color-domain-colorized -->
+
+    <owl:Thing rdf:about="#color-domain-colorized">
+        <rdf:type rdf:resource="#color-domain-union"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#color-domain-graylevel -->
+
+    <owl:Thing rdf:about="#color-domain-graylevel">
+        <rdf:type rdf:resource="#color-domain-union"/>
+    </owl:Thing>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#emphasis-50-over-15-microseconds -->
+
+    <emphasis-union rdf:about="#emphasis-50-over-15-microseconds">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </emphasis-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#emphasis-ccittJ17 -->
+
+    <emphasis-union rdf:about="#emphasis-ccittJ17">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </emphasis-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#emphasis-none -->
+
+    <emphasis-union rdf:about="#emphasis-none">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </emphasis-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#frame-structure-interlaced -->
+
+    <frame-structure-union rdf:about="#frame-structure-interlaced">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </frame-structure-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#frame-structure-progressive -->
+
+    <frame-structure-union rdf:about="#frame-structure-progressive">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </frame-structure-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#quality-rating-type-objective -->
+
+    <owl:Thing rdf:about="#quality-rating-type-objective"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#quality-rating-type-subjective -->
+
+    <owl:Thing rdf:about="#quality-rating-type-subjective"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#rating-scheme-style-higher-better -->
+
+    <owl:Thing rdf:about="#rating-scheme-style-higher-better"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#rating-scheme-style-lower-better -->
+
+    <owl:Thing rdf:about="#rating-scheme-style-lower-better"/>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#scalable-coding-fgs -->
+
+    <scalable-coding-union rdf:about="#scalable-coding-fgs">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </scalable-coding-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#scalable-coding-snr -->
+
+    <scalable-coding-union rdf:about="#scalable-coding-snr">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </scalable-coding-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#scalable-coding-spatial -->
+
+    <scalable-coding-union rdf:about="#scalable-coding-spatial">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </scalable-coding-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#scalable-coding-temporal -->
+
+    <scalable-coding-union rdf:about="#scalable-coding-temporal">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </scalable-coding-union>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#unique-id-encoding-base-16 -->
+
+    <unique-id-encoding-enumeration rdf:about="#unique-id-encoding-base-16">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </unique-id-encoding-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#unique-id-encoding-base-64 -->
+
+    <unique-id-encoding-enumeration rdf:about="#unique-id-encoding-base-64">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </unique-id-encoding-enumeration>
+    
+
+
+    <!-- Individual: http://comm.semanticweb.org/media.owl#unique-id-encoding-text -->
+
+    <unique-id-encoding-enumeration rdf:about="#unique-id-encoding-text">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </unique-id-encoding-enumeration>
+</rdf:RDF>
