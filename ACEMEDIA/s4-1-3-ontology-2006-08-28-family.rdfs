@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-08-28-family-ontology.rdfs#"
+    xmlns:family-party="http://www.acemedia.org/ontologies/FAMILY-PARTY#"
+    xmlns:mid-artifact="http://www.acemedia.org/ontologies/MIDLEVEL-ARTIFACT#"
+    xmlns:mid-equip="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#"
+    xmlns:mid="http://www.acemedia.org/ontologies/MIDLEVEL#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dolce="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#"
+  xml:base="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-08-28-family-ontology.rdfs">
+  <owl:Ontology rdf:about="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-08-28-family-ontology.rdfs"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Best-Man">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Event-Status"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Barbecue">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Performing-Arts">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Bathroom">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Entertain-Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Candle">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Friend">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Phisical-Rapport"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Event-Status">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Glass">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Newlywed">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Event-Status"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-ARTIFACT#Chair">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Vehicle">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Guest-Of-Honour">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Event-Status"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Chandelier">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL#Food">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organism"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Wedding-Cake">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#Food"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Decoration">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Hall">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Birthday-Cake">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#Food"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organism">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Priest">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Religion"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Clown">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Performing-Arts"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Present">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Entertain-Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Groom">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Event-Status"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Table">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Furniture"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Dance-Hall">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Coriandoli">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Entertain-Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Phisical-Rapport">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Living-Room">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Singer">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Performing-Arts"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Accessory">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Kitchen">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Guest">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Event-Status"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Balloon">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Entertain-Equipment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Religion">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Party-Hat">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Accessory"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Bride">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Event-Status"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/FAMILY-PARTY#Dancer">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/FAMILY-PARTY#Performing-Arts"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

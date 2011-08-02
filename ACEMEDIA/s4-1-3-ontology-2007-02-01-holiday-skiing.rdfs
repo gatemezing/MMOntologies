@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:holiday-skiing="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#"
+    xmlns:mid-equip="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dolce="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#"
+    xmlns="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-08-28-holiday-skiing-ontology.rdfs#"
+    xmlns:holiday="http://www.acemedia.org/ontologies/HOLIDAY#"
+  xml:base="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-08-28-holiday-skiing-ontology.rdfs">
+  <owl:Ontology rdf:about="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-08-28-holiday-skiing-ontology.rdfs"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Equipment"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Emergency-Doctor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Entertain-Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Skier">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Toboggan">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Helicopter">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Alpine-Ski">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Equipment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Mountain-Shelter">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Crampon">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Equipment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Phenomenon">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Rucksack">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Equipment"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Snow-Cat">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Mountain-Hut">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organism">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Stick">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Equipment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Sleigh">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Windcheater">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Clothing"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Snow-Shoe">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Equipment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Endurant"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Mountaineer">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Clothing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Chair-Lift">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Toy">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Entertain-Equipment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Ski-Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Climber">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Snow-Man">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Toy"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY#Cable-Car">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-SKIING#Mountain-Villa">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+  </rdfs:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

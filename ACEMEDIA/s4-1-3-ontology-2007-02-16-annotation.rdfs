@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:ann="http://www.acemedia.org/ontologies/ANNOTATION#"
+    xmlns:vdo-ext="http://www.acemedia.org/ontologies/VDO-EXT#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:mso="http://www.acemedia.org/ontologies/SCHEMA#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-28/aceMedia-KIv2-2006-08-28-rdfs-files/d411-spec-2005-08-03-annotation-ontology.rdfs#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:time="http://www.isi.edu/~pan/damltime/time.owl#"
+  xml:base="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-28/aceMedia-KIv2-2006-08-28-rdfs-files/d411-spec-2005-08-03-annotation-ontology.rdfs">
+  <owl:Ontology rdf:about="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-28/aceMedia-KIv2-2006-08-28-rdfs-files/d411-spec-2005-08-03-annotation-ontology.rdfs"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Sunset">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Outdoor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.isi.edu/~pan/damltime/time.owl#DateTimeDescription"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Cityscape">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Manmade"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Natural">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Outdoor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO-EXT#Prototype">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Indoor">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Scene"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Scene">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Coastal">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/ANNOTATION#Natural"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Outdoor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/ANNOTATION#Scene"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Manmade">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/ANNOTATION#Outdoor"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#Landscape">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/ANNOTATION#Natural"/>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#hasDegreeOfConfidence">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#hasScore">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO-EXT#hasDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#hasDateTime"/>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#hasScene">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/ANNOTATION#Scene"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/ANNOTATION#depicts">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

@@ -1,0 +1,729 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:mid-sport="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#"
+    xmlns:mid-artifact="http://www.acemedia.org/ontologies/MIDLEVEL-ARTIFACT#"
+    xmlns="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-06-20-v02-round4.0-bgvx-tennis-ontology.rdfs#"
+    xmlns:tennis="http://www.acemedia.org/ontologies/TENNIS#"
+    xmlns:mid="http://www.acemedia.org/ontologies/MIDLEVEL#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dolce="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#"
+    xmlns:oxml="http://schema.ontoprise.com/oxml/rdf/1.0#"
+  xml:base="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-06-20-v02-round4.0-bgvx-tennis-ontology.rdfs">
+  <owl:Ontology rdf:about="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2006-06-20-v02-round4.0-bgvx-tennis-ontology.rdfs"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Lob">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The lob is a high, soft return over the head of an opponent who has approached the net</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Match">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A formal contest in which two or more persons or teams compete</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Point">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Each point is started by a player who initiates play by "serving" the ball into a designated area on the other side of the court</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Second_serve">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >When serving, players have two chances to hit the ball in the opponent's service court. If the first attempt fails, they receive a "second serve"</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Serve"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Player">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Tennis-Person"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#SlowCourt">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Courts that grab the ball on impact, slowing the bounce</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Court">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the court on which tennis is played</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Forehand">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >For a right-hander, the stroke played on the right side of the body; opposite for a left-hander.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Set">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A unit of scoring; the first player to win six games by a margin of two (or win a special tie-break game at 6-6) wins a set</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-ARTIFACT#Chair">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#INTEGER">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Result">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Result of a match</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Geographical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Crosscourt_shot">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A ball hit diagonally across the court, as opposed to one hit straight down the line.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#STRING">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#BaseLine">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The line which demarcates the legal length of the court</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Line"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Assistant">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Tennis-Person"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Racket">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a sports implement (usually consisting of a handle and an oval frame with a tightly interlaced network of strings) used to strike a ball</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#FastCourt">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Court surfaces, such as wood and grass, that allow the ball to bounce faster and lower than others</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Gut">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A responsive string, made from animal intestines, used to string rackets</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Smash">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The overhead smash is a powerful shot often used to return a lob that has not been hit high or deep enough. The shot is hit in a similar manner to the serve, or the spike in volleyball</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Mid-court">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The area around the service lines, halfway between the net and the baseline</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Tournament">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stairs">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Backcourt">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The area between the baseline and service line</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Game">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Part of a set. Every set consists of at least six games</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#BOOLEAN">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Foot-fault_Judge">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Judge"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Net-cord_Judge">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Judge"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Cape">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Slice">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A slice shot differs from a "drive" in that the backspin applied keeps it in the air for longer, causing it to travel further before bouncing</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Activity"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#ClayCourt">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#SoftCourt"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A court with a surface made of crushed shale, stone or brick. It can be red or green. The French Open is played on clay.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Natural-Person"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Break">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Where the serving player loses the game</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Tennis">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Passing_Shot">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A groundstroke that passes a net player on either side</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Coach">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Tennis-Person"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The person in charge of training a tennis player or a team.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Composite">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Material"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Material component of a racket</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Backhand">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >For a right-hander, the stroke played on the left side of the body; the reverse for a left-hander.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Finale">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Match"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Shoe">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a canvas shoe with a pliable rubber sole</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Umpire_Chair">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-ARTIFACT#Chair"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#ThingToWin">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Activity"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Drop_Shot">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A slice shot that stops very quickly and hardly bounces</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Advertisements">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#SoftCourt">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Courts that give under the feet, i.e. clay</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Wood">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Material"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Judge">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Tennis-Person"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Flag">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#DOUBLE">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#CenterLine">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Refers to both the line dividing the service boxes and the smaller hashmark that bisects the baseline.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Line"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#HardCourt">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A tennis court whose surface is made out of asphalt, concrete or a similar material. The U.S. and Australian Opens are played on hardcourts</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Tennis-Person">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Umpire">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Judge"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The umpire decides which player has won a point and also keeps the score. In major tournaments the umpire is assisted by a number of judges (e.g. line judges).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Net">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#GrassCourt">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#FastCourt"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Event">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Location">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Geographical-Object"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#ExhibitionMatch">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Matches arranged outside official competitions as a form of public entertainment. Those matches are not sanctioned by the Tours</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Match"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Line_Judge">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Judge"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Metal">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Material"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Material component of a racket</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Line">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Alley">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The area on each side of the singles court that enlarges the surface area for doubles play.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#ServiceBox">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The area on the other side of the net in which a serve must land in order to be legal</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#TennisBall">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Let">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An invalid point which has to be replayed. Occurs when a serve touches the net but still lands in the correct service court</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Serve"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Kick_serve">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Serve"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A serve with heavy spin, causing it to change direction or bounce unexpectedly when it lands in the service court. Also known as a twist serve.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Ace">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A good serve that is unreturnable and not touched</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Serve"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Volley">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Playing the ball in the air before it bounces</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#ServiceLine">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Line"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The line near mid-court that marks the boundaries of the service boxes.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Trophy">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Material">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Material component of a racket</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Stroke">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Event"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the act of hitting a tennis ball with a tennis racket</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Asphalt">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#HardCourt"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Serve">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A stroke that puts the ball in play</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasCourts">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Location"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isDoing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isJudgedBy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Match"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Judge"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasStroke">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Stroke"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Point"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isCoachedBy">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Coach"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasFinale">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Tournament"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Finale"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isGrandSlam">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Tournament"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPlayedBy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Match"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasSpeed">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#DOUBLE"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Serve"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#awards">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Trophy"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Tournament"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPartOf___Line">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL#isPartOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Line"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL#isPartOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasMatch">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Tournament"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Match"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPartOf___Mid-court">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#isPartOf"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Mid-court"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.ontoprise.com/oxml/rdf/1.0#is_local_relation_of">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#takesPlaceOn">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Match"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPlayingOn">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasPoints">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Point"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Game"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#usesRacket">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Racket"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#year">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Tournament"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasResults">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Result"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isCovered">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasGames">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Game"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Set"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isSittingOn___Umpire">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Umpire_Chair"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL#isSittingOn"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL#isSittingOn">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-ARTIFACT#Chair"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPartOf___Net">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Net"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#isPartOf"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isConstitutedOf">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Racket"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Material"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >matière dans laquelle est faite la raquette</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasSets">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Match"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Set"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isParticipatingTo">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Tournament"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isWonBy">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-SPORT#SportGame"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPartOf___Alley">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Alley"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#isPartOf"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasNet">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Net"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#wears">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Shoe"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Player"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPartOf___Backcourt">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#isPartOf"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Backcourt"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isSittingOn___Spectator">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-ARTIFACT#Chair"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#isSittingOn"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isPartOf___ServiceBox">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Court"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#ServiceBox"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#isPartOf"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#isComposedOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Gut"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Racket"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasScore">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Result"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/TENNIS#hasTension">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/TENNIS#Racket"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The degree of tautness in the strings of a racket.</rdfs:comment>
+  </rdf:Property>
+<rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Replay">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Time-Interval"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="http://www.acemedia.org/ontologies/TENNIS#Rally">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Event"/>
+</rdfs:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

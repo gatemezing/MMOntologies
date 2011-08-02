@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:mid-equip="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#"
+    xmlns:mid-geo="http://www.acemedia.org/ontologies/MIDLEVEL-GEOGRAPHICAL-OBJECT#"
+    xmlns:mid-non-agent="http://www.acemedia.org/ontologies/MIDLEVEL-NON-AGENTIVE-PHYSICAL-OBJECT#"
+    xmlns:mid="http://www.acemedia.org/ontologies/MIDLEVEL#"
+    xmlns:holiday-beach="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-02-28-review-rdfs-files/s4-1-2-ontology-2005-03-10-round3.3-alin-holiday-beach-ontology.rdfs#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dolce="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#"
+  xml:base="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-02-28-review-rdfs-files/s4-1-2-ontology-2005-03-10-round3.3-alin-holiday-beach-ontology.rdfs">
+  <owl:Ontology rdf:about="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-02-28-review-rdfs-files/s4-1-2-ontology-2005-03-10-round3.3-alin-holiday-beach-ontology.rdfs"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Bather">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a person who travels through the water by swimming;</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Surf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ride the waves of the sea with a surfboard</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Fortress">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a fortified defensive structure</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Towel">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a rectangular piece of absorbent cloth (or paper) for drying or wiping</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Lighthouse">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a tower with a light that gives warning of shoals to passing ships</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Swimming-Clothing">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Clothing"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL#Animal">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Pier">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a platform built out from the shore into the water and supported by piles; provides access to ships and boats</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Swimmer">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Hut">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A small house, hivel, or cabin; a mean lodge or dwelling; a slightly built or temporary structure</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Phenomenon">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Life-Guard">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a person who keeps watch over something or someone</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Safety-Belt">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a belt made of some buoyant material, or which is capable of being inflated, so as to enable a person to float in water; a life preserver</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Windsurf">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ride standing on a surfboard with an attached sail, on water</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Water-Motor">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organism">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Pedlar">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >omeone who travels about selling his wares (as on the streets or at carnivals)</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Sailing-Boat">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a small sailing vessel; usually with a single mast</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-NON-AGENTIVE-PHYSICAL-OBJECT#Geological-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-GEOGRAPHICAL-OBJECT#Cliff"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Crab">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Crustacean"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >decapod having eyes on short stalks and a broad flattened carapace with a small abdomen folded under the thorax and pincers</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Sand">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL-NON-AGENTIVE-PHYSICAL-OBJECT#Geological-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a loose material consisting of grains of rock or coral</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Spade">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An implement for digging or cutting the ground, consisting usually of an oblong and nearly rectangular blade of iron</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Relevant-Part">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Fashion-Clothing">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Flipper">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a shoe for swimming; the paddle-like front is an aid in swimming (especially underwater)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Pail">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A vessel of wood or tin, etc., usually cylindrical and having a bail, -- used esp. for carrying liquids, as water or milk, etc.; a bucket. It may, or may not, have a cover</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Clothing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Fashion-Clothing"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Natural-Person">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-GEOGRAPHICAL-OBJECT#Beach"/>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Harpoon">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a spear with a shaft and barbed point for throwing; used for catching large fish or whales;</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Water-Ski">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >broad ski for skimming over water towed by a speedboat</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Agentive-Physical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Crustacean">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MIDLEVEL#Animal"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Umbrella">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Beach-Equipment"/>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#isOnWater">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#isDoingAction">
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Natural-Person"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#isOnBeach">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Spatial">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ABOVE- BELOW- NEAR- PLACE LEFT RIGHT- OUTSIDE-INSIDE</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Relational">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MORE THAN, TOGETHER WITH, PART OF</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#isTogetherWith">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Logical">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AND; OR</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/HOLIDAY-BEACH#Temporal">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AFTER-BEFORE-SAME TIME- DURING-AT THE TIME</rdfs:comment>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

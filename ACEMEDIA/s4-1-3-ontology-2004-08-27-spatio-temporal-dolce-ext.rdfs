@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:dolce-st="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="file:/home/saathoff/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2007-02-16-rdfs-files/s4-1-3-ontology-2004-08-27-spatio-temporal-dolce-ext.rdfs#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dolce="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#"
+  xml:base="file:/home/saathoff/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2007-02-16-rdfs-files/s4-1-3-ontology-2004-08-27-spatio-temporal-dolce-ext.rdfs">
+  <owl:Ontology rdf:about="file:/home/saathoff/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2007-02-16-rdfs-files/s4-1-3-ontology-2004-08-27-spatio-temporal-dolce-ext.rdfs"/>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Temporal-Region"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Space-Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#MET-BY">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#MEETS">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PARTIALY-OVERLAPED-BY">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PARTIALY-OVERLAPS"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#FINISHES">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#TANGENTIAL-PROPER-PART-OF"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PART-OF">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#OVERLAPS"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#NORTH">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCRETE-FROM"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#OVERLAPS">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#CONNECTED"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#NEAR">
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#INTER-REGIONAL-RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#WEST">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCRETE-FROM"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#STARTS">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#TANGENTIAL-PROPER-PART-OF"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#FINISHED-BY">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-TANGENTIAL-PROPER-PART"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-PROPER-PART">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-PART"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#TANGENTIAL-PROPER-PART-OF">
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PROPER-PART-OF"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PARTIALY-OVERLAPS">
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#OVERLAPS"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#MEDIUM-DISTANCE">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#INTER-REGIONAL-RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCRETE-FROM"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EQUALS">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PART-OF"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-PART"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#STARTED-BY">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-TANGENTIAL-PROPER-PART"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED">
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCRETE-FROM"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#CONNECTED"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PROPER-PART-OF">
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PART-OF"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#SOUTH">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCRETE-FROM"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#CONNECTED">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#INTER-REGIONAL-RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#INTER-REGIONAL-RELATION">
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#AFTER">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCRETE-FROM">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#INTER-REGIONAL-RELATION"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-NON-TANGENTIAL-PROPER-PART">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-PROPER-PART"/>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PARTIALY-OVERLAPS-INTO">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PARTIALY-OVERLAPS"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DURING">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#NON-TANGENTIAL-PROPER-PART-OF"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-TANGENTIAL-PROPER-PART">
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-PROPER-PART"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-PART">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#OVERLAPS"/>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#BEFORE">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >'AFTER' Relation in Allen's Interval Calculus</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#CONTAINS">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#HAS-NON-TANGENTIAL-PROPER-PART"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#Time-Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#FAR">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#INTER-REGIONAL-RELATION"/>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EAST">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCRETE-FROM"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#NON-TANGENTIAL-PROPER-PART-OF">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#PROPER-PART-OF"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

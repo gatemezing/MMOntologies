@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.acemedia.org/ontologies/SPATIO-TEMPORAL#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="http://www.acemedia.org/ontologies/SPATIO-TEMPORAL">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST"/>
+    <owl:imports rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite"/>
+  </owl:Ontology>
+  <rdf:Property rdf:ID="left-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="right-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="above-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="above-right-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="above-left-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="below-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="below-left-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="below-right-of-adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#EXTERNALLY-CONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="below-all">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#SOUTH"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="above-all">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#NORTH"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="below-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="below-left-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="below-right-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="right-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="above-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="above-left-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="above-right-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="left-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#DISCONNECTED"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="contains">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/DOLCE-ST-EXTENSIONS#NON-TANGENTIAL-PROPER-PART-OF"/>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.1, Build 284)  http://protege.stanford.edu -->

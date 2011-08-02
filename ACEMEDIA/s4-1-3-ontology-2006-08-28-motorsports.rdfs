@@ -1,0 +1,829 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:mid-equip="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dolce="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#"
+    xmlns:motorsport="http://www.acemedia.org/ontologies/MOTORSPORTS#"
+    xmlns="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2005-03-10-round3.3-alin-motorcar-ontology.rdfs#"
+  xml:base="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2005-03-10-round3.3-alin-motorcar-ontology.rdfs">
+  <owl:Ontology rdf:about="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-17/aceMedia-KIv2-2006-08-17-rdfs-files/s4-1-2-ontology-2005-03-10-round3.3-alin-motorcar-ontology.rdfs"/>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Set">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Traffic-Light">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Also called the Tree, it is the noticeable electronic starting device between the lanes on the starting line. It displays a calibrated-light countdown for each driver.
+---
+Also called the Tree, it is the noticeable electronic starting device between the lanes on the starting line. It displays a calibrated-light countdown for each driver.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Race-Device"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Valve-Lifter">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Also called a "valve follower": the cylindrically shaped component that presses against the lobe of a camshaft and moves up and down as the cam lobe rotates. Most valve lifters have an oil-lubricated hardened face that slides on the cam lobe. So-called "roller lifters," however, have a small roller in contact with the cam lobe: thereby reducing the friction between the cam lobe and the lifter.
+---
+Also called a "valve follower": the cylindrically shaped component that presses against the lobe of a camshaft and moves up and down as the cam lobe rotates. Most valve lifters have an oil-lubricated hardened face that slides on the cam lobe. So-called "roller lifters," however, have a small roller in contact with the cam lobe: thereby reducing the friction between the cam lobe and the lifter.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Device">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Anti-Squat">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Similar to anti-dive, this suspension characteristic uses acceleration-induced forces in the rear suspension to reduce squat.
+---
+Similar to anti-dive, this suspension characteristic uses acceleration-induced forces in the rear suspension to reduce squat.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Ground">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Downforce created by an a low pressure area between the underbody and the ground, and downforce created by the front and rear wings.
+---
+Downforce created by an a low pressure area between the underbody and the ground, and downforce created by the front and rear wings.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Effects"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Car-Door">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#C-Pillar">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The roof support between a car's rearmost side window and its rear window. On a vehicle with four side pillars, the rearmost roof support may be called a D-pillar.
+---
+The roof support between a car's rearmost side window and its rear window. On a vehicle with four side pillars, the rearmost roof support may be called a D-pillar.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Protective-Cloathing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Clothing"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chain">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#RPM">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Engine-Dimensions"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Beam-Axle">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A rigid axle supporting the non-driven wheels. Also called a dead axle.
+---
+A rigid axle supporting the non-driven wheels. Also called a dead axle.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Air-Box">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Venturi">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Fluid speed increases when the fluid is forced through a narrow or restricted area. The increased speed results in a reduction in pressure. The underbody venturi is shaped to create a low pressure area between the road and chassis which creates downforce.
+---
+Fluid speed increases when the fluid is forced through a narrow or restricted area. The increased speed results in a reduction in pressure. The underbody venturi is shaped to create a low pressure area between the road and chassis which creates downforce.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Effects"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Lift">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcyclist">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Relevant-Part">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MIDLEVEL-EQUIPMENT#Clothing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Equipment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Thank-Pad">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Lights">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Racing-Track">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Race-Device">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Device"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Doctor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#HP">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Engine-Dimensions"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Speedway">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Racing-Circuit"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The speedway is an oval track with banked turns and long straightaways. The one lap record at the Michigan International Speedway (2 mile oval), is 234.275 mph. At Indianapolis (2.5 mile oval), the record is 232.618 mph. High, sustained speed requires aerodynamic efficiency.
+---
+The speedway is an oval track with banked turns and long straightaways. The one lap record at the Michigan International Speedway (2 mile oval), is 234.275 mph. At Indianapolis (2.5 mile oval), the record is 232.618 mph. High, sustained speed requires aerodynamic efficiency.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Rear-Wing">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chassis"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Mirror">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Street">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Racing-Circuit"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A narrow, temporary course ranging from 1.6 to 2.1 miles in length, with tight turns and a long straightaway. The Long Beach circuit (lap record 108.198 mph), tests the durability of the gearbox, braking system and low speed acceleration.
+---
+A narrow, temporary course ranging from 1.6 to 2.1 miles in length, with tight turns and a long straightaway. The Long Beach circuit (lap record 108.198 mph), tests the durability of the gearbox, braking system and low speed acceleration.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Back-Protection">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Protective-Cloathing"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Disc">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Brakes"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Bevel-Gears">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A gearset employing gears shaped like slices of a cone, which allows the axes of the gears to be nonparallel. Bevel gears are used to transmit motion through an angle.
+---
+A gearset employing gears shaped like slices of a cone, which allows the axes of the gears to be nonparallel. Bevel gears are used to transmit motion through an angle.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Phenomenon">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Road">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Racing-Circuit"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Laguna Seca Raceway (lap record 112.296 mph), is an example of a road course with hills. A road course is a wide open track that ranges in length from 1.9 to 4 miles. It has both slow and high speed corners and wide enough for passing. The suspension system, downhill braking and power are stressed on this type of course.Laguna Seca Raceway (lap record 112.296 mph), is an example of a road course with hills. A road course is a wide open track that ranges in length from 1.9 to 4 miles. It has both slow and high speed corners and wide enough for passing. The suspension system, downhill braking and power are stressed on this type of course.
+---
+Laguna Seca Raceway (lap record 112.296 mph), is an example of a road course with hills. A road course is a wide open track that ranges in length from 1.9 to 4 miles. It has both slow and high speed corners and wide enough for passing. The suspension system, downhill braking and power are stressed on this type of course.Laguna Seca Raceway (lap record 112.296 mph), is an example of a road course with hills. A road course is a wide open track that ranges in length from 1.9 to 4 miles. It has both slow and high speed corners and wide enough for passing. The suspension system, downhill braking and power are stressed on this type of course.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Catalytic-Converter">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Often simply called a "catalyst": a stainless-steel canister fitted to a car's exhaust system that contains a thin layer of catalytic material spread over a large area of inert supports. The material used is some combination of platinum, rhodium, and palladium; it induces chemical reactions that convert an engine's exhaust emissions into less harmful products. So-called three-way catalysts are particularly efficient; their operation, however, demands very precise combustion control, which can be produced only by a feedback fuel-air-ratio control system.
+---
+Often simply called a "catalyst": a stainless-steel canister fitted to a car's exhaust system that contains a thin layer of catalytic material spread over a large area of inert supports. The material used is some combination of platinum, rhodium, and palladium; it induces chemical reactions that convert an engine's exhaust emissions into less harmful products. So-called three-way catalysts are particularly efficient; their operation, however, demands very precise combustion control, which can be produced only by a feedback fuel-air-ratio control system.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Stand">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Supercharger">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An air compressor used to force more air into an engine than it can inhale on its own. The term is frequently applied only to mechanically driven compressors, but it actually encompasses all varieties of compressors-including turbochargers.
+---
+An air compressor used to force more air into an engine than it can inhale on its own. The term is frequently applied only to mechanically driven compressors, but it actually encompasses all varieties of compressors-including turbochargers.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Drum">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Brakes"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Front-Wing">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chassis"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Legally-Constructed-Person">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Racer">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Air-Filter">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Racing-Car">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Racing-Circuit">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Non-Agentive-Physical-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Wheel">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Rim">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Safety-Jacket">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Protective-Cloathing"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Front">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Lights"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Lights"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Mechanic">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Policeman">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Engine-Dimensions">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Window">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Dependent-Place">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Artifact"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organism">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Biological-Object"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Wheel-Chock">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Side-Pod">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chassis"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Differential">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A special gearbox designed so that the torque fed into it is split and delivered to two outputs that can turn at different speeds. Differentials within axles are designed to split torque evenly; however, when used between the front and rear axles in four-wheel-drive systems (a center differential), they can be designed to apportion torque unevenly.
+---
+A special gearbox designed so that the torque fed into it is split and delivered to two outputs that can turn at different speeds. Differentials within axles are designed to split torque evenly; however, when used between the front and rear axles in four-wheel-drive systems (a center differential), they can be designed to apportion torque unevenly.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Sponsor">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organization"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Wind-Tunnel">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Construction"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Natural-Person"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Short-Oval">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Racing-Circuit"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Phoenix International Raceway (lap record 172.804 mph), is a one mile, long oval track. Short straightaways and banked turns are characteristics of this type of track. The short oval tests the suspension and aerodynamic setup of the car.
+---
+Phoenix International Raceway (lap record 172.804 mph), is a one mile, long oval track. Short straightaways and banked turns are characteristics of this type of track. The short oval tests the suspension and aerodynamic setup of the car.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organization">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Legally-Constructed-Person"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Helmet">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Protective-Cloathing"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Region"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Turn-Signal">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Lights"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Lights"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Air-Dam">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A front spoiler mounted beneath the bumper and shaped to reduce the airflow under the car. Air dams can increase the airflow to radiators, reduce aerodynamic drag, and/or reduce lift.
+---
+A front spoiler mounted beneath the bumper and shaped to reduce the airflow under the car. Air dams can increase the airflow to radiators, reduce aerodynamic drag, and/or reduce lift.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chassis">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A general term that refers to all of the mechanical parts of a car attached to a structural frame. In cars with unitized construction, the chassis comprises everything but the body of the car.
+---
+A general term that refers to all of the mechanical parts of a car attached to a structural frame. In cars with unitized construction, the chassis comprises everything but the body of the car.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Lever">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Targa">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A removable-roof body style popularized by Porsche that is similar to a convertible except that it incorporates a fixed, roll-bar-like structure running from side to side behind the front seats.
+---
+A removable-roof body style popularized by Porsche that is similar to a convertible except that it incorporates a fixed, roll-bar-like structure running from side to side behind the front seats.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Control-Arm">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A suspension element that has one joint at one end and two joints at the other end, typically the chassis side. Also known as a wishbone or an A-arm.
+---
+A suspension element that has one joint at one end and two joints at the other end, typically the chassis side. Also known as a wishbone or an A-arm.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Shift-Gate">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The mechanism in a transmission linkage that controls the motion of the gearshift lever. The shift gate is usually an internal mechanism; however, in some transmissions: including Ferrari five-speeds and Mercedes-Benz automatics : the shift gate is an exposed guide around the shift lever.
+---
+The mechanism in a transmission linkage that controls the motion of the gearshift lever. The shift gate is usually an internal mechanism; however, in some transmissions: including Ferrari five-speeds and Mercedes-Benz automatics : the shift gate is an exposed guide around the shift lever.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chassis-Height">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chassis-Dimensions"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Shock-Absorber">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A device that converts motion into heat, usually by forcing oil through small internal passages in a tubular housing. Used primarily to dampen suspension oscillations, shock absorbers respond to motion; their effects, therefore, are most obvious in transient maneuvers.
+---
+A device that converts motion into heat, usually by forcing oil through small internal passages in a tubular housing. Used primarily to dampen suspension oscillations, shock absorbers respond to motion; their effects, therefore, are most obvious in transient maneuvers.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Coil-Spring">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A bar of resilient metal wound into a spiral that may be compressed or extended without permanent deformation. Coil springs have many automotive applications but are particularly important as suspension springs.
+---
+A bar of resilient metal wound into a spiral that may be compressed or extended without permanent deformation. Coil springs have many automotive applications but are particularly important as suspension springs.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Windscreen">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Rear">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Lights"/>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Lights"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Manufacturer">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Organization"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#B-Pillar">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The roof support between a car's front door window and rear side window, if there is one.
+---
+The roof support between a car's front door window and rear side window, if there is one.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Lights">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Clutch">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Fact">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Relevant-Part"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Tank-Pad">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Effects">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Abstract"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The ground effect car is capable of speeds in excess of 230 mph. The front 
+and rear wings create downforce which forces the car to the track. The underbody
+venturi tunnel creates a low pressure area between the chassis and the track
+which "sucks" the car to the track. The venturi is shaded gray. The blue
+arrows indicate airflow.
+---
+The ground effect car is capable of speeds in excess of 230 mph. The front 
+and rear wings create downforce which forces the car to the track. The underbody
+venturi tunnel creates a low pressure area between the chassis and the track
+which "sucks" the car to the track. The venturi is shaded gray. The blue
+arrows indicate airflow.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Anti-Roll-Bar">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Brakes">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Relevant-Part"/>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Spoiler">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An aerodynamic device that changes the direction of airflow in order to reduce lift or aerodynamic drag and/or improve engine cooling.
+---
+An aerodynamic device that changes the direction of airflow in order to reduce lift or aerodynamic drag and/or improve engine cooling.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Brake">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcycle-Lights"/>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Lights"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Pilot">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Chassis-Dimensions">
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Physical-Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Elbow-Protection">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Protective-Cloathing"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Relevant-Part"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Conveyance">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Instrumentality"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#Strut">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Motorcar-Relevant-Part"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A suspension element in which a reinforced shock absorber is used as one of the wheel's locating members, typically by solidly bolting the wheel hub to the bottom end of the strut.
+---
+A suspension element in which a reinforced shock absorber is used as one of the wheel's locating members, typically by solidly bolting the wheel hub to the bottom end of the strut.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Social-Role">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasArrivalPosition">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasRacingPosition">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isJudgedBy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isSponsoredBy">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Sponsor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasCarManufacturer">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/MOTORSPORTS#Manufacturer"/>
+    <rdfs:domain rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isOnMotorcycle">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isWonBy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasLength">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isDoing">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isAffectedBy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isDriving">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#Vehicle"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasTime">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#lasts">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#awards">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasRace">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isInCar">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isParticipatingTo">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasStartingPosition">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#hasPoints">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/MOTORSPORTS#isMadeOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

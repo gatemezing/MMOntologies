@@ -1,0 +1,2097 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:vdo="http://www.acemedia.org/ontologies/VDO#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="file:/home/saathoff/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2007-02-16-rdfs-files/s4-1-3-ontology-2004-07-19-visual-descriptors.rdfs#"
+  xml:base="file:/home/saathoff/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2007-02-16-rdfs-files/s4-1-3-ontology-2004-07-19-visual-descriptors.rdfs">
+  <owl:Ontology rdf:about="file:/home/saathoff/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2007-02-16-rdfs-files/s4-1-3-ontology-2004-07-19-visual-descriptors.rdfs"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionCameraDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#CameraMotionPolymorphismType">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#GoFGoPColorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#RegularityDegree">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ContainedLocatorType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#CameraMotionSegmentType">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ComponentType">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Region">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#INTEGER">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Feature">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#FocusOfExpansionType">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#STRING">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorQuantizationDescriptor">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#BasicDescriptors"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionTrajectoryDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionDescriptor"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#BOOLEAN">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ParametricMotion">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionDescriptor"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#LocalizationDescriptors"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#DCValueElement">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#AggregationMode">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#VisualDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#BasicDescriptors">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#VisualDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#TextureDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#VisualDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorSpaceDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#RegionShapeDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ShapeDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorLayoutDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorStructureDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#VisualDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#BasicDescriptors"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MixtureCameraMotionSegmentType">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#CameraMotionSegmentType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#UnitType">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#EdgeHistogramDescriptor">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#LocalizationDescriptors"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#DOUBLE">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MetaConcepts">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MappingFunctType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ShapeDescriptor"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#SpatialDistributionParameters">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#VisualDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#NonMixtureCameraMotionSegmentType">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#CameraMotionSegmentType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#LocalizationDescriptors"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#HomogeneousTextureDescriptor">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#DominantColorDescriptor">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#MotionModelType">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureDescriptor"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ColorSpaceType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Shape">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#Feature"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Color">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#Feature"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Shape3D">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ShapeDescriptor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#LocalizationDescriptors">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#VisualDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalizationDescriptors"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Texture">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#Feature"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#ShapeDescriptor">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#VisualDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#MetaConcepts"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/VDO#Motion">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/VDO#Feature"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#mediaTimePoint">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#loopSegments">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionCameraDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#prototypeCurvatureCircularity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef___SpatioTemporalLocatorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomIn___MixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomIn"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trajParameters">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionTrajectoryDescriptor"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#componentNumberFlag">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialDistribution">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatialDistributionParameters"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef___RegionLocatorDescriptor">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#values">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#nlr">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatialDistributionParameters"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#intensity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#hasVisualDescriptor">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Region"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#VisualDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#depth___FigureTrajectoryType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#depth"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomIn">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panLeft">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference___RegionLocatorDescriptor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomDown___MixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomDown"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originY___Spatial2DCoordinates">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originY"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#scale2">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originX___ParametricMotion">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricMotion"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originX"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomDown">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#modelType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#amountOfMotion___MixtureCameraMotionSegmentType">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureCameraMotionSegmentType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#amountOfMotion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorQuantization">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorQuantizationDescriptor"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DominantColorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#pixelY">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#highestPeakY">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#DOUBLE"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackLeft___NonMixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackLeft"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#xDynamicRange">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#percentage">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#containedLocator">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ContainedLocatorType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panLeft___NonMixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#panLeft"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#parameterTrajectory">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#mediaRealIncrTimePoint">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#planarSurfaces">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Shape3D"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#motionModel">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomOut___MixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomOut"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#pixelX">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#mappingFunct">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#MappingFunctType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#scalableColor">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#GoFGoPColorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorVariance2">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#time">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackRight___FractionalPresenceType">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackRight"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorRefFlag">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorSpaceDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomDown___NonMixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#boomDown"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialCoherency">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DominantColorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#DOUBLE"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#mediaRealTimePoint">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#parameters___ParametricTrajectoryType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#parameters"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#mappingFunctLength">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MappingFunctType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#parameters___ParametricMotion">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#parameters"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricMotion"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#bitsPerBins">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Shape3D"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panRight___MixtureAmountOfMotionType">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panRight"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyBackward">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#typeOfTrajectory">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#binNumber">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorQuantizationDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomUp___NonMixtureAmountOfMotionType">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomUp"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panRight___FractionalPresenceType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panRight"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollAnticlockwise___MixtureAmountOfMotionType">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollAnticlockwise"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#param">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorVariance1">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#aggregation">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#GoFGoPColorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#AggregationMode"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltDown___MixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltDown"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#globalCurvatureEccentricity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfCCoeff">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorLayoutDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#type___FigureTrajectoryType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#type"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#verticalPosition">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FocusOfExpansionType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollClockwise___FractionalPresenceType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollClockwise"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#hasColorDescriptor">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Color"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyForward___FractionalPresenceType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyForward"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorVariance3">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spaLocNumber">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorQuant">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorStructureDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackLeft___MixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackLeft"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackRight___NonMixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackRight"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorValueIndex1">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyBackward___NonMixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#dollyBackward"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference___SpatioTemporalLocatorDescriptor">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#scale1">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#cameraFollows">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionTrajectoryDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spectrum">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Shape3D"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltDown___NonMixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltDown"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#keyPointNum">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#ellipseFlag">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyBackward___MixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#dollyBackward"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#ySrcSize">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialLocalizationParamters">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackRight">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltUp___NonMixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltUp"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coefficients">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#wholeInterval">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#keyTimePointDataType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coefficientSign">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference___MotionTrajectoryDescriptor">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionTrajectoryDescriptor"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfPolygons">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#duration">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricMotion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#xOrigin">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomOut___FractionalPresenceType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomOut"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef___ParametricMotion">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricMotion"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyForward___MixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyForward"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollAnticlockwise___FractionalPresenceType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollAnticlockwise"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#mappingFunction">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MappingFunctType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#box">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#majorComponent">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfVertices___RegionLocatorDescriptor">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfVertices"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#type___TemporalInterpolation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#type"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#peakX">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfPixels">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollAnticlockwise">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#direction2">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#VDOcolorSpace">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#horizontalPosition">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FocusOfExpansionType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#globalCurvatureCircularity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#peakY">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#direction1">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#time___MixtureCameraMotionSegmentType">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#time"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureCameraMotionSegmentType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomOut">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltUp___MixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltUp"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#yOrigin">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollClockwise___MixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollClockwise"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#nameLength">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coefficientPattern">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorLayoutDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#units">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionTrajectoryDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#focusOfExpansion___NonMixtureCameraMotionSegmentType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#FocusOfExpansionType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#focusOfExpansion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureCameraMotionSegmentType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorSpace">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DominantColorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorSpaceDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#minorComponent">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originY___ParametricMotion">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricMotion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originY"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#firstVertexY">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#timeIncr">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomIn___NonMixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#zoomIn"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomIn___FractionalPresenceType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#zoomIn"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltDown___FractionalPresenceType">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltDown"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomUp___FractionalPresenceType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomUp"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#firstVertexX">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panRight___NonMixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panRight"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#keyValue">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorValueIndex2">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollClockwise">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dimension">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#keyTimePoint">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panLeft___MixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#panLeft"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#energy">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#HomogeneousTextureDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#zoomOut___NonMixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#zoomOut"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#depth">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#motionParameters">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originX">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numberOfPeaks">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#xSrcSize">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#energyDeviationFlag">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#HomogeneousTextureDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackRight___MixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#trackRight"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltUp___FractionalPresenceType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltUp"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#contentModel">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#CameraMotionSegmentType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#CameraMotionPolymorphismType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfMotionParameterSets">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#intergratedCoordinateSystem">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#IntergratedCoordinateSystemType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#colorValueIndex3">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dominantDirection">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#bitplane">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#values___ColorStructureDescriptor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorStructureDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#values"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numberOfReferenceRegions">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originX___RegionLocatorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#originX"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numberOfCoefficients">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originX___Spatial2DCoordinates">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#originX"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#amountOfMotion___NonMixtureCameraMotionSegmentType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#amountOfMotion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureCameraMotionSegmentType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originY">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#octan">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#originY___RegionLocatorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#originY"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#artDE">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionShapeDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#constantTypeInterval">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TemporalInterpolation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#name">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numberOfBins">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Shape3D"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numberOfBitPlanesDiscarded">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ScalableColorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#component">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorQuantizationDescriptor"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ComponentType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordPointX">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#temporalParameters">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionActivityDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panRight">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyForward___NonMixtureAmountOfMotionType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyForward"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#pixelX___LocalCoordinateSystem">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#pixelX"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomDown___FractionalPresenceType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#boomDown"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#singularSurfaces">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Shape3D"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dataset">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#xsiTypeID">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#CameraMotionPolymorphismType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#segment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionCameraDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#CameraMotionPolymorphismType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#parameters">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomUp___MixtureAmountOfMotionType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomUp"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureAmountOfMotionType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#VDOhasColorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#unit">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#UnitType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#time___ParametricTrajectoryType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#time"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#type___ColorSpaceDescriptor">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorSpaceDescriptor"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#type"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorSpaceType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#figureTrajectory">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatioTemporalLocatorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#motionModel___ParametricMotion">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#motionModel"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionModelType"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricMotion"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#blockValues">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorLayoutDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltDown">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dataSetLength">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordPointY">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#values___DominantColorDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#DCValueElement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#values"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#DominantColorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackLeft">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#standardDeviation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#HomogeneousTextureDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollAnticlockwise___NonMixtureAmountOfMotionType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#rollAnticlockwise"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#pixelX___RegionLocatorDescriptor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#pixelX"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyForward">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#focusOfExpansion___MixtureCameraMotionSegmentType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureCameraMotionSegmentType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#FocusOfExpansionType"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#focusOfExpansion"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#focusOfExpansion">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#type">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#depth___ParametricTrajectoryType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#depth"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#id">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#Spatial2DCoordinates"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#prototypeCurvatureEccentricity">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ContourShapeDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#fractionalPresence">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MixtureCameraMotionSegmentType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#vertices">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#unlocatedRegion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#dollyBackward___FractionalPresenceType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#dollyBackward"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#regularity">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#TextureBrowsingDescriptor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/VDO#RegularityDegree"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordinateMapping">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#nsr">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatialDistributionParameters"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#energyDeviation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#HomogeneousTextureDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#nmr">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#SpatialDistributionParameters"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#time___NonMixtureCameraMotionSegmentType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureCameraMotionSegmentType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#time"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfYCoeff">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ColorLayoutDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#spatialReference___ParametricMotion">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#BOOLEAN"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#spatialReference"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricMotion"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#homogeneousTextureAverage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#HomogeneousTextureDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#yDynamicRange">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#motionModel___ParametricTrajectoryType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#motionModel"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#amountOfMotion">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#location">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#ParametricTrajectoryType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#trackLeft___FractionalPresenceType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#trackLeft"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#poly">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#tiltUp">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#panLeft___FractionalPresenceType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#panLeft"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FractionalPresenceType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfVertices">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#srcPixelY">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#numOfVertices___FigureTrajectoryType">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#numOfVertices"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#srcPixelX">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#LocalCoordinateSystem"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#boomUp">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#binCount">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#EdgeHistogramDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#rollClockwise___NonMixtureAmountOfMotionType">
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#rollClockwise"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#NonMixtureAmountOfMotionType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coords">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#STRING"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#DEFAULT_ROOT_RELATION"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#RegionLocatorDescriptor"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#time___FigureTrajectoryType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#time"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#FigureTrajectoryType"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/VDO#coordRef___MotionTrajectoryDescriptor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/VDO#MotionTrajectoryDescriptor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#INTEGER"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/VDO#coordRef"/>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->

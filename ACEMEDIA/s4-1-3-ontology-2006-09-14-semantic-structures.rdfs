@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:mso="http://www.acemedia.org/ontologies/SCHEMA#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-28/aceMedia-KIv2-2006-08-28-rdfs-files/id4-1-spec-2004-07-19-v09-uok-iti-semantic-structure-ontology.rdfs#"
+  xml:base="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-28/aceMedia-KIv2-2006-08-28-rdfs-files/id4-1-spec-2004-07-19-v09-uok-iti-semantic-structure-ontology.rdfs">
+  <owl:Ontology rdf:about="file:/home/casi/aceMedia/WP4/T4.1/ontologies/aceMedia-KIv2-2006-08-28/aceMedia-KIv2-2006-08-28-rdfs-files/id4-1-spec-2004-07-19-v09-uok-iti-semantic-structure-ontology.rdfs"/>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#AudioSegment">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Audio"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Temporal intervals or segments of audio data</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Frame">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#StillRegion"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A single frame of a video.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Image">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of images</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#AudioVisualSegment">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Temporal intervals or segments of audiovisual data</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#AudioVisual"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Segment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of fragments of multimedia content</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MultimediaSegment">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Multimedia"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Segment of a composite multimedia presentation</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#VideoText">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MovingRegion"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Spatio-temporal regions of video data that correspond to text or captions</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Video">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of videos</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of multimedia data</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#AudioVisualRegion">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Arbitrary spatio-temporal segments of AV data</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Multimedia">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of multimedia resources</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MovingRegion">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2D spatio-temporal regions of video data</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#KeyFrame">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Frame"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A representative frame for a shot or a video.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Mosaic">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mosaic or panaoramic view of a video segment</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#StillRegion"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#StillRegion">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Image"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2D spatial regions of an image or video frame</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#EditedVideoSegment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Video segment that results from editing work</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Video"/>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Temporal intervals or segments of video data</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#StillRegion3D">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3D spatial regions of a 3D image</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Image"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#ImageText">
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#StillRegion"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Spatial regions of an image or video frame that correspond to text or
+captions</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#AudioVisual">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of audiovisual resources</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#VideoSegmentsOrStillRegions">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#Audio">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The class of audio resources</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.acemedia.org/ontologies/SCHEMA#MovingOrStillRegions">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#media_source_decomposition_of_a_video_segment">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#media_source_decomposition_of_a_segment"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#temporal_decomposition_of_a_video_segment">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#temporal_decomposition_of_a_segment"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegmentsOrStillRegions"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#spatio-temporal_decomposition_of_a_video_segment">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#spatio-temporal_decomposition_of_a_segment"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MovingOrStillRegions"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#spatio-temporal_decomposition_of_a_segment">
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#decomposition_of_a_segment"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#media_source_decomposition_of_a_segment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#decomposition_of_a_segment"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#decomposition_of_a_segment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#temporal_decomposition_of_a_segment">
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#decomposition_of_a_segment"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#spatial_decomposition_of_a_video_segment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MovingRegion"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#spatial_decomposition_of_a_segment"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.acemedia.org/ontologies/SCHEMA#spatial_decomposition_of_a_segment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#decomposition_of_a_segment"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#MultimediaContent"/>
+    <rdfs:range rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Segment"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://www.acemedia.org/ontologies/SCHEMA#hasStartFrame">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.acemedia.org/ontologies/SCHEMA#hasFrameIndex">
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#Frame"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.acemedia.org/ontologies/SCHEMA#hasEndFrame">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://www.acemedia.org/ontologies/SCHEMA#VideoSegment"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2 beta, Build 288)  http://protege.stanford.edu -->
